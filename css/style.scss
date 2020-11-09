@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+button{
+  border-style: none;
+  border-width: 0;
+  outline: none;
+  &:active{
+    border-style: none;
+  }
+  &:focus{
+    outline: none;
+  }
+}
+
+.container{
+  max-width: 1245px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row{
+  display: flex;
+}
+
+
+@import 'nav';
+
+@import 'main';

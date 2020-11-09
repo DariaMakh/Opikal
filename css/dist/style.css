@@ -1,0 +1,244 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+button {
+  border-style: none;
+  border-width: 0;
+  outline: none;
+}
+button:active {
+  border-style: none;
+}
+button:focus {
+  outline: none;
+}
+
+.container {
+  max-width: 1245px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+}
+
+.provisioner__btn:hover, .customer__btn:hover, .header__rools:hover {
+  transition-duration: 5ms;
+  background-color: transparent;
+  border: 2px solid #ff0000;
+}
+.provisioner__btn:hover a, .customer__btn:hover a, .header__rools:hover a {
+  color: #ff0000;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 35px 0 25px;
+}
+.nav__logo {
+  width: 228px;
+  height: auto;
+}
+.nav__logo img {
+  width: 100%;
+  height: auto;
+}
+.nav__phone a {
+  font-size: 14px;
+  font-family: "Aeroport";
+  color: black;
+  font-weight: bold;
+  line-height: 1.45;
+}
+.nav__phone a:hover {
+  color: #ff0000;
+}
+.nav__icons {
+  display: flex;
+  justify-content: space-between;
+  width: 176px;
+}
+.nav__icons_mess {
+  width: 29px;
+  height: 22px;
+}
+.nav__btn {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background-color: red;
+  width: 205px;
+  height: 40px;
+}
+.nav__btn a {
+  display: block;
+  font-size: 13px;
+  font-family: "Aeroport";
+  color: white;
+  font-weight: bold;
+  line-height: 1.65;
+  padding: 8px 38px;
+}
+
+.menu {
+  display: flex;
+}
+.menu__link a {
+  font-size: 13px;
+  font-family: "Aeroport";
+  font-weight: 600;
+  color: black;
+  line-height: 1.65;
+  margin-right: 35px;
+}
+.menu__link a:hover {
+  color: #ff0000;
+}
+
+.header__bg {
+  background-image: url(../../images/header-bg.png);
+  width: 100%;
+  max-height: 859px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  position: relative;
+}
+.header__content {
+  padding: 150px 0;
+}
+.header__img {
+  margin-bottom: 20px;
+}
+.header__title {
+  font-size: 36px;
+  font-family: "Aeroport";
+  color: white;
+  font-weight: bold;
+  line-height: 1.111;
+  width: 830px;
+}
+.header__box {
+  display: flex;
+  justify-content: space-between;
+  width: 545px;
+  margin-top: 65px;
+}
+.header__rools {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 253px;
+  height: 53px;
+  background-color: #f6f6f8;
+}
+.header__rools a {
+  font-size: 16px;
+  font-family: "Aeroport";
+  color: black;
+  line-height: 1.4;
+  display: block;
+  padding: 16px 30px;
+}
+.header__rools:hover a {
+  padding: 14px 30px;
+}
+
+.line-1 {
+  background-color: #ff0000;
+  width: 19px;
+  height: 3px;
+  position: absolute;
+  top: 26px;
+  right: 30px;
+}
+.line-2 {
+  background-color: #ff0000;
+  height: 19px;
+  width: 3px;
+  position: absolute;
+  top: 18px;
+  right: 38px;
+}
+
+.customer p, .provisioner p {
+  display: block;
+  font-size: 14px;
+  font-family: "Aeroport", sans-serif;
+  color: white;
+  line-height: 1.45;
+  margin-bottom: 15px;
+}
+.customer a, .provisioner a {
+  font-size: 13px;
+  font-family: "Aeroport", sans-serif;
+  color: white;
+  font-weight: bold;
+  line-height: 1.65;
+  display: block;
+}
+
+.customer__btn {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background-color: #ff0000;
+  width: 214px;
+  height: 40px;
+}
+.customer a {
+  padding: 8px 42px;
+}
+
+.provisioner__btn {
+  background-color: transparent;
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  width: 273px;
+  height: 38px;
+}
+.provisioner a {
+  padding: 6px 48px;
+}
+
+.header__rools:hover, .customer__btn:hover, .provisioner__btn:hover {
+  transition-duration: 5ms;
+  background-color: transparent;
+  border: 2px solid #ff0000;
+}
+.header__rools:hover a, .customer__btn:hover a, .provisioner__btn:hover a {
+  color: #ff0000;
+}
+
+.equipment__title {
+  font-size: 36px;
+  font-family: "Aeroport";
+  color: black;
+  font-weight: bold;
+  line-height: 1;
+}

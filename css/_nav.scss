@@ -1,0 +1,214 @@
+$red: #ff0000;
+$lgr: #f3f3f3;
+$grey: #f4f4f4;
+$lbl: #141419;
+
+%hover-red{
+    transition-duration: 5ms;
+    background-color: transparent;
+    border: 2px solid $red;
+    a{
+        color: $red;
+    }
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 35px 0 25px;
+    &__logo{
+        width: 228px;
+        height: auto;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__phone{
+        a{
+            font-size: 14px;
+            font-family: "Aeroport";
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            line-height: 1.45;
+            &:hover{
+                color: $red;
+            }
+        }
+    }
+    &__icons{
+        display: flex;
+        justify-content: space-between;
+        width: 176px;
+        &_mess{
+            width: 29px;
+            height: 22px;
+            //color: #080808;
+        }
+    }
+    &__btn{
+        border-width: 1px;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+        background-color: rgb(255, 0, 0);
+        width: 205px;
+        height: 40px;
+        a{
+            display: block;
+            font-size: 13px;
+            font-family: "Aeroport";
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            line-height: 1.65;
+            padding: 8px 38px;
+        }
+    }
+}
+
+.menu{
+    display: flex;
+    &__link{
+        a{
+            font-size: 13px;
+            font-family: "Aeroport";
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+            line-height: 1.65;
+            margin-right: 35px;
+            &:hover{
+                color: $red;
+            }
+        }
+    }
+}
+
+.header{
+    &__bg{
+        background-image: url(../../images/header-bg.png);
+        width: 100%;
+        max-height: 859px;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        position: relative;
+    }
+    &__content{
+        padding: 150px 0;
+    }
+    &__img{
+        margin-bottom: 20px;
+    }
+    &__title{
+        font-size: 36px;
+        font-family: "Aeroport";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        line-height: 1.111;
+        width: 830px;
+    }
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        width: 545px;
+        margin-top: 65px;
+    }
+    &__rools{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 253px;
+        height: 53px;
+        background-color: #f6f6f8;
+        a{
+            font-size: 16px;
+            font-family: "Aeroport";
+            color: rgb(0, 0, 0);
+            line-height: 1.4;
+            display: block;
+            padding: 16px 30px;
+        }
+        &:hover{
+            @extend %hover-red;
+            a{
+                padding: 14px 30px;
+            }
+        }
+    }
+}
+
+.line{
+    &-1{
+        background-color: $red;
+        width: 19px;
+        height: 3px;
+        position: absolute;
+        top: 26px;
+        right: 30px;
+    }
+    &-2{
+        background-color: $red;
+        height: 19px;
+        width: 3px;
+        position: absolute;
+        top: 18px;
+        right: 38px;
+    }
+}
+
+.customer, .provisioner{
+    p{
+        display: block;
+        font-size: 14px;
+        font-family: "Aeroport", sans-serif;
+        color: rgb(255, 255, 255);
+        line-height: 1.45;
+        margin-bottom: 15px;
+    }
+    a{
+        font-size: 13px;
+        font-family: "Aeroport", sans-serif;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        line-height: 1.65;
+        display: block;
+    }
+}
+
+.customer{
+    &__btn{
+        border-width: 1px;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+        background-color: $red;
+        width: 214px;
+        height: 40px;
+        &:hover{
+            @extend %hover-red;
+        }
+    }
+    a{
+        padding: 8px 42px;
+    }
+}
+
+.provisioner{
+    &__btn{
+        background-color: transparent;
+        border-width: 2px;
+        border-color: rgb(255, 255, 255);
+        border-style: solid;
+        width: 273px;
+        height: 38px;
+        &:hover{
+            @extend %hover-red;
+        }
+    }
+    a{
+        padding: 6px 48px;
+    }
+}
+  
