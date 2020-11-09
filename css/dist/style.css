@@ -150,11 +150,12 @@ button:focus {
 }
 .header__rools {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 55%;
+  right: -100px;
   width: 253px;
   height: 53px;
   background-color: #f6f6f8;
+  transform: rotate(-90deg);
 }
 .header__rools a {
   font-size: 16px;
@@ -235,10 +236,17 @@ button:focus {
   color: #ff0000;
 }
 
+.equipment {
+  padding-top: 95px;
+}
 .equipment__title {
   font-size: 36px;
   font-family: "Aeroport";
   color: black;
   font-weight: bold;
   line-height: 1;
+}
+
+.plus-line-1, .plus-line-2 {
+  display: none;
 }

@@ -13,12 +13,19 @@ $lbl: #141419;
 }
 
 .equipment{
+    padding-top: 95px;
     &__title{
         font-size: 36px;
         font-family: "Aeroport";
         color: rgb(0, 0, 0);
         font-weight: bold;
         line-height: 1;
+    }
+}
+
+.plus-line{
+    &-1, &-2{
+        display: none;
     }
 }
 

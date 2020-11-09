@@ -118,11 +118,12 @@ $lbl: #141419;
     }
     &__rools{
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 55%;
+        right: -100px;
         width: 253px;
         height: 53px;
         background-color: #f6f6f8;
+        transform: rotate(-90deg);
         a{
             font-size: 16px;
             font-family: "Aeroport";
