@@ -41,12 +41,51 @@ button:focus {
   display: flex;
 }
 
-.provisioner__btn:hover, .customer__btn:hover, .header__rools:hover, .nav__btn:hover {
+.red__btn {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background-color: #ff0000;
+  width: fit-content;
+  height: fit-content;
+}
+.red__btn:hover a {
+  padding: 7px 41px;
+}
+.red__btn a {
+  font-size: 13px;
+  font-family: "Aeroport", sans-serif;
+  color: white;
+  font-weight: bold;
+  line-height: 1.65;
+  display: block;
+  padding: 8px 42px;
+}
+
+.black__btn {
+  background-color: transparent;
+  border-width: 2px;
+  border-color: #000;
+  border-style: solid;
+  width: fit-content;
+  height: fit-content;
+}
+.black__btn a {
+  font-size: 13px;
+  font-family: "Aeroport", sans-serif;
+  color: #000;
+  font-weight: bold;
+  line-height: 1.65;
+  display: block;
+  padding: 7px 42px;
+}
+
+.possibility .provisioner__btn:hover, .provisioner__btn:hover, .header__rools:hover, .nav__btn:hover, .red__btn:hover, .black__btn:hover {
   transition-duration: 5ms;
   background-color: transparent;
   border: 2px solid #ff0000;
 }
-.provisioner__btn:hover a, .customer__btn:hover a, .header__rools:hover a, .nav__btn:hover a {
+.possibility .provisioner__btn:hover a, .provisioner__btn:hover a, .header__rools:hover a, .nav__btn:hover a, .red__btn:hover a, .black__btn:hover a {
   color: #ff0000;
 }
 
@@ -202,24 +241,6 @@ button:focus {
   display: block;
 }
 
-.customer__btn {
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  background-color: #ff0000;
-  width: 214px;
-  height: 40px;
-}
-.customer__btn a {
-  font-size: 13px;
-  font-family: "Aeroport", sans-serif;
-  color: white;
-  font-weight: bold;
-  line-height: 1.65;
-  display: block;
-  padding: 8px 42px;
-}
-
 .provisioner__btn {
   background-color: transparent;
   border-width: 2px;
@@ -229,21 +250,34 @@ button:focus {
   height: 38px;
 }
 .provisioner__btn a {
+  font-size: 13px;
+  font-family: "Aeroport", sans-serif;
+  color: white;
+  font-weight: bold;
+  line-height: 1.65;
+  display: block;
+}
+.provisioner__btn a {
   padding: 6px 48px;
 }
 
-.nav__btn:hover, .header__rools:hover, .customer__btn:hover, .provisioner__btn:hover {
-  transition-duration: 5ms;
+.possibility .provisioner__btn:hover, .red__btn:hover, .black__btn:hover, .nav__btn:hover, .header__rools:hover, .provisioner__btn:hover {
   background-color: transparent;
   border: 2px solid #ff0000;
 }
-.nav__btn:hover a, .header__rools:hover a, .customer__btn:hover a, .provisioner__btn:hover a {
+.possibility .provisioner__btn:hover a, .red__btn:hover a, .black__btn:hover a, .nav__btn:hover a, .header__rools:hover a, .provisioner__btn:hover a {
   color: #ff0000;
 }
 
 .equipment {
   width: 100%;
   padding-top: 95px;
+  padding-bottom: 110px;
+  background-color: #fcfcfc;
+  background-image: url(../../images/equipment-bg.png);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .equipment__container {
   max-width: 1255px;
@@ -345,11 +379,11 @@ button:focus {
   padding-top: 105px;
   padding-bottom: 115px;
 }
-.possibility .row {
+.possibility .justify {
   justify-content: space-between;
 }
 .possibility__content {
-  max-width: 520px;
+  width: 520px;
 }
 .possibility__content_grey {
   position: absolute;
@@ -360,6 +394,18 @@ button:focus {
   height: 100%;
   z-index: -1;
 }
+.possibility__content_grey-right {
+  position: absolute;
+  background-color: #f4f4f4;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+.possibility__content-box:last-child {
+  padding-top: 100px;
+}
 .possibility__title {
   font-size: 35px;
   font-family: "Aeroport";
@@ -367,9 +413,97 @@ button:focus {
   font-weight: bold;
   line-height: 1.001;
 }
+.possibility__slider_1, .possibility__slider_2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 500px;
+  height: 250px;
+}
+.possibility__slider_1-item, .possibility__slider_2-item {
+  width: 100%;
+  height: 100%;
+}
+.possibility__prev_1, .possibility__next_1, .possibility__prev_2, .possibility__next_2 {
+  width: 43px;
+  height: 42px;
+  border-radius: 50%;
+  background-size: cover;
+  cursor: pointer;
+}
+.possibility__prev_1, .possibility__prev_2 {
+  background-image: url(../../images/prev.png);
+}
+.possibility__next_1, .possibility__next_2 {
+  background-image: url(../../images/next.png);
+}
+.possibility__list-item {
+  font-size: 14px;
+  font-family: "Aeroport";
+  color: black;
+  line-height: 1.385;
+  position: relative;
+  padding-left: 50px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.possibility__list-item:before {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #ff0000;
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+.possibility .provisioner__btn {
+  border-color: #000;
+}
+.possibility .provisioner__btn a {
+  color: #000;
+}
+.possibility__row {
+  display: flex;
+  justify-content: space-between;
+}
+.possibility__text {
+  font-size: 15px;
+  font-family: "Aeroport";
+  color: black;
+  line-height: 1.4;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.possibility__text-light {
+  font-size: 16px;
+  font-family: "Aeroport";
+  color: rgba(20, 20, 25, 0.502);
+  font-weight: bold;
+  line-height: 1.5;
+  margin-top: 45px;
+}
+.possibility__form {
+  margin-top: 45px;
+}
+
+.slider-btns {
+  margin-left: 56px;
+}
+
+.grey-right {
+  right: 0;
+}
 
 @media (max-width: 1305px) {
   .nav__icons {
     width: 135px;
+  }
+}
+@media (max-width: 1105px) {
+  .possibility__row {
+    display: block;
+  }
+  .possibility__content {
+    width: 100%;
   }
 }

@@ -1,3 +1,8 @@
+$red: #ff0000;
+$lgr: #f3f3f3;
+$grey: #f4f4f4;
+$lbl: #141419;
+
 *,
 *::before,
 *::after {
@@ -41,7 +46,55 @@ button{
   display: flex;
 }
 
+.red{
+  &__btn{
+      border-width: 1px;
+      border-color: rgb(0, 0, 0);
+      border-style: solid;
+      background-color: $red;
+      width: fit-content;
+      height: fit-content;
+      &:hover{
+          @extend %hover-red;
+          a{
+            padding: 7px 41px;
+          }
+      }
+      a{
+          font-size: 13px;
+          font-family: "Aeroport", sans-serif;
+          color: rgb(255, 255, 255);
+          font-weight: bold;
+          line-height: 1.65;
+          display: block;
+          padding: 8px 42px;
+      }
+  }
+}
 
+
+.black{
+  &__btn{
+      background-color: transparent;
+      border-width: 2px;
+      border-color: #000;
+      border-style: solid;
+      width: fit-content;
+      height: fit-content;
+      &:hover{
+          @extend %hover-red;
+      }
+      a{
+          font-size: 13px;
+          font-family: "Aeroport", sans-serif;
+          color: #000;
+          font-weight: bold;
+          line-height: 1.65;
+          display: block;
+          padding: 7px 42px;
+      }
+  }
+}
 
 @import 'nav';
 

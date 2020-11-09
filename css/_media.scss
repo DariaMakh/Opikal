@@ -5,3 +5,14 @@
         }
     }
 }
+
+@media (max-width: 1105px){
+    .possibility{
+        &__row{
+            display: block;
+        }
+        &__content{
+            width: 100%;
+        }
+    }
+}

@@ -182,29 +182,6 @@ $lbl: #141419;
     }
 }
 
-.customer{
-    &__btn{
-        border-width: 1px;
-        border-color: rgb(0, 0, 0);
-        border-style: solid;
-        background-color: $red;
-        width: 214px;
-        height: 40px;
-        &:hover{
-            @extend %hover-red;
-        }
-        a{
-            font-size: 13px;
-            font-family: "Aeroport", sans-serif;
-            color: rgb(255, 255, 255);
-            font-weight: bold;
-            line-height: 1.65;
-            display: block;
-            padding: 8px 42px;
-        }
-    }
-}
-
 .provisioner{
     &__btn{
         background-color: transparent;
@@ -215,6 +192,14 @@ $lbl: #141419;
         height: 38px;
         &:hover{
             @extend %hover-red;
+        }
+        a{
+            font-size: 13px;
+            font-family: "Aeroport", sans-serif;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            line-height: 1.65;
+            display: block;
         }
         a{
             padding: 6px 48px;
