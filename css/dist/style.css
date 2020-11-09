@@ -32,7 +32,7 @@ button:focus {
 }
 
 .container {
-  max-width: 1245px;
+  max-width: 1215px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -41,12 +41,12 @@ button:focus {
   display: flex;
 }
 
-.provisioner__btn:hover, .customer__btn:hover, .header__rools:hover {
+.provisioner__btn:hover, .customer__btn:hover, .header__rools:hover, .nav__btn:hover {
   transition-duration: 5ms;
   background-color: transparent;
   border: 2px solid #ff0000;
 }
-.provisioner__btn:hover a, .customer__btn:hover a, .header__rools:hover a {
+.provisioner__btn:hover a, .customer__btn:hover a, .header__rools:hover a, .nav__btn:hover a {
   color: #ff0000;
 }
 
@@ -103,7 +103,6 @@ button:focus {
   line-height: 1.65;
   padding: 8px 38px;
 }
-
 .menu {
   display: flex;
 }
@@ -211,7 +210,13 @@ button:focus {
   width: 214px;
   height: 40px;
 }
-.customer a {
+.customer__btn a {
+  font-size: 13px;
+  font-family: "Aeroport", sans-serif;
+  color: white;
+  font-weight: bold;
+  line-height: 1.65;
+  display: block;
   padding: 8px 42px;
 }
 
@@ -223,21 +228,27 @@ button:focus {
   width: 273px;
   height: 38px;
 }
-.provisioner a {
+.provisioner__btn a {
   padding: 6px 48px;
 }
 
-.header__rools:hover, .customer__btn:hover, .provisioner__btn:hover {
+.nav__btn:hover, .header__rools:hover, .customer__btn:hover, .provisioner__btn:hover {
   transition-duration: 5ms;
   background-color: transparent;
   border: 2px solid #ff0000;
 }
-.header__rools:hover a, .customer__btn:hover a, .provisioner__btn:hover a {
+.nav__btn:hover a, .header__rools:hover a, .customer__btn:hover a, .provisioner__btn:hover a {
   color: #ff0000;
 }
 
 .equipment {
+  width: 100%;
   padding-top: 95px;
+}
+.equipment__container {
+  max-width: 1255px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 .equipment__title {
   font-size: 36px;
@@ -246,7 +257,119 @@ button:focus {
   font-weight: bold;
   line-height: 1;
 }
+.equipment__content {
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.equipment__box {
+  height: 157px;
+  width: 28%;
+}
+.equipment__box_content {
+  padding-top: 45px;
+  width: 100%;
+  height: 117px;
+  border-bottom: 1px solid #111111;
+  position: relative;
+}
+.equipment__box_content a {
+  font-size: 15px;
+  font-family: "Aeroport";
+  color: #111111;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.equipment__box_content-last {
+  padding-top: 45px;
+  width: 80%;
+  height: 117px;
+}
+.equipment__box_content-last p {
+  font-size: 15px;
+  font-family: "Aeroport";
+  color: #111111;
+  line-height: 1.4;
+  font-weight: 600;
+}
+.equipment__box:hover .equipment__box_content {
+  background-color: #ff0000;
+  border: 0;
+  width: calc(100% + 50px);
+  height: 147px;
+  padding-top: 45px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  margin-bottom: 10px;
+  margin-left: -50px;
+}
+.equipment__box:hover .equipment__box_content a {
+  color: #fff;
+  font-weight: 400;
+}
+.equipment__box:hover .plus-1, .equipment__box:hover .plus-2 {
+  display: block;
+}
+.equipment__btn {
+  font-size: 15px;
+  font-family: "Aeroport";
+  color: #ff0000;
+  line-height: 1.4;
+  text-decoration: underline;
+  font-weight: 600;
+}
 
-.plus-line-1, .plus-line-2 {
+.plus-1, .plus-2 {
   display: none;
+  background-color: #fff;
+  position: absolute;
+}
+.plus-1 {
+  width: 3px;
+  height: 23px;
+  top: 50px;
+  right: 60px;
+}
+.plus-2 {
+  width: 23px;
+  height: 3px;
+  top: 60px;
+  right: 50px;
+}
+
+.possibility {
+  width: 100%;
+  position: relative;
+  padding-top: 105px;
+  padding-bottom: 115px;
+}
+.possibility .row {
+  justify-content: space-between;
+}
+.possibility__content {
+  max-width: 520px;
+}
+.possibility__content_grey {
+  position: absolute;
+  background-color: #f4f4f4;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+.possibility__title {
+  font-size: 35px;
+  font-family: "Aeroport";
+  color: #141419;
+  font-weight: bold;
+  line-height: 1.001;
+}
+
+@media (max-width: 1305px) {
+  .nav__icons {
+    width: 135px;
+  }
 }

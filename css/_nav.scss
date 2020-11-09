@@ -66,6 +66,9 @@ $lbl: #141419;
             line-height: 1.65;
             padding: 8px 38px;
         }
+        &:hover{
+            @extend %hover-red;
+        }
     }
 }
 
@@ -190,9 +193,15 @@ $lbl: #141419;
         &:hover{
             @extend %hover-red;
         }
-    }
-    a{
-        padding: 8px 42px;
+        a{
+            font-size: 13px;
+            font-family: "Aeroport", sans-serif;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            line-height: 1.65;
+            display: block;
+            padding: 8px 42px;
+        }
     }
 }
 
@@ -207,9 +216,9 @@ $lbl: #141419;
         &:hover{
             @extend %hover-red;
         }
-    }
-    a{
-        padding: 6px 48px;
+        a{
+            padding: 6px 48px;
+        }
     }
 }
   
