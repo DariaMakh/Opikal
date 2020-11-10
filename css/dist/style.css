@@ -50,16 +50,16 @@ button:focus {
   height: fit-content;
 }
 .red__btn:hover a {
-  padding: 7px 41px;
+  padding: 7px 25px;
 }
 .red__btn a {
-  font-size: 13px;
+  font-size: 17px;
   font-family: "Aeroport", sans-serif;
   color: white;
   font-weight: bold;
   line-height: 1.65;
   display: block;
-  padding: 8px 42px;
+  padding: 8px 26px;
 }
 
 .black__btn {
@@ -71,13 +71,13 @@ button:focus {
   height: fit-content;
 }
 .black__btn a {
-  font-size: 13px;
+  font-size: 17px;
   font-family: "Aeroport", sans-serif;
   color: #000;
   font-weight: bold;
   line-height: 1.65;
   display: block;
-  padding: 7px 42px;
+  padding: 7px 26px;
 }
 
 .possibility .provisioner__btn:hover, .provisioner__btn:hover, .header__rools:hover, .nav__btn:hover, .red__btn:hover, .black__btn:hover {
@@ -107,7 +107,7 @@ button:focus {
   height: auto;
 }
 .nav__phone a {
-  font-size: 14px;
+  font-size: 19px;
   font-family: "Aeroport";
   color: black;
   font-weight: bold;
@@ -146,9 +146,9 @@ button:focus {
   display: flex;
 }
 .menu__link a {
-  font-size: 13px;
+  font-size: 17px;
   font-family: "Aeroport";
-  font-weight: 600;
+  font-weight: 300;
   color: black;
   line-height: 1.65;
   margin-right: 35px;
@@ -173,7 +173,7 @@ button:focus {
   margin-bottom: 20px;
 }
 .header__title {
-  font-size: 36px;
+  font-size: 49px;
   font-family: "Aeroport";
   color: white;
   font-weight: bold;
@@ -183,7 +183,7 @@ button:focus {
 .header__box {
   display: flex;
   justify-content: space-between;
-  width: 545px;
+  width: 550px;
   margin-top: 65px;
 }
 .header__rools {
@@ -226,19 +226,11 @@ button:focus {
 
 .customer p, .provisioner p {
   display: block;
-  font-size: 14px;
+  font-size: 19px;
   font-family: "Aeroport", sans-serif;
   color: white;
   line-height: 1.45;
   margin-bottom: 15px;
-}
-.customer a, .provisioner a {
-  font-size: 13px;
-  font-family: "Aeroport", sans-serif;
-  color: white;
-  font-weight: bold;
-  line-height: 1.65;
-  display: block;
 }
 
 .provisioner__btn {
@@ -246,19 +238,17 @@ button:focus {
   border-width: 2px;
   border-color: white;
   border-style: solid;
-  width: 273px;
-  height: 38px;
+  width: fit-content;
+  height: fit-content;
 }
 .provisioner__btn a {
-  font-size: 13px;
+  font-size: 17px;
   font-family: "Aeroport", sans-serif;
   color: white;
   font-weight: bold;
   line-height: 1.65;
   display: block;
-}
-.provisioner__btn a {
-  padding: 6px 48px;
+  padding: 6px 26px;
 }
 
 .possibility .provisioner__btn:hover, .red__btn:hover, .black__btn:hover, .nav__btn:hover, .header__rools:hover, .provisioner__btn:hover {
@@ -285,10 +275,10 @@ button:focus {
   padding: 0 15px;
 }
 .equipment__title {
-  font-size: 36px;
+  font-size: 49px;
   font-family: "Aeroport";
   color: black;
-  font-weight: bold;
+  font-weight: 400;
   line-height: 1;
 }
 .equipment__content {
@@ -309,11 +299,11 @@ button:focus {
   position: relative;
 }
 .equipment__box_content a {
-  font-size: 15px;
+  font-size: 20px;
   font-family: "Aeroport";
   color: #111111;
   line-height: 1.4;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.3px;
 }
 .equipment__box_content-last {
@@ -403,11 +393,8 @@ button:focus {
   height: 100%;
   z-index: -1;
 }
-.possibility__content-box:last-child {
-  padding-top: 100px;
-}
 .possibility__title {
-  font-size: 35px;
+  font-size: 47px;
   font-family: "Aeroport";
   color: #141419;
   font-weight: bold;
@@ -437,13 +424,13 @@ button:focus {
   background-image: url(../../images/next.png);
 }
 .possibility__list-item {
-  font-size: 14px;
+  font-size: 17px;
   font-family: "Aeroport";
   color: black;
   line-height: 1.385;
   position: relative;
   padding-left: 50px;
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: 25px;
 }
 .possibility__list-item:before {
@@ -453,7 +440,7 @@ button:focus {
   height: 2px;
   background-color: #ff0000;
   position: absolute;
-  top: 8px;
+  top: 10px;
   left: 0;
 }
 .possibility .provisioner__btn {
@@ -467,7 +454,7 @@ button:focus {
   justify-content: space-between;
 }
 .possibility__text {
-  font-size: 15px;
+  font-size: 20px;
   font-family: "Aeroport";
   color: black;
   line-height: 1.4;
@@ -480,10 +467,44 @@ button:focus {
   color: rgba(20, 20, 25, 0.502);
   font-weight: bold;
   line-height: 1.5;
-  margin-top: 45px;
+  margin-top: 40px;
+}
+.possibility__text-light_2 {
+  font-size: 12px;
+  font-family: "Aeroport";
+  color: rgba(20, 20, 25, 0.502);
+  font-weight: bold;
+  line-height: 2.5;
+  margin-bottom: 55px;
 }
 .possibility__form {
-  margin-top: 45px;
+  margin-top: 40px;
+  width: 475px;
+}
+.possibility__form input {
+  width: 100%;
+  display: block;
+  border: 0;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #141419;
+  margin-bottom: 22px;
+  font-size: 18px;
+  font-family: "Aeroport";
+  color: #141419;
+  line-height: 1.2;
+}
+.possibility__form input::placeholder {
+  font-size: 13px;
+  font-family: "Aeroport";
+  color: rgba(20, 20, 25, 0.302);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.possibility__btns {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .slider-btns {
@@ -492,6 +513,12 @@ button:focus {
 
 .grey-right {
   right: 0;
+}
+
+.content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (max-width: 1305px) {
@@ -506,4 +533,10 @@ button:focus {
   .possibility__content {
     width: 100%;
   }
+}
+.footer {
+  width: 100%;
+  background-color: #101216;
+  padding: 80px 0;
+  height: auto;
 }

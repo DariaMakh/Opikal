@@ -30,7 +30,7 @@ $lbl: #141419;
     }
     &__phone{
         a{
-            font-size: 14px;
+            font-size: 19px;
             font-family: "Aeroport";
             color: rgb(0, 0, 0);
             font-weight: bold;
@@ -76,9 +76,9 @@ $lbl: #141419;
     display: flex;
     &__link{
         a{
-            font-size: 13px;
+            font-size: 17px;
             font-family: "Aeroport";
-            font-weight: 600;
+            font-weight: 300;
             color: rgb(0, 0, 0);
             line-height: 1.65;
             margin-right: 35px;
@@ -106,7 +106,7 @@ $lbl: #141419;
         margin-bottom: 20px;
     }
     &__title{
-        font-size: 36px;
+        font-size: 49px;
         font-family: "Aeroport";
         color: rgb(255, 255, 255);
         font-weight: bold;
@@ -116,7 +116,7 @@ $lbl: #141419;
     &__box{
         display: flex;
         justify-content: space-between;
-        width: 545px;
+        width: 550px;
         margin-top: 65px;
     }
     &__rools{
@@ -166,19 +166,11 @@ $lbl: #141419;
 .customer, .provisioner{
     p{
         display: block;
-        font-size: 14px;
+        font-size: 19px;
         font-family: "Aeroport", sans-serif;
         color: rgb(255, 255, 255);
         line-height: 1.45;
         margin-bottom: 15px;
-    }
-    a{
-        font-size: 13px;
-        font-family: "Aeroport", sans-serif;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-        line-height: 1.65;
-        display: block;
     }
 }
 
@@ -188,21 +180,19 @@ $lbl: #141419;
         border-width: 2px;
         border-color: rgb(255, 255, 255);
         border-style: solid;
-        width: 273px;
-        height: 38px;
+        width: fit-content;
+        height: fit-content;
         &:hover{
             @extend %hover-red;
         }
         a{
-            font-size: 13px;
+            font-size: 17px;
             font-family: "Aeroport", sans-serif;
             color: rgb(255, 255, 255);
             font-weight: bold;
             line-height: 1.65;
             display: block;
-        }
-        a{
-            padding: 6px 48px;
+            padding: 6px 26px;
         }
     }
 }

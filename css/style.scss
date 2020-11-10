@@ -57,17 +57,17 @@ button{
       &:hover{
           @extend %hover-red;
           a{
-            padding: 7px 41px;
+            padding: 7px 25px;
           }
       }
       a{
-          font-size: 13px;
+          font-size: 17px;
           font-family: "Aeroport", sans-serif;
           color: rgb(255, 255, 255);
           font-weight: bold;
           line-height: 1.65;
           display: block;
-          padding: 8px 42px;
+          padding: 8px 26px;
       }
   }
 }
@@ -85,13 +85,13 @@ button{
           @extend %hover-red;
       }
       a{
-          font-size: 13px;
+          font-size: 17px;
           font-family: "Aeroport", sans-serif;
           color: #000;
           font-weight: bold;
           line-height: 1.65;
           display: block;
-          padding: 7px 42px;
+          padding: 7px 26px;
       }
   }
 }
@@ -101,3 +101,5 @@ button{
 @import 'main';
 
 @import 'media';
+
+@import 'footer';
