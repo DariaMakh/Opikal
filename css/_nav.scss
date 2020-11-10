@@ -31,7 +31,7 @@ $lbl: #141419;
     &__phone{
         a{
             font-size: 19px;
-            font-family: "Aeroport";
+            font-family: $font;
             color: rgb(0, 0, 0);
             font-weight: bold;
             line-height: 1.45;
@@ -60,7 +60,7 @@ $lbl: #141419;
         a{
             display: block;
             font-size: 13px;
-            font-family: "Aeroport";
+            font-family: $font;
             color: rgb(255, 255, 255);
             font-weight: bold;
             line-height: 1.65;
@@ -77,7 +77,7 @@ $lbl: #141419;
     &__link{
         a{
             font-size: 17px;
-            font-family: "Aeroport";
+            font-family: $font;
             font-weight: 300;
             color: rgb(0, 0, 0);
             line-height: 1.65;
@@ -107,7 +107,7 @@ $lbl: #141419;
     }
     &__title{
         font-size: 49px;
-        font-family: "Aeroport";
+        font-family: "FuturaDemiC";
         color: rgb(255, 255, 255);
         font-weight: bold;
         line-height: 1.111;
@@ -129,7 +129,7 @@ $lbl: #141419;
         transform: rotate(-90deg);
         a{
             font-size: 16px;
-            font-family: "Aeroport";
+            font-family: $font;
             color: rgb(0, 0, 0);
             line-height: 1.4;
             display: block;
@@ -167,7 +167,7 @@ $lbl: #141419;
     p{
         display: block;
         font-size: 19px;
-        font-family: "Aeroport", sans-serif;
+        font-family: $font;
         color: rgb(255, 255, 255);
         line-height: 1.45;
         margin-bottom: 15px;
@@ -187,7 +187,7 @@ $lbl: #141419;
         }
         a{
             font-size: 17px;
-            font-family: "Aeroport", sans-serif;
+            font-family: $font;
             color: rgb(255, 255, 255);
             font-weight: bold;
             line-height: 1.65;

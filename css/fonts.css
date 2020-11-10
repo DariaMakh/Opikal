@@ -1,34 +1,35 @@
 @font-face {
-	font-family: "Aeroport";
-	font-weight: bold;
-	font-style: normal;
-	src: url("D:/Новая папка/Opikal/css/fonts/AEROPORT-BOLD.TTF") format("truetype"); 
-}
-
-@font-face {
-	font-family: "Aeroport";
-	font-weight: bold;
-	font-style: italic;
-	src: url("D:/Новая папка/Opikal/css/fonts/AEROPORT-BOLDITALIC.TTF") format("truetype"); 
-}
-
-@font-face {
-	font-family: "Aeroport";
-	font-weight: medium;
-	font-style: normal;
-	src: url("D:/Новая папка/Opikal/css/fonts/AEROPORT-MEDIUM.TTF") format("truetype"); 
-}
-
-@font-face {
-	font-family: "Aeroport";
+	font-family: "FuturaBookC";
 	font-weight: 400;
 	font-style: normal;
-	src: url("D:/Новая папка/Opikal/css/fonts/AEROPORT.TTF") format("truetype"); 
+	src: url("D:/Новая папка/Opical/css/fonts/FuturaBookC.ttf") format("truetype"); 
 }
 
 @font-face {
-	font-family: "Aeroport";
-	font-weight: 300;
+	font-family: "FuturaBookC";
+	font-weight: 400;
+	font-style: italic;
+	src: url("D:/Новая папка/Opical/css/fonts/FuturaBookCItalic.ttf") format("truetype"); 
+}
+
+@font-face {
+	font-family: "FuturaBookC";
+	font-weight: 500;
 	font-style: normal;
-	src: url("D:/Новая папка/Opikal/css/fonts/AEROPORT.TTF") format("truetype"); 
+	src: url("D:/Новая папка/Opical/css/fonts/FuturaMediumC.ttf") format("truetype"); 
+}
+
+@font-face {
+	font-family: "FuturaBookC";
+	font-weight: 500;
+	font-style: italic;
+	src: url("D:/Новая папка/Opical/css/fonts/FuturaMediumC-Italic.ttf") format("truetype"); 
+}
+
+
+@font-face {
+	font-family: "FuturaBookDemiC";
+	font-weight: 400;
+	font-style: normal;
+	src: url("D:/Новая папка/Opical/css/fonts/FuturaDemiC.ttf") format("truetype"); 
 }

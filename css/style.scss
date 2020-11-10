@@ -3,6 +3,8 @@ $lgr: #f3f3f3;
 $grey: #f4f4f4;
 $lbl: #141419;
 
+$font: "FuturaBookC";
+
 *,
 *::before,
 *::after {
@@ -14,10 +16,16 @@ $lbl: #141419;
 
 body {
   overflow-x: hidden;
+  font-family: $font;
 }
 
 a {
+  font-family: $font;
   text-decoration: none;
+}
+
+p{
+  font-family: $font;
 }
 
 ul, li {
@@ -62,12 +70,12 @@ button{
       }
       a{
           font-size: 17px;
-          font-family: "Aeroport", sans-serif;
           color: rgb(255, 255, 255);
           font-weight: bold;
           line-height: 1.65;
           display: block;
           padding: 8px 26px;
+          letter-spacing: 0.4px;
       }
   }
 }
@@ -86,12 +94,12 @@ button{
       }
       a{
           font-size: 17px;
-          font-family: "Aeroport", sans-serif;
           color: #000;
           font-weight: bold;
           line-height: 1.65;
           display: block;
           padding: 7px 26px;
+          letter-spacing: 0.4px;
       }
   }
 }
