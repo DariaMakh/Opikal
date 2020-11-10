@@ -145,6 +145,9 @@
     .plus-2{
         right: 30px;
     }
+    .footer__row:first-child{
+        padding-bottom: 45px;
+    }
 }
 
 @media (max-width: 685px){
@@ -156,6 +159,31 @@
 }
 
 @media (max-width: 640px){
+    .equipment{
+        padding: 45px 10px 50px 10px;
+        &__title{
+            font-size: 30px;
+        }
+        &__content{
+            padding-top: 30px;
+        }
+    }
+    .possibility{
+        padding-top: 40px;
+        &__content{
+            padding: 0;
+        }
+        &__form{
+            width: 100%;
+            margin-top: 30px;
+        }
+        &__text-light{
+            margin-top: 20px;
+            &_2{
+                margin-bottom: 30px;
+            }
+        }
+    }
     .footer{
         padding: 40px 0;
         &__logo{
@@ -178,7 +206,42 @@
     }
 }
 
+@media (max-width: 620px){
+    .equipment{
+        &__box{
+            width: 100%;
+            &:hover{
+                .equipment__box_content{
+                    width: 100%;
+                    margin-left: 0;
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 380px){
+    .equipment{
+        &__box{
+            height: 130px;
+            &:hover{
+                .equipment__box_content{
+                    padding-left: 20px;
+                    padding-top: 20px;
+                    height: 115px;
+                }
+            }
+        }
+    }
+    .plus-1{
+        right: 30px;
+        top: 20px;
+    }
+    .plus-2{
+        right: 20px;
+        top: 30px;
+    }
     .footer{
         &__right{
             margin-top: 20px;
@@ -188,4 +251,5 @@
             margin-top: 15px;
         }
     }
+
 }
