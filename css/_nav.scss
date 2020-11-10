@@ -19,7 +19,7 @@ $lbl: #141419;
     background-color: #fff;
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 35px 0 25px;
+    padding: 10px 35px 15px 25px;
     &__logo{
         width: 228px;
         height: auto;
@@ -49,6 +49,15 @@ $lbl: #141419;
             height: 22px;
             //color: #080808;
         }
+        &_mess, &_notification, &_like, &_account{
+            a{
+                width: 100%;
+                height: 100%;
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
+        }
     }
     &__btn{
         border-width: 1px;
@@ -69,6 +78,11 @@ $lbl: #141419;
         &:hover{
             @extend %hover-red;
         }
+    }
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        width: 390px;
     }
 }
 

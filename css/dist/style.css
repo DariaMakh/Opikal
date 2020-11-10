@@ -102,7 +102,7 @@ button:focus {
   background-color: #fff;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 35px 0 25px;
+  padding: 10px 35px 15px 25px;
 }
 .nav__logo {
   width: 228px;
@@ -131,6 +131,13 @@ button:focus {
   width: 29px;
   height: 22px;
 }
+.nav__icons_mess a, .nav__icons_notification a, .nav__icons_like a, .nav__icons_account a {
+  width: 100%;
+  height: 100%;
+}
+.nav__icons_mess a:hover, .nav__icons_notification a:hover, .nav__icons_like a:hover, .nav__icons_account a:hover {
+  opacity: 0.6;
+}
 .nav__btn {
   border-width: 1px;
   border-color: black;
@@ -148,6 +155,12 @@ button:focus {
   line-height: 1.65;
   padding: 8px 38px;
 }
+.nav__row {
+  display: flex;
+  justify-content: space-between;
+  width: 390px;
+}
+
 .menu {
   display: flex;
 }
@@ -318,11 +331,11 @@ button:focus {
   height: 117px;
 }
 .equipment__box_content-last p {
-  font-size: 15px;
+  font-size: 20px;
   font-family: "FuturaBookC";
   color: #111111;
   line-height: 1.4;
-  font-weight: 600;
+  font-weight: 500;
 }
 .equipment__box:hover .equipment__box_content {
   background-color: #ff0000;
@@ -343,12 +356,12 @@ button:focus {
   display: block;
 }
 .equipment__btn {
-  font-size: 15px;
+  font-size: 20px;
   font-family: "FuturaBookC";
   color: #ff0000;
   line-height: 1.4;
   text-decoration: underline;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .plus-1, .plus-2 {
@@ -500,7 +513,7 @@ button:focus {
   line-height: 1.2;
 }
 .possibility__form input::placeholder {
-  font-size: 13px;
+  font-size: 18px;
   font-family: "FuturaBookC";
   color: rgba(20, 20, 25, 0.302);
   font-weight: bold;
@@ -508,7 +521,7 @@ button:focus {
   line-height: 1.2;
 }
 .possibility__btns {
-  width: 450px;
+  width: 410px;
   display: flex;
   justify-content: space-between;
 }
@@ -527,19 +540,6 @@ button:focus {
   justify-content: space-between;
 }
 
-@media (max-width: 1305px) {
-  .nav__icons {
-    width: 135px;
-  }
-}
-@media (max-width: 1105px) {
-  .possibility__row {
-    display: block;
-  }
-  .possibility__content {
-    width: 100%;
-  }
-}
 .footer {
   width: 100%;
   background-color: #101216;
@@ -550,6 +550,11 @@ button:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.footer__row:first-child {
+  border-bottom: 1px solid #1b1d21;
+  width: 100%;
+  padding-bottom: 65px;
 }
 .footer__left {
   display: flex;

@@ -60,11 +60,11 @@ $lbl: #141419;
                 width: 80%;
                 height: 117px;
                 p{
-                    font-size: 15px;
+                    font-size: 20px;
                     font-family: $font;
                     color: rgb(17, 17, 17);
                     line-height: 1.4;
-                    font-weight: 600;
+                    font-weight: 500;
                 }
             }
         }
@@ -98,12 +98,12 @@ $lbl: #141419;
         }
     }
     &__btn{
-        font-size: 15px;
+        font-size: 20px;
         font-family: $font;
         color: $red;
         line-height: 1.4;
         text-decoration: underline;
-        font-weight: 600;
+        font-weight: 500;
     }
 }
 
@@ -258,7 +258,7 @@ $lbl: #141419;
             color: rgb(20, 20, 25);
             line-height: 1.2;
             &::placeholder{
-                font-size: 13px;
+                font-size: 18px;
                 font-family: $font;
                 color: rgba(20, 20, 25, 0.302);
                 font-weight: bold;
@@ -268,7 +268,7 @@ $lbl: #141419;
         }
     }
     &__btns{
-        width: 450px;
+        width: 410px;
         display: flex;
         justify-content: space-between;
     }
