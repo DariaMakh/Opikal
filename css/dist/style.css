@@ -95,6 +95,11 @@ button:focus {
   color: #ff0000;
 }
 
+.header__img img, .nav__icons_mess img, .nav__icons_notification img, .nav__icons_like img, .nav__icons_account img {
+  width: 100%;
+  height: auto;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -107,6 +112,10 @@ button:focus {
 .nav__logo {
   width: 228px;
   height: auto;
+}
+.nav__logo a {
+  width: 100%;
+  height: 100%;
 }
 .nav__logo img {
   width: 100%;
@@ -129,7 +138,19 @@ button:focus {
 }
 .nav__icons_mess {
   width: 29px;
-  height: 22px;
+  height: auto;
+}
+.nav__icons_notification {
+  width: 19px;
+  height: auto;
+}
+.nav__icons_like {
+  width: 24px;
+  height: auto;
+}
+.nav__icons_account {
+  width: 20px;
+  height: auto;
 }
 .nav__icons_mess a, .nav__icons_notification a, .nav__icons_like a, .nav__icons_account a {
   width: 100%;
@@ -190,6 +211,8 @@ button:focus {
 }
 .header__img {
   margin-bottom: 20px;
+  width: 324px;
+  height: auto;
 }
 .header__title {
   font-size: 49px;

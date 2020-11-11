@@ -11,6 +11,12 @@ $lbl: #141419;
         color: $red;
     }
 }
+%img-width{
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
 
 .nav{
     display: flex;
@@ -23,6 +29,10 @@ $lbl: #141419;
     &__logo{
         width: 228px;
         height: auto;
+        a{
+            width: 100%;
+            height: 100%;
+        }
         img{
             width: 100%;
             height: auto;
@@ -46,10 +56,22 @@ $lbl: #141419;
         width: 176px;
         &_mess{
             width: 29px;
-            height: 22px;
-            //color: #080808;
+            height: auto;
+        }
+        &_notification{
+            width: 19px;
+            height: auto;
+        }
+        &_like{
+            width: 24px;
+            height: auto;
+        }
+        &_account{
+            width: 20px;
+            height: auto;
         }
         &_mess, &_notification, &_like, &_account{
+            @extend %img-width;
             a{
                 width: 100%;
                 height: 100%;
@@ -118,6 +140,9 @@ $lbl: #141419;
     }
     &__img{
         margin-bottom: 20px;
+        width: 324px;
+        height: auto;
+        @extend %img-width;
     }
     &__title{
         font-size: 49px;
