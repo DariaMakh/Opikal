@@ -26,6 +26,9 @@ $lbl: #141419;
     max-width: 1600px;
     margin: 0 auto;
     padding: 10px 35px 15px 25px;
+    &__burger{
+        display: none;
+    }
     &__logo{
         width: 228px;
         height: auto;
@@ -235,4 +238,5 @@ $lbl: #141419;
         }
     }
 }
-  
+
+@import 'burger';

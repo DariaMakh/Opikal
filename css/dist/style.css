@@ -109,6 +109,9 @@ button:focus {
   margin: 0 auto;
   padding: 10px 35px 15px 25px;
 }
+.nav__burger {
+  display: none;
+}
 .nav__logo {
   width: 228px;
   height: auto;
@@ -293,6 +296,40 @@ button:focus {
   padding: 6px 26px;
 }
 
+.nav__burger {
+  position: relative;
+  width: 36px;
+  height: 27px;
+  cursor: pointer;
+  z-index: 1;
+}
+.nav__burger:hover .menu-line {
+  background-color: #ff0000;
+}
+
+.menu-line {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  background: #141419;
+}
+.menu-line_2 {
+  top: 12px;
+}
+.menu-line_3 {
+  top: 24px;
+  width: 16px;
+}
+.menu-line.active .menu-line_1 {
+  transform: rotate(45deg);
+}
+.menu-line.active .menu-line_1 {
+  transform: rotate(-45deg);
+}
+
 .possibility .provisioner__btn:hover, .red__btn:hover, .black__btn:hover, .nav__btn:hover, .header__rools:hover, .provisioner__btn:hover {
   background-color: transparent;
   border: 2px solid #ff0000;
@@ -442,13 +479,17 @@ button:focus {
   font-weight: bold;
   line-height: 1.001;
 }
-.possibility__slider_1, .possibility__slider_2 {
+.possibility__slider {
   margin-top: 30px;
   margin-bottom: 30px;
   width: 500px;
   height: 250px;
 }
-.possibility__slider_1-item, .possibility__slider_2-item {
+.possibility__slider-item {
+  width: 100%;
+  height: 100%;
+}
+.possibility__slider_1, .possibility__slider_2 {
   width: 100%;
   height: 100%;
 }
@@ -484,6 +525,9 @@ button:focus {
   position: absolute;
   top: 10px;
   left: 0;
+}
+.possibility__list-item:last-child {
+  margin-bottom: 0;
 }
 .possibility .provisioner__btn {
   border-color: #000;
