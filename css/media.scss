@@ -165,7 +165,7 @@
             display: block;
             top: 95px;
             .menu__link{
-                padding: 10px 20px;
+                    padding: 16px 40px;
                 a{
                     font-size: 22px;
                 }
@@ -320,6 +320,11 @@
 }
 
 @media (max-width: 530px){
+    .nav{
+        &__row{
+            display: none;
+        }
+    }
     .header{
         &__content{
             padding: 40px 0;

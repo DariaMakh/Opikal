@@ -201,7 +201,7 @@ button:focus {
 }
 
 .header__bg {
-  background-image: url(../../images/header-bg.png);
+  background-image: url(../../images/header-bg.jpg);
   width: 100%;
   max-height: 859px;
   background-repeat: no-repeat;
@@ -309,7 +309,7 @@ button:focus {
   padding-top: 95px;
   padding-bottom: 110px;
   background-color: #fcfcfc;
-  background-image: url(../../images/equipment-bg.png);
+  background-image: url(../../images/eq-bg.jpg);
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;

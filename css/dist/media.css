@@ -149,7 +149,7 @@
     top: 95px;
   }
   .menu.active .menu__link {
-    padding: 10px 20px;
+    padding: 16px 40px;
   }
   .menu.active .menu__link a {
     font-size: 22px;
@@ -290,6 +290,10 @@
   }
 }
 @media (max-width: 530px) {
+  .nav__row {
+    display: none;
+  }
+
   .header__content {
     padding: 40px 0;
   }

@@ -3,6 +3,8 @@ $lgr: #f3f3f3;
 $grey: #f4f4f4;
 $lbl: #141419;
 
+$font: "FuturaBookC";
+
 %hover-red{
     transition-duration: 5ms;
     background-color: transparent;
@@ -130,7 +132,7 @@ $lbl: #141419;
 
 .header{
     &__bg{
-        background-image: url(../../images/header-bg.png);
+        background-image: url(../../images/header-bg.jpg);
         width: 100%;
         max-height: 859px;
         background-repeat: no-repeat;
