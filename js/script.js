@@ -15,11 +15,11 @@ $('.possibility__slider_2').slick({
     prevArrow: $('.possibility__prev_2'),
 });
 
-$(document).ready(function(){
+$('.nav__burger').click(function(event){
+    $('.nav__burger, .menu').toggleClass('active');
+});
 
-  $('.nav__burger').click(function(event){
-      $('.nav__burger, .menu').toggleClass('active');
-      
-  })
-})
 
+$('.nav__icons_account').click(function(event){
+    $('.account-modal, .account-modal__overlay').toggleClass('open');
+});

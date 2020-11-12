@@ -19,9 +19,7 @@
         background: rgba(0,0,0, 0.6);
         transition: opacity 0.3s;
         transition-duration: 0.5s;
-    }
-    &.open{
-        .account-modal__overlay{
+        &.open{
             display: block;
             opacity: 1;
             pointer-events: auto;
