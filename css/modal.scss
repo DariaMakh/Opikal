@@ -1,28 +1,126 @@
-.account-modal{
+$font: "FuturaBookC";
+
+.modal{
     position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
-    &__overlay{
+    overflow: auto;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    z-index: 99;
+    &-content{
         display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 4;
-        background: rgba(0,0,0, 0.6);
-        transition: opacity 0.3s;
-        transition-duration: 0.5s;
-        &.open{
-            display: block;
-            opacity: 1;
-            pointer-events: auto;
+        &__row{
+            display: flex;
+            justify-content: space-between;
+            width: 87%;
+            margin: 40px auto 35px auto;
+        }
+        &__box{
+            width: 49%;
+            input{
+                width: 100%;
+                display: block;
+                border: 0;
+                padding-bottom: 20px;
+                border-bottom: 2px solid #141419;
+                margin-bottom: 22px;
+                font-size: 18px;
+                font-family: $font;
+                color: rgb(20, 20, 25);
+                line-height: 1.2;
+                &::placeholder{
+                    font-size: 18px;
+                    font-family: $font;
+                    color: rgba(20, 20, 25, 0.302);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    line-height: 1.2;
+                }
+            }
+            textarea{
+                width: 100%;
+                height: 100px;
+                border: 0;
+                background-color: #f2f2f2;
+                &::placeholder{
+                    font-size: 18px;
+                    font-family: $font;
+                    color: rgba(20, 20, 25, 0.302);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    line-height: 1.2;
+                }
+            }
         }
     }
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__container{
+        margin: 5vh auto 0 auto;
+        width: 820px;
+        height: 800px;
+        background: #fff;
+        box-sizing: border-box;
+        padding: 20px;
+        position: relative;
+    }
+    &__close{
+        position: relative;
+        &_1, &_2{
+            position: absolute;
+            top: 4px;
+            right: 0;
+            width: 22px;
+            height: 3px;
+            background: #141419;
+        }
+        &_1{
+            transform: rotate(45deg);
+        }
+        &_2{
+            transform: rotate(-45deg);
+        }
+        p{
+            display: block;
+            margin-right: 30px;
+            font-family: "FuturaBookC";
+            font-size: 10px;
+            color: rgb(20, 20, 25);
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+    }
+    &__subtitle{
+        font-size: 15px;
+        color: rgb(0, 0, 0);
+        font-family: "FuturaBookC";
+        line-height: 1.2;
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        span{
+            text-transform: uppercase;
+        }
+    }
+    &__title{
+        font-size: 35px;
+        font-family: "FuturaBookC";
+        color: rgb(20, 20, 25);
+        font-weight: bold;
+        line-height: 1.001;
+        width: 100%;
+        text-align: center;
+    }
 }
+
+  
+
+
+  

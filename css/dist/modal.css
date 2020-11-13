@@ -1,25 +1,119 @@
-.account-modal {
+.modal {
   position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  z-index: 99;
+}
+.modal-content {
+  display: none;
+}
+.modal-content__row {
+  display: flex;
+  justify-content: space-between;
+  width: 87%;
+  margin: 40px auto 35px auto;
+}
+.modal-content__box {
+  width: 49%;
+}
+.modal-content__box input {
+  width: 100%;
+  display: block;
+  border: 0;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #141419;
+  margin-bottom: 22px;
+  font-size: 18px;
+  font-family: "FuturaBookC";
+  color: #141419;
+  line-height: 1.2;
+}
+.modal-content__box input::placeholder {
+  font-size: 18px;
+  font-family: "FuturaBookC";
+  color: rgba(20, 20, 25, 0.302);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.modal-content__box textarea {
+  width: 100%;
+  height: 100px;
+  border: 0;
+  background-color: #f2f2f2;
+}
+.modal-content__box textarea::placeholder {
+  font-size: 18px;
+  font-family: "FuturaBookC";
+  color: rgba(20, 20, 25, 0.302);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.modal__row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  justify-content: flex-end;
 }
-.account-modal__overlay {
+.modal__container {
+  margin: 5vh auto 0 auto;
+  width: 820px;
+  height: 800px;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+}
+.modal__close {
+  position: relative;
+}
+.modal__close_1, .modal__close_2 {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-  background: rgba(0, 0, 0, 0.6);
-  transition-duration: 0.5s;
+  top: 4px;
+  right: 0;
+  width: 22px;
+  height: 3px;
+  background: #141419;
 }
-.account-modal__overlay.open {
-  opacity: 1;
-  pointer-events: auto;
+.modal__close_1 {
+  transform: rotate(45deg);
+}
+.modal__close_2 {
+  transform: rotate(-45deg);
+}
+.modal__close p {
+  display: block;
+  margin-right: 30px;
+  font-family: "FuturaBookC";
+  font-size: 10px;
+  color: #141419;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.modal__subtitle {
+  font-size: 15px;
+  color: black;
+  font-family: "FuturaBookC";
+  line-height: 1.2;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+.modal__subtitle span {
+  text-transform: uppercase;
+}
+.modal__title {
+  font-size: 35px;
+  font-family: "FuturaBookC";
+  color: #141419;
+  font-weight: bold;
+  line-height: 1.001;
+  width: 100%;
+  text-align: center;
 }

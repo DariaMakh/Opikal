@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/slick/slick.css">
     <link rel="stylesheet" href="css/dist/style.css">
     <link rel="stylesheet" href="css/dist/burger.css">
+    <link rel="stylesheet" href="css/dist/modal.css">
     <link rel="stylesheet" href="css/dist/media.css">
 
 </head>
@@ -48,10 +49,8 @@
                         </a>
                     </div>
     
-                    <div class="nav__icons_like">
-                        <a href="#">
-                            <img src="images/nav-icon-3.png" alt="">
-                        </a>
+                    <div class="nav__icons_like showModal" data-id="2">
+                        <img src="images/nav-icon-3.png" alt="">
                     </div>
     
                     <div class="nav__icons_account">
@@ -63,6 +62,52 @@
                 <a href="#" target="_blank">Разместить заявку</a>
             </div>
         </nav>
+
+        <div class="modal-content modal-content_customer-account" id="cont1">
+            <div class="modal-content__container">
+                <div class="modal__subtitle">
+                    Добро пожаловать на <span>opical.com</span>!
+                </div>
+                <div class="modal__title">
+                    Регистрация поставщика
+                </div>
+                <div class="modal-content__row">
+                    <div class="modal-content__box">
+                        <input type="text" name="name" id="name" placeholder="Имя" required>
+                        <input type="text" name="name2" id="name2" placeholder="Фамилия">
+                        <input type="text" name="name3" id="name3" placeholder="Отчество">
+                        <input type="email" name="tel" id="email" placeholder="Почта" required>
+                        <input type="password" name="password" id="password" placeholder="Пароль" required>
+                    </div>
+
+                    <div class="modal-content__box">
+                        <input type="tel" name="tel" id="tel" placeholder="телефон" required>
+                        <input type="tel" name="tel" id="tel" placeholder="ИНН" required>
+                        <textarea name="org_name" id="org_name" placeholder="Название организации, ИП" required></textarea>
+                        <textarea name="addr" id="addr" cols="1" rows="2" placeholder="Адрес" required></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-content modal-content_pr-account" id="cont2">
+            <h1>Содержимое модального окна 2</h1>
+        </div>
+
+        <div class="modal" id="modal">
+            <div class="modal__container">
+                <div class="modal__row">
+                    <div class="modal__close">
+                        <p>Закрыть</p>
+                        <span class="modal__close_1"></span>
+                        <span class="modal__close_2"></span>
+                    </div>
+                </div>
+                
+
+                <div id="innerModal"></div>
+            </div>
+        </div>
 
         <div class="header__bg">
             <div class="container">
@@ -88,7 +133,7 @@
                             <p>
                                 Поставщику
                             </p>
-                            <div class="provisioner__btn">
+                            <div class="provisioner__btn showModal" data-id="1">
                                 <a href="#">Подписаться на рассылку</a>
                             </div>
                         </div>
@@ -102,12 +147,6 @@
             </div>
         </div>
     </header>
-    
-    <div class="account-modal">
-        <div class="account-modal__overlay">
-
-        </div>
-    </div>
 
     <main>
 
