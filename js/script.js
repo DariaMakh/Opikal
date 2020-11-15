@@ -19,11 +19,6 @@ $('.nav__burger').click(function(event){
     $('.nav__burger, .menu').toggleClass('active');
 });
 
-
-$('.nav__icons_account').click(function(event){
-    $('.account-modal, .account-modal__overlay').toggleClass('open');
-});
-
 $(function(){
     var modal = {
         self: $('.modal'),
@@ -56,4 +51,17 @@ $(function(){
             return false;
         }
     });
-})
+});
+
+/*
+
+$('.input').on('input', function() {
+        var $field = $(this).closest('.placeholder');
+        if (this.value) {
+          $field.addClass('placeholder--not-empty');
+        } else {
+          $field.removeClass('placeholder--not-empty');
+        }
+    });
+
+*/

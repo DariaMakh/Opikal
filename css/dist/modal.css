@@ -21,44 +21,45 @@
 .modal-content__box {
   width: 49%;
 }
-.modal-content__box input {
+.modal-content__inputs {
+  position: relative;
+}
+.modal-content__inputs .input:focus + .placeholder,
+.modal-content__inputs .input:valid + .placeholder {
+  font-size: 14px;
+  top: 14px;
+}
+.modal-content__inputs .textarea:focus + .textarea-placeholder,
+.modal-content__inputs .textarea:valid + .textarea-placeholder {
+  font-size: 14px;
+  top: 3px;
+}
+.modal-content__btn {
+  margin: 0 auto;
+  width: 240px;
+}
+.modal-content__btn-style {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background: #ff0000;
   width: 100%;
+  height: 42px;
+  font-size: 17px;
+  color: white;
+  font-weight: bold;
+  font-family: "FuturaBookC";
+  line-height: 1.65;
   display: block;
-  border: 0;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #141419;
-  margin-bottom: 22px;
-  font-size: 18px;
-  font-family: "FuturaBookC";
-  color: #141419;
-  line-height: 1.2;
-}
-.modal-content__box input::placeholder {
-  font-size: 18px;
-  font-family: "FuturaBookC";
-  color: rgba(20, 20, 25, 0.302);
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1.2;
-}
-.modal-content__box textarea {
-  width: 100%;
-  height: 100px;
-  border: 0;
-  background-color: #f2f2f2;
-}
-.modal-content__box textarea::placeholder {
-  font-size: 18px;
-  font-family: "FuturaBookC";
-  color: rgba(20, 20, 25, 0.302);
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1.2;
+  padding: 8px 26px;
+  letter-spacing: 0.4px;
+  cursor: pointer;
 }
 .modal__row {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-bottom: 40px;
 }
 .modal__container {
   margin: 5vh auto 0 auto;
@@ -119,4 +120,100 @@
   line-height: 1.001;
   width: 100%;
   text-align: center;
+}
+
+.input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #141419;
+  width: 100%;
+  height: 34px;
+  margin-top: 30px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "FuturaBookC";
+  color: #141419;
+  appearance: none;
+  border-radius: 0;
+  box-shadow: none;
+  line-height: normal;
+  letter-spacing: normal;
+  outline: 0;
+}
+
+.textarea {
+  margin-top: 0;
+  padding-top: 22px;
+  padding-left: 18px;
+  height: 100px;
+  background: #f2f2f2;
+  height: 94px;
+  border: 0;
+}
+.textarea-placeholder {
+  position: absolute;
+  left: 18px;
+  top: 66px;
+  font-size: 18px;
+  font-family: "FuturaBookC";
+  color: rgba(20, 20, 25, 0.302);
+  font-weight: bold;
+  transition: all 0.15s ease-out;
+  pointer-events: none;
+}
+.textarea-placeholder span {
+  color: #ff0000;
+}
+
+.placeholder {
+  position: absolute;
+  top: 27px;
+  left: 0;
+  font-size: 18px;
+  font-family: "FuturaBookC";
+  color: rgba(20, 20, 25, 0.302);
+  font-weight: bold;
+  transition: all 0.15s ease-out;
+  pointer-events: none;
+  background: none;
+}
+.placeholder span {
+  color: #ff0000;
+}
+
+@media all and (min-width: 641px) and (max-width: 855px) {
+  .modal__container {
+    width: 95%;
+    height: auto;
+  }
+}
+@media all and (min-width: 0) and (max-width: 640px) {
+  .modal__container {
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+  .modal__row {
+    margin-bottom: 20px;
+  }
+  .modal__subtitle {
+    margin: 0 0 5px 0;
+  }
+  .modal-content__row {
+    flex-direction: column;
+    width: 98%;
+    margin: 30px auto 30px auto;
+  }
+  .modal-content__box {
+    width: 100%;
+  }
+  .modal-content__inputs {
+    margin-bottom: 10px;
+  }
+}
+@media all and (min-width: 0) and (max-width: 399px) {
+  .modal__title {
+    font-size: 27px;
+  }
 }
