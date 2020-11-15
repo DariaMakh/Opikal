@@ -72,11 +72,14 @@ $font: "FuturaBookC";
     }
     &__close{
         position: relative;
+        height: 16px;
+        width: 68px;
+        cursor: pointer;
         &_1, &_2{
             position: absolute;
-            top: 4px;
+            top: 3px;
             right: 0;
-            width: 22px;
+            width: 20px;
             height: 3px;
             background: #141419;
         }
@@ -88,7 +91,7 @@ $font: "FuturaBookC";
         }
         p{
             display: block;
-            margin-right: 30px;
+            padding-right: 20px;
             font-family: "FuturaBookC";
             font-size: 10px;
             color: rgb(20, 20, 25);

@@ -44,6 +44,10 @@ $(function(){
         modal.showModal(content);
     });
 
+    $(".modal__close").click(function(){
+        $(".modal").fadeOut(200);
+    });
+
     $('.modal').on('click', function(e){
         if ($(e.target).attr('id') === 'modal' || $(e.target).hasClass('modal__close')){
             modal.hideModal();
