@@ -78,7 +78,7 @@ if ($('.modal-content__inputs .input').length > 0) {
 	});
 }
 
-function upload(){
+function uploadImg(){
     var inputImg = document.querySelectorAll('.input-upload_img');
     Array.prototype.forEach.call(inputImg, function ( input ){
         var label = input.nextElementSibling,
@@ -97,4 +97,24 @@ function upload(){
     });
 };
 
-document.addEventListener("DOMContentLoaded", upload)
+function uploadFile(){
+    var inputImg = document.querySelectorAll('.input-upload_doc');
+    Array.prototype.forEach.call(inputImg, function ( input ){
+        var label = document.querySelectorAll('.upload-doc__file');
+        labelVal = label.innerHTML;
+
+        input.addEventListener( 'change', function (e){
+            var docName = '';
+            docName = this.files[0].name;
+            if ( docName ){
+                label.querySelector('p').innerHTML = docName;
+            }
+            else{
+                label.innerHTML = labelVal;
+            }
+        });
+    });
+};
+
+document.addEventListener("DOMContentLoaded", uploadImg);
+document.addEventListener("DOMContentLoaded", uploadFile);

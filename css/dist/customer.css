@@ -137,7 +137,7 @@
   width: 100%;
 }
 .profile__upload {
-  margin-top: 60px;
+  margin-top: 55px;
   margin-bottom: 50px;
 }
 .profile__upload-label {
@@ -149,6 +149,15 @@
 .input-upload_img {
   width: 165px;
   height: 35px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+
+.input-upload_doc {
+  width: 318px;
+  height: 34px;
   opacity: 0;
   overflow: hidden;
   position: absolute;
@@ -168,7 +177,7 @@
   left: 24px;
 }
 
-.input-upload_img + label > span {
+.input-upload + label > span {
   display: inline-block;
   height: 35px;
   padding: 8px 30px 8px 30px;
@@ -177,10 +186,35 @@
   font-family: "FuturaBookC";
   color: white;
 }
-.input-upload_img + label > span p {
+.input-upload + label > span p {
   font-size: 16px;
   font-family: "FuturaBookC";
   color: white;
   cursor: pointer;
   padding-left: 23px;
+}
+
+.upload-doc__file {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  font-family: "FuturaBookC";
+  color: #141419;
+  font-style: italic;
+  font-weight: 300;
+  margin-top: 28px;
+}
+.upload-doc__file img {
+  width: 28px;
+  height: 32px;
+  object-fit: cover;
+  object-position: center;
+}
+.upload-doc__file-name {
+  margin-left: 13px;
+  font-size: 19px;
+  font-family: "FuturaBookC";
+  font-weight: 300;
+  color: #141419;
+  font-style: italic;
 }
