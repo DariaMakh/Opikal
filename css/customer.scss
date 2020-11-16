@@ -136,6 +136,7 @@ $red: #ff0000;
         font-weight: normal;
         font-family: $font;
         color: rgb(20, 20, 25);
+        width: 100%;
     }
     &__upload{
         margin-top: 60px;
@@ -147,3 +148,43 @@ $red: #ff0000;
         }
     }
 }
+
+.input-upload_img{
+    width: 165px;
+    height: 35px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+.upload-label span{
+    position: relative;
+    img{
+        width: 17px;
+        height: 15px;
+        object-position: center;
+        object-fit: cover;
+        position: absolute;
+        top: 10px;
+        left: 24px;
+    }
+}
+
+.input-upload + label>span{
+    display: inline-block;
+    height: 35px;
+    padding: 8px 30px 8px 30px;
+    background-color: #000;
+    font-size: 16px;
+    font-family: $font;
+    color: rgb(255, 255, 255);
+    p{
+        font-size: 16px;
+        font-family: $font;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        padding-left: 23px;
+    }
+}
+  

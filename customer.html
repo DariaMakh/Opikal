@@ -98,14 +98,22 @@
                     </nav>
                 </div>
                 <div class="account__profile">
-                    <form action="" method="get" class="profile">
+                    <form action="" enctype="multipart/form-data" method="post" class="profile">
                         <div class="profile__row">
                             <div class="profile__photo">
                                 <img src="images/profile.jpg" alt="Картинка профиля">
                             </div>
                             <div>
                                 <div class="profile__label">Логотип профиля</div>
-                                <input type="file" name="" id="" placeholder="Загрузить" class="profile__input-upload">
+                                <div>
+                                    <input type="file" name="" id="" accept="image/jpeg,image/png" class="input-upload input-upload_img">
+                                    <label for="file" class="upload-label">
+                                        <span>
+                                            <img src="images/upload.png" alt="">
+                                            <p>Загрузить</p>
+                                        </span>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                         <div class="profile__item">
@@ -152,8 +160,8 @@
                         </div>
                     </form>
 
-                    <div class="red__btn" data-id="2">
-                        <a href="#">Сохранить</a>
+                    <div class="btn-submit">
+                        <input type="submit" value="Сохранить">
                     </div>
                 </div>
             </div>

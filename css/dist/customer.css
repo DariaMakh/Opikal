@@ -134,6 +134,7 @@
   font-weight: normal;
   font-family: "FuturaBookC";
   color: #141419;
+  width: 100%;
 }
 .profile__upload {
   margin-top: 60px;
@@ -143,4 +144,43 @@
   font-size: 25px;
   color: #141419;
   font-weight: 500;
+}
+
+.input-upload_img {
+  width: 165px;
+  height: 35px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+
+.upload-label span {
+  position: relative;
+}
+.upload-label span img {
+  width: 17px;
+  height: 15px;
+  object-position: center;
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  left: 24px;
+}
+
+.input-upload_img + label > span {
+  display: inline-block;
+  height: 35px;
+  padding: 8px 30px 8px 30px;
+  background-color: #000;
+  font-size: 16px;
+  font-family: "FuturaBookC";
+  color: white;
+}
+.input-upload_img + label > span p {
+  font-size: 16px;
+  font-family: "FuturaBookC";
+  color: white;
+  cursor: pointer;
+  padding-left: 23px;
 }
