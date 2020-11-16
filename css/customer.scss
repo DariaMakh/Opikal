@@ -1,0 +1,149 @@
+$font: "FuturaBookC";
+$red: #ff0000;
+
+.account{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    background-color: #fff;
+    background-image: url(../../images/eq-bg.jpg);
+    background-size: cover;
+    background-position: right;
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__selection{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 400px;
+    }
+    &__content{
+        margin-top: 65px;
+        display: flex;
+        margin-bottom: 60px;
+    }
+    &__title{
+        font-size: 66px;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        margin-top: 40px;
+    }
+    &__aside{
+        width: 300px;
+    }
+    &__profile{
+        margin-left: 70px;
+        width: 100%;
+    }
+    &-menu{
+        width: 100%;
+        background-color: #fff;
+        &__title{
+            padding-top: 50px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            background-color: #000;
+            color: #fff;
+            font-size: 20px;  
+            width: 100%;            
+        }
+        &__link{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 50px;
+            padding-bottom: 30px;
+            background-color: #fff;
+            border-bottom: 1px solid #111111;
+            &__num, a{
+                color: rgb(17, 17, 17);
+                font-size: 20px; 
+                font-weight: 500;
+                display: block;
+            }
+            a{
+                position: relative;
+                width: 100%;
+                display: flex;
+                &:hover{
+                    color: rgba(17, 17, 17, 0.7);
+                }
+            }
+            &:first-child{
+                border: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+        &__num{
+            position: absolute;
+            top: -2px;
+            right: 0;
+        }
+    }
+}
+
+.profile{
+    border: 1px solid #000000;
+    padding: 33px 57px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 55px;
+    &__row{
+        display: flex;
+        align-items: center;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #efefef;
+    }
+    &__photo{
+        margin-right: 45px;
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+    &__label{
+        font-size: 17px;
+        font-family: $font;
+        color: rgba(20, 20, 25, 0.302);
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+    &__item{
+        width: 100%;
+        border-bottom: 1px solid #efefef;
+        padding-top: 39px;
+        padding-bottom: 10px;
+    }
+    &__input{
+        background: none;
+        border: none;
+        appearance: none;
+        border-radius: 0;
+        box-shadow: none;
+        line-height: normal;
+        letter-spacing: normal;
+        outline: 0;
+        font-size: 19px;
+        font-weight: normal;
+        font-family: $font;
+        color: rgb(20, 20, 25);
+    }
+    &__upload{
+        margin-top: 60px;
+        margin-bottom: 50px;
+        &-label{
+            font-size: 25px;
+            color: rgb(20, 20, 25);
+            font-weight: 500;
+        }
+    }
+}
