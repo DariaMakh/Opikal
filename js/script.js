@@ -56,12 +56,35 @@ $(function(){
 /*
 
 $('.input').on('input', function() {
-        var $field = $(this).closest('.placeholder');
-        if (this.value) {
-          $field.addClass('placeholder--not-empty');
-        } else {
-          $field.removeClass('placeholder--not-empty');
-        }
-    });
+    var $field = $(this).closest('.placeholder');
+    if (this.value) {
+        $field.addClass('placeholder--not-empty');
+    } else {
+        $field.removeClass('placeholder--not-empty');
+    }
+});
 
 */
+
+$('body').on('focus', '.modal-content__inputs .input', function(){
+	var parent = $(this).parent();
+	$('.placeholder', parent).addClass('placeholder-act');
+});
+
+$('body').on('blur', '.modal-content__inputs .input', function(){
+	var val = $(this).val();
+	var parent = $(this).parent();
+	if (val == '') {
+		$('.placeholder', parent).removeClass('placeholder-act');
+	}
+});
+
+if ($('.modal-content__inputs .input').length > 0) {
+	$('.modal-content__inputs .input').each(function(){
+		var val = $(this).val();
+		var parent = $(this).parent();
+		if (val != '') {
+			$('.placeholder', parent).addClass('placeholder-act');
+		}
+	});
+}
