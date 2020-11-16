@@ -1,0 +1,35 @@
+.breadcrumbs{
+    display: flex;
+    &__item{
+        margin-right: 50px;
+        a{
+            position: relative;
+            font-size: 15px;
+            font-family: $font;
+            color: rgba(0, 0, 0, 0.502);
+            font-weight: 300;
+            img{
+                width: 15px;
+                height: 14px;
+                object-fit: cover;
+                object-position: center;
+                margin-right: 15px;
+            }
+            &:after{
+                content: "";
+                display: block;
+                height: 2px;
+                width: 12px;
+                background-color:rgba(0, 0, 0, 0.502);
+                position: absolute;
+                top: 50%;
+                right: -30px;
+            }
+        }
+        &:last-child{
+            a:after{
+                display: none;
+            }
+        }
+    }
+}

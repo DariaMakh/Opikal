@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   outline: none;
+  font-family: "FuturaBookC";
 }
 
 body {
@@ -84,6 +85,40 @@ button:focus {
   display: block;
   padding: 7px 26px;
   letter-spacing: 0.4px;
+}
+
+.breadcrumbs {
+  display: flex;
+}
+.breadcrumbs__item {
+  margin-right: 50px;
+}
+.breadcrumbs__item a {
+  position: relative;
+  font-size: 15px;
+  font-family: "FuturaBookC";
+  color: rgba(0, 0, 0, 0.502);
+  font-weight: 300;
+}
+.breadcrumbs__item a img {
+  width: 15px;
+  height: 14px;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 15px;
+}
+.breadcrumbs__item a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 12px;
+  background-color: rgba(0, 0, 0, 0.502);
+  position: absolute;
+  top: 50%;
+  right: -30px;
+}
+.breadcrumbs__item:last-child a:after {
+  display: none;
 }
 
 .possibility .provisioner__btn:hover, .provisioner__btn:hover, .header__rools:hover, .nav__btn:hover, .red__btn:hover, .black__btn:hover {
