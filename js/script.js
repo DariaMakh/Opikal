@@ -19,6 +19,8 @@ $('.nav__burger').click(function(event){
     $('.nav__burger, .menu').toggleClass('active');
 });
 
+// ОТКРЫТИЕ И ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА
+
 $(function(){
     var modal = {
         self: $('.modal'),
@@ -78,6 +80,8 @@ if ($('.modal-content__inputs .input').length > 0) {
 	});
 }
 
+// ОТОБРАЖЕНИЕ НАЗВАНИЯ КАРТИНКИ
+
 function uploadImg(){
     var inputImg = document.querySelectorAll('.input-upload_img');
     Array.prototype.forEach.call(inputImg, function ( input ){
@@ -97,6 +101,7 @@ function uploadImg(){
     });
 };
 
+// ОТОБРАЖЕНИЕ НАЗВАНИЯ ФАЙЛА ПОСЛЕ ЗАГРУЗКИ
 $('.input-upload_doc').on('change', function() {
     var splittedFakePath = this.value.split('\\');
     $('.upload-doc__file-name').text(splittedFakePath[splittedFakePath.length - 1]);

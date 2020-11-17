@@ -105,24 +105,20 @@ button{
   text-align: center;
   text-decoration: none;
   padding: 12px 50px;
-  border: 1px solid transparent;
-  color: #ffffff;
-  background-color: #000;
+  border: 1px solid #000;
+  color: #000;
+  background-color: #fff;
   font-size: 17px;
   font-weight: bold;
-  &:active{
+  &:active, &:hover{
     color: #ffffff;
     background-color: #000;
-  }
-  &:hover{
-    border: 1px solid #000;
-    background-color: #fff;
-    color: #000;
   }
 }
 
 .red{
   background-color: $red;
+  border: 1px solid transparent;
   color: #fff;
   &:hover{
     border: 1px solid #000;

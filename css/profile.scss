@@ -1,6 +1,17 @@
 $font: "FuturaBookC";
 $red: #ff0000;
 
+%input-reset{
+    background: none;
+    border: none;
+    appearance: none;
+    border-radius: 0;
+    box-shadow: none;
+    line-height: normal;
+    letter-spacing: normal;
+    outline: 0;
+}
+
 .account{
     position: relative;
     width: 100%;
@@ -108,6 +119,7 @@ $red: #ff0000;
         font-weight: 500;
         color: rgb(20, 20, 25);
         text-transform: uppercase;
+        margin-bottom: 25px;
     }
     &__photo{
         display: flex;
@@ -139,19 +151,25 @@ $red: #ff0000;
         padding-bottom: 10px;
     }
     &__input{
-        background: none;
-        border: none;
-        appearance: none;
-        border-radius: 0;
-        box-shadow: none;
-        line-height: normal;
-        letter-spacing: normal;
-        outline: 0;
+        @extend %input-reset;
         font-size: 19px;
         font-weight: normal;
         font-family: $font;
         color: rgb(20, 20, 25);
         width: 100%;
+        &_2{
+            @extend %input-reset;
+            width: calc(100% - 27%);
+            height: 35px;
+            font-size: 17px;
+            font-weight: 400;
+            border-bottom: 1px solid #111111;
+            &::placeholder{
+                font-size: 17px;
+                font-weight: 300;
+                color: rgba(20, 20, 25, 0.502);
+            }
+        }
     }
     &__upload{
         margin-top: 55px;
@@ -165,10 +183,88 @@ $red: #ff0000;
     &__row{
         width: 100%;
         display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        .profile__label{
+            width: 27%;
+        }
+    }
+    &__sub{
+        width: 100%;
+        background-color: #f1f1f1;
+        margin-top: 57px;
+        margin-bottom: 50px;
+        padding: 30px 25px;
+    }
+    &__desc{
+        margin: 50px 0;
+    }
+    &__textarea{
+        @extend %input-reset;
+        font-size: 19px;
+        font-weight: normal;
+        font-family: $font;
+        color: rgb(20, 20, 25);
+        width: 100%;
+        height: 138px;
+        border: 1px solid #000000;
+        padding: 20px 20px 10px 20px;
+        &::placeholder{
+            font-size: 19px;
+            color: rgba(20, 20, 25, 0.302);
+            line-height: 1.286;
+        }
     }
     &__submit{
         margin-top: 55px;
+        a{
+            margin-right: 19px;
+        }
     }
+}
+
+.sub{
+    &__list{
+        &-item{
+            margin-left: 28px;
+            position: relative;
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+            line-height: 2.05;
+        }
+    }
+    &__sub-list{
+        padding-left: 28px;
+    }
+    &-item{
+        font-size: 16px;
+    }
+    &__btn{
+        position: relative;
+        margin-top: 25px;
+        width: fit-content;
+        .line-1 {
+            top: 21px;
+            right: 17px;
+        }
+        .line-2 {
+            top: 13px;
+            right: 25px;
+        }
+    }
+}
+
+.delete{
+    content: '';
+    background-image: url(../../images/del.png);
+    width: 18px;
+    height: 18px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 7px;
+    left: -27px;
+    cursor: pointer;
 }
 
 .input-upload_img, .input-upload_doc{

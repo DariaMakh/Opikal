@@ -87,24 +87,20 @@ button:focus {
   text-align: center;
   text-decoration: none;
   padding: 12px 50px;
-  border: 1px solid transparent;
-  color: #ffffff;
-  background-color: #000;
+  border: 1px solid #000;
+  color: #000;
+  background-color: #fff;
   font-size: 17px;
   font-weight: bold;
 }
-.btn:active {
+.btn:active, .btn:hover {
   color: #ffffff;
   background-color: #000;
-}
-.btn:hover {
-  border: 1px solid #000;
-  background-color: #fff;
-  color: #000;
 }
 
 .red {
   background-color: #ff0000;
+  border: 1px solid transparent;
   color: #fff;
 }
 .red:hover {
