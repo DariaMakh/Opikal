@@ -10,16 +10,10 @@
 
 body {
   overflow-x: hidden;
-  font-family: "FuturaBookC";
 }
 
 a {
-  font-family: "FuturaBookC";
   text-decoration: none;
-}
-
-p {
-  font-family: "FuturaBookC";
 }
 
 ul, li {
@@ -85,6 +79,38 @@ button:focus {
   display: block;
   padding: 7px 26px;
   letter-spacing: 0.4px;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 50px;
+  border: 1px solid transparent;
+  color: #ffffff;
+  background-color: #000;
+  font-size: 17px;
+  font-weight: bold;
+}
+.btn:active {
+  color: #ffffff;
+  background-color: #000;
+}
+.btn:hover {
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+}
+
+.red {
+  background-color: #ff0000;
+  color: #fff;
+}
+.red:hover {
+  border: 1px solid #000;
+  background-color: #eb0000;
+  color: #fff;
 }
 
 .breadcrumbs {

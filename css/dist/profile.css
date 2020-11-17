@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 400px;
+  width: 375px;
 }
 .account__content {
   margin-top: 65px;
@@ -46,8 +46,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 50px;
-  padding-bottom: 30px;
   background-color: #fff;
   border-bottom: 1px solid #111111;
 }
@@ -61,6 +59,8 @@
   position: relative;
   width: 100%;
   display: flex;
+  padding-top: 50px;
+  padding-bottom: 30px;
 }
 .account-menu__link a:hover {
   color: rgba(17, 17, 17, 0.7);
@@ -72,22 +72,22 @@
   padding-left: 30px;
   background-color: #000;
 }
-.account-menu__link:hover {
+.account-menu__link:hover, .account-menu__link:focus {
   padding-left: 30px;
   background-color: #000;
 }
-.account-menu__link:hover a {
+.account-menu__link:hover a, .account-menu__link:focus a {
   color: #fff;
 }
-.account-menu__link:hover .account-menu__num {
-  right: 30px;
+.account-menu__link:hover .account-menu__num, .account-menu__link:focus .account-menu__num {
+  right: 20px;
 }
 .account-menu__link:first-child {
   border-top: 1px solid #111111;
 }
 .account-menu__num {
   position: absolute;
-  top: 0px;
+  top: 50px;
   right: 0;
 }
 
@@ -96,7 +96,16 @@
   padding: 33px 57px;
   width: 100%;
   background-color: #fff;
-  margin-bottom: 55px;
+  border-top: 0;
+}
+.profile:first-child {
+  border-top: 1px solid #000000;
+}
+.profile__title {
+  font-size: 27px;
+  font-weight: 500;
+  color: #141419;
+  text-transform: uppercase;
 }
 .profile__row {
   display: flex;
@@ -150,6 +159,9 @@
   font-size: 25px;
   color: #141419;
   font-weight: 500;
+}
+.profile__submit {
+  margin-top: 55px;
 }
 
 .input-upload_img, .input-upload_doc {
