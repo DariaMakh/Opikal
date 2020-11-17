@@ -17,16 +17,10 @@ $font: "FuturaBookC";
 
 body {
   overflow-x: hidden;
-  font-family: $font;
 }
 
 a {
-  font-family: $font;
   text-decoration: none;
-}
-
-p{
-  font-family: $font;
 }
 
 ul, li {
@@ -102,6 +96,38 @@ button{
           padding: 7px 26px;
           letter-spacing: 0.4px;
       }
+  }
+}
+
+.btn{
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 50px;
+  border: 1px solid transparent;
+  color: #ffffff;
+  background-color: #000;
+  font-size: 17px;
+  font-weight: bold;
+  &:active{
+    color: #ffffff;
+    background-color: #000;
+  }
+  &:hover{
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.red{
+  background-color: $red;
+  color: #fff;
+  &:hover{
+    border: 1px solid #000;
+    background-color: #eb0000;
+    color: #fff;
   }
 }
 
