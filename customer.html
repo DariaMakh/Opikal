@@ -88,7 +88,7 @@
                 <div class="account__aside">
                     <nav>
                         <div class="account-menu">
-                            <div class="account-menu__link"><div class="account-menu__title">Профиль</div></div>
+                            <div class="account-menu__link"><a href="customer.html">Профиль</a></div>
                             <div class="account-menu__link"><a href="#">Мои заявки<div class="account-menu__num">2</div></a></div>
                             <div class="account-menu__link"><a href="#">Сообщения<div class="account-menu__num">2</div></a></div>
                             <div class="account-menu__link"><a href="#">Предложения поставщиков<div class="account-menu__num">2</div></a></div>
@@ -106,12 +106,10 @@
                             <div>
                                 <div class="profile__label">Логотип профиля</div>
                                 <div>
-                                    <input type="file" name="" id="" accept="image/jpeg,image/png" class="input-upload input-upload_img">
-                                    <label for="file" class="upload-label">
-                                        <span>
-                                            <img src="images/upload.png" alt="">
-                                            <p>Загрузить</p>
-                                        </span>
+                                    <input type="file" name="profile_img" id="profile_img" accept="image/jpeg,image/png" class="input-upload input-upload_img">
+                                    <label for="profile_img" class="upload-label">
+                                        <img src="images/upload.png" alt="">
+                                        <p>Загрузить</p>
                                     </label>
                                 </div>
                             </div>
@@ -152,12 +150,10 @@
                         </div>
 
                         <div class="profile__upload">
-                            <input type="file" name="" id="" class="input-upload input-upload_doc">
-                            <label for="file" class="upload-label">
-                                <span>
-                                    <img src="images/upload.png" alt="">
-                                    <p>Прикрепить реквизиты организации</p>
-                                </span>
+                            <input type="file" name="pdf" id="pdf" accept=".pdf" class="input-upload input-upload_doc">
+                            <label for="pdf" class="upload-label">
+                                <img src="images/upload.png" alt="">
+                                <p>Прикрепить реквизиты организации</p>
                             </label>
                         </div>
 

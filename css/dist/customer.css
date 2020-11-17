@@ -41,15 +41,6 @@
   width: 100%;
   background-color: #fff;
 }
-.account-menu__title {
-  padding-top: 50px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  background-color: #000;
-  color: #fff;
-  font-size: 20px;
-  width: 100%;
-}
 .account-menu__link {
   width: 100%;
   display: flex;
@@ -74,14 +65,29 @@
 .account-menu__link a:hover {
   color: rgba(17, 17, 17, 0.7);
 }
+.account-menu__link a:active {
+  color: #fff;
+}
+.account-menu__link a:active .account-menu__link {
+  padding-left: 30px;
+  background-color: #000;
+}
+.account-menu__link:hover {
+  padding-left: 30px;
+  background-color: #000;
+}
+.account-menu__link:hover a {
+  color: #fff;
+}
+.account-menu__link:hover .account-menu__num {
+  right: 30px;
+}
 .account-menu__link:first-child {
-  border: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  border-top: 1px solid #111111;
 }
 .account-menu__num {
   position: absolute;
-  top: -2px;
+  top: 0px;
   right: 0;
 }
 
@@ -146,28 +152,32 @@
   font-weight: 500;
 }
 
-.input-upload_img {
-  width: 165px;
-  height: 35px;
+.input-upload_img, .input-upload_doc {
+  width: 0.1px;
+  height: 0.1px;
   opacity: 0;
   overflow: hidden;
   position: absolute;
-  z-index: 1;
+  z-index: -1;
 }
 
-.input-upload_doc {
-  width: 318px;
-  height: 34px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: 1;
-}
-
-.upload-label span {
+.input-upload + label {
   position: relative;
+  display: inline-block;
+  height: 35px;
+  padding: 8px 30px 8px 30px;
+  background-color: #000;
+  font-size: 16px;
+  font-family: "FuturaBookC";
+  color: white;
 }
-.upload-label span img {
+.input-upload + label p {
+  font-size: 16px;
+  font-family: "FuturaBookC";
+  color: white;
+  padding-left: 23px;
+}
+.input-upload + label img {
   width: 17px;
   height: 15px;
   object-position: center;
@@ -177,21 +187,10 @@
   left: 24px;
 }
 
-.input-upload + label > span {
-  display: inline-block;
-  height: 35px;
-  padding: 8px 30px 8px 30px;
-  background-color: #000;
-  font-size: 16px;
-  font-family: "FuturaBookC";
-  color: white;
-}
-.input-upload + label > span p {
-  font-size: 16px;
-  font-family: "FuturaBookC";
-  color: white;
+.input-upload:focus + label,
+.input-upload + label:hover {
+  background-color: #ff0000;
   cursor: pointer;
-  padding-left: 23px;
 }
 
 .upload-doc__file {
@@ -203,12 +202,6 @@
   font-style: italic;
   font-weight: 300;
   margin-top: 28px;
-}
-.upload-doc__file img {
-  width: 28px;
-  height: 32px;
-  object-fit: cover;
-  object-position: center;
 }
 .upload-doc__file-name {
   margin-left: 13px;

@@ -42,15 +42,6 @@ $red: #ff0000;
     &-menu{
         width: 100%;
         background-color: #fff;
-        &__title{
-            padding-top: 50px;
-            padding-bottom: 30px;
-            padding-left: 30px;
-            background-color: #000;
-            color: #fff;
-            font-size: 20px;  
-            width: 100%;            
-        }
         &__link{
             width: 100%;
             display: flex;
@@ -73,16 +64,31 @@ $red: #ff0000;
                 &:hover{
                     color: rgba(17, 17, 17, 0.7);
                 }
+                &:active{
+                    color: #fff;
+                    .account-menu__link{
+                        padding-left: 30px;
+                        background-color: #000;
+                    }
+                }
+            }
+            &:hover{
+                padding-left: 30px;
+                background-color: #000;
+                a{
+                    color: #fff;
+                }
+                .account-menu__num{
+                    right: 30px;
+                }
             }
             &:first-child{
-                border: 0;
-                padding-top: 0;
-                padding-bottom: 0;
+                border-top: 1px solid #111111;
             }
         }
         &__num{
             position: absolute;
-            top: -2px;
+            top: 0px;
             right: 0;
         }
     }
@@ -149,38 +155,17 @@ $red: #ff0000;
     }
 }
 
-.input-upload_img{
-    width: 165px;
-    height: 35px;
+.input-upload_img, .input-upload_doc{
+    width: 0.1px;
+    height: 0.1px;
     opacity: 0;
     overflow: hidden;
     position: absolute;
-    z-index: 1;
+    z-index: -1;
 }
 
-.input-upload_doc{
-    width: 318px;
-    height: 34px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: 1;
-}
-
-.upload-label span{
+.input-upload + label {
     position: relative;
-    img{
-        width: 17px;
-        height: 15px;
-        object-position: center;
-        object-fit: cover;
-        position: absolute;
-        top: 10px;
-        left: 24px;
-    }
-}
-
-.input-upload + label>span{
     display: inline-block;
     height: 35px;
     padding: 8px 30px 8px 30px;
@@ -192,10 +177,24 @@ $red: #ff0000;
         font-size: 16px;
         font-family: $font;
         color: rgb(255, 255, 255);
-        cursor: pointer;
         padding-left: 23px;
     }
+    img{
+        width: 17px;
+        height: 15px;
+        object-position: center;
+        object-fit: cover;
+        position: absolute;
+        top: 10px;
+        left: 24px;
+    }
 }
+.input-upload:focus + label,
+.input-upload + label:hover {
+    background-color: $red;
+    cursor: pointer;
+}
+
 
 .upload-doc{
     &__file{
@@ -207,12 +206,6 @@ $red: #ff0000;
         font-style: italic;
         font-weight: 300;
         margin-top: 28px;
-        img{
-            width: 28px;
-            height: 32px;
-            object-fit: cover;
-            object-position: center;
-        }
         &-name{
             margin-left: 13px;
             font-size: 19px;
