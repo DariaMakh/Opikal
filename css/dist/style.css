@@ -121,7 +121,7 @@ button:focus {
 }
 .btn-add:active, .btn-add:hover {
   color: #000;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .rools {
