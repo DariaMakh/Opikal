@@ -398,5 +398,4 @@
 
 .checkbox:not(:disabled):not(:checked) + label:hover::before {
   border-color: #ff0000;
-  color: #ff0000;
 }

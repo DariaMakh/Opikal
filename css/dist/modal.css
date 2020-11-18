@@ -1,3 +1,8 @@
+.registration-form {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
 .modal {
   position: fixed;
   width: 100vw;
@@ -15,8 +20,8 @@
 .modal-content__row {
   display: flex;
   justify-content: space-between;
-  width: 87%;
-  margin: 40px auto 35px auto;
+  width: 100%;
+  margin: 40px 0 35px 0;
 }
 .modal-content__box {
   width: 49%;
@@ -45,6 +50,14 @@
   letter-spacing: 0.4px;
   cursor: pointer;
 }
+.modal-content__btn-login {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.modal-content__btn-login .modal__link {
+  margin: 25px auto;
+}
 .modal__row {
   display: flex;
   align-items: center;
@@ -52,9 +65,9 @@
   margin-bottom: 40px;
 }
 .modal__container {
-  margin: 5vh auto 0 auto;
+  margin: 5vh auto 4vh auto;
   width: 820px;
-  height: 800px;
+  height: auto;
   background: #fff;
   box-sizing: border-box;
   padding: 20px;
@@ -110,6 +123,24 @@
   line-height: 1.001;
   width: 100%;
   text-align: center;
+}
+.modal__link {
+  width: auto;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: underline;
+  color: #ff0000;
+}
+.modal__text {
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #a6a6a7;
+  width: 100%;
+  text-align: center;
+}
+.modal__text span {
+  color: #ff0000;
 }
 
 .input {
@@ -170,6 +201,15 @@
 }
 .textarea-placeholder span {
   color: #ff0000;
+}
+
+.agreement {
+  margin-bottom: 30px;
+}
+.agreement label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #a6a6a7;
 }
 
 @media all and (min-width: 641px) and (max-width: 855px) {

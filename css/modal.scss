@@ -1,6 +1,9 @@
 $font: "FuturaBookC";
 $red: #ff0000;
-
+.registration-form{
+    padding-left: 70px;
+    padding-right: 70px;
+}
 .modal{
     position: fixed;
     width: 100vw;
@@ -16,8 +19,8 @@ $red: #ff0000;
         &__row{
             display: flex;
             justify-content: space-between;
-            width: 87%;
-            margin: 40px auto 35px auto;
+            width: 100%;
+            margin: 40px 0 35px 0;
         }
         &__box{
             width: 49%;
@@ -45,6 +48,14 @@ $red: #ff0000;
                 letter-spacing: 0.4px;
                 cursor: pointer;
             }
+            &-login{
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                .modal__link{
+                    margin: 25px auto;
+                }
+            }
         }
     }
     &__row{
@@ -54,9 +65,9 @@ $red: #ff0000;
         margin-bottom: 40px;
     }
     &__container{
-        margin: 5vh auto 0 auto;
+        margin: 5vh auto 4vh auto;
         width: 820px;
-        height: 800px;
+        height: auto;
         background: #fff;
         box-sizing: border-box;
         padding: 20px;
@@ -112,6 +123,24 @@ $red: #ff0000;
         line-height: 1.001;
         width: 100%;
         text-align: center;
+    }
+    &__link{
+        width: auto;
+        font-size: 16px;
+        font-weight: 300;
+        text-decoration: underline;
+        color: $red;
+    }
+    &__text{
+        margin-top: 30px;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(166, 166, 167);
+        width: 100%;
+        text-align: center;
+        span{
+            color: $red;
+        }
     }
 }
 
@@ -174,6 +203,16 @@ $red: #ff0000;
         }
     }
 }
+
+.agreement{
+    margin-bottom: 30px;
+    label{
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(166, 166, 167);
+    }
+}  
+  
 
 @media all and (min-width: 641px) and (max-width: 855px){
     .modal{
