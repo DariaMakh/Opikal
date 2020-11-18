@@ -355,7 +355,13 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  z-index: 2;
 }
 .gallery-list__item:first-child {
   margin-left: 0;
+}
+.gallery-list .delete {
+  left: auto;
+  z-index: 3;
+  right: 10px;
 }

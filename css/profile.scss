@@ -365,9 +365,15 @@ $red: #ff0000;
             height: 100%;
             object-fit: cover;
             object-position: center;
+            z-index: 2;
         }
         &:first-child{
             margin-left: 0;
         }
+    }
+    .delete{
+        left: auto;
+        z-index: 3;
+        right: 10px;
     }
 }

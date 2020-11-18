@@ -102,12 +102,14 @@ function uploadImg(){
 };
 
 // ОТОБРАЖЕНИЕ НАЗВАНИЯ ФАЙЛА ПОСЛЕ ЗАГРУЗКИ
+
 $('.input-upload_doc').on('change', function() {
     var splittedFakePath = this.value.split('\\');
     $('.upload-doc__file-name').text(splittedFakePath[splittedFakePath.length - 1]);
 });
 
 document.addEventListener("DOMContentLoaded", uploadImg);
+
 
 var showGallery = (function () {
     var fr = new FileReader,
@@ -119,7 +121,7 @@ var showGallery = (function () {
         if (file.type.match('image.*')) {
             li = document.createElement('li');
             li.classList.add('gallery-list__item');
-            li.innerHTML = "<img src='" + e.target.result + "' >";
+            li.innerHTML = "<img src='" + e.target.result + "'><span class=\"delete\"></span>";
             document.getElementById('gallery-list').appendChild(li);
         }
             file = files[++i];
