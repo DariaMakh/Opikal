@@ -52,13 +52,12 @@ $red: #ff0000;
     }
     &-menu{
         width: 100%;
-        background-color: #fff;
+        background-color: transparent;
         &__link{
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: #fff;
             border-bottom: 1px solid #111111;
             &__num, a{
                 color: rgb(17, 17, 17);
@@ -101,6 +100,23 @@ $red: #ff0000;
             position: absolute;
             top: 50px;
             right: 0;
+        }
+    }
+    &__rools{
+        position: fixed;
+        top: 425px;
+        right: -108px;
+        width: 253px;
+        height: 53px;
+        background-color: #f6f6f8;
+        transform: rotate(-90deg);
+        .line-1 {
+            top: 23px;
+            right: 45px;
+        }
+        .line-2 {
+            top: 15px;
+            right: 53px;
         }
     }
 }

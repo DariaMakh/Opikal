@@ -163,29 +163,6 @@ $font: "FuturaBookC";
         width: 550px;
         margin-top: 65px;
     }
-    &__rools{
-        position: absolute;
-        top: 55%;
-        right: -100px;
-        width: 253px;
-        height: 53px;
-        background-color: #f6f6f8;
-        transform: rotate(-90deg);
-        a{
-            font-size: 16px;
-            font-family: $font;
-            color: rgb(0, 0, 0);
-            line-height: 1.4;
-            display: block;
-            padding: 16px 30px;
-        }
-        &:hover{
-            @extend %hover-red;
-            a{
-                padding: 14px 30px;
-            }
-        }
-    }
 }
 
 .line{

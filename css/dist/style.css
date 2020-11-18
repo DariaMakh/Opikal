@@ -1,3 +1,11 @@
+.btn-add, .btn {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 50px;
+}
+
 *,
 *::before,
 *::after {
@@ -82,11 +90,6 @@ button:focus {
 }
 
 .btn {
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  padding: 12px 50px;
   border: 1px solid #000;
   color: #000;
   background-color: #fff;
@@ -107,6 +110,39 @@ button:focus {
   border: 1px solid #000;
   background-color: #eb0000;
   color: #fff;
+}
+
+.btn-add {
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+  font-size: 17px;
+  font-weight: bold;
+}
+.btn-add:active, .btn-add:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.rools {
+  position: absolute;
+  top: 55%;
+  right: -100px;
+  width: 253px;
+  height: 53px;
+  background-color: #f6f6f8;
+  transform: rotate(-90deg);
+}
+.rools a {
+  font-size: 16px;
+  font-family: "FuturaBookC";
+  color: black;
+  line-height: 1.4;
+  display: block;
+  padding: 16px 30px;
+}
+.rools:hover a {
+  padding: 14px 30px;
 }
 
 .breadcrumbs {
@@ -143,12 +179,12 @@ button:focus {
   display: none;
 }
 
-.possibility .provisioner__btn:hover, .provisioner__btn:hover, .header__rools:hover, .nav__btn:hover, .red__btn:hover, .black__btn:hover {
+.possibility .provisioner__btn:hover, .provisioner__btn:hover, .nav__btn:hover, .red__btn:hover, .black__btn:hover, .rools:hover {
   transition-duration: 5ms;
   background-color: transparent;
   border: 2px solid #ff0000;
 }
-.possibility .provisioner__btn:hover a, .provisioner__btn:hover a, .header__rools:hover a, .nav__btn:hover a, .red__btn:hover a, .black__btn:hover a {
+.possibility .provisioner__btn:hover a, .provisioner__btn:hover a, .nav__btn:hover a, .red__btn:hover a, .black__btn:hover a, .rools:hover a {
   color: #ff0000;
 }
 
@@ -288,26 +324,6 @@ button:focus {
   width: 550px;
   margin-top: 65px;
 }
-.header__rools {
-  position: absolute;
-  top: 55%;
-  right: -100px;
-  width: 253px;
-  height: 53px;
-  background-color: #f6f6f8;
-  transform: rotate(-90deg);
-}
-.header__rools a {
-  font-size: 16px;
-  font-family: "FuturaBookC";
-  color: black;
-  line-height: 1.4;
-  display: block;
-  padding: 16px 30px;
-}
-.header__rools:hover a {
-  padding: 14px 30px;
-}
 
 .line-1 {
   background-color: #ff0000;
@@ -353,11 +369,11 @@ button:focus {
   padding: 6px 26px;
 }
 
-.possibility .provisioner__btn:hover, .red__btn:hover, .black__btn:hover, .nav__btn:hover, .header__rools:hover, .provisioner__btn:hover {
+.possibility .provisioner__btn:hover, .red__btn:hover, .black__btn:hover, .rools:hover, .nav__btn:hover, .provisioner__btn:hover {
   background-color: transparent;
   border: 2px solid #ff0000;
 }
-.possibility .provisioner__btn:hover a, .red__btn:hover a, .black__btn:hover a, .nav__btn:hover a, .header__rools:hover a, .provisioner__btn:hover a {
+.possibility .provisioner__btn:hover a, .red__btn:hover a, .black__btn:hover a, .rools:hover a, .nav__btn:hover a, .provisioner__btn:hover a {
   color: #ff0000;
 }
 

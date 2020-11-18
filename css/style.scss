@@ -5,6 +5,14 @@ $lbl: #141419;
 
 $font: "FuturaBookC";
 
+%btn{
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 50px;
+}
+
 *,
 *::before,
 *::after {
@@ -100,11 +108,7 @@ button{
 }
 
 .btn{
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  padding: 12px 50px;
+  @extend %btn;
   border: 1px solid #000;
   color: #000;
   background-color: #fff;
@@ -124,6 +128,43 @@ button{
     border: 1px solid #000;
     background-color: #eb0000;
     color: #fff;
+  }
+}
+
+.btn-add{
+  @extend %btn;
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+  font-size: 17px;
+  font-weight: bold;
+  &:active, &:hover{
+    color: #000;
+    background-color: #fff;
+  }
+}
+
+.rools{
+  position: absolute;
+  top: 55%;
+  right: -100px;
+  width: 253px;
+  height: 53px;
+  background-color: #f6f6f8;
+  transform: rotate(-90deg);
+  a{
+    font-size: 16px;
+    font-family: $font;
+    color: rgb(0, 0, 0);
+    line-height: 1.4;
+    display: block;
+    padding: 16px 30px;
+  }
+  &:hover{
+    @extend %hover-red;
+    a{
+      padding: 14px 30px;
+    }
   }
 }
 
