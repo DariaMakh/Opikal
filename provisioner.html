@@ -108,7 +108,7 @@
                                 <div>
                                     <div class="profile__label">Логотип профиля</div>
                                     <div>
-                                        <input type="file" name="profile_img" id="profile_img" accept="image/jpeg,image/png" class="input-upload input-upload_img">
+                                        <input type="file" name="profile_img" id="profile_img" accept="image/jpeg,image/png" class="input-upload input-upload_img profile_img">
                                         <label for="profile_img" class="upload-label">
                                             <img src="images/upload.png" alt="">
                                             <p>Загрузить</p>
@@ -278,12 +278,14 @@
                             </div>
 
                             <div>
-                                <input type="file" name="profile_img" id="profile_img" accept="image/jpeg,image/png" class="input-upload input-upload_img" multiple>
-                                <label for="profile_img" class="upload-label">
+                                <input type="file" name="gallery" id="gallery" accept="image/jpeg,image/png" class="input-upload input-upload_img" multiple>
+                                <label for="gallery" class="upload-label">
                                     <img src="images/upload.png" alt="">
                                     <p>Прикрепить фото</p>
                                 </label>
                             </div>
+
+                            <ul id="gallery-list" class="gallery-list"></ul>
                         </div>
                             
                     </form>

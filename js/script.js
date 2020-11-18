@@ -83,7 +83,7 @@ if ($('.modal-content__inputs .input').length > 0) {
 // ОТОБРАЖЕНИЕ НАЗВАНИЯ КАРТИНКИ
 
 function uploadImg(){
-    var inputImg = document.querySelectorAll('.input-upload_img');
+    var inputImg = document.querySelectorAll('.profile_img');
     Array.prototype.forEach.call(inputImg, function ( input ){
         var label = input.nextElementSibling,
         labelVal = label.innerHTML;
@@ -108,3 +108,39 @@ $('.input-upload_doc').on('change', function() {
 });
 
 document.addEventListener("DOMContentLoaded", uploadImg);
+
+var showGallery = (function () {
+    var fr = new FileReader,
+        i = 0,
+        files, file;
+    
+    fr.onload = function (e) {
+        var li, span;
+        if (file.type.match('image.*')) {
+            li = document.createElement('li');
+            li.classList.add('gallery-list__item');
+            li.innerHTML = "<img src='" + e.target.result + "' >";
+            document.getElementById('gallery-list').appendChild(li);
+        }
+            file = files[++i];
+            if (file) {
+                fr.readAsDataURL(file)
+            } else {
+                i = 0;
+            }
+    }
+    
+    return function (e) {
+        files = e.target.files;
+        file = files[i];
+        if (files) {
+            while (i < files.length && !file.type.match('image.*')) {
+                file = files[++i];
+            }
+            if (file) fr.readAsDataURL(files[i])
+        }
+    }
+ 
+})()
+ 
+document.getElementById('gallery').addEventListener('change', showGallery, false);
