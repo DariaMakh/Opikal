@@ -92,13 +92,17 @@
 .account-menu__link:hover .account-menu__num, .account-menu__link:focus .account-menu__num {
   right: 20px;
 }
-.account-menu__link:first-child {
+.account-menu__link_1 {
   border-top: 1px solid #111111;
+  position: relative;
 }
 .account-menu__num {
   position: absolute;
   top: 50px;
   right: 0;
+}
+.account-menu__burger_btn {
+  display: none;
 }
 .account__rools {
   position: fixed;
@@ -116,6 +120,27 @@
 .account__rools .line-2 {
   top: 15px;
   right: 53px;
+}
+
+.burger-line_1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 18px;
+  height: 3px;
+  background: #141419;
+  transition: all 0.3s ease 0s;
+  transform: rotate(-40deg);
+}
+.burger-line_2 {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  width: 18px;
+  height: 3px;
+  background: #141419;
+  transition: all 0.3s ease 0s;
+  transform: rotate(40deg);
 }
 
 .profile {
@@ -398,4 +423,43 @@
 
 .checkbox:not(:disabled):not(:checked) + label:hover::before {
   border-color: #ff0000;
+}
+
+@media all and (min-width: 0px) and (max-width: 979px) {
+  .account__row {
+    display: block;
+  }
+  .account__rools {
+    display: none;
+  }
+  .account__selection {
+    margin-top: 25px;
+  }
+  .account__content {
+    display: block;
+  }
+  .account__aside {
+    width: 100%;
+  }
+  .account__profile {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  .account-menu {
+    position: relative;
+  }
+  .account-menu__burger_menu {
+    display: none;
+  }
+  .account-menu__burger_menu.active {
+    display: block;
+  }
+  .account-menu__burger_btn {
+    display: block;
+    width: 32px;
+    height: 17px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+  }
 }

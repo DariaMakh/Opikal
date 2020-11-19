@@ -92,14 +92,20 @@ $red: #ff0000;
                     right: 20px;
                 }
             }
-            &:first-child{
+            &_1{
                 border-top: 1px solid #111111;
+                position: relative;
             }
         }
         &__num{
             position: absolute;
             top: 50px;
             right: 0;
+        }
+        &__burger{
+            &_btn{
+                display: none;
+            }
         }
     }
     &__rools{
@@ -118,6 +124,29 @@ $red: #ff0000;
             top: 15px;
             right: 53px;
         }
+    }
+}
+
+.burger-line{
+    &_1{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 18px;
+        height: 3px;
+        background: #141419;
+        transition: all 0.3s ease 0s;
+        transform: rotate(-40deg);
+    }
+    &_2{
+        position: absolute;
+        right: 12px;
+        top: 0;
+        width: 18px;
+        height: 3px;
+        background: #141419;
+        transition: all 0.3s ease 0s;
+        transform: rotate(40deg);
     }
 }
 
@@ -410,5 +439,48 @@ $red: #ff0000;
 
 .checkbox:not(:disabled):not(:checked)+label:hover::before {
     border-color: $red;
+}
+
+@media all and (min-width: 0px) and (max-width: 979px) {
+    .account{
+        &__row{
+            display: block;
+        }
+        &__rools{
+            display: none;
+        }
+        &__selection{
+            margin-top: 25px;
+        }
+        &__content{
+            display: block;
+        }
+        &__aside{
+            width: 100%;
+        }
+        &__profile{
+            margin-left: 0;
+            margin-top: 40px;
+        }
+        &-menu{
+            position: relative;
+            &__burger{
+                &_menu{
+                    display: none;
+                }
+                &_menu.active{
+                    display: block;
+                }
+                &_btn{
+                    display: block;
+                    width: 32px;
+                    height: 17px;
+                    position: absolute;
+                    right: 30px;
+                    top: 50%;
+                }
+            }
+        }
+    }
 }
   

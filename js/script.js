@@ -19,6 +19,10 @@ $('.nav__burger').click(function(event){
     $('.nav__burger, .menu').toggleClass('active');
 });
 
+$('.account-menu__burger_btn').click(function(event){
+    $('account-menu__burger_menu').toggleClass('active');
+});
+
 // ОТКРЫТИЕ И ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА
 
 $(function(){
@@ -67,6 +71,19 @@ $('body').on('blur', '.modal-content__inputs .input', function(){
 	var parent = $(this).parent();
 	if (val == '') {
 		$('.placeholder', parent).removeClass('placeholder-act');
+	}
+});
+
+$('body').on('focus', '.modal-content__inputs .input', function(){
+	var parent = $(this).parent();
+	$('.textarea-placeholder', parent).addClass('placeholder-act');
+});
+
+$('body').on('blur', '.modal-content__inputs .input', function(){
+	var val = $(this).val();
+	var parent = $(this).parent();
+	if (val == '') {
+		$('.textarea-placeholder', parent).removeClass('placeholder-act');
 	}
 });
 
