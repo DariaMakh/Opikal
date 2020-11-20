@@ -6,6 +6,17 @@
   padding: 12px 50px;
 }
 
+.profile__textarea, .profile__input_2, .profile__input {
+  background: none;
+  border: none;
+  appearance: none;
+  border-radius: 0;
+  box-shadow: none;
+  line-height: normal;
+  letter-spacing: normal;
+  outline: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -646,6 +657,797 @@ button:focus {
   justify-content: space-between;
 }
 
+.nav__burger {
+  position: relative;
+  width: 36px;
+  height: 27px;
+  cursor: pointer;
+  z-index: 1;
+}
+.nav__burger:hover .menu-line, .nav__burger:active .menu-line {
+  background-color: #ff0000;
+}
+.nav__burger.active .menu-line_1 {
+  transform: rotate(45deg);
+  top: 12px;
+}
+.nav__burger.active .menu-line_2 {
+  transform: rotate(-45deg);
+}
+.nav__burger.active .menu-line_3 {
+  display: none;
+}
+
+.menu-line {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  background: #141419;
+  transition: all 0.3s ease 0s;
+}
+.menu-line_2 {
+  top: 12px;
+}
+.menu-line_3 {
+  top: 24px;
+  width: 16px;
+}
+
+.registration-form {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  z-index: 99;
+}
+.modal-content {
+  display: none;
+}
+.modal-content__row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 40px 0 35px 0;
+}
+.modal-content__box {
+  width: 49%;
+}
+.modal-content__inputs {
+  position: relative;
+}
+.modal-content__btn {
+  margin: 0 auto;
+  width: 240px;
+}
+.modal-content__btn-style {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background: #ff0000;
+  width: 100%;
+  height: 42px;
+  font-size: 17px;
+  color: white;
+  font-weight: bold;
+  font-family: "FuturaBookC";
+  line-height: 1.65;
+  display: block;
+  padding: 8px 26px;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+}
+.modal-content__btn-login {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 25px auto;
+}
+.modal__row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+}
+.modal__container {
+  margin: 5vh auto 4vh auto;
+  width: 820px;
+  height: auto;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+}
+.modal__close {
+  position: relative;
+  height: 16px;
+  width: 68px;
+  cursor: pointer;
+}
+.modal__close_1, .modal__close_2 {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 20px;
+  height: 3px;
+  background: #141419;
+}
+.modal__close_1 {
+  transform: rotate(45deg);
+}
+.modal__close_2 {
+  transform: rotate(-45deg);
+}
+.modal__close p {
+  display: block;
+  padding-right: 20px;
+  font-family: "FuturaBookC";
+  font-size: 10px;
+  color: #141419;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.modal__subtitle {
+  font-size: 15px;
+  color: black;
+  font-family: "FuturaBookC";
+  line-height: 1.2;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+.modal__subtitle span {
+  text-transform: uppercase;
+}
+.modal__title {
+  font-size: 35px;
+  font-family: "FuturaBookC";
+  color: #141419;
+  font-weight: bold;
+  line-height: 1.001;
+  width: 100%;
+  text-align: center;
+}
+.modal__link {
+  width: auto;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: underline;
+  color: #ff0000;
+}
+.modal__text {
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #a6a6a7;
+  width: 100%;
+  text-align: center;
+}
+.modal__text span {
+  color: #ff0000;
+}
+
+.input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #141419;
+  width: 100%;
+  height: 34px;
+  margin-top: 30px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "FuturaBookC";
+  color: #141419;
+  appearance: none;
+  border-radius: 0;
+  box-shadow: none;
+  line-height: normal;
+  letter-spacing: normal;
+  outline: 0;
+}
+
+.placeholder {
+  position: absolute;
+  top: 27px;
+  left: 0;
+  font-size: 18px;
+  font-family: "FuturaBookC";
+  color: rgba(20, 20, 25, 0.302);
+  transition: all 0.15s ease-out;
+  pointer-events: none;
+  background: none;
+}
+.placeholder span {
+  color: #ff0000;
+}
+
+.textarea {
+  margin-top: 0;
+  padding-top: 30px;
+  padding-left: 18px;
+  height: 100px;
+  background: #f2f2f2;
+  border: 0;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "FuturaBookC";
+  color: #141419;
+  appearance: none;
+  border-radius: 0;
+  box-shadow: none;
+  line-height: normal;
+  letter-spacing: normal;
+  outline: 0;
+}
+.textarea-placeholder {
+  position: absolute;
+  left: 18px;
+  top: 66px;
+  font-size: 18px;
+  font-family: "FuturaBookC";
+  color: rgba(20, 20, 25, 0.302);
+  font-weight: bold;
+  transition: all 0.15s ease-out;
+  pointer-events: none;
+}
+.textarea-placeholder span {
+  color: #ff0000;
+}
+
+.agreement {
+  margin-bottom: 30px;
+}
+.agreement label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #a6a6a7;
+}
+
+@media all and (min-width: 641px) and (max-width: 855px) {
+  .modal__container {
+    width: 95%;
+    height: auto;
+  }
+}
+@media all and (min-width: 0) and (max-width: 730px) {
+  .modal__container {
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+  .modal__row {
+    margin-bottom: 20px;
+  }
+  .modal__subtitle {
+    margin: 0 0 5px 0;
+  }
+  .modal__link {
+    font-size: 22px;
+  }
+  .modal-content__row {
+    flex-direction: column;
+    width: 100%;
+    margin: 30px auto 30px auto;
+  }
+  .modal-content__box {
+    width: 100%;
+  }
+  .modal-content__inputs {
+    margin-bottom: 10px;
+  }
+  .modal-content__btn-login {
+    margin: 15px auto;
+  }
+  .modal__text {
+    margin-top: 0;
+  }
+
+  .registration-form {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .agreement label {
+    font-size: 22px;
+  }
+
+  .placeholder {
+    font-size: 22px;
+  }
+
+  .textarea-placeholder {
+    font-size: 22px;
+  }
+
+  .input {
+    height: 44px;
+  }
+
+  .textarea {
+    height: 150px;
+  }
+  .textarea-placeholder {
+    top: 115px;
+  }
+}
+@media all and (min-width: 0) and (max-width: 399px) {
+  .modal__title {
+    font-size: 27px;
+  }
+}
+.placeholder-act {
+  font-size: 14px;
+  top: 10px;
+}
+
+.account {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+  background-color: #fff;
+  background-image: url(../../images/eq-bg.jpg);
+  background-size: cover;
+  background-position: right;
+}
+.account__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.account__selection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 375px;
+}
+.account__box {
+  margin-top: 65px;
+  display: flex;
+  margin-bottom: 60px;
+}
+.account__title {
+  font-size: 66px;
+  color: black;
+  font-weight: bold;
+  margin-top: 40px;
+}
+.account__aside {
+  width: 300px;
+}
+.account__content {
+  margin-left: 70px;
+  width: 100%;
+}
+.account-menu {
+  width: 100%;
+  background-color: transparent;
+}
+.account-menu__link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #111111;
+}
+.account-menu__link__num, .account-menu__link a {
+  color: #111111;
+  font-size: 20px;
+  font-weight: 500;
+  display: block;
+}
+.account-menu__link a {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+.account-menu__link a:hover {
+  color: rgba(17, 17, 17, 0.7);
+}
+.account-menu__link a:active {
+  color: #fff;
+}
+.account-menu__link a:active .account-menu__link {
+  padding-left: 30px;
+  background-color: #000;
+}
+.account-menu__link:hover, .account-menu__link:focus {
+  padding-left: 30px;
+  background-color: #000;
+}
+.account-menu__link:hover a, .account-menu__link:focus a {
+  color: #fff;
+}
+.account-menu__link:hover .account-menu__num, .account-menu__link:focus .account-menu__num {
+  right: 20px;
+}
+.account-menu__link_1 {
+  border-top: 1px solid #111111;
+  position: relative;
+}
+.account-menu__num {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+.account-menu__burger_btn {
+  display: none;
+}
+.account__rools {
+  position: fixed;
+  top: 425px;
+  right: -108px;
+  width: 253px;
+  height: 53px;
+  background-color: transparent;
+  transform: rotate(-90deg);
+}
+.account__rools .line-1 {
+  top: 23px;
+  right: 45px;
+}
+.account__rools .line-2 {
+  top: 15px;
+  right: 53px;
+}
+
+.burger-line_1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 18px;
+  height: 3px;
+  background: #141419;
+  transition: all 0.3s ease 0s;
+  transform: rotate(-40deg);
+}
+.burger-line_2 {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  width: 18px;
+  height: 3px;
+  background: #141419;
+  transition: all 0.3s ease 0s;
+  transform: rotate(40deg);
+}
+
+.profile {
+  border: 1px solid #000000;
+  padding: 33px 57px;
+  width: 100%;
+  background-color: #fff;
+  border-top: 0;
+}
+.profile:first-child {
+  border-top: 1px solid #000000;
+}
+.profile__title {
+  font-size: 27px;
+  font-weight: 500;
+  color: #141419;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.profile__photo {
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #efefef;
+}
+.profile__photo_img {
+  margin-right: 45px;
+}
+.profile__photo_img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile__label {
+  font-size: 17px;
+  font-family: "FuturaBookC";
+  color: rgba(20, 20, 25, 0.302);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.profile__item {
+  width: 100%;
+  border-bottom: 1px solid #efefef;
+  padding-top: 39px;
+  padding-bottom: 10px;
+}
+.profile__input {
+  font-size: 19px;
+  font-weight: normal;
+  font-family: "FuturaBookC";
+  color: #141419;
+  width: 100%;
+}
+.profile__input_2 {
+  width: calc(100% - 27%);
+  height: 35px;
+  font-size: 17px;
+  font-weight: 400;
+  border-bottom: 1px solid #111111;
+}
+.profile__input_2::placeholder {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgba(20, 20, 25, 0.502);
+}
+.profile__upload {
+  margin-top: 55px;
+  margin-bottom: 50px;
+}
+.profile__upload-label {
+  font-size: 25px;
+  color: #141419;
+  font-weight: 500;
+}
+.profile__row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.profile__row .profile__label {
+  width: 27%;
+}
+.profile__sub {
+  width: 100%;
+  background-color: #f1f1f1;
+  margin-top: 57px;
+  margin-bottom: 50px;
+  padding: 30px 25px;
+}
+.profile__desc {
+  margin: 50px 0;
+}
+.profile__textarea {
+  font-size: 19px;
+  font-weight: normal;
+  font-family: "FuturaBookC";
+  color: #141419;
+  width: 100%;
+  height: 138px;
+  border: 1px solid #000000;
+  padding: 20px 20px 10px 20px;
+}
+.profile__textarea::placeholder {
+  font-size: 19px;
+  color: rgba(20, 20, 25, 0.302);
+  line-height: 1.286;
+}
+.profile__submit {
+  margin-top: 55px;
+}
+.profile__submit a {
+  margin-right: 19px;
+}
+
+.sub__list-item {
+  margin-left: 28px;
+  position: relative;
+  font-size: 18px;
+  color: black;
+  line-height: 2.05;
+}
+.sub__sub-list {
+  padding-left: 28px;
+}
+.sub-item {
+  font-size: 16px;
+}
+.sub__btn {
+  position: relative;
+  margin-top: 25px;
+  width: fit-content;
+}
+.sub__btn .line-1 {
+  top: 21px;
+  right: 17px;
+}
+.sub__btn .line-2 {
+  top: 13px;
+  right: 25px;
+}
+
+.delete {
+  content: "";
+  background-image: url(../../images/del.png);
+  width: 18px;
+  height: 18px;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 7px;
+  left: -27px;
+  cursor: pointer;
+}
+
+.input-upload_img, .input-upload_doc {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.input-upload + label {
+  position: relative;
+  display: inline-block;
+  height: 35px;
+  padding: 8px 30px 8px 30px;
+  background-color: #000;
+  font-size: 16px;
+  font-family: "FuturaBookC";
+  color: white;
+}
+.input-upload + label p {
+  font-size: 16px;
+  font-family: "FuturaBookC";
+  color: white;
+  padding-left: 23px;
+}
+.input-upload + label img {
+  width: 17px;
+  height: 15px;
+  object-position: center;
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  left: 24px;
+}
+
+.input-upload:focus + label,
+.input-upload + label:hover {
+  background-color: #ff0000;
+  cursor: pointer;
+}
+
+.upload-doc__file {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  font-family: "FuturaBookC";
+  color: #141419;
+  font-style: italic;
+  font-weight: 300;
+  margin-top: 28px;
+}
+.upload-doc__file-name {
+  margin-left: 13px;
+  font-size: 19px;
+  font-family: "FuturaBookC";
+  font-weight: 300;
+  color: #141419;
+  font-style: italic;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.gallery-list__item {
+  width: 120px;
+  height: 110px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.gallery-list__item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 2;
+}
+.gallery-list__item:first-child {
+  margin-left: 0;
+}
+.gallery-list .delete {
+  left: auto;
+  z-index: 3;
+  right: 10px;
+}
+
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-size: 17px;
+  color: #141419;
+  cursor: pointer;
+}
+.checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #000;
+  margin-right: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 85%;
+}
+.checkbox:checked + label::before {
+  background-color: #000;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.checkbox:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #ff0000;
+}
+
+@media all and (min-width: 0px) and (max-width: 979px) {
+  .account__row {
+    display: block;
+  }
+  .account__rools {
+    display: none;
+  }
+  .account__selection {
+    margin-top: 25px;
+  }
+  .account__box {
+    display: block;
+  }
+  .account__aside {
+    width: 100%;
+  }
+  .account__content {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  .account-menu {
+    position: relative;
+  }
+  .account-menu__burger_menu {
+    display: none;
+  }
+  .account-menu__burger_menu.active {
+    display: block;
+  }
+  .account-menu__burger_btn {
+    display: block;
+    width: 32px;
+    height: 17px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+  }
+}
 .footer {
   width: 100%;
   background-color: #101216;

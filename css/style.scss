@@ -13,6 +13,17 @@ $font: "FuturaBookC";
   padding: 12px 50px;
 }
 
+%input-reset{
+    background: none;
+    border: none;
+    appearance: none;
+    border-radius: 0;
+    box-shadow: none;
+    line-height: normal;
+    letter-spacing: normal;
+    outline: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -173,5 +184,11 @@ button{
 @import 'nav';
 
 @import 'main';
+
+@import 'burger';
+
+@import 'modal';
+
+@import 'profile';
 
 @import 'footer';

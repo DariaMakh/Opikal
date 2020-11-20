@@ -6,7 +6,7 @@
     z-index: 1;
     &:hover, &:active{
         .menu-line{
-            background-color: #ff0000;
+            background-color: $red;
         }
     }
     &.active{
@@ -37,18 +37,10 @@
     transition: all 0.3s ease 0s;
     &_2{
         top: 12px;
-        //animation-name: line2;
     }
     &_3{
         top: 24px;
         width: 16px;
-        //animation-name: line3;
     }
-//    &_1, &_2, &_3{
-//        animation-duration: 6s;
-//        animation-iteration-count: infinite;
-//        animation-delay: 4s;
-//        animation-timing-function: linear;
-//    }
 }
 
