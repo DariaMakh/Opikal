@@ -22,6 +22,8 @@ $font: "FuturaBookC";
     line-height: normal;
     letter-spacing: normal;
     outline: 0;
+    font-weight: normal;
+    font-family: $font;
 }
 
 *,
@@ -152,6 +154,19 @@ button{
   &:active, &:hover{
     color: #000;
     background-color: transparent;
+  }
+}
+
+.btn-border{
+  @extend %btn;
+  border: 1px solid #000;
+  color: #fff;
+  background-color:$red;
+  font-size: 17px;
+  font-weight: bold;
+  &:active, &:hover{
+    color: #ffffff;
+    background-color: #000;
   }
 }
 

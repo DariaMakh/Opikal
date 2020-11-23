@@ -1,12 +1,193 @@
-.offer{
+$red: #ff0000;
+$lgr: #f3f3f3;
+$grey: #f4f4f4;
+$lbl: #141419;
+
+$font: "FuturaBookC";
+
+%btn{
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 50px;
+}
+  
+%input-reset{
+    background: none;
+    border: none;
+    appearance: none;
+    border-radius: 0;
+    box-shadow: none;
+    line-height: normal;
+    letter-spacing: normal;
+    outline: 0;
+    font-weight: normal;
+    font-family: $font;
+    &:focus, &:active{
+        outline: 0;
+    }
+}
+
+%select-text{
+    font-size: 18px;
+    font-family: $font;
+    color: rgb(20, 20, 25);
+}
+
+.search-input{
+    @extend %input-reset;
     width: 100%;
-    &__search{
-        &-form{
-            width: 100%;
-            background-color: rgba(173, 173, 173, 0.45);
-            padding: 27px;
+    height: 100%;
+    padding-left: 42px;
+    font-size: 18px;
+    color: #000;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000;
+    &::placeholder{
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.302);
+    }
+    &:focus{
+        .search-input::-ms-clear {
+            display: none;
         }
     }
 }
 
+.offer{
+    width: 100%;
+    &__search{
+        &-form{
+            display: flex;
+            width: 100%;
+            background-color: rgba(173, 173, 173, 0.45);
+            padding: 27px;
+            .btn-border{
+                margin-left: 25px;
+            }
+            &_input{
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+        }
+        &_icon{
+            &-1{
+                position: absolute;
+                top: 12px;
+                left: 16px;
+                width: 18px;
+                height: 18px;
+                background-image: url(../../images/search.png);
+            }
+            &-2{
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 19px;
+                transform: translateY(-50%);
+                p{
+                    font-size: 14px;
+                    color: rgba(0, 0, 0, 0.702);
+                }
+                &:hover{
+                    p{
+                        color: rgb(255, 0, 0);
+                    }
+                    .offer__search_img {
+                        background-image: url(../../images/search-2-hover.png);
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+        &_img{
+            width: 20px;
+            height: 17px;
+            position: absolute;
+            top: -2px;
+            left: -24px;
+            background-image: url(../../images/search-2.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+    &__advanced-search{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+}
+
+.select{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+    &__box{
+        width: 48%;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 15px;
+        width: 100%;
+        border-bottom: 2px solid #060606;
+        cursor: pointer;
+        &:hover{
+            border-bottom: 2px solid $red;
+            .select__current{
+                color: $red;
+            }
+            .select__icon{
+                border-color: $red transparent transparent transparent;
+            }
+        }
+    }
+    &__current{
+        @extend %select-text;
+    }
+    &__icon{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 5.5px 0 5.5px;
+        border-color: #000000 transparent transparent transparent;
+    }
+    &__body{
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        border: 2px solid #060606;
+        border-top: 0;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        &.active{
+            display: block;
+            background: #fff;
+            z-index: 3;
+        }
+    }
+    &__item{
+        @extend %select-text;
+        padding-top: 10px;
+        padding-left: 20px;
+        cursor: pointer;
+        &:hover{
+            color: $red;
+            padding-left: 25px;
+        }
+    }
+}
   
