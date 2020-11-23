@@ -20,8 +20,13 @@ $('.nav__burger').click(function(event){
 });
 
 $('.account-menu__burger_btn').click(function(event){
-    $('account-menu__burger_menu').toggleClass('active');
+    $('.account-menu__burger_menu').toggleClass('active');
 });
+
+$('.offer__search_icon-2').click(function(event){
+    $('.offer__advanced-search').toggleClass('active');
+});
+
 
 // ОТКРЫТИЕ И ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА
 
@@ -127,6 +132,7 @@ $('.input-upload_doc').on('change', function() {
 
 document.addEventListener("DOMContentLoaded", uploadImg);
 
+/*
 
 var showGallery = (function () {
     var fr = new FileReader,
@@ -162,4 +168,7 @@ var showGallery = (function () {
  
 })()
  
-document.getElementById('gallery').addEventListener('change', showGallery, false);
+document.getElementById('gallery').addEventListener("DOMContentLoaded", showGallery, false);
+
+
+*/
