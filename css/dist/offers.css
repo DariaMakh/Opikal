@@ -99,6 +99,98 @@
 .offer__advanced-search.active {
   display: block;
 }
+.offer__box {
+  width: 100%;
+  border: 1px solid #000;
+  background-color: #fff;
+  border-top: 0;
+  padding: 60px;
+}
+.offer__box:first-child {
+  border-top: 1px solid #000;
+}
+.offer__box_title {
+  font-size: 24px;
+  font-family: "FuturaBookDemiC";
+  color: #141419;
+  margin: 26px 0;
+}
+.offer__box_equipment {
+  font-size: 16px;
+  font-family: "FuturaBookDemiC";
+  color: rgba(255, 0, 0, 0.8);
+  text-decoration: underline;
+  display: block;
+}
+.offer__content {
+  margin-top: 20px;
+  width: 100%;
+}
+.offer__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.offer__section {
+  width: auto;
+  display: flex;
+}
+.offer__section_text {
+  font-size: 16px;
+  font-family: "FuturaBookC";
+  color: #141419;
+}
+.offer__section_text-2 {
+  font-size: 20px;
+  font-family: "FuturaBookC";
+  color: #141419;
+}
+.offer__section_label {
+  position: relative;
+  font-size: 16px;
+  font-family: "FuturaBookC";
+  color: red;
+  text-decoration: underline;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.offer__section_label, .offer__section .label {
+  margin-right: 12px;
+}
+.offer__line {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  margin: 36px 0;
+}
+.offer__notification {
+  font-size: 13px;
+  font-family: "FuturaBookDemiC";
+  color: red;
+  text-transform: uppercase;
+  background-color: #f0f0f0;
+  padding: 6px 7px;
+  height: fit-content;
+}
+.offer__btns {
+  margin-top: 35px;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.block {
+  display: block;
+}
+
+.notification {
+  font-size: 11px;
+  font-family: "FuturaBookDemiC";
+  color: red;
+  text-transform: uppercase;
+  position: absolute;
+  top: -7px;
+  cursor: pointer;
+}
 
 .select {
   width: 100%;

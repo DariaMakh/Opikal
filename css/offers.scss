@@ -4,6 +4,7 @@ $grey: #f4f4f4;
 $lbl: #141419;
 
 $font: "FuturaBookC";
+$font2: "FuturaBookDemiC";
 
 %btn{
     cursor: pointer;
@@ -122,7 +123,100 @@ $font: "FuturaBookC";
             display: block;
         }
     }
+    &__box{
+        width: 100%;
+        border: 1px solid #000;
+        background-color: #fff;
+        border-top: 0;
+        padding: 60px;
+        &:first-child{
+            border-top: 1px solid #000;
+        }
+        &_title{
+            font-size: 24px;
+            font-family: $font2;
+            color: rgb(20, 20, 25);
+            margin: 26px 0;
+        }
+        &_equipment{
+            font-size: 16px;
+            font-family: $font2;
+            color: rgba(255, 0, 0, 0.8);
+            text-decoration: underline;
+            display: block;
+        }
+    }
+    &__content{
+        margin-top: 20px;
+        width: 100%;
+    }
+    &__row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__section{
+        width: auto;
+        display: flex;
+        &_text{
+            font-size: 16px;
+            font-family: $font;
+            color: #141419;
+            &-2{
+                font-size: 20px;
+                font-family: $font;
+                color: #141419;
+            }
+        }
+        &_label{
+            position: relative;
+            font-size: 16px;
+            font-family: $font;
+            color: rgb(255, 0, 0);
+            text-decoration: underline;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+        &_label, .label{
+            margin-right: 12px;
+        }
+    }
+    &__line{
+        width: 100%;
+        border: 1px solid #e5e5e5;
+        margin: 36px 0;
+    }
+    &__notification{
+        font-size: 13px;
+        font-family: $font2;
+        color: rgb(255, 0, 0);
+        text-transform: uppercase;
+        background-color: #f0f0f0;
+        padding: 6px 7px;
+        height: fit-content;
+    }
+    &__btns{
+        margin-top: 35px;
+        width: 450px;
+        display: flex;
+        justify-content: space-between;
+    }
 }
+
+.block{
+    display: block;
+}
+
+.notification{
+    font-size: 11px;
+    font-family: $font2;
+    color: rgb(255, 0, 0);
+    text-transform: uppercase;
+    position: absolute;
+    top: -7px;
+    cursor: pointer;
+}
+
 
 .select{
     width: 100%;
@@ -190,4 +284,4 @@ $font: "FuturaBookC";
         }
     }
 }
-  
+
