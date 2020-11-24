@@ -209,6 +209,16 @@ button{
   margin-bottom: 5px;
 }
 
+.notification{
+  font-size: 11px;
+  font-family: $font2;
+  color: rgb(255, 0, 0);
+  text-transform: uppercase;
+  position: absolute;
+  top: -7px;
+  cursor: pointer;
+}
+
 @import 'breadcrumbs';
 
 @import 'nav';
@@ -220,5 +230,7 @@ button{
 @import 'modal';
 
 @import 'profile';
+
+@import 'offers';
 
 @import 'footer';
