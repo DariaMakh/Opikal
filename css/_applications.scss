@@ -1,0 +1,49 @@
+$red: #ff0000;
+$lgr: #f3f3f3;
+$grey: #f4f4f4;
+$lbl: #141419;
+
+$font: "FuturaBookC";
+$font2: "FuturaBookDemiC";
+
+.applications{
+    &__filter{
+        display: flex;
+        flex-wrap: wrap;
+        .btn{
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 10px;
+            margin-bottom: 11px;
+        }
+    }
+    &__content{
+        margin-top: 50px;
+    }
+    &__offer{
+        margin-top: 45px;
+        display: flex;
+        align-items: center;
+        p{
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+            margin-right: 25px;
+            a{
+                font-size: 16px;
+                color: $red;
+                text-decoration: underline;
+            }
+        }
+        &_logo{
+            display: flex;
+            flex-wrap: wrap;
+            img{
+                width: 27px;
+                height: 27px;
+                object-fit: contain;
+                object-position: center;
+                margin-right: 18px;
+            }
+        }
+    }
+}
