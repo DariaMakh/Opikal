@@ -57,98 +57,101 @@ $font2: "FuturaBookDemiC";
 }
 
 .offer{
-    width: 100%;
-    &__search{
-        &-form{
-            display: flex;
-            width: 100%;
-            background-color: rgba(173, 173, 173, 0.45);
-            padding: 27px;
-            .btn-border{
-                margin-left: 25px;
-            }
-            &_input{
-                width: 100%;
-                height: auto;
-                position: relative;
-            }
-        }
-        &_icon{
-            &-1{
-                position: absolute;
-                top: 12px;
-                left: 16px;
-                width: 18px;
-                height: 18px;
-                background-image: url(../../images/search.png);
-            }
-            &-2{
-                cursor: pointer;
-                position: absolute;
-                top: 50%;
-                right: 19px;
-                transform: translateY(-50%);
-                p{
-                    font-size: 14px;
-                    color: rgba(0, 0, 0, 0.702);
-                }
-                &:hover{
-                    p{
-                        color: rgb(255, 0, 0);
-                    }
-                    .offer__search_img {
-                        background-image: url(../../images/search-2-hover.png);
-                        background-size: cover;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                    }
-                }
-            }
-        }
-        &_img{
-            width: 20px;
-            height: 17px;
-            position: absolute;
-            top: -2px;
-            left: -24px;
-            background-image: url(../../images/search-2.png);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-    }
-    &__advanced-search{
-        display: none;
-        &.active{
-            display: block;
-        }
-    }
-    &__box{
-        width: 100%;
-        border: 1px solid #000;
-        background-color: #fff;
-        border-top: 0;
-        padding: 60px;
-        &:first-child{
-            border-top: 1px solid #000;
-        }
-        &_title{
-            font-size: 24px;
-            font-family: $font2;
-            color: rgb(20, 20, 25);
-            margin: 26px 0;
-        }
-        &_equipment{
-            font-size: 16px;
-            font-family: $font2;
-            color: rgba(255, 0, 0, 0.8);
-            text-decoration: underline;
-            display: block;
-        }
-    }
     &__content{
         margin-top: 20px;
         width: 100%;
+    }
+}
+
+.search{
+    width: 100%;
+    &-form{
+        display: flex;
+        width: 100%;
+        background-color: rgba(173, 173, 173, 0.45);
+        padding: 27px;
+        .btn-border{
+            margin-left: 25px;
+        }
+        &__input{
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+    }
+    &__icon{
+        &-1{
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            width: 18px;
+            height: 18px;
+            background-image: url(../../images/search.png);
+        }
+        &-2{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 19px;
+            transform: translateY(-50%);
+            p{
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.702);
+            }
+            &:hover{
+                p{
+                    color: rgb(255, 0, 0);
+                }
+                .search__img {
+                    background-image: url(../../images/search-2-hover.png);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+    &__img{
+        width: 20px;
+        height: 17px;
+        position: absolute;
+        top: -2px;
+        left: -24px;
+        background-image: url(../../images/search-2.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.advanced-search{
+    display: none;
+    &.active{
+        display: block;
+    }
+}
+
+.box{
+    width: 100%;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-top: 0;
+    padding: 60px;
+    &:first-child{
+        border-top: 1px solid #000;
+    }
+    &__title{
+        font-size: 24px;
+        font-family: $font2;
+        color: rgb(20, 20, 25);
+        margin: 26px 0;
+    }
+    &__equipment{
+        font-size: 16px;
+        font-family: $font2;
+        color: rgba(255, 0, 0, 0.8);
+        text-decoration: underline;
+        display: block;
     }
     &__row{
         display: flex;
@@ -274,4 +277,3 @@ $font2: "FuturaBookDemiC";
         }
     }
 }
-

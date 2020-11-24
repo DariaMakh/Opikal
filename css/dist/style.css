@@ -268,7 +268,7 @@ button:focus {
 }
 .nav__phone a {
   font-size: 19px;
-  font-family: "FuturaBookC";
+  font-family: "FuturaBookDemiC";
   color: black;
   font-weight: bold;
   line-height: 1.45;
@@ -1528,24 +1528,29 @@ button:focus {
   display: none;
 }
 
-.offer {
+.offer__content {
+  margin-top: 20px;
   width: 100%;
 }
-.offer__search-form {
+
+.search {
+  width: 100%;
+}
+.search-form {
   display: flex;
   width: 100%;
   background-color: rgba(173, 173, 173, 0.45);
   padding: 27px;
 }
-.offer__search-form .btn-border {
+.search-form .btn-border {
   margin-left: 25px;
 }
-.offer__search-form_input {
+.search-form__input {
   width: 100%;
   height: auto;
   position: relative;
 }
-.offer__search_icon-1 {
+.search__icon-1 {
   position: absolute;
   top: 12px;
   left: 16px;
@@ -1553,27 +1558,27 @@ button:focus {
   height: 18px;
   background-image: url(../../images/search.png);
 }
-.offer__search_icon-2 {
+.search__icon-2 {
   cursor: pointer;
   position: absolute;
   top: 50%;
   right: 19px;
   transform: translateY(-50%);
 }
-.offer__search_icon-2 p {
+.search__icon-2 p {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.702);
 }
-.offer__search_icon-2:hover p {
+.search__icon-2:hover p {
   color: red;
 }
-.offer__search_icon-2:hover .offer__search_img {
+.search__icon-2:hover .search__img {
   background-image: url(../../images/search-2-hover.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.offer__search_img {
+.search__img {
   width: 20px;
   height: 17px;
   position: absolute;
@@ -1584,59 +1589,57 @@ button:focus {
   background-position: center;
   background-repeat: no-repeat;
 }
-.offer__advanced-search {
+
+.advanced-search {
   display: none;
 }
-.offer__advanced-search.active {
+.advanced-search.active {
   display: block;
 }
-.offer__box {
+
+.box {
   width: 100%;
   border: 1px solid #000;
   background-color: #fff;
   border-top: 0;
   padding: 60px;
 }
-.offer__box:first-child {
+.box:first-child {
   border-top: 1px solid #000;
 }
-.offer__box_title {
+.box__title {
   font-size: 24px;
   font-family: "FuturaBookDemiC";
   color: #141419;
   margin: 26px 0;
 }
-.offer__box_equipment {
+.box__equipment {
   font-size: 16px;
   font-family: "FuturaBookDemiC";
   color: rgba(255, 0, 0, 0.8);
   text-decoration: underline;
   display: block;
 }
-.offer__content {
-  margin-top: 20px;
-  width: 100%;
-}
-.offer__row {
+.box__row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.offer__section {
+.box__section {
   width: auto;
   display: flex;
 }
-.offer__section_text {
+.box__section_text {
   font-size: 16px;
   font-family: "FuturaBookC";
   color: #141419;
 }
-.offer__section_text-2 {
+.box__section_text-2 {
   font-size: 20px;
   font-family: "FuturaBookC";
   color: #141419;
 }
-.offer__section_label {
+.box__section_label {
   position: relative;
   font-size: 16px;
   font-family: "FuturaBookC";
@@ -1645,15 +1648,15 @@ button:focus {
   text-transform: uppercase;
   display: inline-block;
 }
-.offer__section_label, .offer__section .label {
+.box__section_label, .box__section .label {
   margin-right: 12px;
 }
-.offer__line {
+.box__line {
   width: 100%;
   border: 1px solid #e5e5e5;
   margin: 36px 0;
 }
-.offer__notification {
+.box__notification {
   font-size: 13px;
   font-family: "FuturaBookDemiC";
   color: red;
@@ -1662,7 +1665,7 @@ button:focus {
   padding: 6px 7px;
   height: fit-content;
 }
-.offer__btns {
+.box__btns {
   margin-top: 35px;
   width: 450px;
   display: flex;
