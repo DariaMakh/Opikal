@@ -16,7 +16,7 @@
   letter-spacing: normal;
   outline: 0;
   font-weight: normal;
-  font-family: "FuturaBookC";
+  font-family: "FuturaBookDemiC";
 }
 
 *,
@@ -75,6 +75,7 @@ button:focus {
   padding: 7px 25px;
 }
 .red__btn a {
+  font-family: "FuturaBookDemiC";
   font-size: 17px;
   color: white;
   font-weight: bold;
@@ -100,12 +101,14 @@ button:focus {
   display: block;
   padding: 7px 26px;
   letter-spacing: 0.4px;
+  font-family: "FuturaBookDemiC";
 }
 
 .btn {
   border: 1px solid #000;
   color: #000;
   background-color: #fff;
+  font-family: "FuturaBookDemiC";
   font-size: 17px;
   font-weight: bold;
 }
@@ -129,6 +132,7 @@ button:focus {
   border: 1px solid #000;
   color: #fff;
   background-color: #000;
+  font-family: "FuturaBookDemiC";
   font-size: 17px;
   font-weight: bold;
 }
@@ -141,6 +145,7 @@ button:focus {
   border: 1px solid #000;
   color: #fff;
   background-color: #ff0000;
+  font-family: "FuturaBookDemiC";
   font-size: 17px;
   font-weight: bold;
 }
@@ -160,7 +165,7 @@ button:focus {
 }
 .rools a {
   font-size: 16px;
-  font-family: "FuturaBookC";
+  font-family: "FuturaBookDemiC";
   color: black;
   line-height: 1.4;
   display: block;
@@ -337,7 +342,7 @@ button:focus {
 }
 .header__title {
   font-size: 49px;
-  font-family: "FuturaDemiC";
+  font-family: "FuturaBookDemiC";
   color: white;
   font-weight: bold;
   line-height: 1.111;
@@ -419,7 +424,7 @@ button:focus {
 }
 .equipment__title {
   font-size: 49px;
-  font-family: "FuturaBookC";
+  font-family: "FuturaBookDemiC";
   color: black;
   font-weight: 400;
   line-height: 1;
@@ -538,7 +543,7 @@ button:focus {
 }
 .possibility__title {
   font-size: 47px;
-  font-family: "FuturaBookC";
+  font-family: "FuturaBookDemiC";
   color: #141419;
   font-weight: bold;
   line-height: 1.001;
@@ -572,7 +577,6 @@ button:focus {
 }
 .possibility__list-item {
   font-size: 17px;
-  font-family: "FuturaBookC";
   color: black;
   line-height: 1.385;
   position: relative;
@@ -1035,6 +1039,7 @@ button:focus {
   margin-bottom: 60px;
 }
 .account__title {
+  font-family: "FuturaBookDemiC";
   font-size: 66px;
   color: black;
   font-weight: bold;
@@ -1220,9 +1225,6 @@ button:focus {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-}
-.profile__row .profile__label {
-  width: 27%;
 }
 .profile__sub {
   width: 100%;

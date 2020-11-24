@@ -1,3 +1,6 @@
+$font: "FuturaBookC";
+$font2: "FuturaBookDemiC";
+
 .account{
     position: relative;
     width: 100%;
@@ -24,6 +27,7 @@
         margin-bottom: 60px;
     }
     &__title{
+        font-family: $font2;
         font-size: 66px;
         color: rgb(0, 0, 0);
         font-weight: bold;
@@ -215,9 +219,6 @@
         display: flex;
         align-items: center;
         margin-bottom: 30px;
-        .profile__label{
-            width: 27%;
-        }
     }
     &__sub{
         width: 100%;

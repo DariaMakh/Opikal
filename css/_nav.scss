@@ -4,6 +4,7 @@ $grey: #f4f4f4;
 $lbl: #141419;
 
 $font: "FuturaBookC";
+$font2: "FuturaBookDemiC";
 
 %hover-red{
     transition-duration: 5ms;
@@ -151,7 +152,7 @@ $font: "FuturaBookC";
     }
     &__title{
         font-size: 49px;
-        font-family: "FuturaDemiC";
+        font-family: $font2;
         color: rgb(255, 255, 255);
         font-weight: bold;
         line-height: 1.111;

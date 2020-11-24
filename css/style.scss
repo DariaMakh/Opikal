@@ -4,6 +4,7 @@ $grey: #f4f4f4;
 $lbl: #141419;
 
 $font: "FuturaBookC";
+$font2: "FuturaBookDemiC";
 
 %btn{
   cursor: pointer;
@@ -14,16 +15,16 @@ $font: "FuturaBookC";
 }
 
 %input-reset{
-    background: none;
-    border: none;
-    appearance: none;
-    border-radius: 0;
-    box-shadow: none;
-    line-height: normal;
-    letter-spacing: normal;
-    outline: 0;
-    font-weight: normal;
-    font-family: $font;
+  background: none;
+  border: none;
+  appearance: none;
+  border-radius: 0;
+  box-shadow: none;
+  line-height: normal;
+  letter-spacing: normal;
+  outline: 0;
+  font-weight: normal;
+  font-family: $font2;
 }
 
 *,
@@ -85,13 +86,14 @@ button{
           }
       }
       a{
-          font-size: 17px;
-          color: rgb(255, 255, 255);
-          font-weight: bold;
-          line-height: 1.65;
-          display: block;
-          padding: 8px 26px;
-          letter-spacing: 0.4px;
+        font-family: $font2;
+        font-size: 17px;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        line-height: 1.65;
+        display: block;
+        padding: 8px 26px;
+        letter-spacing: 0.4px;
       }
   }
 }
@@ -116,6 +118,7 @@ button{
           display: block;
           padding: 7px 26px;
           letter-spacing: 0.4px;
+          font-family: $font2;
       }
   }
 }
@@ -125,6 +128,7 @@ button{
   border: 1px solid #000;
   color: #000;
   background-color: #fff;
+  font-family: $font2;
   font-size: 17px;
   font-weight: bold;
   &:active, &:hover{
@@ -149,6 +153,7 @@ button{
   border: 1px solid #000;
   color: #fff;
   background-color: #000;
+  font-family: $font2;
   font-size: 17px;
   font-weight: bold;
   &:active, &:hover{
@@ -162,6 +167,7 @@ button{
   border: 1px solid #000;
   color: #fff;
   background-color:$red;
+  font-family: $font2;
   font-size: 17px;
   font-weight: bold;
   &:active, &:hover{
@@ -180,7 +186,7 @@ button{
   transform: rotate(-90deg);
   a{
     font-size: 16px;
-    font-family: $font;
+    font-family: $font2;
     color: rgb(0, 0, 0);
     line-height: 1.4;
     display: block;
