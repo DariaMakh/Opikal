@@ -47,3 +47,60 @@ $font2: "FuturaBookDemiC";
         }
     }
 }
+
+.application{
+    margin-top: 35px;
+    background-color: #fff;
+    &-box{
+        width: 100%;
+        border: 1px solid #a8a8a8;
+        border-top: 0;
+        padding: 65px 40px 50px 40px;
+        &__row{
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        &:first-child{
+            border-top: 1px solid #a8a8a8;
+        }
+        &:hover{
+            .application{
+                background-color: rgba(66, 132, 216, 0.45);
+                padding: 25px;
+            }
+            padding: 40px 16px 35px 16px;
+            border-color: #000;
+        }
+    }
+    &__num{
+        padding: 8px 12px;
+        background-color: $red;
+        font-size: 13px;
+        font-family: $font2;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 25px;
+    }
+    &__date{
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(25, 20, 20);
+        text-transform: uppercase;
+    }
+    &__text{
+        font-size: 17px;
+        color: rgb(20, 20, 25);
+    }
+    &__theme{
+        font-size: 21px;
+        font-family: $font2;
+        color: rgb(20, 20, 25);
+    }
+    &__line{
+        width: 100%;
+        border: 1px solid #e5e5e5;
+        margin: 25px 0;
+    }
+}

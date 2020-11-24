@@ -177,7 +177,7 @@ button:focus {
 
 .label {
   font-size: 17px;
-  font-family: "FuturaBookC";
+  font-family: "FuturaBookDemiC";
   color: rgba(20, 20, 25, 0.302);
   font-weight: bold;
   text-transform: uppercase;
@@ -1777,6 +1777,63 @@ button:focus {
   object-fit: contain;
   object-position: center;
   margin-right: 18px;
+}
+
+.application {
+  margin-top: 35px;
+  background-color: #fff;
+}
+.application-box {
+  width: 100%;
+  border: 1px solid #a8a8a8;
+  border-top: 0;
+  padding: 65px 40px 50px 40px;
+}
+.application-box__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.application-box:first-child {
+  border-top: 1px solid #a8a8a8;
+}
+.application-box:hover {
+  padding: 40px 16px 35px 16px;
+  border-color: #000;
+}
+.application-box:hover .application {
+  background-color: rgba(66, 132, 216, 0.45);
+  padding: 25px;
+}
+.application__num {
+  padding: 8px 12px;
+  background-color: #ff0000;
+  font-size: 13px;
+  font-family: "FuturaBookDemiC";
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 25px;
+}
+.application__date {
+  font-size: 16px;
+  font-weight: 500;
+  color: #191414;
+  text-transform: uppercase;
+}
+.application__text {
+  font-size: 17px;
+  color: #141419;
+}
+.application__theme {
+  font-size: 21px;
+  font-family: "FuturaBookDemiC";
+  color: #141419;
+}
+.application__line {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  margin: 25px 0;
 }
 
 .footer {
