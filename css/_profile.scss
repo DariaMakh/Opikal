@@ -171,14 +171,6 @@ $font2: "FuturaBookDemiC";
             overflow: hidden;
         }
     }
-    &__label{
-        font-size: 17px;
-        font-family: $font;
-        color: rgba(20, 20, 25, 0.302);
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-bottom: 5px;
-    }
     &__item{
         width: 100%;
         border-bottom: 1px solid #efefef;
@@ -191,6 +183,10 @@ $font2: "FuturaBookDemiC";
         font-family: $font;
         color: rgb(20, 20, 25);
         width: 100%;
+        &::placeholder{
+            font-size: 17px;
+            font-family: $font2;
+        }
         &_2{
             @extend %input-reset;
             width: calc(100% - 27%);
@@ -219,6 +215,9 @@ $font2: "FuturaBookDemiC";
         display: flex;
         align-items: center;
         margin-bottom: 30px;
+        .label{
+            width: 27%;
+        }
     }
     &__sub{
         width: 100%;

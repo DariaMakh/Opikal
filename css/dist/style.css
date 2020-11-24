@@ -175,6 +175,15 @@ button:focus {
   padding: 14px 30px;
 }
 
+.label {
+  font-size: 17px;
+  font-family: "FuturaBookC";
+  color: rgba(20, 20, 25, 0.302);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
 .breadcrumbs {
   display: flex;
 }
@@ -1179,14 +1188,6 @@ button:focus {
   border-radius: 50%;
   overflow: hidden;
 }
-.profile__label {
-  font-size: 17px;
-  font-family: "FuturaBookC";
-  color: rgba(20, 20, 25, 0.302);
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-}
 .profile__item {
   width: 100%;
   border-bottom: 1px solid #efefef;
@@ -1198,6 +1199,10 @@ button:focus {
   font-family: "FuturaBookC";
   color: #141419;
   width: 100%;
+}
+.profile__input::placeholder {
+  font-size: 17px;
+  font-family: "FuturaBookDemiC";
 }
 .profile__input_2 {
   width: calc(100% - 27%);
@@ -1225,6 +1230,9 @@ button:focus {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+}
+.profile__row .label {
+  width: 27%;
 }
 .profile__sub {
   width: 100%;

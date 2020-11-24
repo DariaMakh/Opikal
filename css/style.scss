@@ -200,6 +200,15 @@ button{
   }
 }
 
+.label{
+  font-size: 17px;
+  font-family: $font;
+  color: rgba(20, 20, 25, 0.302);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
 @import 'breadcrumbs';
 
 @import 'nav';
