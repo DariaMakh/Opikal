@@ -1077,9 +1077,7 @@ button:focus {
 }
 .account-menu__link {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: relative;
   border-bottom: 1px solid #111111;
 }
 .account-menu__link__num, .account-menu__link a {
@@ -1109,11 +1107,8 @@ button:focus {
   padding-left: 30px;
   background-color: #000;
 }
-.account-menu__link:hover a, .account-menu__link:focus a {
+.account-menu__link:hover a, .account-menu__link:hover .account-menu__num, .account-menu__link:focus a, .account-menu__link:focus .account-menu__num {
   color: #fff;
-}
-.account-menu__link:hover .account-menu__num, .account-menu__link:focus .account-menu__num {
-  right: 20px;
 }
 .account-menu__link_1 {
   border-top: 1px solid #111111;
@@ -1122,7 +1117,10 @@ button:focus {
 .account-menu__num {
   position: absolute;
   top: 50px;
-  right: 0;
+  right: 5px;
+  color: #111111;
+  font-size: 20px;
+  font-weight: 500;
 }
 .account-menu__burger_btn {
   display: none;
@@ -1151,7 +1149,7 @@ button:focus {
   top: 0;
   width: 18px;
   height: 3px;
-  background: #141419;
+  background: #fff;
   transition: all 0.3s ease 0s;
   transform: rotate(-40deg);
 }
@@ -1161,7 +1159,7 @@ button:focus {
   top: 0;
   width: 18px;
   height: 3px;
-  background: #141419;
+  background: #fff;
   transition: all 0.3s ease 0s;
   transform: rotate(40deg);
 }
@@ -1465,6 +1463,7 @@ button:focus {
   }
   .account-menu {
     position: relative;
+    background-color: #fff;
   }
   .account-menu__burger_menu {
     display: none;
@@ -1478,7 +1477,29 @@ button:focus {
     height: 17px;
     position: absolute;
     right: 30px;
-    top: 50%;
+    top: 39px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .account-menu__link, .account-menu__link_1 {
+    border: 0;
+  }
+  .account-menu__link a {
+    color: #000;
+    padding: 30px 20px;
+  }
+  .account-menu__link_1 {
+    background-color: #000;
+  }
+  .account-menu__link_1 a {
+    color: #fff;
+  }
+  .account-menu__link:hover, .account-menu__link:focus {
+    padding-left: 0;
+  }
+  .account__num {
+    top: 30px;
+    right: 38px;
   }
 }
 .btn, .btn-add, .btn-border {
