@@ -138,7 +138,7 @@ button:focus {
 }
 .btn-add:active, .btn-add:hover {
   color: #000;
-  background-color: transparent;
+  background-color: #fff;
 }
 
 .btn-border {
@@ -192,6 +192,13 @@ button:focus {
   position: absolute;
   top: -7px;
   cursor: pointer;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
 }
 
 .breadcrumbs {
@@ -1497,7 +1504,7 @@ button:focus {
   .account-menu__link:hover, .account-menu__link:focus {
     padding-left: 0;
   }
-  .account__num {
+  .account-menu__num {
     top: 30px;
     right: 38px;
   }
@@ -1536,6 +1543,7 @@ button:focus {
   width: 100%;
   height: 100%;
   padding-left: 42px;
+  padding-right: 160px;
   font-size: 18px;
   color: #000;
   background-color: white;
@@ -1544,9 +1552,6 @@ button:focus {
 .search-input::placeholder {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.302);
-}
-.search-input:focus .search-input::-ms-clear {
-  display: none;
 }
 
 .offer__content {
