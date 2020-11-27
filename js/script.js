@@ -23,8 +23,8 @@ $('.account-menu__burger_btn').click(function(event){
     $('.account-menu__burger_menu').toggleClass('active');
 });
 
-$('.offer__search_icon-2').click(function(event){
-    $('.offer__advanced-search').toggleClass('active');
+$('.search__icon-2').click(function(event){
+    $('.advanced-search').toggleClass('active');
 });
 
 var select = function(){
