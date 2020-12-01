@@ -300,6 +300,20 @@ input[type=search]::-webkit-search-results-decoration {
   width: 24px;
   height: auto;
 }
+.nav__icons_like span {
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+  padding-top: 1px;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -16px;
+  left: 13px;
+}
 .nav__icons_account {
   width: 20px;
   height: auto;
@@ -307,6 +321,7 @@ input[type=search]::-webkit-search-results-decoration {
 .nav__icons_mess a, .nav__icons_notification a, .nav__icons_like a, .nav__icons_account a {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .nav__icons_mess a:hover, .nav__icons_notification a:hover, .nav__icons_like a:hover, .nav__icons_account a:hover {
   opacity: 0.6;

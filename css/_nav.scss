@@ -71,6 +71,20 @@ $font2: "FuturaBookDemiC";
         &_like{
             width: 24px;
             height: auto;
+            span{
+                font-size: 13px;
+                color: rgb(255, 255, 255);
+                font-weight: bold;
+                border-radius: 50%;
+                background-color: rgb(255, 0, 0);
+                text-align: center;
+                padding-top: 1px;
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: -16px;
+    left: 13px;
+            }
         }
         &_account{
             width: 20px;
@@ -81,6 +95,7 @@ $font2: "FuturaBookDemiC";
             a{
                 width: 100%;
                 height: 100%;
+                position: relative;
                 &:hover{
                     opacity: 0.6;
                 }
