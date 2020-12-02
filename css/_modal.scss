@@ -104,11 +104,13 @@
         text-align: center;
     }
     &__link{
-        width: auto;
+        display: inline-block;
         font-size: 16px;
         font-weight: 300;
         text-decoration: underline;
         color: $red;
+        margin-left: 3px;
+        margin-right: 3px;
     }
     &__text{
         margin-top: 30px;
