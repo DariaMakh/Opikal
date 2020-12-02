@@ -15,20 +15,16 @@
   .nav__icons {
     width: 122px;
   }
-
-  .menu {
-    justify-content: space-between;
-    width: 300px;
-  }
-  .menu__link a {
-    margin-right: 0;
-  }
-}
-@media (max-width: 1160px) {
   .nav__row {
     flex-direction: column-reverse;
     width: 158px;
   }
+
+  .menu {
+    align-items: center;
+  }
+}
+@media (max-width: 1160px) {
   .nav__phone {
     margin-top: 6px;
   }
@@ -39,7 +35,11 @@
     width: 180px;
   }
 }
-@media (max-width: 1130px) {
+@media (max-width: 1135px) {
+  .menu__link a {
+    margin-right: 22px;
+  }
+
   .possibility {
     padding: 90px 0;
   }
@@ -130,6 +130,22 @@
   }
   .nav .red__btn {
     display: none;
+  }
+  .nav__icons {
+    display: none;
+  }
+  .nav__row {
+    width: 100%;
+  }
+  .nav__phone {
+    padding: 16px 40px;
+  }
+  .nav__phone a {
+    font-size: 22px;
+    font-family: "FuturaBookC";
+    font-weight: 300;
+    color: black;
+    line-height: 1.65;
   }
 
   .menu {
