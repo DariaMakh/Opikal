@@ -1,9 +1,11 @@
-.btn-border, .btn-add, .btn {
+.btn-add, .btn-search, .btn-filter, .btn-white, .btn-black_2, .btn-black, .btn-red, .btn {
   cursor: pointer;
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  padding: 12px 50px;
+  font-family: "FuturaBookDemiC";
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .search-input, .profile__textarea, .profile__input_2, .profile__input {
@@ -16,7 +18,16 @@
   letter-spacing: normal;
   outline: 0;
   font-weight: normal;
-  font-family: "FuturaBookDemiC";
+  font-family: "FuturaBookC";
+}
+.search-input:focus, .profile__textarea:focus, .profile__input_2:focus, .profile__input:focus, .search-input:active, .profile__textarea:active, .profile__input_2:active, .profile__input:active {
+  outline: 0;
+}
+
+.select__item, .select__current {
+  font-size: 18px;
+  font-family: "FuturaBookC";
+  color: #141419;
 }
 
 *,
@@ -63,69 +74,90 @@ button:focus {
   display: flex;
 }
 
-.red__btn {
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  background-color: #ff0000;
-  width: fit-content;
-  height: fit-content;
-}
-.red__btn:hover a {
-  padding: 7px 25px;
-}
-.red__btn a {
-  font-family: "FuturaBookDemiC";
-  font-size: 17px;
-  color: white;
-  font-weight: bold;
-  line-height: 1.65;
-  display: block;
-  padding: 8px 26px;
-  letter-spacing: 0.4px;
-}
-
-.black__btn {
-  background-color: transparent;
-  border-width: 2px;
-  border-color: #000;
-  border-style: solid;
-  width: fit-content;
-  height: fit-content;
-}
-.black__btn a {
-  font-size: 17px;
-  color: #000;
-  font-weight: bold;
-  line-height: 1.65;
-  display: block;
-  padding: 7px 26px;
-  letter-spacing: 0.4px;
-  font-family: "FuturaBookDemiC";
-}
-
 .btn {
   border: 1px solid #000;
   color: #000;
   background-color: #fff;
-  font-family: "FuturaBookDemiC";
-  font-size: 17px;
-  font-weight: bold;
 }
 .btn:active, .btn:hover {
   color: #ffffff;
   background-color: #000;
 }
 
-.red {
-  background-color: #ff0000;
-  border: 1px solid transparent;
+.btn-red {
+  border: 1px solid #000;
   color: #fff;
+  background-color: #ff0000;
+  padding: 10px 30px;
+}
+.btn-black {
+  border: 2px solid #000;
+  color: #000;
+  background-color: #fff;
+  padding: 8px 28px;
+}
+.btn-black:hover {
+  border: 2px solid #000;
+  color: #fff;
+  background-color: #000;
+}
+.btn-black_2 {
+  border: 1px solid #000;
+  color: #000;
+  background-color: #fff;
+  padding: 10px 50px;
+}
+.btn-black_2:hover {
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+}
+.btn-white {
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  padding: 8px 28px;
+}
+.btn-white:hover {
+  border: 2px solid #ff0000;
+  color: #ff0000;
+}
+.btn-filter {
+  border: 1px solid #959595;
+  background-color: #fff;
+  color: #959595;
+  padding: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 11px;
+  font-size: 16px;
+}
+.btn-filter:hover {
+  border: 1px solid #000;
+  color: #000;
+  background-color: #fff;
+}
+.btn-search {
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #ff0000;
+  padding: 8px 50px;
+  margin-left: 25px;
+}
+
+.red {
+  border: 1px solid transparent;
 }
 .red:hover {
   border: 1px solid #000;
   background-color: #eb0000;
   color: #fff;
+}
+
+.btn-black-active {
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
 }
 
 .btn-add {
@@ -139,19 +171,6 @@ button:focus {
 .btn-add:active, .btn-add:hover {
   color: #000;
   background-color: #fff;
-}
-
-.btn-border {
-  border: 1px solid #000;
-  color: #fff;
-  background-color: #ff0000;
-  font-family: "FuturaBookDemiC";
-  font-size: 17px;
-  font-weight: bold;
-}
-.btn-border:active, .btn-border:hover {
-  color: #ffffff;
-  background-color: #000;
 }
 
 .rools {
@@ -235,12 +254,12 @@ input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
 
-.possibility .provisioner__btn:hover, .provisioner__btn:hover, .nav__btn:hover, .red__btn:hover, .black__btn:hover, .rools:hover {
+.possibility .provisioner__btn:hover, .provisioner__btn:hover, .nav__btn:hover, .rools:hover {
   transition-duration: 5ms;
   background-color: transparent;
   border: 2px solid #ff0000;
 }
-.possibility .provisioner__btn:hover a, .provisioner__btn:hover a, .nav__btn:hover a, .red__btn:hover a, .black__btn:hover a, .rools:hover a {
+.possibility .provisioner__btn:hover a, .provisioner__btn:hover a, .nav__btn:hover a, .rools:hover a {
   color: #ff0000;
 }
 
@@ -440,11 +459,11 @@ input[type=search]::-webkit-search-results-decoration {
   padding: 6px 26px;
 }
 
-.possibility .provisioner__btn:hover, .red__btn:hover, .black__btn:hover, .rools:hover, .nav__btn:hover, .provisioner__btn:hover {
+.possibility .provisioner__btn:hover, .rools:hover, .nav__btn:hover, .provisioner__btn:hover {
   background-color: transparent;
   border: 2px solid #ff0000;
 }
-.possibility .provisioner__btn:hover a, .red__btn:hover a, .black__btn:hover a, .rools:hover a, .nav__btn:hover a, .provisioner__btn:hover a {
+.possibility .provisioner__btn:hover a, .rools:hover a, .nav__btn:hover a, .provisioner__btn:hover a {
   color: #ff0000;
 }
 
@@ -789,23 +808,6 @@ input[type=search]::-webkit-search-results-decoration {
 .modal-content__btn {
   margin: 0 auto;
   width: 240px;
-}
-.modal-content__btn-style {
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  background: #ff0000;
-  width: 100%;
-  height: 42px;
-  font-size: 17px;
-  color: white;
-  font-weight: bold;
-  font-family: "FuturaBookC";
-  line-height: 1.65;
-  display: block;
-  padding: 8px 26px;
-  letter-spacing: 0.4px;
-  cursor: pointer;
 }
 .modal-content__btn-login {
   align-items: center;
@@ -1524,51 +1526,6 @@ input[type=search]::-webkit-search-results-decoration {
     right: 38px;
   }
 }
-.btn, .btn-add, .btn-border {
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  padding: 12px 50px;
-}
-
-.search-input, .profile__input, .profile__input_2, .profile__textarea {
-  background: none;
-  border: none;
-  appearance: none;
-  border-radius: 0;
-  box-shadow: none;
-  line-height: normal;
-  letter-spacing: normal;
-  outline: 0;
-  font-weight: normal;
-  font-family: "FuturaBookC";
-}
-.search-input:focus, .profile__input:focus, .profile__input_2:focus, .profile__textarea:focus, .search-input:active, .profile__input:active, .profile__input_2:active, .profile__textarea:active {
-  outline: 0;
-}
-
-.select__item, .select__current {
-  font-size: 18px;
-  font-family: "FuturaBookC";
-  color: #141419;
-}
-
-.search-input {
-  width: 100%;
-  height: 100%;
-  padding-left: 42px;
-  padding-right: 160px;
-  font-size: 18px;
-  color: #000;
-  background-color: white;
-  border: 1px solid #000;
-}
-.search-input::placeholder {
-  font-size: 16px;
-  color: rgba(0, 0, 0, 0.302);
-}
-
 .offer__content {
   margin-top: 20px;
   width: 100%;
@@ -1593,8 +1550,9 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .search__icon-1 {
   position: absolute;
-  top: 12px;
-  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
   width: 18px;
   height: 18px;
   background-image: url(../../images/search.png);
@@ -1629,6 +1587,20 @@ input[type=search]::-webkit-search-results-decoration {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+.search-input {
+  width: 100%;
+  height: 100%;
+  padding-left: 35px;
+  padding-right: 160px;
+  font-size: 18px;
+  color: #000;
+  background-color: white;
+  border: 1px solid #000;
+}
+.search-input::placeholder {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.302);
 }
 
 .advanced-search {
@@ -1708,7 +1680,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .box__btns {
   margin-top: 35px;
-  width: 450px;
+  width: 380px;
   display: flex;
   justify-content: space-between;
 }

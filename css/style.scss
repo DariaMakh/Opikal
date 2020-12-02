@@ -11,7 +11,9 @@ $font2: "FuturaBookDemiC";
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  padding: 12px 50px;
+  font-family: $font2;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 %input-reset{
@@ -24,7 +26,16 @@ $font2: "FuturaBookDemiC";
   letter-spacing: normal;
   outline: 0;
   font-weight: normal;
-  font-family: $font2;
+  font-family: $font;
+  &:focus, &:active{
+      outline: 0;
+  }
+}
+
+%select-text{
+  font-size: 18px;
+  font-family: $font;
+  color: rgb(20, 20, 25);
 }
 
 *,
@@ -71,81 +82,102 @@ button{
   display: flex;
 }
 
-.red{
-  &__btn{
-      border-width: 1px;
-      border-color: rgb(0, 0, 0);
-      border-style: solid;
-      background-color: $red;
-      width: fit-content;
-      height: fit-content;
-      &:hover{
-          @extend %hover-red;
-          a{
-            padding: 7px 25px;
-          }
-      }
-      a{
-        font-family: $font2;
-        font-size: 17px;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-        line-height: 1.65;
-        display: block;
-        padding: 8px 26px;
-        letter-spacing: 0.4px;
-      }
-  }
-}
-
-
-.black{
-  &__btn{
-      background-color: transparent;
-      border-width: 2px;
-      border-color: #000;
-      border-style: solid;
-      width: fit-content;
-      height: fit-content;
-      &:hover{
-          @extend %hover-red;
-      }
-      a{
-          font-size: 17px;
-          color: #000;
-          font-weight: bold;
-          line-height: 1.65;
-          display: block;
-          padding: 7px 26px;
-          letter-spacing: 0.4px;
-          font-family: $font2;
-      }
-  }
-}
 
 .btn{
   @extend %btn;
   border: 1px solid #000;
   color: #000;
   background-color: #fff;
-  font-family: $font2;
-  font-size: 17px;
-  font-weight: bold;
   &:active, &:hover{
     color: #ffffff;
     background-color: #000;
   }
 }
 
+
+
+.btn{
+  &-red{
+    @extend %btn;
+    border: 1px solid #000;
+    color: #fff;
+    background-color: $red;
+    padding: 10px 30px;
+  }
+  &-black{
+    @extend %btn;
+    border: 2px solid #000;
+    color: #000;
+    background-color: #fff;
+    padding: 8px 28px;
+    &:hover{
+      border: 2px solid #000;
+      color: #fff;
+      background-color: #000;
+    }
+    &_2{
+      @extend %btn;
+      border: 1px solid #000;
+      color: #000;
+      background-color: #fff;
+      padding: 10px 50px;
+      &:hover{
+        border: 1px solid #000;
+        color: #fff;
+        background-color: #000;
+      }
+    }
+  }
+  &-white{
+    @extend %btn;
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    padding: 8px 28px;
+    &:hover{
+      border: 2px solid $red;
+      color: $red;
+    }
+  }
+  &-filter{
+    @extend %btn;
+    border: 1px solid rgb(149, 149, 149);
+    background-color: #fff;
+    color: rgb(149, 149, 149);
+    padding: 10px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 11px;
+    font-size: 16px;
+    &:hover{
+      border: 1px solid #000;
+      color: #000;
+      background-color: #fff;
+    }
+  }
+  &-search{
+    @extend %btn;
+    border: 1px solid #000;
+    color: #fff;
+    background-color: $red;
+    padding: 8px 50px;
+    margin-left: 25px;
+  }
+}
+
 .red{
-  background-color: $red;
   border: 1px solid transparent;
-  color: #fff;
   &:hover{
     border: 1px solid #000;
     background-color: #eb0000;
     color: #fff;
   }
+}
+
+.btn-black-active{
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
 }
 
 .btn-add{
@@ -159,20 +191,6 @@ button{
   &:active, &:hover{
     color: #000;
     background-color: #fff;
-  }
-}
-
-.btn-border{
-  @extend %btn;
-  border: 1px solid #000;
-  color: #fff;
-  background-color: $red;
-  font-family: $font2;
-  font-size: 17px;
-  font-weight: bold;
-  &:active, &:hover{
-    color: #ffffff;
-    background-color: #000;
   }
 }
 
