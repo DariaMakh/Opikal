@@ -237,6 +237,9 @@
 }
 
 @media (max-width: 640px){
+    .rools{
+        display: none;
+    }
     .header{
         &__title{
             font-size: 38px;

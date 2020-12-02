@@ -182,25 +182,29 @@ button{
 
 .btn-add{
   @extend %btn;
-  border: 1px solid #000;
-  color: #fff;
-  background-color: #000;
-  font-family: $font2;
-  font-size: 17px;
-  font-weight: bold;
+      border: 1px solid #000;
+    color: #fff;
+    background-color: #000;
+    font-family: "FuturaBookDemiC";
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 60px 10px 25px;
   &:active, &:hover{
     color: #000;
     background-color: #fff;
   }
 }
 
+
+
 .rools{
   position: absolute;
   top: 55%;
-  right: -100px;
-  width: 253px;
-  height: 53px;
+  right: -73px;
+  width: 188px;
+  height: 42px;
   background-color: #f6f6f8;
+  border: 1px solid #f6f6f8;
   transform: rotate(-90deg);
   a{
     font-size: 16px;
@@ -208,13 +212,22 @@ button{
     color: rgb(0, 0, 0);
     line-height: 1.4;
     display: block;
-    padding: 16px 30px;
+    padding: 10px 20px;
   }
   &:hover{
-    @extend %hover-red;
+    background-color: transparent;
+    border: 1px solid $red;
     a{
-      padding: 14px 30px;
+      color: $red;
     }
+  }
+  .line-1{
+    top: 20px;
+    right: 20px;
+  }
+  .line-2{
+    top: 12px;
+    right: 28px;
   }
 }
 
