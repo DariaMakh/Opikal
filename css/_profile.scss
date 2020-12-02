@@ -55,7 +55,8 @@ $font2: "FuturaBookDemiC";
             }
             a{
                 position: relative;
-                width: 100%;
+                width: fit-content;
+                max-width: 90%;
                 display: flex;
                 padding-top: 50px;
                 padding-bottom: 30px;
