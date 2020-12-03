@@ -100,6 +100,12 @@ button{
     color: #fff;
     background-color: $red;
     padding: 12px 30px;
+    &:hover{
+      border: 2px solid $red;
+      color: $red;
+      background-color: transparent;
+      padding: 11px 29px;
+    }
   }
   &-black{
     @extend %btn;
