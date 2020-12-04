@@ -259,6 +259,18 @@ input[type='search']::-webkit-search-results-decoration {
   display: none;
 }
 
+.banner{
+  margin-top: 54px;
+  width: 100%;
+  height: auto;
+  img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 @import 'breadcrumbs';
 
 @import 'nav';

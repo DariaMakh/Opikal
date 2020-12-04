@@ -238,6 +238,18 @@ input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
 
+.banner {
+  margin-top: 54px;
+  width: 100%;
+  height: auto;
+}
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
 .breadcrumbs {
   display: flex;
 }
