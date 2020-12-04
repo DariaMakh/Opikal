@@ -1929,7 +1929,7 @@ input[type=search]::-webkit-search-results-decoration {
   margin-top: 6px;
 }
 .mess__btns {
-  width: 300px;
+  width: 235px;
   display: flex;
   justify-content: space-between;
 }
@@ -1940,6 +1940,9 @@ input[type=search]::-webkit-search-results-decoration {
   color: #ff0000;
   text-decoration: underline;
   position: relative;
+}
+.mess__link:hover {
+  opacity: 0.7;
 }
 .mess__link_1 {
   position: absolute;
