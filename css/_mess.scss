@@ -1,0 +1,87 @@
+$font: "FuturaBookC";
+$font2: "FuturaBookDemiC";
+$red: #ff0000;
+
+%btn{
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: $font2;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+.mess{
+    &__num{
+        font-size: 13px;
+        color: rgba(20, 20, 25, 0.302);
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    &__from{
+        font-size: 14px;
+        font-family: $font;
+        color: rgb(20, 20, 25);
+        margin-top: 8px;
+    }
+    &__theme{
+        font-family: $font2;
+        font-size: 20px;
+        color: #000;
+        margin-top: 10px;
+        P{
+            font-family: $font;
+            font-weight: 300;
+            font-size: 19px;
+            color: #000;
+            margin-top: 6px;
+        }
+    }
+    &__btns{
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &__link{
+        @extend %btn;
+        font-size: 16px;
+        font-family: $font2;
+        font-weight: 600;
+        color: $red;
+        text-decoration: underline;
+        position: relative;
+        &_1{
+            position: absolute;
+            left: -35px;
+            top: -3px;
+            width: 20px;
+            height: 20px;
+            background-image: url(../../images/download-icon.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &_2{
+            position: absolute;
+            left: -45px;
+            top: -6px;
+            width: 31px;
+            height: 31px;
+            background-image: url(../../images/print-icon.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    .box__line{
+        margin: 22px 0;
+    }
+    .box__btns{
+        width: 100%;
+        align-items: center;
+        margin-top: 35px;
+    }
+}

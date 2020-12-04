@@ -1,4 +1,4 @@
-.btn-add, .btn-search, .btn-filter, .btn-white, .btn-black_2, .btn-black, .btn-red, .btn {
+.mess__link, .btn-add, .btn-search, .btn-filter, .btn-white, .btn-black_2, .btn-black, .btn-red, .btn {
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -1683,7 +1683,6 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 24px;
   font-family: "FuturaBookDemiC";
   color: #141419;
-  margin: 26px 0;
 }
 .box__equipment {
   font-size: 16px;
@@ -1696,6 +1695,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 26px;
 }
 .box__section {
   width: auto;
@@ -1720,6 +1720,9 @@ input[type=search]::-webkit-search-results-decoration {
   text-transform: uppercase;
   display: inline-block;
 }
+.box__section_label .notification {
+  top: -8px;
+}
 .box__section_label, .box__section .label {
   margin-right: 12px;
 }
@@ -1738,7 +1741,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: fit-content;
 }
 .box__btns {
-  margin-top: 35px;
+  margin-top: 15px;
   width: 380px;
   display: flex;
   justify-content: space-between;
@@ -1922,6 +1925,86 @@ input[type=search]::-webkit-search-results-decoration {
 
 .bt {
   border-top: 1px solid #a8a8a8;
+}
+
+.mess__link, .btn, .btn-red, .btn-black, .btn-black_2, .btn-white, .btn-filter, .btn-search, .btn-add {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-family: "FuturaBookDemiC";
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.mess__num {
+  font-size: 13px;
+  color: rgba(20, 20, 25, 0.302);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.mess__from {
+  font-size: 14px;
+  font-family: "FuturaBookC";
+  color: #141419;
+  margin-top: 8px;
+}
+.mess__theme {
+  font-family: "FuturaBookDemiC";
+  font-size: 20px;
+  color: #000;
+  margin-top: 10px;
+}
+.mess__theme P {
+  font-family: "FuturaBookC";
+  font-weight: 300;
+  font-size: 19px;
+  color: #000;
+  margin-top: 6px;
+}
+.mess__btns {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.mess__link {
+  font-size: 16px;
+  font-family: "FuturaBookDemiC";
+  font-weight: 600;
+  color: #ff0000;
+  text-decoration: underline;
+  position: relative;
+}
+.mess__link_1 {
+  position: absolute;
+  left: -35px;
+  top: -3px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../../images/download-icon.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mess__link_2 {
+  position: absolute;
+  left: -45px;
+  top: -6px;
+  width: 31px;
+  height: 31px;
+  background-image: url(../../images/print-icon.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mess .box__line {
+  margin: 22px 0;
+}
+.mess .box__btns {
+  width: 100%;
+  align-items: center;
+  margin-top: 35px;
 }
 
 .footer {

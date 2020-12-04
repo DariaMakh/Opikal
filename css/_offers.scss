@@ -102,7 +102,6 @@
         font-size: 24px;
         font-family: $font2;
         color: rgb(20, 20, 25);
-        margin: 26px 0;
     }
     &__equipment{
         font-size: 16px;
@@ -115,6 +114,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin-bottom: 26px;
     }
     &__section{
         width: auto;
@@ -137,6 +137,9 @@
             text-decoration: underline;
             text-transform: uppercase;
             display: inline-block;
+            .notification{
+                top: -8px;
+            }
         }
         &_label, .label{
             margin-right: 12px;
@@ -157,7 +160,7 @@
         height: fit-content;
     }
     &__btns{
-        margin-top: 35px;
+        margin-top: 15px;
         width: 380px;
         display: flex;
         justify-content: space-between;
