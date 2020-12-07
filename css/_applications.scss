@@ -76,10 +76,15 @@ $font2: "FuturaBookDemiC";
             left: 0;
             z-index: 0;
         }
+        &:first-child{
+            .application-box{
+                border-top: 1px solid #a8a8a8;
+            }
+        }
         &:hover{
             padding: 25px;
             .application-box{
-                padding: 40px 16px 35px 16px;
+                padding: 40px 16px 25px 16px;
                 border-top: 1px solid #000;
                 border-color: #000;
             }
@@ -115,8 +120,4 @@ $font2: "FuturaBookDemiC";
         border: 1px solid #e5e5e5;
         margin: 25px 0;
     }
-}
-
-.bt{
-    border-top: 1px solid #a8a8a8;
 }

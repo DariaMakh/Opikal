@@ -1861,11 +1861,14 @@ input[type=search]::-webkit-search-results-decoration {
   left: 0;
   z-index: 0;
 }
+.application__hover:first-child .application-box {
+  border-top: 1px solid #a8a8a8;
+}
 .application__hover:hover {
   padding: 25px;
 }
 .application__hover:hover .application-box {
-  padding: 40px 16px 35px 16px;
+  padding: 40px 16px 25px 16px;
   border-top: 1px solid #000;
   border-color: #000;
 }
@@ -1898,10 +1901,6 @@ input[type=search]::-webkit-search-results-decoration {
   width: 100%;
   border: 1px solid #e5e5e5;
   margin: 25px 0;
-}
-
-.bt {
-  border-top: 1px solid #a8a8a8;
 }
 
 .mess__link, .btn, .btn-red, .btn-black, .btn-black_2, .btn-white, .btn-filter, .btn-search, .btn-add {
