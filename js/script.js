@@ -48,7 +48,6 @@ var select = function(){
     };
 }
 
-
 // ОТКРЫТИЕ И ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА
 
 $(function(){
@@ -57,10 +56,10 @@ $(function(){
 
         showModal: function(content){
             this.self.find('#innerModal').html(content);
-            this.self.fadeIn(200);
+            this.self.fadeIn(500);
         },
         hideModal: function(){
-            this.self.fadeOut(200);
+            this.self.fadeOut(100);
             this.self.find('#innerModal').html('');
         }
     };
@@ -72,7 +71,7 @@ $(function(){
     });
 
     $(".modal__close").click(function(){
-        $(".modal").fadeOut(200);
+        $(".modal").fadeOut(100);
     });
 
     $('.modal').on('click', function(e){
@@ -154,7 +153,6 @@ $('.input-upload_doc').on('change', function() {
 document.addEventListener("DOMContentLoaded", uploadImg);
 
 /*
-
 var showGallery = (function () {
     var fr = new FileReader,
         i = 0,
@@ -190,6 +188,4 @@ var showGallery = (function () {
 })()
  
 document.getElementById('gallery').addEventListener("DOMContentLoaded", showGallery, false);
-
-
 */
