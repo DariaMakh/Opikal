@@ -904,7 +904,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .modal__title {
   font-size: 35px;
-  font-family: "FuturaBookC";
+  font-family: "FuturaBookDemiC";
   color: #141419;
   font-weight: bold;
   line-height: 1.001;
@@ -1565,6 +1565,11 @@ input[type=search]::-webkit-search-results-decoration {
   margin-top: 20px;
   width: 100%;
 }
+.offer__btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
 
 .search {
   width: 100%;
@@ -1651,6 +1656,7 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: #fff;
   border-top: 0;
   padding: 60px;
+  position: relative;
 }
 .box:first-child {
   border-top: 1px solid #000;
@@ -1661,12 +1667,15 @@ input[type=search]::-webkit-search-results-decoration {
   color: #141419;
 }
 .box__equipment {
+  margin: 25px 0 20px 0;
+}
+.box__equipment a {
   font-size: 16px;
   font-family: "FuturaBookDemiC";
   color: rgba(255, 0, 0, 0.8);
   text-decoration: underline;
-  display: block;
-  margin: 25px 0 20px 0;
+  display: inline-block;
+  margin-right: 45px;
 }
 .box__row {
   display: flex;
@@ -1719,9 +1728,10 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .box__btns {
   margin-top: 15px;
-  width: 380px;
+  width: 375px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .block {
@@ -1785,6 +1795,19 @@ input[type=search]::-webkit-search-results-decoration {
 .select__item:hover {
   color: #ff0000;
   padding-left: 25px;
+}
+
+.del {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.row_1 {
+  width: 400px;
 }
 
 .applications__filter {

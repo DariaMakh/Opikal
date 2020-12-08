@@ -1,3 +1,11 @@
+$red: #ff0000;
+$lgr: #f3f3f3;
+$grey: #f4f4f4;
+$lbl: #141419;
+
+$font: "FuturaBookC";
+$font2: "FuturaBookDemiC";
+
 .registration-form{
     padding-left: 70px;
     padding-right: 70px;
@@ -96,7 +104,7 @@
     }
     &__title{
         font-size: 35px;
-        font-family: "FuturaBookC";
+        font-family: $font2;
         color: rgb(20, 20, 25);
         font-weight: bold;
         line-height: 1.001;
