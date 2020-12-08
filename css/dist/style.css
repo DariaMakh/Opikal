@@ -860,15 +860,16 @@ input[type=search]::-webkit-search-results-decoration {
   padding: 20px;
   position: relative;
 }
+.modal__container_2 {
+  width: 1120px;
+}
 .modal__close {
   position: relative;
-  height: 16px;
-  width: 68px;
   cursor: pointer;
 }
 .modal__close_1, .modal__close_2 {
   position: absolute;
-  top: 3px;
+  top: 5px;
   right: 0;
   width: 20px;
   height: 3px;
@@ -882,12 +883,13 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .modal__close p {
   display: block;
-  padding-right: 20px;
+  padding-right: 28px;
   font-family: "FuturaBookC";
-  font-size: 10px;
+  font-size: 12px;
   color: #141419;
   text-transform: uppercase;
   line-height: 1.2;
+  text-align: end;
 }
 .modal__subtitle {
   font-size: 15px;
@@ -1085,6 +1087,54 @@ input[type=search]::-webkit-search-results-decoration {
 .placeholder-act {
   font-size: 14px;
   top: 10px;
+}
+
+.desk {
+  display: flex;
+}
+.desk__img {
+  width: 374px;
+  height: auto;
+}
+.desk__img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+.desk__form {
+  margin-left: 50px;
+  width: calc(100% - 374px);
+}
+.desk__title {
+  font-size: 48px;
+  font-family: "FuturaBookDemiC";
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.desk__name {
+  font-size: 18px;
+  font-family: "FuturaBookC";
+  color: #141419;
+  margin-bottom: 10px;
+}
+.desk__input {
+  width: 100%;
+  height: 190px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: "FuturaBookC";
+  color: #141419;
+  line-height: 1.444;
+}
+.desk__input::placeholder {
+  font-size: 18px;
+  font-family: "FuturaBookC";
+  color: #141419;
+  line-height: 1.444;
 }
 
 .account {

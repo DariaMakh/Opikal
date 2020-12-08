@@ -59,15 +59,16 @@ $font2: "FuturaBookDemiC";
         box-sizing: border-box;
         padding: 20px;
         position: relative;
+        &_2{
+            width: 1120px;
+        }
     }
     &__close{
         position: relative;
-        height: 16px;
-        width: 68px;
         cursor: pointer;
         &_1, &_2{
             position: absolute;
-            top: 3px;
+            top: 5px;
             right: 0;
             width: 20px;
             height: 3px;
@@ -81,18 +82,19 @@ $font2: "FuturaBookDemiC";
         }
         p{
             display: block;
-            padding-right: 20px;
-            font-family: "FuturaBookC";
-            font-size: 10px;
+            padding-right: 28px;
+            font-family: $font;
+            font-size: 12px;
             color: rgb(20, 20, 25);
             text-transform: uppercase;
             line-height: 1.2;
+            text-align: end;
         }
     }
     &__subtitle{
         font-size: 15px;
         color: rgb(0, 0, 0);
-        font-family: "FuturaBookC";
+        font-family: $font;
         line-height: 1.2;
         width: 100%;
         text-align: center;
@@ -290,4 +292,52 @@ $font2: "FuturaBookDemiC";
 .placeholder-act{
     font-size: 14px;
     top: 10px;
+}
+
+.desk{
+    display: flex;
+    &__img{
+        width: 374px;
+        height: auto;
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__form{
+        margin-left: 50px;
+        width: calc(100% - 374px);
+    }
+    &__title{
+        font-size: 48px;
+        font-family: $font2;
+        color: #000;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    &__name{
+        font-size: 18px;
+        font-family: $font;
+        color: rgb(20, 20, 25);
+        margin-bottom: 10px;
+    }
+    &__input{
+        width: 100%;
+        height: 190px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-family: $font;
+        color: rgb(20, 20, 25);
+        line-height: 1.444;
+        &::placeholder{
+            font-size: 18px;
+            font-family: $font;
+            color: rgb(20, 20, 25);
+            line-height: 1.444;
+        }
+    }
 }
