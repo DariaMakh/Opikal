@@ -243,9 +243,12 @@
                                 </div>
                                 <div class="sub__list">
                                     <ul>
-                                        <li class="sub__list-item"><span class="delete"></span>Конвейерное оборудование
+                                        <li class="sub__list-item"><span class="delete"></span>
+                                            <a href="#" class="modal-trigger" data-modal="modal-desk">Конвейерное оборудование</a>
                                             <ul class="sub__sub-list">
-                                                <li class="sub__list-item sub-item"><span class="delete"></span>Конвейер винтовой</li>
+                                                <li class="sub__list-item sub-item"><span class="delete"></span>
+                                                    <a href="#" class="modal-trigger" data-modal="modal-desk">Конвейер винтовой</a>
+                                                </li>
                                                 <li class="sub__list-item sub-item"><span class="delete"></span>Конвейер сребковый</li>
                                             </ul>
                                         </li>
@@ -324,6 +327,31 @@
     </div>
 
 </main>
+
+    <!-- Modal -->
+    <div class="modal" id="modal-desk">
+        <div class="modal-sandbox"></div>
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="modal__close">
+                    <p>Закрыть</p>
+                    <span class="modal__close_1"></span>
+                    <span class="modal__close_2"></span>
+                </div>
+            </div>
+            <div class="desk modal-body">
+                <div class="desk__img">
+                    <img src="images/equipment/img-1.jpg" alt="">
+                </div>
+                <form action="#" name="desk-form" method="post" class="desk__form">
+                    <div class="desk__title">Описание</div>
+                    <div class="desk__name">Весы конвейерные ВК-М</div>
+                    <textarea type="text" name="desk" id="desk" class="textarea desk__input">Принцип действия весов конвейерных ВК-М (далее - весы) основан на преобразовании деформаций упругих элементов датчиков тензорезисторных весоизмерительных, возникающих под действием силы тяжести взвешиваемого груза, в электрический сигнал, изменяющийся пропорционально</textarea>
+                    <input type="submit" value="Сохранить" class="btn-red">
+                </form>
+            </div>
+        </div>
+    </div>
 
 <footer class="footer">
     <div class="container">
