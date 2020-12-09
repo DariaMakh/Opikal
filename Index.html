@@ -60,166 +60,186 @@
             <a href="#" class="btn-red showModal" data-id="2">Разместить заявку</a>
         </nav>
 
-        <div class="modal-content modal-content_customer-account" id="cont1">
-            <div class="modal-content__container">
-                <div class="modal__subtitle">
-                    Добро пожаловать на <span>opical.com</span>!
-                </div>
-                <div class="modal__title">
-                    Регистрация поставщика
-                </div>
-                <form action="#" name="registration-form" method="post" class="registration-form">
-                    <div class="modal-content__row">
-                        <div class="modal-content__box">
-                            <div class="modal-content__inputs">
-                                <input class="input" type="text" name="name" id="name" required>
-                                <p class="placeholder">Имя <span>*</span></p>
-                            </div>
-
-                            <div class="modal-content__inputs">
-                                <input class="input" type="text" name="name2" id="name2">
-                                <p class="placeholder">Фамилия</p>
-                            </div>
-
-                            <div class="modal-content__inputs">
-                                <input class="input" type="text" name="name3" id="name3" required>
-                                <p class="placeholder">Отчество</p>
-                            </div>
-                            
-                            <div class="modal-content__inputs">
-                                <input class="input" type="email" name="email" id="email" required>
-                                <p class="placeholder">Почта <span>*</span></p>
-                            </div>
-
-                            <div class="modal-content__inputs">
-                                <input class="input" type="password" name="password" id="password" required>
-                                <p class="placeholder">Пароль <span>*</span></p>
-                            </div>
-                        </div>
-    
-                        <div class="modal-content__box">
-                            <div class="modal-content__inputs">
-                                <input class="input" type="tel" name="tel" id="tel" required>
-                                <p class="placeholder">Телефон <span>*</span></p>
-                            </div>
-
-                            <div class="modal-content__inputs">
-                                <input class="input" type="text" name="inn" id="inn" required>
-                                <p class="placeholder">ИНН <span>*</span></p>
-                            </div>
-
-                            <div class="modal-content__inputs">
-                                <textarea class="input textarea" name="org_name" id="org_name" required></textarea>
-                                <p class="textarea-placeholder">Название организации, ИП <span>*</span></p>
-                            </div>
-
-                            <div class="modal-content__inputs">
-                                <textarea class="input textarea" name="addr" id="addr"></textarea>
-                                <p class="textarea-placeholder">Адрес</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="agreement">
-                        <input type="checkbox" class="checkbox" id="agreement" name="agreement" value="yes">
-                        <label for="agreement">Соглашаюсь с 
-                            <a href="customer.html" target="_blank" class="modal__link">политикой конфиденциальности</a> и 
-                            <a href="#" target="_blank" class="modal__link">правилами обработки персональных данных</a>
-                        </label>
-                    </div>
-                    <div class="modal-content__btn">
-                        <button class="btn-red" type="submit">Зарегистрироваться</button>
-                    </div>
-                    <div class="modal-content__btn-login">
-                        <a href="#" target="_blank" class="modal__link">Войти</a>
-                    </div>
-                    <div class="modal__text">
-                        <span>*</span> Поле обязательно для заполнения
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="modal-content modal-content_pr-account" id="cont2">
-            <div class="modal-content__container">
-                <div class="modal__subtitle">
-                    Добро пожаловать на <span>opical.com</span>!
-                </div>
-                <div class="modal__title">
-                    Регистрация заказчика
-                </div>
-                <form action="#" name="registration-form" method="get">
-                    <div class="modal-content__row">
-                        <div class="modal-content__box">
-                            <div class="modal-content__inputs">
-                                <input class="input" type="text" name="name" id="name" required>
-                                <p class="placeholder">Имя <span>*</span></p>
-                            </div>
-
-                            <div class="modal-content__inputs">
-                                <input class="input" type="text" name="name2" id="name2">
-                                <p class="placeholder">Фамилия</p>
-                            </div>
-
-                            <div class="modal-content__inputs">
-                                <input class="input" type="text" name="name3" id="name3">
-                                <p class="placeholder">Отчество</p>
-                            </div>
-                            
-                            <div class="modal-content__inputs">
-                                <input class="input" type="email" name="email" id="email" required>
-                                <p class="placeholder">Почта <span>*</span></p>
-                            </div>
-
-                            <div class="modal-content__inputs">
-                                <input class="input" type="password" name="password" id="password" required>
-                                <p class="placeholder">Пароль <span>*</span></p>
-                            </div>
-                        </div>
-    
-                        <div class="modal-content__box">
-                            <div class="modal-content__inputs">
-                                <input class="input" type="tel" name="tel" id="tel">
-                                <p class="placeholder">Телефон</p>
-                            </div>
-
-                            <div class="modal-content__inputs">
-                                <input class="input" type="text" name="inn" id="inn">
-                                <p class="placeholder">ИНН</p>
-                            </div>
-
-                            <div class="modal-content__inputs">
-                                <textarea class="input textarea" name="org_name" id="org_name"></textarea>
-                                <p class="placeholder textarea-placeholder">Название организации, ИП</p>
-                            </div>
-
-                            <div class="modal-content__inputs">
-                                <textarea class="input textarea" name="addr" id="addr"></textarea>
-                                <p class="placeholder textarea-placeholder">Адрес</p>
-                            </div>
-                        </div>
-                        <div class="agree">
-
-                        </div>
-                    </div>
-                    <div class="modal-content__btn">
-                        <button class="btn-red" type="submit">Зарегистрироваться</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="modal" id="modal">
-            <div class="modal__container">
-                <div class="modal__row">
+        <!-- Modal p -->
+        <div class="modal" id="modal-reg_p">
+            <div class="modal-sandbox"></div>
+            <div class="modal-box modal-reg">
+                <div class="modal-header">
                     <div class="modal__close">
                         <p>Закрыть</p>
                         <span class="modal__close_1"></span>
                         <span class="modal__close_2"></span>
                     </div>
                 </div>
-                
+                <div class="modal-body modal-body_reg">
+                    <div class="modal__subtitle">
+                        Добро пожаловать на <span>opical.com</span>!
+                    </div>
+                    <div class="modal__title">
+                        Регистрация поставщика
+                    </div>
+                    <form action="#" name="registration-form" method="post" class="registration-form">
+                        <div class="modal-content__row">
+                            <div class="modal-content__box">
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="text" name="name" id="name" required>
+                                    <p class="placeholder">Имя <span>*</span></p>
+                                </div>
+        
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="text" name="name2" id="name2">
+                                    <p class="placeholder">Фамилия</p>
+                                </div>
+        
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="text" name="name3" id="name3" required>
+                                    <p class="placeholder">Отчество</p>
+                                </div>
+                                
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="email" name="email" id="email" required>
+                                    <p class="placeholder">Почта <span>*</span></p>
+                                </div>
+        
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="password" name="password" id="password" required>
+                                    <p class="placeholder">Пароль <span>*</span></p>
+                                </div>
+                            </div>
+        
+                            <div class="modal-content__box">
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="tel" name="tel" id="tel" required>
+                                    <p class="placeholder">Телефон <span>*</span></p>
+                                </div>
+        
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="text" name="inn" id="inn" required>
+                                    <p class="placeholder">ИНН <span>*</span></p>
+                                </div>
+        
+                                <div class="modal-content__inputs">
+                                    <textarea class="input textarea" name="org_name" id="org_name" required></textarea>
+                                    <p class="textarea-placeholder">Название организации, ИП <span>*</span></p>
+                                </div>
+        
+                                <div class="modal-content__inputs">
+                                    <textarea class="input textarea" name="addr" id="addr"></textarea>
+                                    <p class="textarea-placeholder">Адрес</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agreement">
+                            <input type="checkbox" class="checkbox" id="agreement" name="agreement" value="yes">
+                            <label for="agreement">Соглашаюсь с 
+                                <a href="customer.html" target="_blank" class="modal__link">политикой конфиденциальности</a> и 
+                                <a href="#" target="_blank" class="modal__link">правилами обработки персональных данных</a>
+                            </label>
+                        </div>
+                        <div class="modal-content__btn">
+                            <button class="btn-red" type="submit">Зарегистрироваться</button>
+                        </div>
+                        <div class="modal-content__btn-login">
+                            <a href="#" target="_blank" class="modal__link">Войти</a>
+                        </div>
+                        <div class="modal__text">
+                            <span>*</span> Поле обязательно для заполнения
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-                <div id="innerModal"></div>
+        <!-- Modal customer -->
+        <div class="modal" id="modal-reg_c">
+            <div class="modal-sandbox"></div>
+            <div class="modal-box modal-reg">
+                <div class="modal-header">
+                    <div class="modal__close">
+                        <p>Закрыть</p>
+                        <span class="modal__close_1"></span>
+                        <span class="modal__close_2"></span>
+                    </div>
+                </div>
+                <div class="modal-body modal-body_reg">
+                    <div class="modal__subtitle">
+                        Добро пожаловать на <span>opical.com</span>!
+                    </div>
+                    <div class="modal__title">
+                        Регистрация заказчика
+                    </div>
+                    <form action="#" name="registration-form" method="get">
+                        <div class="modal-content__row">
+                            <div class="modal-content__box">
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="text" name="name" id="name" required>
+                                    <p class="placeholder">Имя <span>*</span></p>
+                                </div>
+    
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="text" name="name2" id="name2">
+                                    <p class="placeholder">Фамилия</p>
+                                </div>
+    
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="text" name="name3" id="name3">
+                                    <p class="placeholder">Отчество</p>
+                                </div>
+                                
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="email" name="email" id="email" required>
+                                    <p class="placeholder">Почта <span>*</span></p>
+                                </div>
+    
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="password" name="password" id="password" required>
+                                    <p class="placeholder">Пароль <span>*</span></p>
+                                </div>
+                            </div>
+        
+                            <div class="modal-content__box">
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="tel" name="tel" id="tel">
+                                    <p class="placeholder">Телефон</p>
+                                </div>
+    
+                                <div class="modal-content__inputs">
+                                    <input class="input" type="text" name="inn" id="inn">
+                                    <p class="placeholder">ИНН</p>
+                                </div>
+    
+                                <div class="modal-content__inputs">
+                                    <textarea class="input textarea" name="org_name" id="org_name"></textarea>
+                                    <p class="placeholder textarea-placeholder">Название организации, ИП</p>
+                                </div>
+    
+                                <div class="modal-content__inputs">
+                                    <textarea class="input textarea" name="addr" id="addr"></textarea>
+                                    <p class="placeholder textarea-placeholder">Адрес</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="agreement">
+                            <input type="checkbox" class="checkbox" id="agreement" name="agreement" value="yes">
+                            <label for="agreement">Соглашаюсь с 
+                                <a href="customer.html" target="_blank" class="modal__link">политикой конфиденциальности</a> и 
+                                <a href="#" target="_blank" class="modal__link">правилами обработки персональных данных</a>
+                            </label>
+                        </div>
+
+                        <div class="modal-content__btn">
+                            <button class="btn-red" type="submit">Зарегистрироваться</button>
+                        </div>
+
+                        <div class="modal-content__btn-login">
+                            <a href="#" target="_blank" class="modal__link">Войти</a>
+                        </div>
+                        
+                        <div class="modal__text">
+                            <span>*</span> Поле обязательно для заполнения
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -239,7 +259,7 @@
                             <p>
                                 Заказчику
                             </p>
-                            <div class="showModal" data-id="2">
+                            <div class="modal-trigger" data-modal="modal-reg_c">
                                 <a class="btn-red" href="#">Разместить заявку</a>
                             </div>
                         </div>
@@ -247,7 +267,7 @@
                             <p>
                                 Поставщику
                             </p>
-                            <div class="showModal" data-id="1">
+                            <div  class="modal-trigger" data-modal="modal-reg_p">
                                 <a href="#" class="btn-white">Подписаться на рассылку</a>
                             </div>
                         </div>
@@ -313,7 +333,7 @@
                         </div>
 
                         <div class="row">
-                            <a href="#" class="btn-red showModal" data-id="2">Разместить заявку</a>
+                            <a href="#" class="btn-red showModal modal-trigger" data-modal="modal-reg_c">Разместить заявку</a>
                             <div class="slider-btns">
                                 <button class="possibility__prev_1 slick-prev"></button>
                                 <button class="possibility__next_1 slick-next"></button>
@@ -369,7 +389,7 @@
                         </div>
 
                         <div class="row">
-                            <a href="#" class="btn-black">Подписаться на рассылку</a>
+                            <a href="#" class="btn-black modal-trigger" data-modal="modal-reg_p">Подписаться на рассылку</a>
                             <div class="slider-btns">
                                 <button class="possibility__prev_2 slick-prev"></button>
                                 <button class="possibility__next_2 slick-next"></button>
@@ -508,7 +528,7 @@
                             <div class="possibility__text">
                                 Наша система автоматически оповещает поставщиков о вашей заявке
                             </div>
-                            <a href="#" class="btn-red">Заказать рассылку</a>
+                            <a href="#" class="btn-red modal-trigger" data-modal="modal-reg_c">Заказать рассылку</a>
                         </div>
 
                         <div class="possibility__content-box">
@@ -519,8 +539,8 @@
                                 Предложите ваши цены заинтересованным вашей продукции заказчикам                        
                             </div>
                             <div class="possibility__btns">
-                                <a href="#" class="btn-red showModal" data-id="1">Создать кабинет</a>
-                                <a href="#" class="btn-black">Заказать рассылку</a>
+                                <a href="#" class="btn-red modal-trigger" data-modal="modal-reg_p">Создать кабинет</a>
+                                <a href="#" class="btn-black modal-trigger" data-modal="modal-reg_p">Заказать рассылку</a>
                             </div>
                         </div>
                     </div>

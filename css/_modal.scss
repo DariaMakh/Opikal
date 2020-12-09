@@ -6,20 +6,30 @@ $lbl: #141419;
 $font: "FuturaBookC";
 $font2: "FuturaBookDemiC";
 
-.registration-form{
-    padding-left: 70px;
-    padding-right: 70px;
+.modal,
+.modal-box {
+  z-index: 900;
 }
+
+.modal-sandbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
 .modal{
+    display: none; 
     position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
+    width: 100%;
+    height: 100%;
     left: 0;
+    top: 0;
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.8);
     overflow: auto;
-    background: rgba(0,0,0,0.9);
-    display: none;
-    z-index: 99;
     &-content{
         display: none;
         &__row{
@@ -36,12 +46,12 @@ $font2: "FuturaBookDemiC";
         }
         &__btn{
             margin: 0 auto;
-            width: 240px;
+            width: fit-content;
             &-login{
                 align-items: center;
                 display: flex;
                 flex-direction: column;
-                margin: 25px auto;
+                margin: 25px auto 50px auto;
             }
         }
     }
@@ -98,8 +108,7 @@ $font2: "FuturaBookDemiC";
         line-height: 1.2;
         width: 100%;
         text-align: center;
-        margin-top: 40px;
-        margin-bottom: 15px;
+        margin: 15px 0;
         span{
             text-transform: uppercase;
         }
@@ -131,6 +140,43 @@ $font2: "FuturaBookDemiC";
         text-align: center;
         span{
             color: $red;
+        }
+    }
+    &-box {
+        position: relative;
+        width: 80%;
+        max-width: 1120px;
+        margin: 170px auto;
+        animation-name: modalbox;
+        animation-duration: .4s;
+        animation-timing-function: cubic-bezier(0,0,.3,1.6);
+    }
+    &-header {
+        padding: 10px 10px 0 10px;
+        background: #fff;
+        color: #000;
+    }
+    &-body {
+        background: #fff;
+        padding: 25px 50px 50px 50px;
+        &_reg{
+          padding-bottom: 15px;
+        }
+    }
+    &-reg{
+        max-width: 820px;
+        margin: 25px auto;
+    }
+    &-trigger{
+        transition: ease .2s;
+        & button{
+          top: 50%;
+          left: 50%;
+          padding: 20px 40px;
+          background: transparent;
+          color: #ffffff;
+          border: 1px solid #ffffff;
+          text-decoration: none;
         }
     }
 }
@@ -188,6 +234,7 @@ $font2: "FuturaBookDemiC";
     line-height: normal;
     letter-spacing: normal;
     outline: 0;
+    resize: none;
     &-placeholder{
         position: absolute;
         left: 18px;
@@ -212,6 +259,29 @@ $font2: "FuturaBookDemiC";
         color: rgb(166, 166, 167);
     }
 }  
+
+/* Animation */
+@-webkit-keyframes modalbox {
+    0% {
+      top: -250px; 
+      opacity: 0;
+    }
+    100% {
+      top: 0; 
+      opacity: 1;
+    }
+  }
+  
+  @keyframes modalbox {
+    0% {
+      top: -250px; 
+      opacity: 0;
+    }
+    100% {
+      top: 0; 
+      opacity: 1;
+    }
+  }
   
 
 @media all and (min-width: 641px) and (max-width: 855px){
@@ -257,6 +327,10 @@ $font2: "FuturaBookDemiC";
         }
         &__text{
             margin-top: 0;
+        }
+        &-reg{
+            margin: 0;
+            width: 100%;
         }
     }
     .registration-form {
@@ -333,6 +407,7 @@ $font2: "FuturaBookDemiC";
         font-family: $font;
         color: rgb(20, 20, 25);
         line-height: 1.444;
+        border-top: 2px solid #000;
         &::placeholder{
             font-size: 18px;
             font-family: $font;

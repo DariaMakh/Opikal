@@ -50,39 +50,17 @@ var select = function(){
 
 // ОТКРЫТИЕ И ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА
 
-$(function(){
-    var modal = {
-        self: $('.modal'),
-
-        showModal: function(content){
-            this.self.find('#innerModal').html(content);
-            this.self.fadeIn(500);
-        },
-        hideModal: function(){
-            this.self.fadeOut(100);
-            this.self.find('#innerModal').html('');
-        }
-    };
-
-    $(".showModal").on('click', function(e){
-        var id = $(this).data('id');
-        var content = $('#cont'+id).html();
-        modal.showModal(content);
-    });
-
-    $(".modal__close").click(function(){
-        $(".modal").fadeOut(100);
-    });
-
-    $('.modal').on('click', function(e){
-        if ($(e.target).attr('id') === 'modal' || $(e.target).hasClass('modal__close')){
-            modal.hideModal();
-        } 
-        else {
-            return false;
-        }
-    });
-});
+$(".modal-trigger").click(function(e){
+    e.preventDefault();
+    dataModal = $(this).attr("data-modal");
+    $("#" + dataModal).css({"display":"block"});
+    // $("body").css({"overflow-y": "hidden"}); //Prevent double scrollbar.
+  });
+  
+  $(".modal__close, .modal-sandbox").click(function(){
+    $(".modal").css({"display":"none"});
+    // $("body").css({"overflow-y": "auto"}); //Prevent double scrollbar.
+  });
 
 // PLACEHOLDER
 
