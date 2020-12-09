@@ -217,7 +217,7 @@ button:focus {
   color: rgba(20, 20, 25, 0.302);
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  line-height: 1.6;
 }
 
 .notification {
@@ -1813,6 +1813,7 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 16px;
   font-family: "FuturaBookC";
   color: #141419;
+  line-height: 1.6;
 }
 .box__section_text-2 {
   font-size: 20px;
@@ -1843,10 +1844,15 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 13px;
   font-family: "FuturaBookDemiC";
   color: red;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
   background-color: #f0f0f0;
   padding: 6px 7px;
   height: fit-content;
+}
+.box__notification span {
+  color: #000;
+  font-weight: bold;
 }
 .box__btns {
   margin-top: 15px;
@@ -1930,6 +1936,22 @@ input[type=search]::-webkit-search-results-decoration {
 
 .row_1 {
   width: 400px;
+}
+
+.fav {
+  width: 615px;
+}
+.fav__btns {
+  width: 470px;
+}
+.fav__btns .btn-black {
+  padding: 10px 60px;
+}
+.fav__btns .btn-red {
+  padding: 11px 60px;
+}
+.fav__btns .btn-red:hover {
+  padding: 10px 60px;
 }
 
 .applications__filter {

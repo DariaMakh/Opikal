@@ -133,6 +133,7 @@
             font-size: 16px;
             font-family: $font;
             color: #141419;
+            line-height: 1.6;
             &-2{
                 font-size: 20px;
                 font-family: $font;
@@ -164,10 +165,15 @@
         font-size: 13px;
         font-family: $font2;
         color: rgb(255, 0, 0);
+        letter-spacing: 0.4px;
         text-transform: uppercase;
         background-color: #f0f0f0;
         padding: 6px 7px;
         height: fit-content;
+        span{
+            color: #000;
+            font-weight: bold;
+        }
     }
     &__btns{
         margin-top: 15px;
@@ -257,4 +263,20 @@
 
 .row_1{
     width: 400px;
+}
+
+.fav{
+    width: 615px;
+    &__btns{
+        width: 470px;
+        .btn-black{
+            padding: 10px 60px;
+        }
+        .btn-red{
+            padding: 11px 60px;
+            &:hover{
+                padding: 10px 60px;
+            }
+        }
+    }
 }
