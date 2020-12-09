@@ -50,6 +50,10 @@ $font2: "FuturaBookDemiC";
 
 .application{
     margin-top: 35px;
+    &__link{
+        width: 100%;
+        height: 100%;
+    }
     &-box{
         position: relative;
         width: 100%;
