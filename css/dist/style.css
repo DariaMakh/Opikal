@@ -1882,26 +1882,21 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 10px;
   width: 100%;
+  border: 0;
   border-bottom: 2px solid #060606;
+  background: transparent;
   cursor: pointer;
-}
-.select__header:hover {
-  border-bottom: 2px solid #ff0000;
-}
-.select__header:hover .select__current {
-  color: #ff0000;
-}
-.select__header:hover .select__icon {
-  border-color: #ff0000 transparent transparent transparent;
-}
-.select__icon {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 6px 5.5px 0 5.5px;
-  border-color: #000000 transparent transparent transparent;
+  font-size: 18px;
+  font-family: "FuturaBookC";
+  color: #141419;
+  appearance: none;
+  background-image: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAHCAQAAAB5eQ+RAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkDAkOKDSPjiaqAAAAWUlEQVQI123LIQ6DQBQE0AdZV0M4TBUXwRMMqnjO09shdkFvBaGlwBv1M/MLjbfaqrDLHmYtpU6S/5J0ym3Xi4ci6h0M389kcPKyyBaji2ASTYIblafqd34AhDIhYRVMiywAAAAASUVORK5CYII=);
+  background-repeat: no-repeat;
+  background-position: right 0 top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
 }
 .select__body {
   display: none;
