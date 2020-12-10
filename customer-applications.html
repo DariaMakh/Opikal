@@ -63,6 +63,67 @@
 
 <main>
 
+    <!-- Modal offer -->
+    <div class="modal" id="modal-offer">
+        <div class="modal-sandbox"></div>
+        <div class="modal-box modal-offer">
+            <div class="modal-header">
+                <div class="modal__close">
+                    <p>Закрыть</p>
+                    <span class="modal__close_1"></span>
+                    <span class="modal__close_2"></span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal__title">
+                    В настоящее время
+                    <br>
+                    Вам готовят предложения:
+                </div>
+                <div class="modal-offer__row">
+                    <a href="#" target="_blank">ООО «Тыковка»
+                        <img src="images/logo/1.jpg" alt="">
+                    </a>                
+
+                    <a href="#" target="_blank">ООО «Снежинка»
+                        <img src="images/logo/2.jpg" alt="">
+                    </a>  
+
+                    <a href="#" target="_blank">ООО «Петрушка»
+                        <img src="images/logo/3.jpg" alt="">
+                    </a>  
+
+                    <a href="#" target="_blank">
+                        <img src="images/logo/4.jpg" alt="">ООО «Тыковка»
+                    </a>  
+
+                    <a href="#" target="_blank">ООО «Снежинка»
+                        <img src="images/logo/1.jpg" alt="">
+                    </a> 
+                </div>
+                <form action="#" name="offer-form" method="post" class="offer-form">
+                    <div class="modal-content__text">
+                        Хотите попросить <a href="#">ускорить</a> подачу предложений?
+                    </div>
+
+                    <div class="calendar">
+                        <div class="calendar__header" id="calendar">
+
+                        </div>
+                        <div class="calendar__footer">
+                            <div class="agreement">
+                                <input type="checkbox" class="checkbox" id="fix_date" name="fix_date" value="yes">
+                                <label for="fix_date">без фиксирования даты</label>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <button class="btn-red" type="submit">Сохранить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <div class="account">
         <div class="container">
             <div class="account__row">
@@ -157,7 +218,7 @@
 
                                 <div class="applications__offer">
                                     <p>
-                                        Вам готовят предложение <a href="#">5</a> поставщиков:
+                                        Вам готовят предложение <a href="#" class="modal-trigger" data-modal="modal-offer">5</a> поставщиков:
                                     </p>
                                     <div class="applications__offer_logo">
                                         <a href="#" target="_blank">

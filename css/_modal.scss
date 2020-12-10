@@ -54,6 +54,18 @@ $font2: "FuturaBookDemiC";
                 margin: 25px auto 50px auto;
             }
         }
+        &__text{
+            font-size: 19px;
+            font-weight: 600;
+            font-family: $font2;
+            color: #000;
+            a{
+                display: inline-block;
+                color: $red;
+                text-decoration: underline;
+                letter-spacing: 0.6px;
+            }
+        }
     }
     &__row{
         display: flex;
@@ -199,6 +211,42 @@ $font2: "FuturaBookDemiC";
             padding: 12px 110px;
             &:hover{
                 padding: 11px 109px;
+            }
+        }
+    }
+    &-offer{
+        width: 720px;
+        .modal__title{
+            text-align: left;
+            font-size: 41px;
+        }
+        &__row{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 35px;
+            a{
+                display: inline-block;
+                font-size: 18px;
+                color: rgb(20, 20, 25);
+                position: relative;
+                padding-left: 40px;
+                width: 50%;
+                margin-bottom: 24px;
+                img{
+                    width: 27px;
+                    height: 27px;
+                    object-fit: contain;
+                    object-position: center;
+                    margin-right: 18px;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+                &:hover{
+                    color: $red;
+                }
             }
         }
     }

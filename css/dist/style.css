@@ -854,6 +854,18 @@ input[type=search]::-webkit-search-results-decoration {
   flex-direction: column;
   margin: 25px auto 50px auto;
 }
+.modal-content__text {
+  font-size: 19px;
+  font-weight: 600;
+  font-family: "FuturaBookDemiC";
+  color: #000;
+}
+.modal-content__text a {
+  display: inline-block;
+  color: #ff0000;
+  text-decoration: underline;
+  letter-spacing: 0.6px;
+}
 .modal__row {
   display: flex;
   align-items: center;
@@ -998,6 +1010,42 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .modal-forgot .btn-red:hover {
   padding: 11px 109px;
+}
+.modal-offer {
+  width: 720px;
+}
+.modal-offer .modal__title {
+  text-align: left;
+  font-size: 41px;
+}
+.modal-offer__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 35px;
+}
+.modal-offer__row a {
+  display: inline-block;
+  font-size: 18px;
+  color: #141419;
+  position: relative;
+  padding-left: 40px;
+  width: 50%;
+  margin-bottom: 24px;
+}
+.modal-offer__row a img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+  object-position: center;
+  margin-right: 18px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.modal-offer__row a:hover {
+  color: #ff0000;
 }
 
 .input {
