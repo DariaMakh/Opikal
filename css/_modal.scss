@@ -194,6 +194,14 @@ $font2: "FuturaBookDemiC";
             margin: 30px auto 20px auto;
         }
     }
+    &-forgot{
+        .btn-red {
+            padding: 12px 110px;
+            &:hover{
+                padding: 11px 109px;
+            }
+        }
+    }
 }
 
 .input{
