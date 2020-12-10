@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=640, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Личный кабинет поставщика</title>
+    <title>Личный кабинет заказчика</title>
 
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/slick/slick.css">
@@ -67,49 +67,44 @@
             <div class="account__row">
                 <div class="breadcrumbs">
                     <div class="breadcrumbs__item">
-                        <a href="#"><img src="images/main.png" alt="">Главная</a>
+                        <a href="Index.html"><img src="images/main.png" alt="">Главная</a>
                     </div>
-                    <div class="breadcrumbs__item"><a href="#">Личный кабинет поставщика</a></div>
+                    <div class="breadcrumbs__item"><a href="#" disabled>Личный кабинет заказчика</a></div>
                 </div>
                 <div class="account__selection">
-                    <a href="customer.html" class="btn-black_2">Заказчик</a>
-                    <a href="provisioner.html" class="btn-black_2 btn-black-active">Поставщик</a>
+                    <a href="customer.html" class="btn-black_2 btn-black-active">Заказчик</a>
+                    <a href="provisioner.html" class="btn-black_2">Поставщик</a>
                 </div>
             </div>
 
-            <div class="account__title">Личный кабинет поставщика</div>
+            <div class="account__title">Личный кабинет заказчика</div>
 
             <div class="account__box">
                 <div class="account__aside">
                     <nav>
                         <div class="account-menu">
-                            <div class="account-menu__link account-menu__link_1">
-                                <a href="provisioner.html">Профиль</a>
+                            <div class="account-menu__link  account-menu__link_1">
+                                <a href="customer.html">Профиль</a>
                             </div>
-                            <button class="account-menu__burger_btn">
-                                <span class="burger-line_1"></span>
-                                <span class="burger-line_2"></span>
-                            </button>
-                            <div class="account-menu__burger_menu">
-                                <div class="account-menu__link">
-                                    <a href="offers.html">Мои предложения</a>
-                                    <div class="account-menu__num">2</div>
-                                </div>
-                                <div class="account-menu__link">
-                                    <a href="messege.html">Сообщения</a>
-                                    <div class="account-menu__num">2</div>
-                                </div>
-                                <div class="account-menu__link">
-                                    <a href="favorites.html">Избранное</a>
-                                    <div class="account-menu__num">2</div>
-                                </div>
-                                <div class="account-menu__link">
-                                    <a href="prov-drafts.html">Черновики</a>
-                                    <div class="account-menu__num">2</div>
-                                </div>
-                                <div class="account-menu__link">
-                                    <a href="#">Шаблоны</a>
-                                </div>
+                            <div class="account-menu__link">
+                                <a href="applications.html">Мои заявки<span class="notification">2</span></a>
+                                <div class="account-menu__num">2</div>
+                            </div>
+                            <div class="account-menu__link">
+                                <a href="customer-messages.html">Сообщения<span class="notification">2</span></a>
+                                <div class="account-menu__num">2</div>
+                            </div>
+                            <div class="account-menu__link">
+                                <a href="customer-offer.html">Предложения поставщиков</a>
+                                <div class="account-menu__num">2</div>
+                            </div>
+                            <div class="account-menu__link">
+                                <a href="#">Мои тендеры<span class="notification">2</span></a>
+                                <div class="account-menu__num">2</div>
+                            </div>
+                            <div class="account-menu__link">
+                                <a href="#">Черновики</a>
+                                <div class="account-menu__num">2</div>
                             </div>
                         </div>
                     </nav>
@@ -120,9 +115,9 @@
                             <div class="search-form__input">
                                 <span class="search__icon-1"></span>
                                 <span class="search__icon-2">
-                                        <div class="search__img"></div>
-                                        <p>Расширенный поиск</p>
-                                    </span>
+                                    <div class="search__img"></div>
+                                    <p>Расширенный поиск</p>
+                                </span>
                                 <input name="search" placeholder="Поиск" type="search" class="search-input">
                             </div>
                             <button type="submit" class="btn-search">Найти</button>
@@ -132,39 +127,30 @@
                     <div class="advanced-search">
                         <div class="advanced-search__select select">
                             <div class="select__box">
-                                <div class="select__header">
-                                    <span class="select__current">Выберите категорию</span>
-                                    <div class="select__icon"></div>
-                                </div>
-                                <div class="select__body">
-                                    <div class="select__item">категория 1</div>
-                                    <div class="select__item">категория 2</div>
-                                    <div class="select__item">категория 3</div>
-                                </div>
+                                <select class="select__header" id="mounth">
+                                    <option class="select__current" value="hide">Выберите категорию</option>
+                                    <option class="select__item" value="item1">категория 1</option>
+                                    <option class="select__item" value="item2">категория 2</option>
+                                    <option class="select__item" value="item3">категория 3</option>
+                                </select> 
                             </div>
 
                             <div class="select__box">
-                                <div class="select__header">
-                                    <span class="select__current">Выберите оборудование</span>
-                                    <div class="select__icon"></div>
-                                </div>
-                                <div class="select__body">
-                                    <div class="select__item">оборудование 1</div>
-                                    <div class="select__item">оборудование 2</div>
-                                    <div class="select__item">оборудование 3</div>
-                                </div>
+                                <select class="select__header" id="mounth">
+                                    <option class="select__current" value="hide">Выберите оборудование</option>
+                                    <option class="select__item" value="item1">категория 1</option>
+                                    <option class="select__item" value="item2">категория 2</option>
+                                    <option class="select__item" value="item3">категория 3</option>
+                                </select>
                             </div>
 
                             <div class="select__box">
-                                <div class="select__header">
-                                    <span class="select__current">По ответственному</span>
-                                    <div class="select__icon"></div>
-                                </div>
-                                <div class="select__body">
-                                    <div class="select__item">ответственный 1</div>
-                                    <div class="select__item">ответственный 2</div>
-                                    <div class="select__item">ответственный 3</div>
-                                </div>
+                                <select class="select__header" id="mounth">
+                                    <option class="select__current" value="hide">По ответственному</option>
+                                    <option class="select__item" value="item1">категория 1</option>
+                                    <option class="select__item" value="item2">категория 2</option>
+                                    <option class="select__item" value="item3">категория 3</option>
+                                </select> 
                             </div>
 
                         </div>
@@ -207,15 +193,14 @@
                             
                             <hr class="box__line">
 
-                            <div class="box__row row_1">
-                                <div class="box__section block">
-                                    <div class="label">Название компании:</div>
-                                    <span class="box__section_text-2">ООО "Тыковка"</span>
-                                </div>
-
-                                <div class="box__section block">
-                                    <div class="label">Ответственный:</div>
-                                    <span class="box__section_text-2">Филаткин А.Н.</span>
+                            <div class="box__row">
+                                <div class="box__section">
+                                    <div class="label">Этап, на котором остаовились:</div>
+                                    <div class="box__notification">
+                                        <a href="#">
+                                            <span>Опросной лист №1</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -259,15 +244,14 @@
                             
                             <hr class="box__line">
 
-                            <div class="box__row row_1">
-                                <div class="box__section block">
-                                    <div class="label">Название компании:</div>
-                                    <span class="box__section_text-2">ООО "Тыковка"</span>
-                                </div>
-
-                                <div class="box__section block">
-                                    <div class="label">Ответственный:</div>
-                                    <span class="box__section_text-2">Филаткин А.Н.</span>
+                            <div class="box__row">
+                                <div class="box__section">
+                                    <div class="label">Этап, на котором остаовились:</div>
+                                    <div class="box__notification">
+                                        <a href="#">
+                                            <span>Опросной лист №1</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -275,6 +259,7 @@
                                 <a href="#" class="btn-red">Редактировать</a>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
