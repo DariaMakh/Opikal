@@ -2051,7 +2051,7 @@ input[type=search]::-webkit-search-results-decoration {
   background-position: center;
   padding: 25px;
 }
-.new .application-box {
+.new .application-box, .new .box {
   padding: 40px 16px 25px 16px;
   border-top: 1px solid #000;
   border-color: #000;

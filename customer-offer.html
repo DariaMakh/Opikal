@@ -69,7 +69,7 @@
                     <div class="breadcrumbs__item">
                         <a href="Index.html"><img src="images/main.png" alt="">Главная</a>
                     </div>
-                    <div class="breadcrumbs__item"><a href="#">Личный кабинет заказчика</a></div>
+                    <div class="breadcrumbs__item"><a href="#" disabled>Личный кабинет заказчика</a></div>
                 </div>
                 <div class="account__selection">
                     <a href="customer.html" class="btn-black_2 btn-black-active">Заказчик</a>
@@ -110,80 +110,133 @@
                     </nav>
                 </div>
                 <div class="account__content">
-                    <form action="" enctype="multipart/form-data" method="post">
-                        <div class="profile">
-                            <div class="profile__photo">
-                                <div class="profile__photo_img">
-                                    <img src="images/profile.jpg" alt="Картинка профиля">
-                                </div>
-                                <div>
-                                    <div class="label">Логотип профиля</div>
-                                    <div>
-                                        <input type="file" name="profile_img" id="profile_img" accept="image/jpeg,image/png" class="input-upload input-upload_img">
-                                        <label for="profile_img" class="upload-label">
-                                            <img src="images/upload.png" alt="">
-                                            <p>Загрузить</p>
-                                        </label>
+                    <div class="search">
+                        <form action="" method="get" class="search-form">
+                            <div class="search-form__input">
+                                <span class="search__icon-1"></span>
+                                <span class="search__icon-2">
+                                    <div class="search__img"></div>
+                                    <p>Расширенный поиск</p>
+                                </span>
+                                <input name="search" placeholder="Поиск" type="search" class="search-input">
+                            </div>
+                            <button type="submit" class="btn-search">Найти</button>
+                        </form>
+                    </div>
+
+                    <div class="advanced-search">
+                        <div class="advanced-search__select select">
+                            <div class="select__box">
+                                <select class="select__header" id="mounth">
+                                    <option class="select__current" value="hide">Выберите категорию</option>
+                                    <option class="select__item" value="item1">категория 1</option>
+                                    <option class="select__item" value="item2">категория 2</option>
+                                    <option class="select__item" value="item3">категория 3</option>
+                                </select> 
+                            </div>
+
+                            <div class="select__box">
+                                <select class="select__header" id="mounth">
+                                    <option class="select__current" value="hide">Выберите оборудование</option>
+                                    <option class="select__item" value="item1">категория 1</option>
+                                    <option class="select__item" value="item2">категория 2</option>
+                                    <option class="select__item" value="item3">категория 3</option>
+                                </select>
+                            </div>
+
+                            <div class="select__box">
+                                <select class="select__header" id="mounth">
+                                    <option class="select__current" value="hide">По ответственному</option>
+                                    <option class="select__item" value="item1">категория 1</option>
+                                    <option class="select__item" value="item2">категория 2</option>
+                                    <option class="select__item" value="item3">категория 3</option>
+                                </select> 
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="application">
+                        <a href="#" target="_blank" class="application__link">
+                            <div class="application__2 new">
+                                <div class="application-box">
+                                    <div class="application-box__row">
+                                        <div class="application__num">Заявка №1</div>
+                                        <div class="application__date">16.07.2020</div>
+                                    </div>
+                
+                                    <div class="application-box__block">
+                                        <div class="label">Название компании:</div>
+                                        <div class="application__text">
+                                            ООО "Нефтегазодобывающая горнометалургия"
+                                        </div>
+                                    </div>
+                
+                                    <hr class="application__line">
+                
+                                    <div class="application-box__block">
+                                        <div class="label">Тема:</div>
+                                        <div class="application__theme">
+                                            Коммерческое предложение на поставку товара образец документов
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="profile__item">
-                                <div class="label">Наименование организации</div>
-                                <input type="text" name="org_name" id="org_name" value="ООО “Тыковка”" class="profile__input">
-                            </div>
-        
-                            <div class="profile__item">
-                                <div class="label">ИНН</div>
-                                <input type="text" name="org_name" id="org_name" value="9382465783245" class="profile__input">
-                            </div>
-        
-                            <div class="profile__item">
-                                <div class="label">ФИО</div>
-                                <input type="text" name="org_name" id="org_name" value="Иванов Иван Иванович" class="profile__input">
-                            </div>
-    
-                            <div class="profile__item">
-                                <div class="label">Должность</div>
-                                <input type="text" name="org_name" id="org_name" value="Менеджер" class="profile__input">
-                            </div>
-    
-                            <div class="profile__item">
-                                <div class="label">Телефон</div>
-                                <input type="text" name="org_name" id="org_name" value="+7(911)580-40-40" class="profile__input">
-                            </div>
-    
-                            <div class="profile__item">
-                                <div class="label">Эл.почта</div>
-                                <input type="text" name="org_name" id="org_name" value="vw34345@mail.ru" class="profile__input">
-                            </div>
-    
-                            <div class="profile__item">
-                                <div class="label"></div>
-                                <input type="text" name="org_name" id="org_name" placeholder="За что отвечает?" class="profile__input">
-                            </div>
-    
-                            <div class="profile__upload">
-                                <input type="file" name="pdf" id="pdf" accept=".pdf" class="input-upload input-upload_doc">
-                                <label for="pdf" class="upload-label">
-                                    <img src="images/upload.png" alt="">
-                                    <p>Прикрепить реквизиты организации</p>
-                                </label>
-                            </div>
-    
-                            <div class="upload-doc">
-                                <div class="profile__upload-label">
-                                    Вы прикрепили:
-                                </div>
-                                <div class="upload-doc__file">
-                                    <img src="images/pdf-icon.png" alt="">
-                                    <p class="upload-doc__file-name">пусто</p>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                        </a>
 
-                    <div class="profile__submit">
-                        <input type="submit" value="Сохранить" class="btn-red">
+                        <a href="#" target="_blank" class="application__link">
+                            <div class="application__2">
+                                <div class="application-box">
+                                    <div class="application-box__row">
+                                        <div class="application__num">Заявка №1</div>
+                                        <div class="application__date">16.07.2020</div>
+                                    </div>
+                
+                                    <div class="application-box__block">
+                                        <div class="label">Название компании:</div>
+                                        <div class="application__text">
+                                            ООО "Нефтегазодобывающая горнометалургия"
+                                        </div>
+                                    </div>
+                
+                                    <hr class="application__line">
+                
+                                    <div class="application-box__block">
+                                        <div class="label">Тема:</div>
+                                        <div class="application__theme">
+                                            Коммерческое предложение на поставку товара образец документов
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" target="_blank" class="application__link">
+                            <div class="application__2">
+                                <div class="application-box">
+                                    <div class="application-box__row">
+                                        <div class="application__num">Заявка №1</div>
+                                        <div class="application__date">16.07.2020</div>
+                                    </div>
+                
+                                    <div class="application-box__block">
+                                        <div class="label">Название компании:</div>
+                                        <div class="application__text">
+                                            ООО "Нефтегазодобывающая горнометалургия"
+                                        </div>
+                                    </div>
+                
+                                    <hr class="application__line">
+                
+                                    <div class="application-box__block">
+                                        <div class="label">Тема:</div>
+                                        <div class="application__theme">
+                                            Коммерческое предложение на поставку товара образец документов
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
