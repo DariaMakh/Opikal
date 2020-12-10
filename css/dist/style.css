@@ -978,6 +978,21 @@ input[type=search]::-webkit-search-results-decoration {
   border: 1px solid #ffffff;
   text-decoration: none;
 }
+.modal-login {
+  width: 420px;
+}
+.modal-login .modal-content__box {
+  width: 100%;
+}
+.modal-login .btn-red {
+  padding: 12px 137px;
+}
+.modal-login .btn-red:hover {
+  padding: 11px 136px;
+}
+.modal-login .modal-content__btn-login {
+  margin: 30px auto 20px auto;
+}
 
 .input {
   background: none;

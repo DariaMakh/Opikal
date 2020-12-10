@@ -179,6 +179,21 @@ $font2: "FuturaBookDemiC";
           text-decoration: none;
         }
     }
+    &-login{
+        width: 420px;
+        .modal-content__box {
+            width: 100%;
+        }
+        .btn-red {
+            padding: 12px 137px;
+            &:hover{
+                padding: 11px 136px;
+            }
+        }
+        .modal-content__btn-login{
+            margin: 30px auto 20px auto;
+        }
+    }
 }
 
 .input{
