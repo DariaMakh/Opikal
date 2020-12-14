@@ -1,0 +1,124 @@
+.justify {
+  align-items: center;
+  justify-content: space-between;
+}
+.justify_2 {
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.light {
+  font-size: 17px;
+  font-family: "FuturaBookC";
+  color: rgba(20, 20, 25, 0.502);
+  display: block;
+}
+
+.generated-application {
+  padding-top: 60px;
+  background-color: #fff;
+  background-image: url(../../images/application-bg.jpg);
+  background-position: top;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+.generated-application__content {
+  margin-top: 60px;
+}
+.generated-application__title {
+  font-family: "FuturaBookDemiC";
+  font-size: 65px;
+  font-weight: 600;
+  color: #000;
+}
+.generated-application__number {
+  font-family: "FuturaBookDemiC";
+  font-size: 21px;
+  font-weight: 600;
+  color: #000;
+  margin-top: 50px;
+  margin-bottom: 32px;
+}
+.generated-application__number span {
+  color: #ff0000;
+  font-weight: 500;
+  margin-left: 5px;
+}
+.generated-application__row {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1030px;
+}
+.generated-application__label {
+  font-family: "FuturaBookDemiC";
+  font-size: 21px;
+  font-weight: 600;
+  color: #000;
+}
+.generated-application__input::placeholder {
+  font-size: 16px;
+  font-family: "FuturaBookC";
+  color: rgba(20, 20, 25, 0.502);
+}
+.generated-application__block {
+  margin-right: 32px;
+}
+.generated-application .input {
+  margin-top: 0;
+}
+.generated-application .block {
+  position: relative;
+}
+.generated-application__date-inp {
+  border: 1px solid #000;
+  background-color: #fff;
+  height: 45px;
+  padding-left: 40px;
+}
+.generated-application__date-inp_img {
+  width: 22px;
+  height: 24px;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+.generated-application__theme {
+  margin-top: 60px;
+}
+.generated-application__theme_header {
+  font-family: "FuturaBookDemiC";
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #000;
+  padding: 20px 50px;
+  width: fit-content;
+}
+.generated-application__theme_text {
+  position: relative;
+  border: 1px solid #000;
+  padding: 35px;
+  background-color: #fff;
+  font-family: "FuturaBookC";
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+}
+.generated-application__theme_edit {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  cursor: pointer;
+}
+.generated-application__theme_edit svg {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+}
