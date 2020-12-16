@@ -226,6 +226,20 @@
   .equipment__box {
     width: 48%;
   }
+
+  .box__btns {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .mess .box__btns {
+    align-items: flex-start;
+  }
+
+  .mess__btns {
+    margin-left: 35px;
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 640px) {
   .rools {
