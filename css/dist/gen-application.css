@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .justify {
   align-items: center;
   justify-content: space-between;
@@ -121,4 +122,165 @@
   position: absolute;
   right: 7px;
   top: 7px;
+}
+
+.tabs {
+  width: 100%;
+  margin-top: 60px;
+}
+
+/*
+.tab{
+    //Стили для списка вкладок
+    &-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+    //Стили для вкладки
+    &-header__item {
+        margin-right: 40px;
+        cursor: pointer;
+    }
+    // Стили для активной вкладки
+    &-header__item.active {
+        color: #fff;
+        position: relative;
+        background-color: #000;
+        border-color: #000;
+    }
+    //Стиль для списка контейнеров с содержимым вкладок
+    &-content {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        //Стили для контейнера с содержимым вкладки
+        &__item {
+            display: none;
+        }
+        //Стили для активного контейнера вкладки
+        &__item.active {
+            display: block;
+        }
+    }
+}
+*/
+/**SORRY FOR NOT STYLING THIS ONE, but I wanted to keep it clean for those who are looking to repeat the functionality*****/
+/**VERTICAL TAB STYLING*
+
+.ui-tabs-vertical {
+    width: 55em;
+  }
+
+  .ui-tabs-vertical .ui-tabs-nav {
+    padding: .2em .1em .2em .2em;
+    float: left;
+    width: 12em;
+  }
+
+  .ui-tabs-vertical .ui-tabs-nav li {
+    clear: left;
+    width: 100%;
+    border-bottom-width: 1px !important;
+    border-right-width: 0 !important;
+    margin: 0 -1px .2em 0;
+  }
+
+  .ui-tabs-vertical .ui-tabs-nav li a {
+    display: block;
+    width:100%;
+    outline:0;
+  }
+
+  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+    margin: 0 -1px .2em 0;
+    padding-right: .1em;
+    border-right-width: 1px;
+
+  }
+
+  .ui-tabs-vertical .ui-tabs-panel {
+    padding: 1em;
+    float: right;
+    width: 40em;
+  }
+VERTICAL TAB STYLING*
+
+*/
+.tab__btn_2, .tab__btn, .tab__header_2 .tab__btn {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-family: "FuturaBookDemiC";
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.tab__header {
+  display: block;
+  clear: both;
+}
+.tab__header_1 .tab__btn {
+  margin-right: 40px;
+}
+.tab__header_2 {
+  display: flex;
+}
+.tab__header_2 .tab__btn {
+  color: #000;
+  background-color: transparent;
+  padding: 22px 0;
+  width: 50%;
+  font-size: 21px;
+  padding: 7px 14px;
+}
+.tab__header_2 .tab__btn.tab__header_2--active {
+  background: #000;
+  color: #fff;
+}
+.tab__btn {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 7px 14px;
+}
+.tab__btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+.tab__btn.tab__header--active {
+  background: #000;
+  color: #fff;
+}
+.tab__btn_2 {
+  color: #000;
+  background-color: transparent;
+  padding: 22px 0;
+  width: 50%;
+  font-size: 21px;
+  padding: 7px 14px;
+}
+.tab__btn_2.tab__header_2--active {
+  background: #000;
+  color: #fff;
+}
+.tab__content {
+  display: block;
+  clear: both;
+}
+.tab__content_1 {
+  margin-top: 70px;
+}
+.tab__content > div {
+  display: inline-block;
+  display: none;
+}
+.tab__content > div.tab__content--active {
+  display: block;
+}
+
+.tab__content .tab__header > div.tab__header--active {
+  background: #000;
+  color: #fff;
 }
