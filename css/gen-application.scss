@@ -231,31 +231,6 @@ VERTICAL TAB STYLING*
 }
 
 .tab{
-    &__header {
-        display: block;
-        clear: both;
-        &_1{
-            .tab__btn{
-                margin-right: 40px;
-            }
-        }
-        &_2{
-            display: flex;
-            .tab__btn{
-                @extend %btn;
-                color: #000;
-                background-color: transparent;
-                padding: 22px 0;
-                width: 50%;
-                font-size: 21px;
-                padding: 7px 14px;
-                &.tab__header_2--active {
-                    background: #000;
-                    color: #fff;
-                }
-            }
-        }
-    }
     &__btn{
         @extend %btn;
         color: #000;
@@ -269,6 +244,31 @@ VERTICAL TAB STYLING*
         &.tab__header--active {
             background: #000;
             color: #fff;
+        }
+    }
+    &__header {
+        display: block;
+        clear: both;
+        &_1{
+            .tab__btn{
+                margin-right: 40px;
+            }
+        }
+        &_2{
+            display: flex;
+            .tab__btn{
+                @extend %btn;
+                color: #000;
+                border: transparent;
+                background-color: transparent;
+                padding: 22px 0;
+                width: 50%;
+                font-size: 21px;
+                &.tab__header_2--active {
+                    background: #000;
+                    color: #fff;
+                }
+            }
         }
     }
     &__content {
@@ -285,12 +285,17 @@ VERTICAL TAB STYLING*
             display: block;
         }
     }
-
 }
   
-  .tab__content .tab__header > div.tab__header--active {
+.tab__content .tab__header > div.tab__header--active {
     background: #000;
     color: #fff;
-  }
+}
+
+.stab{
+    width: 100%;
+    border: 40px solid rgba(191, 191, 191, .451);
+    background-color: #fff;
+}
   
   

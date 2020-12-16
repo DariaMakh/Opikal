@@ -207,7 +207,7 @@
 VERTICAL TAB STYLING*
 
 */
-.tab__btn_2, .tab__btn, .tab__header_2 .tab__btn {
+.tab__header_2 .tab__btn, .tab__btn {
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -217,28 +217,6 @@ VERTICAL TAB STYLING*
   font-weight: bold;
 }
 
-.tab__header {
-  display: block;
-  clear: both;
-}
-.tab__header_1 .tab__btn {
-  margin-right: 40px;
-}
-.tab__header_2 {
-  display: flex;
-}
-.tab__header_2 .tab__btn {
-  color: #000;
-  background-color: transparent;
-  padding: 22px 0;
-  width: 50%;
-  font-size: 21px;
-  padding: 7px 14px;
-}
-.tab__header_2 .tab__btn.tab__header_2--active {
-  background: #000;
-  color: #fff;
-}
 .tab__btn {
   color: #000;
   background-color: #fff;
@@ -253,15 +231,25 @@ VERTICAL TAB STYLING*
   background: #000;
   color: #fff;
 }
-.tab__btn_2 {
+.tab__header {
+  display: block;
+  clear: both;
+}
+.tab__header_1 .tab__btn {
+  margin-right: 40px;
+}
+.tab__header_2 {
+  display: flex;
+}
+.tab__header_2 .tab__btn {
   color: #000;
+  border: transparent;
   background-color: transparent;
   padding: 22px 0;
   width: 50%;
   font-size: 21px;
-  padding: 7px 14px;
 }
-.tab__btn_2.tab__header_2--active {
+.tab__header_2 .tab__btn.tab__header_2--active {
   background: #000;
   color: #fff;
 }
@@ -283,4 +271,10 @@ VERTICAL TAB STYLING*
 .tab__content .tab__header > div.tab__header--active {
   background: #000;
   color: #fff;
+}
+
+.stab {
+  width: 100%;
+  border: 40px solid rgba(191, 191, 191, 0.451);
+  background-color: #fff;
 }
