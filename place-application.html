@@ -65,8 +65,8 @@
 
     </header>
 
-    <main class="place-bg">
-        
+    <main>
+    <div class="place-bg">
         <div class="container">
             <div class="place-app">
                 <div class="row">
@@ -91,9 +91,17 @@
                             </div>
                             
                             <!-- One "tab" for each step in the form: -->
-                            <div class="tab">Name:
-                              <p><input placeholder="First name..." oninput="this.className = ''"></p>
-                              <p><input placeholder="Last name..." oninput="this.className = ''"></p>
+                            <div class="tab">
+                              <!-- <p><input placeholder="First name..." oninput="this.className = ''"></p>
+                              <p><input placeholder="Last name..." oninput="this.className = ''"></p> -->
+
+                              <select name="category" size="1"  form="form__steps" class="place-select">
+                                    <option value="" style="display:none"> <p>Выберите категорию</p></option>
+                                    <option value="1" > <p>Категория не известна</p></option>
+                                    <option value="2" > <p>Конвейерное оборудование</p></option>
+                                    <option value="3" > <p>Другое оборудование</p></option>
+                                    <option value="4" > <p>Допустим, комплектующие</p></option>
+                                </select>
                             </div>
                             
                             <div class="tab">Contact Info:
@@ -124,7 +132,7 @@
                 </div>
             </div>
         </div>
-
+    </div>
     </main>
 
     <footer class="footer">
