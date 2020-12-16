@@ -132,6 +132,15 @@ $font2: "FuturaBookDemiC";
             }
         }
     }
+    &__btns{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        padding-bottom: 90px;
+        .btn-black, .btn-red{
+            margin-right: 40px;
+        }
+    }
 }
 
 .tabs {
@@ -294,8 +303,35 @@ VERTICAL TAB STYLING*
 
 .stab{
     width: 100%;
+    height: 900px;
     border: 40px solid rgba(191, 191, 191, .451);
     background-color: #fff;
+    overflow-y: auto;
+    &__text{
+        &-right{
+            font-size: 16px;
+            font-family: $font;
+            color: #000;
+            line-height: 1.375;
+            text-align: right;
+            span{
+                margin-left: 5px;
+                color: #cdcdcd;
+            }
+        }
+    }
+    &__right{
+        padding: 20px;
+    }
+    &__block{
+        .upload-doc{
+            padding-left: 220px;
+            padding-top: 30px;
+        }
+        .upload-doc__file-name{
+            font-style: italic;
+        }
+    }
 }
   
   
