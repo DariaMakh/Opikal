@@ -357,7 +357,8 @@ VERTICAL TAB STYLING*
 
 .requisites{
 	width: 700px;
-	margin: 0 auto;
+    margin: 0 auto;
+    position: relative;
 	&__list{
         background-color: #fff;
         margin-bottom: 60px;
@@ -414,5 +415,21 @@ VERTICAL TAB STYLING*
 			color: #000;
 			margin-bottom: 30px;
 		}
-	}
+    }
+    &__navigation{
+        border-radius: 4px;
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+        font-family: $font;
+        font-size: 19px;
+        text-align: center;
+        opacity: 0.6;
+        position: absolute;
+        width: 270px;
+        height: 60px;
+        padding: 19px 0;
+        bottom: -48px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
