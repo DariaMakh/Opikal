@@ -486,6 +486,11 @@ $font2: "FuturaBookDemiC";
                 &:hover, &:focus{
                     padding-left: 0;
                 }
+                .notification {
+                    font-size: 18px;
+                    top: 20px;
+                    right: 4px;
+                }
             }
             &__num{
                 top: 30px;

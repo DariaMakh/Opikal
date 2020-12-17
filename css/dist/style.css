@@ -5,7 +5,7 @@
   text-decoration: none;
   font-family: "FuturaBookDemiC";
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .search-input, .profile__textarea, .profile__input_2, .profile__input {
@@ -1745,6 +1745,11 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .account-menu__link:hover, .account-menu__link:focus {
     padding-left: 0;
+  }
+  .account-menu__link .notification {
+    font-size: 18px;
+    top: 20px;
+    right: 4px;
   }
   .account-menu__num {
     top: 30px;
