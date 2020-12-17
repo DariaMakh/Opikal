@@ -308,7 +308,9 @@ VERTICAL TAB STYLING*
     &-box{
         border: 40px solid rgba(191, 191, 191, .451);
         background-color: #fff;
-        height: 900px;
+        height: auto;
+        min-height: 900px;
+        padding-bottom: 25px;
     }
     &__text{
         &-right{
@@ -337,4 +339,23 @@ VERTICAL TAB STYLING*
     }
 }
   
-  
+#scroll-style::-webkit-scrollbar-track {
+	border-radius: 0;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+#scroll-style::-webkit-scrollbar {
+	width: 25px;
+	background-color: #666666;
+}
+#scroll-style::-webkit-scrollbar-thumb {
+	border-radius: 0;
+    background-color: #666666;
+}
+
+.scroll-box{
+    margin: 0 auto;
+    width: 97%;
+    height: 870px;
+    overflow-y: auto;
+}
