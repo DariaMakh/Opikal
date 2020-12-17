@@ -80,7 +80,7 @@
                 <div class="place-app__title">Разместить заявку</div>
                 <div class="place-app__content">
                     <div class="place-app__form form">
-                        <form id="regForm" action="">
+                        <form id="place-form" action="">
 
                             <div class="form__steps">
                                 <div class="step">Выбор типа оборудования<span></span></div>
@@ -92,16 +92,48 @@
                             
                             <!-- One "tab" for each step in the form: -->
                             <div class="tab">
-                              <!-- <p><input placeholder="First name..." oninput="this.className = ''"></p>
-                              <p><input placeholder="Last name..." oninput="this.className = ''"></p> -->
+                              <!-- <p><input placeholder="First name..." oninput="this.className = ''"></p> -->
+                                <div class="place_left">
+                                    <div class="__select__category" data-state="">
+                                        <!-- без переноса строки для проверки js -->
+                                        <div class="__select__title" data-default="Выберите категорию"><p class="textChosen">Выберите категорию</p><span class="__select__arrow act"></span></div>
+                                        <div class="__select__content">
 
-                              <select name="category" size="1"  form="form__steps" class="place-select">
-                                    <option value="" style="display:none"> <p>Выберите категорию</p></option>
-                                    <option value="1" > <p>Категория не известна</p></option>
-                                    <option value="2" > <p>Конвейерное оборудование</p></option>
-                                    <option value="3" > <p>Другое оборудование</p></option>
-                                    <option value="4" > <p>Допустим, комплектующие</p></option>
-                                </select>
+                                            <input id="selectName0" class="__select__input"  type="radio" value="0" name="selectName" />
+                                            <label for="selectName0"class="__select__label"><p>Категория не известна</p></label>
+
+                                            <input id="selectName1" class="__select__input"  type="radio" value="1" name="selectName" />
+                                            <label for="selectName1" class="__select__label"><p>Дополнительное оборудование</p></label>
+
+                                            <input id="selectName2" class="__select__input"  type="radio" value="2" name="selectName" />
+                                            <label for="selectName2" class="__select__label"><p>Конвейерное оборудование</p></label>
+
+                                            <input id="selectName3" class="__select__input"  type="radio" value="3" name="selectName" />
+                                            <label for="selectName3" class="__select__label"><p>Другое оборудование</p></label>
+
+                                            <input id="selectName4" class="__select__input"  type="radio" value="4" name="selectName" />
+                                            <label for="selectName4" class="__select__label"><p>Допустим, комплектующие</p></label>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="place_right">
+                                    <div class="place__alert">
+                                        <div class="__alert__title"> 
+                                            <p>Обратите внимание:</p>
+                                        </div>
+                                        <div class="__alert__message">
+                                            <p>
+                                                Если среди представленного перечня оборудования Вы не нашли оборудование, которое Вам требуется, <a href="#">оставьте заявку</a> службе поддержки площадки.
+                                                Наши специалисты проанализируют к какой категории или типу может относиться Ваше оборудованиеи в случае, если оно окажется уникальным, мы зарегистрируем данное оборужование на площадке и поможем найти потенциальных поставщиков.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             
                             <div class="tab">Contact Info:
@@ -119,15 +151,20 @@
                               <p><input placeholder="Username..." oninput="this.className = ''"></p>
                               <p><input placeholder="Password..." oninput="this.className = ''"></p>
                             </div>
-                            
-                            <div style="overflow:auto;">
-                              <div style="float:right;">
-                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-                              </div>
+
+                            <div class="tab">Login Info:
+                                <p><input placeholder="Username..." oninput="this.className = ''"></p>
+                                <p><input placeholder="Password..." oninput="this.className = ''"></p>
+                            </div>
+
+                            <div class="place__clear">
+                                <div class="place-form__button">
+                                    <button type="button" id="prevBtn" onclick="nextPrev(-1)"> Назад </button>
+                                    <button type="button" id="nextBtn" onclick="nextPrev(1)"> Продолжить </button>
+                                </div>
                             </div>
                             
-                            </form>
+                        </form>
                     </div>
                 </div>
             </div>

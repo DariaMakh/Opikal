@@ -12,9 +12,9 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    document.getElementById("nextBtn").innerHTML = "Отправить";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
+    document.getElementById("nextBtn").innerHTML = "Продолжить";
   }
   // ... and run a function that displays the correct step indicator:
   fixStepIndicator(n)
@@ -32,7 +32,7 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    document.getElementById("regForm").submit();
+    document.getElementById("place-form").submit();
     return false;
   }
   // Otherwise, display the correct tab:
@@ -69,4 +69,41 @@ function fixStepIndicator(n) {
   }
   //... and adds the "active" class to the current step:
   x[n].className += " active";
+}
+
+/************************************************/
+
+const selectSingle = document.querySelector('.__select__category');
+const selectSingle_title = selectSingle.querySelector('.__select__title');
+const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
+const selectSingle_arrow = selectSingle_title.querySelector('.__select__arrow');
+const textChosen = selectSingle.querySelector('.textChosen'); 
+
+// Toggle menu
+selectSingle_title.addEventListener('click', () => {
+  if ('active' === selectSingle.getAttribute('data-state')) {
+    selectSingle.setAttribute('data-state', '');
+    selectSingle_arrow.classList.add("act");
+
+  } else {
+    selectSingle.setAttribute('data-state', 'active');
+    selectSingle_arrow.classList.remove("act");
+  }
+  if (textChosen.textContent === selectSingle_title.getAttribute('data-default')) {
+      textChosen.classList.remove("act");
+    }
+  
+
+});
+
+// Close when click to option
+for (let i = 0; i < selectSingle_labels.length; i++) {
+  selectSingle_labels[i].addEventListener('click', (evt) => {
+
+    textChosen.textContent = evt.target.textContent;
+    textChosen.classList.add("act");
+    selectSingle.setAttribute('data-state', '');
+    selectSingle_arrow.classList.add("act");
+
+  });
 }
