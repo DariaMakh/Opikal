@@ -117,19 +117,319 @@ $font2: "FuturaBookDemiC";
             font-weight: 400;
             color: #000;
         }
-        &_edit{
-            width: 30px;
-            height: 30px;
+    }
+    &__btns{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        padding-bottom: 90px;
+        .btn-black, .btn-red{
+            margin-right: 40px;
+        }
+    }
+    &__edit{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #000;
+        cursor: pointer;
+        svg{
             position: absolute;
-            top: 0;
-            right: 0;
+            right: 7px;
+            top: 7px;
+        }
+    }
+}
+
+.tabs {
+    width: 100%;
+    margin-top: 60px;
+}
+ 
+/*
+.tab{
+    //Стили для списка вкладок
+    &-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+    //Стили для вкладки
+    &-header__item {
+        margin-right: 40px;
+        cursor: pointer;
+    }
+    // Стили для активной вкладки
+    &-header__item.active {
+        color: #fff;
+        position: relative;
+        background-color: #000;
+        border-color: #000;
+    }
+    //Стиль для списка контейнеров с содержимым вкладок
+    &-content {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        //Стили для контейнера с содержимым вкладки
+        &__item {
+            display: none;
+        }
+        //Стили для активного контейнера вкладки
+        &__item.active {
+            display: block;
+        }
+    }
+}
+*/
+
+/**SORRY FOR NOT STYLING THIS ONE, but I wanted to keep it clean for those who are looking to repeat the functionality*****/
+
+/**VERTICAL TAB STYLING*
+        
+.ui-tabs-vertical {
+    width: 55em;
+  }
+  
+  .ui-tabs-vertical .ui-tabs-nav {
+    padding: .2em .1em .2em .2em;
+    float: left;
+    width: 12em;
+  }
+  
+  .ui-tabs-vertical .ui-tabs-nav li {
+    clear: left;
+    width: 100%;
+    border-bottom-width: 1px !important;
+    border-right-width: 0 !important;
+    margin: 0 -1px .2em 0;
+  }
+  
+  .ui-tabs-vertical .ui-tabs-nav li a {
+    display: block;
+    width:100%;
+    outline:0;
+  }
+  
+  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+    margin: 0 -1px .2em 0;
+    padding-right: .1em;
+    border-right-width: 1px;
+  
+  }
+  
+  .ui-tabs-vertical .ui-tabs-panel {
+    padding: 1em;
+    float: right;
+    width: 40em;
+  }
+VERTICAL TAB STYLING*
+
+*/
+
+%btn{
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: $font2;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.tab{
+    &__btn{
+        @extend %btn;
+        color: #000;
+        background-color: #fff;
+        border: 2px solid #000;
+        padding: 7px 14px;
+        &:hover{
             background-color: #000;
-            cursor: pointer;
-            svg{
-                position: absolute;
-                right: 7px;
-                top: 7px;
+            color: #fff;
+        }
+        &.tab__header--active {
+            background: #000;
+            color: #fff;
+        }
+    }
+    &__header {
+        display: block;
+        clear: both;
+        &_1{
+            .tab__btn{
+                margin-right: 40px;
             }
         }
+        &_2{
+            display: flex;
+            .tab__btn{
+                @extend %btn;
+                color: #000;
+                border: transparent;
+                background-color: transparent;
+                padding: 22px 0;
+                width: 50%;
+                font-size: 21px;
+                &.tab__header_2--active {
+                    background: #000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &__content {
+        display: block;
+        clear: both;
+        &_1{
+            margin-top: 70px;
+        }
+        & > div {
+            display: inline-block;
+            display: none;
+        }
+        & > div.tab__content--active {
+            display: block;
+        }
+    }
+}
+  
+.tab__content .tab__header > div.tab__header--active {
+    background: #000;
+    color: #fff;
+}
+
+.stab{
+    width: 100%;
+    overflow-y: auto;
+    position: relative;
+    &-box{
+        border: 40px solid rgba(191, 191, 191, .451);
+        background-color: #fff;
+        height: auto;
+        min-height: 900px;
+        padding-bottom: 25px;
+    }
+    &__text{
+        &-right{
+            font-size: 16px;
+            font-family: $font;
+            color: #000;
+            line-height: 1.375;
+            text-align: right;
+            span{
+                margin-left: 5px;
+                color: #cdcdcd;
+            }
+        }
+    }
+    &__right{
+        padding: 20px;
+    }
+    &__block{
+        padding-left: 220px;
+        padding-top: 30px;
+    }
+}
+  
+#scroll-style::-webkit-scrollbar-track {
+	border-radius: 0;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+#scroll-style::-webkit-scrollbar {
+	width: 25px;
+	background-color: #666666;
+}
+#scroll-style::-webkit-scrollbar-thumb {
+	border-radius: 0;
+    background-color: #666666;
+}
+
+.scroll-box{
+    margin: 0 auto;
+    width: 97%;
+    max-height: 870px;
+    overflow-y: auto;
+}
+
+.requisites{
+	width: 700px;
+    margin: 0 auto;
+    position: relative;
+	&__list{
+        background-color: #fff;
+        margin-bottom: 60px;
+        &_title{
+            font-family: $font2;
+            font-weight: 600;
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+		p {
+            font-family: $font2;
+            font-weight: normal;
+			background: #fff;
+			width: 100%;
+			min-width: 300px;
+			margin: 0 auto;
+			font-size: 19px;
+			color: #000;
+			padding-right: 6px;
+			margin-bottom: 30px;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 4px;
+				width: 100%;
+				height: 0;
+				line-height: 0;
+				border-bottom: 1px dotted #000000;
+			}
+		}
+	}
+	&__name {
+		position: relative;
+		background: #fff;
+		display: inline;
+		padding-right: 10px;
+	}
+	&__desc {
+		background: inherit;
+		position: absolute;
+		min-width: 4rem;
+		bottom: 0;
+		right: 0;
+		padding-left: 10px;
+		text-align: left;
+		color: rgba(0, 0, 0, 0.702);
+    }
+    &__additional{
+        padding-top: 40px;
+		&_item{
+			font-family: $font;
+			font-size: 19px;
+			color: #000;
+			margin-bottom: 30px;
+		}
+    }
+    &__navigation{
+        border-radius: 4px;
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+        font-family: $font;
+        font-size: 19px;
+        text-align: center;
+        opacity: 0.6;
+        position: absolute;
+        width: 270px;
+        height: 60px;
+        padding: 19px 0;
+        bottom: -48px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

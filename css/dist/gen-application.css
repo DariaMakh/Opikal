@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .justify {
   align-items: center;
   justify-content: space-between;
@@ -108,7 +109,16 @@
   font-weight: 400;
   color: #000;
 }
-.generated-application__theme_edit {
+.generated-application__btns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding-bottom: 90px;
+}
+.generated-application__btns .btn-black, .generated-application__btns .btn-red {
+  margin-right: 40px;
+}
+.generated-application__edit {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -117,8 +127,290 @@
   background-color: #000;
   cursor: pointer;
 }
-.generated-application__theme_edit svg {
+.generated-application__edit svg {
   position: absolute;
   right: 7px;
   top: 7px;
+}
+
+.tabs {
+  width: 100%;
+  margin-top: 60px;
+}
+
+/*
+.tab{
+    //Стили для списка вкладок
+    &-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+    //Стили для вкладки
+    &-header__item {
+        margin-right: 40px;
+        cursor: pointer;
+    }
+    // Стили для активной вкладки
+    &-header__item.active {
+        color: #fff;
+        position: relative;
+        background-color: #000;
+        border-color: #000;
+    }
+    //Стиль для списка контейнеров с содержимым вкладок
+    &-content {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        //Стили для контейнера с содержимым вкладки
+        &__item {
+            display: none;
+        }
+        //Стили для активного контейнера вкладки
+        &__item.active {
+            display: block;
+        }
+    }
+}
+*/
+/**SORRY FOR NOT STYLING THIS ONE, but I wanted to keep it clean for those who are looking to repeat the functionality*****/
+/**VERTICAL TAB STYLING*
+
+.ui-tabs-vertical {
+    width: 55em;
+  }
+
+  .ui-tabs-vertical .ui-tabs-nav {
+    padding: .2em .1em .2em .2em;
+    float: left;
+    width: 12em;
+  }
+
+  .ui-tabs-vertical .ui-tabs-nav li {
+    clear: left;
+    width: 100%;
+    border-bottom-width: 1px !important;
+    border-right-width: 0 !important;
+    margin: 0 -1px .2em 0;
+  }
+
+  .ui-tabs-vertical .ui-tabs-nav li a {
+    display: block;
+    width:100%;
+    outline:0;
+  }
+
+  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+    margin: 0 -1px .2em 0;
+    padding-right: .1em;
+    border-right-width: 1px;
+
+  }
+
+  .ui-tabs-vertical .ui-tabs-panel {
+    padding: 1em;
+    float: right;
+    width: 40em;
+  }
+VERTICAL TAB STYLING*
+
+*/
+.tab__header_2 .tab__btn, .tab__btn {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-family: "FuturaBookDemiC";
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.tab__btn {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 7px 14px;
+}
+.tab__btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+.tab__btn.tab__header--active {
+  background: #000;
+  color: #fff;
+}
+.tab__header {
+  display: block;
+  clear: both;
+}
+.tab__header_1 .tab__btn {
+  margin-right: 40px;
+}
+.tab__header_2 {
+  display: flex;
+}
+.tab__header_2 .tab__btn {
+  color: #000;
+  border: transparent;
+  background-color: transparent;
+  padding: 22px 0;
+  width: 50%;
+  font-size: 21px;
+}
+.tab__header_2 .tab__btn.tab__header_2--active {
+  background: #000;
+  color: #fff;
+}
+.tab__content {
+  display: block;
+  clear: both;
+}
+.tab__content_1 {
+  margin-top: 70px;
+}
+.tab__content > div {
+  display: inline-block;
+  display: none;
+}
+.tab__content > div.tab__content--active {
+  display: block;
+}
+
+.tab__content .tab__header > div.tab__header--active {
+  background: #000;
+  color: #fff;
+}
+
+.stab {
+  width: 100%;
+  overflow-y: auto;
+  position: relative;
+}
+.stab-box {
+  border: 40px solid rgba(191, 191, 191, 0.451);
+  background-color: #fff;
+  height: auto;
+  min-height: 900px;
+  padding-bottom: 25px;
+}
+.stab__text-right {
+  font-size: 16px;
+  font-family: "FuturaBookC";
+  color: #000;
+  line-height: 1.375;
+  text-align: right;
+}
+.stab__text-right span {
+  margin-left: 5px;
+  color: #cdcdcd;
+}
+.stab__right {
+  padding: 20px;
+}
+.stab__block {
+  padding-left: 220px;
+  padding-top: 30px;
+}
+
+#scroll-style::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+#scroll-style::-webkit-scrollbar {
+  width: 25px;
+  background-color: #666666;
+}
+
+#scroll-style::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: #666666;
+}
+
+.scroll-box {
+  margin: 0 auto;
+  width: 97%;
+  max-height: 870px;
+  overflow-y: auto;
+}
+
+.requisites {
+  width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+.requisites__list {
+  background-color: #fff;
+  margin-bottom: 60px;
+}
+.requisites__list_title {
+  font-family: "FuturaBookDemiC";
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+.requisites__list p {
+  font-family: "FuturaBookDemiC";
+  font-weight: normal;
+  background: #fff;
+  width: 100%;
+  min-width: 300px;
+  margin: 0 auto;
+  font-size: 19px;
+  color: #000;
+  padding-right: 6px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.requisites__list p:before {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  height: 0;
+  line-height: 0;
+  border-bottom: 1px dotted #000000;
+}
+.requisites__name {
+  position: relative;
+  background: #fff;
+  display: inline;
+  padding-right: 10px;
+}
+.requisites__desc {
+  background: inherit;
+  position: absolute;
+  min-width: 4rem;
+  bottom: 0;
+  right: 0;
+  padding-left: 10px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.702);
+}
+.requisites__additional {
+  padding-top: 40px;
+}
+.requisites__additional_item {
+  font-family: "FuturaBookC";
+  font-size: 19px;
+  color: #000;
+  margin-bottom: 30px;
+}
+.requisites__navigation {
+  border-radius: 4px;
+  background-color: black;
+  color: #fff;
+  font-family: "FuturaBookC";
+  font-size: 19px;
+  text-align: center;
+  opacity: 0.6;
+  position: absolute;
+  width: 270px;
+  height: 60px;
+  padding: 19px 0;
+  bottom: -48px;
+  left: 50%;
+  transform: translateX(-50%);
 }

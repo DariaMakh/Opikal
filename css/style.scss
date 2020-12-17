@@ -13,7 +13,7 @@ $font2: "FuturaBookDemiC";
   text-decoration: none;
   font-family: $font2;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 %input-reset{
@@ -50,6 +50,7 @@ $font2: "FuturaBookDemiC";
 
 body {
   overflow-x: hidden;
+  background-color: #fff;
 }
 
 a {
@@ -112,7 +113,6 @@ button{
     background-color: #fff;
     padding: 10px 28px;
     &:hover{
-      border: 2px solid #000;
       color: #fff;
       background-color: #000;
     }
@@ -183,13 +183,13 @@ button{
 
 .btn-add{
   @extend %btn;
-      border: 1px solid #000;
-    color: #fff;
-    background-color: #000;
-    font-family: "FuturaBookDemiC";
-    font-size: 17px;
-    font-weight: bold;
-    padding: 10px 60px 10px 25px;
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+  font-family: "FuturaBookDemiC";
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 60px 10px 25px;
   &:active, &:hover{
     color: #000;
     background-color: #fff;
