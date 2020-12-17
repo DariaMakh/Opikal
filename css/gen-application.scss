@@ -356,6 +356,59 @@ VERTICAL TAB STYLING*
 .scroll-box{
     margin: 0 auto;
     width: 97%;
-    height: 870px;
+    max-height: 870px;
     overflow-y: auto;
+}
+
+.requisites{
+	width: 700px;
+	margin: 0 auto;
+	&__list{
+        background-color: #fff;
+        margin-bottom: 60px;
+        &_title{
+            font-family: $font2;
+            font-weight: 600;
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+		p {
+            font-family: $font2;
+            font-weight: normal;
+			background: #fff;
+			width: 100%;
+			min-width: 300px;
+			margin: 0 auto;
+			font-size: 19px;
+			color: #000;
+			padding-right: 6px;
+			margin-bottom: 30px;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 4px;
+				width: 100%;
+				height: 0;
+				line-height: 0;
+				border-bottom: 1px dotted #000000;
+			}
+		}
+	}
+	&__name {
+		position: relative;
+		background: #fff;
+		display: inline;
+		padding-right: 10px;
+	}
+	&__desc {
+		background: inherit;
+		position: absolute;
+		min-width: 4rem;
+		bottom: 0;
+		right: 0;
+		padding-left: 10px;
+		text-align: left;
+		color: rgba(0, 0, 0, 0.702);
+	}
 }
