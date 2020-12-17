@@ -6,19 +6,19 @@
 }
 .place_left {
   display: block;
-  float: left;
-
+  order: 1;
 }
 .place_right {
   display: block;
-  float: right;
+  order: 2;
 }
 .place__clear {
   clear: both;
 }
 .place-app {
   padding: 65px 0 45px 0;
-  height: 880px;
+  min-height: 880px;
+  height: auto;
 }
 .place-app__title {
   font-family: "FuturaBookDemiC";
@@ -115,6 +115,7 @@ input.invalid {
 /* Hide all steps by default: */
 .tab {
   display: none;
+  justify-content: space-between;
 }
 
 /* Mark the active step: */
@@ -270,11 +271,11 @@ h1 {
   background-color: #ff0000;
   color: white;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 28px;
 }
 .place__alert {
-  width: 690px;
+  max-width: 690px;
 }
 .__alert__title {
   padding-bottom: 20px;
@@ -300,7 +301,54 @@ h1 {
 .place__row {
   width: 50%;
   display: flex;
+  position: relative;
 }
-.place__row input {
-  max-width: 20px;
+.__checkbox__label {
+  color: #b7b7b7;
+  position: absolute;
+  left: 30px;
+}
+
+.place__row input[type=checkbox]{
+  display:none;
+}
+.place__row input[type=checkbox] + label:before{
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #000;
+  margin-right: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  top: 0px;
+  left: -30px;
+  position: absolute;
+} 
+.place__row input[type=checkbox]:checked + label:before{
+  background-color: #fff;
+  background-image: url(../../images/check.png);
+} 
+
+@media all and (min-width: 980px) and (max-width: 1224px) {
+  .place__alert {
+    padding-left: 50px;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 980px) {
+  .tab {
+    flex-wrap: wrap;
+}
+  .place_left {
+    order: 2;
+  }
+  .place_right {
+    order: 1;
+  }
+  .place__alert {
+    padding-left: 0;
+    padding-bottom: 50px;
+  }
 }
