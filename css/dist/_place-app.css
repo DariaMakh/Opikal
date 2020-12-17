@@ -161,12 +161,14 @@ h1 {
 .__select[data-state="active"] .__select__title::after {
   transform: translate(3px, -50%) rotate(45deg);
 } */
-.__select__category[data-state="active"] .__select__content {
+.__select__category[data-state="active"] .__select__content,
+.__select__equipment[data-state="active"] .__select__content {
   opacity: 1;
   display: flex;
   border: 2px solid black;
 }
-.__select__category[data-state="active"] .__select__label + .__select__input + .__select__label {
+.__select__category[data-state="active"] .__select__label + .__select__input + .__select__label,
+.__select__equipment[data-state="active"] .__select__label + .__select__input + .__select__label  {
   max-height: 50px;
   border-top-width: 1px;
 }
