@@ -308,12 +308,9 @@ VERTICAL TAB STYLING*
 .stab__right {
   padding: 20px;
 }
-.stab__block .upload-doc {
+.stab__block {
   padding-left: 220px;
   padding-top: 30px;
-}
-.stab__block .upload-doc__file-name {
-  font-style: italic;
 }
 
 #scroll-style::-webkit-scrollbar-track {
@@ -390,4 +387,13 @@ VERTICAL TAB STYLING*
   padding-left: 10px;
   text-align: left;
   color: rgba(0, 0, 0, 0.702);
+}
+.requisites__additional {
+  padding-top: 40px;
+}
+.requisites__additional_item {
+  font-family: "FuturaBookC";
+  font-size: 19px;
+  color: #000;
+  margin-bottom: 30px;
 }
