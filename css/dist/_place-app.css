@@ -276,6 +276,10 @@ h1 {
 }
 .place__alert {
   max-width: 690px;
+  display: none;
+}
+.place__alert.act{
+  display: block;
 }
 .__alert__title {
   padding-bottom: 20px;

@@ -78,6 +78,7 @@ const selectSingle_title = selectSingle.querySelector('.__select__title');
 const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
 const selectSingle_arrow = selectSingle_title.querySelector('.__select__arrow');
 const textChosen = selectSingle.querySelector('.textChosen'); 
+const placeAlert = document.querySelector('.place__alert');
 
 // Toggle menu
 selectSingle_title.addEventListener('click', () => {
@@ -92,7 +93,6 @@ selectSingle_title.addEventListener('click', () => {
   if (textChosen.textContent === selectSingle_title.getAttribute('data-default')) {
       textChosen.classList.remove("act");
     }
-  
 
 });
 
@@ -102,11 +102,17 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
 
     textChosen.textContent = evt.target.textContent;
     textChosen.classList.add("act");
+    selectSingle_title.setAttribute('data-description', i);
     selectSingle.setAttribute('data-state', '');
     selectSingle_arrow.classList.add("act");
 
+    if ('' != selectSingle_title.getAttribute('data-description')) {
+      placeAlert.classList.add("act");
+    }
   });
 }
+
+
 /**********************Equipment**************************/
 
 const selectEquip = document.querySelector('.__select__equipment');
@@ -137,6 +143,7 @@ for (let i = 0; i < selectEquip_labels.length; i++) {
 
     textChosenEquip.textContent = evt.target.textContent;
     textChosenEquip.classList.add("act");
+    selectEquip_title.setAttribute('data-description', i);
     selectEquip.setAttribute('data-state', '');
     selectEquip_arrow.classList.add("act");
 
