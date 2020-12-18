@@ -91,12 +91,12 @@
                             </div>
                             
                             <!-- One "tab" for each step in the form: -->
-                            <div class="tab">
+                            <div class="tab tab1">
                               <!-- <p><input placeholder="First name..." oninput="this.className = ''"></p> -->
                                 <div class="place_left">
                                     <div class="__select__category" data-state="">
                                         <!-- без переноса строки для проверки js -->
-                                        <div class="__select__title" data-default="Выберите категорию" data-description=""><p class="textChosen">Выберите категорию</p><span class="__select__arrow act"></span></div>
+                                        <div class="__select__title" data-default="Выберите категорию" data-description=""><p class="textChosen inact">Выберите категорию</p><span class="__select__arrow act"></span></div>
                                         <div class="__select__content">
 
                                             <input id="selectCategory0" class="__select__input"  type="radio" value="0" name="selectCategory" />
@@ -120,7 +120,7 @@
 
                                     <div class="__select__equipment" data-state="">
                                         <!-- без переноса строки для проверки js -->
-                                        <div class="__select__title" data-default="Выберите оборудование"  data-description=""><p class="textChosen">Выберите оборудование</p><span class="__select__arrow act"></span></div>
+                                        <div class="__select__title" data-default="Выберите оборудование"  data-description=""><p class="textChosen inact">Выберите оборудование</p><span class="__select__arrow act"></span></div>
                                         <div class="__select__content">
 
                                             <input id="selectEquipment0" class="__select__input"  type="radio" value="0" name="selectEquipment" />
@@ -199,6 +199,10 @@
                                 </div>
                             </div>
                             
+                            <div class="place__notice">
+                                <p class="notice__req">Поле обязательное для заполнения</p>
+                            </div>
+
                         </form>
                     </div>
                 </div>
