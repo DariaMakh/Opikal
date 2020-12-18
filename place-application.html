@@ -235,7 +235,8 @@
 
                                     <div class="place__attention hide">
                                         <p class="attention_red">
-                                            Уважаемый организатор, если Вы уверены, что ни один из предложенных вариантов целей не соответсвует Вашему критерию, укажите цель запроса самостоятельно.                                        </p>
+                                            Уважаемый организатор, если Вы уверены, что ни один из предложенных вариантов целей не соответсвует Вашему критерию, укажите цель запроса самостоятельно.
+                                        </p>
                                         <p><input class='__select__title' placeholder="Пожалуйста укажите цель своего запроса" oninput="this.className = '__select__title'"></p>
                                     </div>
                                 </div>
@@ -255,9 +256,58 @@
 
                             </div>
                             
-                            <div class="tab">Login Info:
-                              <p><input placeholder="Username..." oninput="this.className = ''"></p>
-                              <p><input placeholder="Password..." oninput="this.className = ''"></p>
+                            <div class="tab tav4">
+                                <div class="place__addresss">
+                                    <div class="address__row">
+                                        <div class="row__title">
+                                            <p> Страна нахождения объекта </p>
+                                        </div>
+                                        <div class="row__input"> 
+                                            <div class="country__select">
+                                                <div class="__select__title" data-default="Другая" data-description="0"><p class="textChosen inact">Другая</p><span class="__select__arrow act"></span></div>
+                                                <div class="__select__content">
+        
+                                                    <input id="selectCountry0" class="__select__input"  type="radio" value="0" name="selectCountry" />
+                                                    <label for="selectCountry0"class="__select__label"><p>Другая</p></label>
+        
+                                                    <input id="selectCountry1" class="__select__input"  type="radio" value="1" name="selectCountry" />
+                                                    <label for="selectCountry1" class="__select__label"><p>Россия</p></label>
+    
+                                                    <input id="selectCountry2" class="__select__input"  type="radio" value="2" name="selectCountry" />
+                                                    <label for="selectCountry2" class="__select__label"><p>Япония</p></label>
+    
+                                                </div>
+                                            </div>
+                                            <div class="country__input">
+                                                <p>
+                                                    <input class='__select__title' placeholder="Указать" oninput="this.className = '__select__title'">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="address__row">
+                                        <div class="row__title">
+                                            <p> Название объекта </p>
+                                        </div>
+                                        <div class="row__input"> 
+                                            <p>
+                                                <input class='__select__title' placeholder="Указать" oninput="this.className = '__select__title'">
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="address__row">
+                                        <div class="row__title">
+                                            <p> Адрес нахождения объекта </p>
+                                        </div>
+                                        <div class="row__input"> 
+                                            <p>
+                                                <input class='__select__title' placeholder="Укажите населенный пункт" oninput="this.className = '__select__title'">
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
                             </div>
 
                             <div class="tab">Login Info:

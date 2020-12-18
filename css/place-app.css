@@ -415,8 +415,44 @@ p > input.__select__title {
 .place__attention.act {
     display: block;
 }
+.place__addresss {
+    width: 100%;
+}
+.address__row {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.country__select {
+    width: 35%;
+}
+.country__input {
+    width: 60%;
+}
+.row__title {
+    padding: 15px 0;
+    text-align: left;
+    width: 25%;
+}
+.row__title p{
+    color: #111111;
+    font-size: 22px;
+    font-weight: 500;
+}
+.row__input {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.country__input > p > input.__select__title,
+.row__input > p > input.__select__title {
+    margin: 0;
+}
 
-
+.row__input p {
+    width: 100%;
+}
 .place__notice {
     padding: 50px 0;
     display: none;
