@@ -130,14 +130,67 @@ for (let i = 0; i < selectEquip_labels.length; i++) {
   });
 }
 
+/**********************Status**************************/
+
+const selectStatus = document.querySelector('.__select__status');
+const selectStatus_title = selectStatus.querySelector('.__select__title');
+const selectStatus_labels = selectStatus.querySelectorAll('.__select__label');
+const selectStatus_arrow = selectStatus_title.querySelector('.__select__arrow');
+const textChosenStatus = selectStatus.querySelector('.textChosen'); 
+const placeAttention = document.querySelector('.tab2 .place__attention');
+
+
+// Toggle menu
+selectStatus_title.addEventListener('click', () => {
+  if ('active' === selectStatus.getAttribute('data-state')) {
+    selectStatus.setAttribute('data-state', '');
+    selectStatus_arrow.classList.add("act");
+
+  } else {
+    selectStatus.setAttribute('data-state', 'active');
+    selectStatus_arrow.classList.remove("act");
+  }
+  if (textChosenStatus.textContent === selectStatus_title.getAttribute('data-default')) {
+      textChosenStatus.classList.remove("act");
+    }
+
+});
+
+// Close when click to option
+for (let i = 0; i < selectStatus_labels.length; i++) {
+  selectStatus_labels[i].addEventListener('click', (evt) => {
+
+    textChosenStatus.textContent = evt.target.textContent;
+    textChosenStatus.classList.add("act");
+    textChosenStatus.classList.remove("inact");
+    selectStatus_title.setAttribute('data-description', i);
+    selectStatus_title.classList.remove("invalid");
+    placeNotice.classList.remove("act");
+    selectStatus.setAttribute('data-state', '');
+    selectStatus_arrow.classList.add("act");
+
+    if (('' === selectStatus_title.getAttribute('data-description')) || 
+        ('0' === selectStatus_title.getAttribute('data-description'))
+        ) {
+      placeAttention.classList.remove("hide");
+      placeAttention.classList.add("act");
+    } else {
+      placeAttention.classList.remove("act");
+      placeAttention.classList.add("hide");
+    }
+  });
+}
+
+
+/**********************Validate**************************/
+
 function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
   x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
+  y = x[currentTab].getElementsByClassName("required");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
-    // alert(y[i].value);
     // If a field is empty...
     if (y[i].value == "") {
       // add an "invalid" class to the field:
@@ -152,6 +205,13 @@ function validateForm() {
 
     valid = false;
   }
+  else if (textChosenStatus.textContent === selectStatus_title.getAttribute('data-default')) {
+    // selectStatus_title.className += " invalid";
+    // placeNotice.className += " act";
+    // valid = false;
+    // обязательно ли поле??
+  }
+
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";

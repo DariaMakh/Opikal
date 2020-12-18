@@ -1,3 +1,7 @@
+.place-app__content p, 
+.step {
+    font-size: 18px;
+}
 .place-bg {
     border-top: 1px solid rgb(225, 225, 225);
     background: url(/images/place-bg.png) 100% 100% no-repeat;
@@ -103,11 +107,11 @@ z-index: 2;
 /* Style the form */
 /* Style the input fields */
 input {
-    padding: 10px;
+    padding: 10px 0;
+    height: 50px;
     width: 100%;
-    font-size: 17px;
-    font-family: Raleway;
-    border: 1px solid #aaaaaa;
+    font-size: 18px;
+    border: none;
 }
 
 /* Mark input boxes that gets an error on validation: */
@@ -153,7 +157,8 @@ h1 {
 }
 
 .__select__category,
-.__select__equipment {
+.__select__equipment,
+.__select__status {
     position: relative;
     height: 50px;
     width: 440px;
@@ -173,24 +178,27 @@ transform: translate(-3px, -50%) rotate(-45deg);
 transform: translate(3px, -50%) rotate(45deg);
 } */
 .__select__category[data-state="active"] .__select__content,
-.__select__equipment[data-state="active"] .__select__content {
+.__select__equipment[data-state="active"] .__select__content,
+.__select__status[data-state="active"] .__select__content {
     opacity: 1;
     display: flex;
     border: 2px solid black;
 }
 .__select__category[data-state="active"] .__select__label + .__select__input + .__select__label,
-.__select__equipment[data-state="active"] .__select__label + .__select__input + .__select__label  {
+.__select__equipment[data-state="active"] .__select__label + .__select__input + .__select__label,
+.__select__status[data-state="active"] .__select__label + .__select__input + .__select__label   {
     max-height: 50px;
     border-top-width: 1px;
 }
 
-.__select__title {
+.__select__title,
+input.__select__title {
     position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
-    /* padding: 8px 16px; */
+    min-height: 50px;
     border-bottom: solid 2px black;
     cursor: pointer;
 }
@@ -294,12 +302,20 @@ background-color: #d8093a;
 .place-form__button button{
     width: 200px;
     height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+}
+#nextBtn {
     border: 1px solid black;
     background-color: #ff0000;
     color: white;
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 28px;
+}
+#prevBtn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    margin-right: 30px;
 }
 .place__alert {
     max-width: 690px;
@@ -364,6 +380,28 @@ background-color: #d8093a;
     background-image: url(../../images/check.png);
 } 
 
+.place__attention {
+    width: 100%;
+}
+.place__attention p.attention_red,
+.__select__status {
+    width: 490px;
+}
+.attention_red {
+    color: red;
+}
+.tab2 {
+    flex-direction: column;
+}
+.tab2 p > input.__select__title {
+    margin: 30px 0 60px;
+}
+.place__attention.hide {
+    display: none;
+}
+.place__attention.act {
+    display: block;
+}
 
 
 .place__notice {
