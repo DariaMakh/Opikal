@@ -39,75 +39,55 @@ function nextPrev(n) {
   showTab(currentTab);
 }
 
-function validateForm() {
-  // This function deals with validation of the form fields
-  var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false:
-      valid = false;
-    }
-  }
-  // If the valid status is true, mark the step as finished and valid:
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
-  return valid; // return the valid status
-}
-
-function fixStepIndicator(n) {
-  // This function removes the "active" class of all steps...
-  var i, x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
-  }
-  //... and adds the "active" class to the current step:
-  x[n].className += " active";
-}
 
 /**********************Category**************************/
 
-const selectSingle = document.querySelector('.__select__category');
-const selectSingle_title = selectSingle.querySelector('.__select__title');
-const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
-const selectSingle_arrow = selectSingle_title.querySelector('.__select__arrow');
-const textChosen = selectSingle.querySelector('.textChosen'); 
-const placeAlert = document.querySelector('.place__alert');
+const selectCategory = document.querySelector('.__select__category');
+const selectCategory_title = selectCategory.querySelector('.__select__title');
+const selectCategory_labels = selectCategory.querySelectorAll('.__select__label');
+const selectCategory_arrow = selectCategory_title.querySelector('.__select__arrow');
+const textChosen = selectCategory.querySelector('.textChosen'); 
+const placeAlert = document.querySelector('.tab1 .place_right');
+const placeNotice = document.querySelector('.place__notice');
+
+const selectEquip = document.querySelector('.__select__equipment');
+const selectCheckbox = document.querySelector('.__select__checkbox');
 
 // Toggle menu
-selectSingle_title.addEventListener('click', () => {
-  if ('active' === selectSingle.getAttribute('data-state')) {
-    selectSingle.setAttribute('data-state', '');
-    selectSingle_arrow.classList.add("act");
+selectCategory_title.addEventListener('click', () => {
+  if ('active' === selectCategory.getAttribute('data-state')) {
+    selectCategory.setAttribute('data-state', '');
+    selectCategory_arrow.classList.add("act");
 
   } else {
-    selectSingle.setAttribute('data-state', 'active');
-    selectSingle_arrow.classList.remove("act");
+    selectCategory.setAttribute('data-state', 'active');
+    selectCategory_arrow.classList.remove("act");
   }
-  if (textChosen.textContent === selectSingle_title.getAttribute('data-default')) {
+  if (textChosen.textContent === selectCategory_title.getAttribute('data-default')) {
       textChosen.classList.remove("act");
     }
 
 });
 
 // Close when click to option
-for (let i = 0; i < selectSingle_labels.length; i++) {
-  selectSingle_labels[i].addEventListener('click', (evt) => {
+for (let i = 0; i < selectCategory_labels.length; i++) {
+  selectCategory_labels[i].addEventListener('click', (evt) => {
 
     textChosen.textContent = evt.target.textContent;
     textChosen.classList.add("act");
-    selectSingle_title.setAttribute('data-description', i);
-    selectSingle.setAttribute('data-state', '');
-    selectSingle_arrow.classList.add("act");
+    textChosen.classList.remove("inact");
+    selectCategory_title.setAttribute('data-description', i);
+    selectCategory_title.classList.remove("invalid");
+    placeNotice.classList.remove("act");
+    selectCategory.setAttribute('data-state', '');
+    selectCategory_arrow.classList.add("act");
 
-    if ('' != selectSingle_title.getAttribute('data-description')) {
+    if (('' != selectCategory_title.getAttribute('data-description')) && 
+        ('0' != selectCategory_title.getAttribute('data-description'))
+        ) {
       placeAlert.classList.add("act");
+      selectEquip.classList.add("act");
+      selectCheckbox.classList.add("act");
     }
   });
 }
@@ -115,7 +95,6 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
 
 /**********************Equipment**************************/
 
-const selectEquip = document.querySelector('.__select__equipment');
 const selectEquip_title = selectEquip.querySelector('.__select__title');
 const selectEquip_labels = selectEquip.querySelectorAll('.__select__label');
 const selectEquip_arrow = selectEquip_title.querySelector('.__select__arrow');
@@ -143,9 +122,165 @@ for (let i = 0; i < selectEquip_labels.length; i++) {
 
     textChosenEquip.textContent = evt.target.textContent;
     textChosenEquip.classList.add("act");
+    textChosenEquip.classList.remove("inact");
     selectEquip_title.setAttribute('data-description', i);
     selectEquip.setAttribute('data-state', '');
     selectEquip_arrow.classList.add("act");
 
   });
+}
+
+/**********************Status**************************/
+
+const selectStatus = document.querySelector('.__select__status');
+const selectStatus_title = selectStatus.querySelector('.__select__title');
+const selectStatus_labels = selectStatus.querySelectorAll('.__select__label');
+const selectStatus_arrow = selectStatus_title.querySelector('.__select__arrow');
+const textChosenStatus = selectStatus.querySelector('.textChosen'); 
+const placeAttentionStatus = document.querySelector('.tab2 .place__attention');
+
+
+// Toggle menu
+selectStatus_title.addEventListener('click', () => {
+  if ('active' === selectStatus.getAttribute('data-state')) {
+    selectStatus.setAttribute('data-state', '');
+    selectStatus_arrow.classList.add("act");
+
+  } else {
+    selectStatus.setAttribute('data-state', 'active');
+    selectStatus_arrow.classList.remove("act");
+  }
+  if (textChosenStatus.textContent === selectStatus_title.getAttribute('data-default')) {
+      textChosenStatus.classList.remove("act");
+    }
+
+});
+
+// Close when click to option
+for (let i = 0; i < selectStatus_labels.length; i++) {
+  selectStatus_labels[i].addEventListener('click', (evt) => {
+
+    textChosenStatus.textContent = evt.target.textContent;
+    textChosenStatus.classList.add("act");
+    textChosenStatus.classList.remove("inact");
+    selectStatus_title.setAttribute('data-description', i);
+    selectStatus_title.classList.remove("invalid");
+    placeNotice.classList.remove("act");
+    selectStatus.setAttribute('data-state', '');
+    selectStatus_arrow.classList.add("act");
+
+    if (('' === selectStatus_title.getAttribute('data-description')) || 
+        ('0' === selectStatus_title.getAttribute('data-description'))
+        ) {
+            placeAttentionStatus.classList.remove("hide");
+            placeAttentionStatus.classList.add("act");
+          } else {
+            placeAttentionStatus.classList.remove("act");
+            placeAttentionStatus.classList.add("hide");
+          }
+  });
+}
+
+/**********************Aim**************************/
+
+const selectAim = document.querySelector('.__select__aim');
+const selectAim_title = selectAim.querySelector('.__select__title');
+const selectAim_labels = selectAim.querySelectorAll('.__select__label');
+const selectAim_arrow = selectAim_title.querySelector('.__select__arrow');
+const textChosenAim = selectAim.querySelector('.textChosen'); 
+const placeAlertAim = document.querySelector('.tab3 .place_right');
+const placeAttentionAim = document.querySelector('.tab3 .place__attention');
+
+
+// Toggle menu
+selectAim_title.addEventListener('click', () => {
+  if ('active' === selectAim.getAttribute('data-state')) {
+    selectAim.setAttribute('data-state', '');
+    selectAim_arrow.classList.add("act");
+
+  } else {
+    selectAim.setAttribute('data-state', 'active');
+    selectAim_arrow.classList.remove("act");
+  }
+  if (textChosenAim.textContent === selectAim_title.getAttribute('data-default')) {
+      textChosenAim.classList.remove("act");
+    }
+
+});
+
+// Close when click to option
+for (let i = 0; i < selectAim_labels.length; i++) {
+  selectAim_labels[i].addEventListener('click', (evt) => {
+
+    textChosenAim.textContent = evt.target.textContent;
+    textChosenAim.classList.add("act");
+    textChosenAim.classList.remove("inact");
+    selectAim_title.setAttribute('data-description', i);
+    selectAim_title.classList.remove("invalid");
+    selectAim.setAttribute('data-state', '');
+    selectAim_arrow.classList.add("act");
+
+    if ('' === selectAim_title.getAttribute('data-description')) {
+      placeAlertAim.classList.add("act");
+    } else {
+      placeAlertAim.classList.remove("act");
+    }
+  
+    if (('' === selectAim_title.getAttribute('data-description')) || 
+    ('0' === selectAim_title.getAttribute('data-description'))
+    ) {
+        placeAttentionAim.classList.remove("hide");
+        placeAttentionAim.classList.add("act");
+      } else {
+        placeAttentionAim.classList.remove("act");
+        placeAttentionAim.classList.add("hide");
+      }
+  });
+}
+
+/**********************Validate**************************/
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByClassName("required");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false:
+      valid = false;
+    }
+  }
+  if (textChosen.textContent === selectCategory_title.getAttribute('data-default')) {
+    selectCategory_title.className += " invalid";
+    placeNotice.className += " act";
+
+    valid = false;
+  }
+  else if (textChosenStatus.textContent === selectStatus_title.getAttribute('data-default')) {
+    // selectStatus_title.className += " invalid";
+    // placeNotice.className += " act";
+    // valid = false;
+    // обязательно ли поле??
+  }
+
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class to the current step:
+  x[n].className += " active";
 }
