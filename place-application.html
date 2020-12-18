@@ -206,10 +206,53 @@
 
                             </div>
                             
-                            <div class="tab">Birthday:
-                              <p><input placeholder="dd" oninput="this.className = ''"></p>
-                              <p><input placeholder="mm" oninput="this.className = ''"></p>
-                              <p><input placeholder="yyyy" oninput="this.className = ''"></p>
+                            <div class="tab tab3">
+
+                                <div class="place_left">
+                                    <div class="__select__aim" data-state="">
+                                        <!-- без переноса строки для проверки js -->
+                                        <div class="__select__title" data-default="Пожалуйста укажите цель своего запроса" data-description=""><p class="textChosen inact">Пожалуйста укажите цель своего запроса</p><span class="__select__arrow act"></span></div>
+                                        <div class="__select__content">
+
+                                            <input id="selectAim0" class="__select__input"  type="radio" value="0" name="selectAim" />
+                                            <label for="selectAim0"class="__select__label"><p>Другое</p></label>
+
+                                            <input id="selectAim1" class="__select__input"  type="radio" value="1" name="selectAim" />
+                                            <label for="selectAim1" class="__select__label"><p>Проводится маркетинговое исследование, бюджетирование, предТЭО</p></label>
+
+                                            <input id="selectAim2" class="__select__input"  type="radio" value="2" name="selectAim" />
+                                            <label for="selectAim2" class="__select__label"><p>Есть текущая проблема, которая требует скорейшего решения</p></label>
+
+                                            <input id="selectAim3" class="__select__input"  type="radio" value="3" name="selectAim" />
+                                            <label for="selectAim3" class="__select__label"><p>Для проекта требуется поставщик</p></label>
+
+                                            <input id="selectAim4" class="__select__input"  type="radio" value="4" name="selectAim" />
+                                            <label for="selectAim4" class="__select__label"><p>Идет поиск более дешевое альтернативы</p></label>
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="place__attention hide">
+                                        <p class="attention_red">
+                                            Уважаемый организатор, если Вы уверены, что ни один из предложенных вариантов целей не соответсвует Вашему критерию, укажите цель запроса самостоятельно.                                        </p>
+                                        <p><input class='__select__title' placeholder="Пожалуйста укажите цель своего запроса" oninput="this.className = '__select__title'"></p>
+                                    </div>
+                                </div>
+                                <div class="place_right act">
+                                    <div class="place__alert">
+                                        <div class="__alert__title"> 
+                                            <p>Обратите внимание:</p>
+                                        </div>
+                                        <div class="__alert__message">
+                                            <p>
+                                                Укажите цель своего запроса. 
+                                                Так поставщикам будет легче предложить вам именно то, что вы ищете. А если выбрали дргуое, то укажите цель запроса самостоятельно.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             
                             <div class="tab">Login Info:

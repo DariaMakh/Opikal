@@ -158,7 +158,8 @@ h1 {
 
 .__select__category,
 .__select__equipment,
-.__select__status {
+.__select__status,
+.__select__aim {
     position: relative;
     height: 50px;
     width: 440px;
@@ -179,18 +180,22 @@ transform: translate(3px, -50%) rotate(45deg);
 } */
 .__select__category[data-state="active"] .__select__content,
 .__select__equipment[data-state="active"] .__select__content,
-.__select__status[data-state="active"] .__select__content {
+.__select__status[data-state="active"] .__select__content,
+.__select__aim[data-state="active"] .__select__content {
     opacity: 1;
     display: flex;
     border: 2px solid black;
 }
 .__select__category[data-state="active"] .__select__label + .__select__input + .__select__label,
 .__select__equipment[data-state="active"] .__select__label + .__select__input + .__select__label,
-.__select__status[data-state="active"] .__select__label + .__select__input + .__select__label   {
+.__select__status[data-state="active"] .__select__label + .__select__input + .__select__label,
+.__select__aim[data-state="active"] .__select__label + .__select__input + .__select__label  {
     max-height: 50px;
     border-top-width: 1px;
 }
-
+.__select__aim {
+    width: 630px;
+}
 .__select__title,
 input.__select__title {
     position: relative;
@@ -317,8 +322,12 @@ background-color: #d8093a;
     color: black;
     margin-right: 30px;
 }
-.place__alert {
+.tab1 .place__alert {
     max-width: 690px;
+    display: block;
+}
+.tab3 .place__alert {
+    max-width: 490px;
     display: block;
 }
 .__alert__title {
@@ -393,9 +402,13 @@ background-color: #d8093a;
 .tab2 {
     flex-direction: column;
 }
-.tab2 p > input.__select__title {
+p > input.__select__title {
     margin: 30px 0 60px;
 }
+.tab3 p > input.__select__title {
+    width: 190%;
+}
+
 .place__attention.hide {
     display: none;
 }

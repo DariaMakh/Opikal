@@ -137,7 +137,7 @@ const selectStatus_title = selectStatus.querySelector('.__select__title');
 const selectStatus_labels = selectStatus.querySelectorAll('.__select__label');
 const selectStatus_arrow = selectStatus_title.querySelector('.__select__arrow');
 const textChosenStatus = selectStatus.querySelector('.textChosen'); 
-const placeAttention = document.querySelector('.tab2 .place__attention');
+const placeAttentionStatus = document.querySelector('.tab2 .place__attention');
 
 
 // Toggle menu
@@ -172,15 +172,71 @@ for (let i = 0; i < selectStatus_labels.length; i++) {
     if (('' === selectStatus_title.getAttribute('data-description')) || 
         ('0' === selectStatus_title.getAttribute('data-description'))
         ) {
-      placeAttention.classList.remove("hide");
-      placeAttention.classList.add("act");
-    } else {
-      placeAttention.classList.remove("act");
-      placeAttention.classList.add("hide");
-    }
+            placeAttentionStatus.classList.remove("hide");
+            placeAttentionStatus.classList.add("act");
+          } else {
+            placeAttentionStatus.classList.remove("act");
+            placeAttentionStatus.classList.add("hide");
+          }
   });
 }
 
+/**********************Aim**************************/
+
+const selectAim = document.querySelector('.__select__aim');
+const selectAim_title = selectAim.querySelector('.__select__title');
+const selectAim_labels = selectAim.querySelectorAll('.__select__label');
+const selectAim_arrow = selectAim_title.querySelector('.__select__arrow');
+const textChosenAim = selectAim.querySelector('.textChosen'); 
+const placeAlertAim = document.querySelector('.tab3 .place_right');
+const placeAttentionAim = document.querySelector('.tab3 .place__attention');
+
+
+// Toggle menu
+selectAim_title.addEventListener('click', () => {
+  if ('active' === selectAim.getAttribute('data-state')) {
+    selectAim.setAttribute('data-state', '');
+    selectAim_arrow.classList.add("act");
+
+  } else {
+    selectAim.setAttribute('data-state', 'active');
+    selectAim_arrow.classList.remove("act");
+  }
+  if (textChosenAim.textContent === selectAim_title.getAttribute('data-default')) {
+      textChosenAim.classList.remove("act");
+    }
+
+});
+
+// Close when click to option
+for (let i = 0; i < selectAim_labels.length; i++) {
+  selectAim_labels[i].addEventListener('click', (evt) => {
+
+    textChosenAim.textContent = evt.target.textContent;
+    textChosenAim.classList.add("act");
+    textChosenAim.classList.remove("inact");
+    selectAim_title.setAttribute('data-description', i);
+    selectAim_title.classList.remove("invalid");
+    selectAim.setAttribute('data-state', '');
+    selectAim_arrow.classList.add("act");
+
+    if ('' === selectAim_title.getAttribute('data-description')) {
+      placeAlertAim.classList.add("act");
+    } else {
+      placeAlertAim.classList.remove("act");
+    }
+  
+    if (('' === selectAim_title.getAttribute('data-description')) || 
+    ('0' === selectAim_title.getAttribute('data-description'))
+    ) {
+        placeAttentionAim.classList.remove("hide");
+        placeAttentionAim.classList.add("act");
+      } else {
+        placeAttentionAim.classList.remove("act");
+        placeAttentionAim.classList.add("hide");
+      }
+  });
+}
 
 /**********************Validate**************************/
 
