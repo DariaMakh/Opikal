@@ -82,7 +82,9 @@ for (let i = 0; i < selectCategory_labels.length; i++) {
     selectCategory.setAttribute('data-state', '');
     selectCategory_arrow.classList.add("act");
 
-    if ('' != selectCategory_title.getAttribute('data-description')) {
+    if (('' != selectCategory_title.getAttribute('data-description')) && 
+        ('0' != selectCategory_title.getAttribute('data-description'))
+        ) {
       placeAlert.classList.add("act");
       selectEquip.classList.add("act");
       selectCheckbox.classList.add("act");
