@@ -4,7 +4,8 @@
 }
 .place-bg {
     border-top: 1px solid rgb(225, 225, 225);
-    background: url(/images/place-bg.png) 100% 100% no-repeat;
+    background: url(/images/application-bg.jpg) 100% 100% no-repeat;
+    background-position: top;
     max-width: 1600px;
     margin: 0 auto;
 }
@@ -23,7 +24,7 @@
     clear: both;
 }
 .place-app {
-    padding: 65px 0 45px 0;
+    padding: 65px 0 0 0;
     min-height: 880px;
     height: auto;
 }
@@ -123,6 +124,7 @@ input.invalid {
 .tab {
     display: none;
     justify-content: space-between;
+    position: relative;
 }
 
 /* Mark the active step: */
@@ -159,7 +161,8 @@ h1 {
 .__select__category,
 .__select__equipment,
 .__select__status,
-.__select__aim {
+.__select__aim,
+.country__select {
     position: relative;
     height: 50px;
     width: 440px;
@@ -181,7 +184,8 @@ transform: translate(3px, -50%) rotate(45deg);
 .__select__category[data-state="active"] .__select__content,
 .__select__equipment[data-state="active"] .__select__content,
 .__select__status[data-state="active"] .__select__content,
-.__select__aim[data-state="active"] .__select__content {
+.__select__aim[data-state="active"] .__select__content,
+.country__select[data-state="active"] .__select__content {
     opacity: 1;
     display: flex;
     border: 2px solid black;
@@ -189,7 +193,8 @@ transform: translate(3px, -50%) rotate(45deg);
 .__select__category[data-state="active"] .__select__label + .__select__input + .__select__label,
 .__select__equipment[data-state="active"] .__select__label + .__select__input + .__select__label,
 .__select__status[data-state="active"] .__select__label + .__select__input + .__select__label,
-.__select__aim[data-state="active"] .__select__label + .__select__input + .__select__label  {
+.__select__aim[data-state="active"] .__select__label + .__select__input + .__select__label,
+.country__select[data-state="active"] .__select__label + .__select__input + .__select__label  {
     max-height: 50px;
     border-top-width: 1px;
 }
@@ -304,7 +309,8 @@ background-color: #d8093a;
 .place-form__button {
     padding-top: 0px;
 }
-.place-form__button button{
+.place-form__button button,
+.place__contacts button{
     width: 200px;
     height: 45px;
     font-size: 18px;
@@ -320,6 +326,12 @@ background-color: #d8093a;
     border: 2px solid black;
     background-color: white;
     color: black;
+    margin-right: 30px;
+}
+#addContact {
+    border: 2px solid black;
+    background-color: black;
+    color: white;
     margin-right: 30px;
 }
 .tab1 .place__alert {
@@ -415,9 +427,27 @@ p > input.__select__title {
 .place__attention.act {
     display: block;
 }
+.tab4 {
+    flex-wrap: wrap;
+}
 .place__addresss {
     width: 100%;
+    padding-bottom: 60px;
 }
+.contacts__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.contacts__row {
+    width: 48%;
+}
+.contacts__row .row__title,
+.contacts__row .row__input {
+    width: 100%;
+}
+
 .address__row {
     display: flex;
     justify-content: space-between;
@@ -430,6 +460,20 @@ p > input.__select__title {
 .country__input {
     width: 60%;
 }
+.country__input.hide {
+    display: none;
+}
+.country__input.act {
+    display: block;
+}
+.notice__message {
+    width: 100%;
+    margin-top: 40px;
+}
+.notice__message > p {
+    color: red;
+    font-size: 20px;
+}
 .row__title {
     padding: 15px 0;
     text-align: left;
@@ -440,6 +484,9 @@ p > input.__select__title {
     font-size: 22px;
     font-weight: 500;
 }
+p.duties {
+    color: transparent;
+}
 .row__input {
     width: 70%;
     display: flex;
@@ -448,8 +495,25 @@ p > input.__select__title {
 .country__input > p > input.__select__title,
 .row__input > p > input.__select__title {
     margin: 0;
+    background-color: transparent;
 }
-
+.place__contacts {
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 50px 0 60px;
+    min-width: 1600px;
+    position: inherit;
+    left: -208px;
+}
+.place__contacts_dop {
+    border-top: 4px solid white;
+}
+/* .tab4:has( > .place__contacts_dop ) + .tab +  .place__clear{
+    display: none;
+} */
+.place__contacts_dop::parent +   .place__clear{
+    display: none;
+}
 .row__input p {
     width: 100%;
 }
