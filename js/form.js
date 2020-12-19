@@ -237,6 +237,53 @@ for (let i = 0; i < selectAim_labels.length; i++) {
       }
   });
 }
+/**********************Country**************************/
+
+const selectCountry = document.querySelector('.country__select');
+const selectCountry_title = selectCountry.querySelector('.__select__title');
+const selectCountry_labels = selectCountry.querySelectorAll('.__select__label');
+const selectCountry_arrow = selectCountry_title.querySelector('.__select__arrow');
+const textChosenCountry = selectCountry.querySelector('.textChosen'); 
+const inputCountry = document.querySelector('.country__input');
+
+
+// Toggle menu
+selectCountry_title.addEventListener('click', () => {
+  if ('active' === selectCountry.getAttribute('data-state')) {
+    selectCountry.setAttribute('data-state', '');
+    selectCountry_arrow.classList.add("act");
+
+  } else {
+    selectCountry.setAttribute('data-state', 'active');
+    selectCountry_arrow.classList.remove("act");
+  }
+  if (textChosenCountry.textContent === selectCountry_title.getAttribute('data-default')) {
+      textChosenCountry.classList.remove("act");
+    }
+
+});
+
+// Close when click to option
+for (let i = 0; i < selectCountry_labels.length; i++) {
+  selectCountry_labels[i].addEventListener('click', (evt) => {
+
+    textChosenCountry.textContent = evt.target.textContent;
+    textChosenCountry.classList.add("act");
+    selectCountry_title.setAttribute('data-description', i);
+    selectCountry_title.classList.remove("invalid");
+    selectCountry.setAttribute('data-state', '');
+    selectCountry_arrow.classList.add("act");
+
+    if ('0' === selectCountry_title.getAttribute('data-description')) {
+        inputCountry.classList.remove("hide");
+        inputCountry.classList.add("act");
+      } else {
+        inputCountry.classList.remove("act");
+        inputCountry.classList.add("hide");
+      }
+  
+  });
+}
 
 /**********************Validate**************************/
 
