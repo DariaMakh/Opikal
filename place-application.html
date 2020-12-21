@@ -362,7 +362,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="button" id="addContact" onclick="addContact()"> Добавить контакт </button>
+                                        <button type="button" id="addContact" onclick="addContactInfo(1, this.id)"> Добавить контакт </button>
                                         <div class="notice__message">
                                             <p>В случае, если вы не являетесь профильным техническим специалистом по данному вопросы, рекомендуем Вам добавить в качестве дополнительного контакта лицо, с которым поставщики смогут консультироваться и обсуждать технические вопросы.</p>
                                         </div>
@@ -370,13 +370,12 @@
                                 </div>
 
                                 <!-- доп блоки -->
-                                <div class="place__contacts place__contacts_dop" id="place__contacts_dop1" style="display: none;">
+                                <div class="place__contacts place__contacts_dop" id="place__contacts_dop" >
                                     <div class="container">
-                                        <h2 class="place__title">КОНТАКТЫ</h2>
                                         <div class="contacts__block">
                                             <div class="contacts__row">
                                                 <div class="row__title">
-                                                    <p id="title_change"> Контактное лицо 1 </p>
+                                                    <p class="title_change"> СКРЫТЫЙ КОНТАКТ-ШАБЛОН </p>
                                                 </div>
                                                 <div class="row__input"> 
                                                     <p>
@@ -426,7 +425,8 @@
                                             </div>
                                         </div>
                                         <div class="place-form__button">
-                                            <button type="button" id="addContact" onclick="addContactInfo(1)"> Добавить контакт </button>
+                                            <button type="button" id="prevBtn" onclick="addContactInfo(-1, this.id)"> Убрать контакт </button>
+                                            <button type="button" id="addContact" onclick="addContactInfo(1, this.id)"> Добавить контакт </button>
                                         </div>
 
 

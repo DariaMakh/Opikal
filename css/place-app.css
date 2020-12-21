@@ -522,7 +522,10 @@ p.duties {
 /* .tab4:has( > .place__contacts_dop ) + .tab +  .place__clear{
     display: none;
 } */
-.place__contacts_dop::parent +   .place__clear{
+/* .place__contacts_dop::parent +   .place__clear{
+    display: none;
+} */
+#place__contacts_dop {
     display: none;
 }
 .row__input p {
