@@ -140,6 +140,9 @@
             margin-bottom: 10px;
             margin-right: 5px;
         }
+        &__notification{
+            margin-right: 10px;
+        }
     }
 }
 
@@ -265,6 +268,7 @@
         }
     }
     .box{
+        padding: 50px;
         &__btns {
             flex-direction: column-reverse;
             align-items: flex-start;
@@ -272,27 +276,77 @@
                 margin-bottom: 15px;
             }
         }
-    }
-    .mess .box__btns {
-        align-items: flex-start;
-    }
-    .mess__btns {
-        margin-left: 35px;
-        margin-bottom: 20px;
-    }
-    .search__icon-2{
-        top: 0;
-        transform: none;
-        p {
-            display: none;
+        &__notification{
+            width: fit-content;
+            margin-bottom: 15px;
+        }
+        &__section{
+            &_text {
+                font-size: 18px;
+            }
+            &_label {
+                font-size: 18px;
+                line-height: 1.6;
+            }
         }
     }
-    .search__img {
-        top: 10px;
-        left: -15px;
+    .mess{
+        .box__btns {
+            align-items: flex-start;
+        }
+        &__btns {
+            margin-left: 35px;
+            margin-bottom: 20px;
+            width: 250px;
+        }
+        &__from {
+            font-size: 20px;
+        }
+        &__num{
+            font-size: 18px;
+        }
+        &__link {
+            font-size: 18px;
+        }
+    }
+    .search{
+        &__icon-2{
+            top: 0;
+            transform: none;
+            p {
+                display: none;
+            }
+        }
+        &__img {
+            top: 10px;
+            left: -15px;
+        }
     }
     .applications__offer {
         margin-top: 15px;
+        display: block;
+        &_logo{
+            margin-top: 15px;
+        }
+    }
+    .application{
+        &__num {
+            font-size: 16px;
+        }
+        &__date {
+            font-size: 18px;
+        }
+        &__text {
+            font-size: 20px;
+            color: #141419;
+        }
+    }
+    .label{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .fav {
+        flex-direction: column-reverse;
     }
 }
 
@@ -347,13 +401,31 @@
         }
     }
     .box{
-        &__section{
-            flex-direction: column;
-        }
         &__notification{
             width: fit-content;
-            margin-top: 10px;
+            font-size: 16px;
         }
+        &__equipment a {
+            font-size: 20px;
+            margin-bottom: 8px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .applications__offer{
+        p {
+            font-size: 24px;
+        }
+        &_logo{
+            img{
+                width: 25px;
+                height: 35px;
+            }
+        }
+    }
+    .mess__link, .btn, .btn-red, .btn-black, .btn-black_2, .btn-white, .btn-filter, .btn-search, .btn-add {
+        font-size: 20px;
     }
     .footer{
         padding: 40px 0;

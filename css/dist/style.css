@@ -7,6 +7,11 @@
   font-size: 17px;
   font-weight: 500;
 }
+@media (max-width: 640px) {
+  .mess__link, .btn-add, .btn-search, .btn-filter, .btn-white, .btn-black_2, .btn-black, .btn-red, .btn {
+    font-size: 20px;
+  }
+}
 
 .search-input, .profile__textarea, .profile__input_2, .profile__input {
   background: none;
@@ -1707,6 +1712,9 @@ input[type=search]::-webkit-search-results-decoration {
   .account__aside {
     width: 100%;
   }
+  .account__aside .banner {
+    display: none;
+  }
   .account__content {
     margin-left: 0;
     margin-top: 40px;
@@ -2163,7 +2171,7 @@ input[type=search]::-webkit-search-results-decoration {
 .mess__theme P {
   font-family: "FuturaBookC";
   font-weight: 300;
-  font-size: 19px;
+  font-size: 20px;
   color: #000;
   margin-top: 6px;
 }

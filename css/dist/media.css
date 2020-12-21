@@ -121,6 +121,9 @@
     margin-bottom: 10px;
     margin-right: 5px;
   }
+  .box__notification {
+    margin-right: 10px;
+  }
 }
 @media (max-width: 960px) {
   .nav {
@@ -227,6 +230,11 @@
     width: 100%;
   }
 
+  .modal-offer {
+    width: 100%;
+    margin: 0;
+  }
+
   .footer__row:first-child {
     padding-bottom: 45px;
   }
@@ -236,6 +244,9 @@
     width: 48%;
   }
 
+  .box {
+    padding: 50px;
+  }
   .box__btns {
     flex-direction: column-reverse;
     align-items: flex-start;
@@ -243,14 +254,34 @@
   .box__btns a {
     margin-bottom: 15px;
   }
+  .box__notification {
+    width: fit-content;
+    margin-bottom: 15px;
+  }
+  .box__section_text {
+    font-size: 18px;
+  }
+  .box__section_label {
+    font-size: 18px;
+    line-height: 1.6;
+  }
 
   .mess .box__btns {
     align-items: flex-start;
   }
-
   .mess__btns {
     margin-left: 35px;
     margin-bottom: 20px;
+    width: 250px;
+  }
+  .mess__from {
+    font-size: 20px;
+  }
+  .mess__num {
+    font-size: 18px;
+  }
+  .mess__link {
+    font-size: 18px;
   }
 
   .search__icon-2 {
@@ -260,7 +291,6 @@
   .search__icon-2 p {
     display: none;
   }
-
   .search__img {
     top: 10px;
     left: -15px;
@@ -268,6 +298,30 @@
 
   .applications__offer {
     margin-top: 15px;
+    display: block;
+  }
+  .applications__offer_logo {
+    margin-top: 15px;
+  }
+
+  .application__num {
+    font-size: 16px;
+  }
+  .application__date {
+    font-size: 18px;
+  }
+  .application__text {
+    font-size: 20px;
+    color: #141419;
+  }
+
+  .label {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .fav {
+    flex-direction: column-reverse;
   }
 }
 @media (max-width: 640px) {
@@ -322,12 +376,28 @@
     width: 18px;
   }
 
-  .box__section {
-    flex-direction: column;
-  }
   .box__notification {
     width: fit-content;
-    margin-top: 10px;
+    font-size: 16px;
+  }
+  .box__equipment a {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .box__equipment a:last-child {
+    margin-bottom: 0;
+  }
+
+  .applications__offer p {
+    font-size: 24px;
+  }
+  .applications__offer_logo img {
+    width: 25px;
+    height: 35px;
+  }
+
+  .mess__link, .btn, .btn-red, .btn-black, .btn-black_2, .btn-white, .btn-filter, .btn-search, .btn-add {
+    font-size: 20px;
   }
 
   .footer {

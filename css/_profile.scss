@@ -443,6 +443,9 @@ $font2: "FuturaBookDemiC";
         }
         &__aside{
             width: 100%;
+            .banner{
+                display: none;
+            }
         }
         &__content{
             margin-left: 0;
