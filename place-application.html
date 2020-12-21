@@ -256,7 +256,7 @@
 
                             </div>
                             
-                            <div class="tab tab4">
+                            <div class="tab tab4" id="tab4">
                                 <div class="place__addresss">
                                     <div class="address__row">
                                         <div class="row__title">
@@ -313,7 +313,7 @@
                                         <div class="contacts__block">
                                             <div class="contacts__row">
                                                 <div class="row__title">
-                                                    <p> Контактное лицо (основное) </p>
+                                                    <p class="title_change"> Контактное лицо (основное) </p>
                                                 </div>
                                                 <div class="row__input"> 
                                                     <p>
@@ -370,13 +370,13 @@
                                 </div>
 
                                 <!-- доп блоки -->
-                                <div class="place__contacts place__contacts_dop">
+                                <div class="place__contacts place__contacts_dop" id="place__contacts_dop1" style="display: none;">
                                     <div class="container">
                                         <h2 class="place__title">КОНТАКТЫ</h2>
                                         <div class="contacts__block">
                                             <div class="contacts__row">
                                                 <div class="row__title">
-                                                    <p> Контактное лицо 1 </p>
+                                                    <p id="title_change"> Контактное лицо 1 </p>
                                                 </div>
                                                 <div class="row__input"> 
                                                     <p>
@@ -426,19 +426,80 @@
                                             </div>
                                         </div>
                                         <div class="place-form__button">
-                                            <button type="button" id="prevBtn" onclick="nextPrev(-1)"> Назад </button>
-                                            <button type="button" id="addContact" onclick="addContact()"> Добавить контакт </button>
-                                            <button type="button" id="nextBtn" onclick="nextPrev(1)"> Продолжить </button>
+                                            <button type="button" id="addContact" onclick="addContactInfo(1)"> Добавить контакт </button>
                                         </div>
-                                        
+
+
+
 
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="tab">Login Info:
-                                <p><input placeholder="Username..." oninput="this.className = ''"></p>
-                                <p><input placeholder="Password..." oninput="this.className = ''"></p>
+                            <div class="tab">
+                                <div class="place__task">
+                                    <div class="task__block">
+                                        <div class="task__row">
+                                            <div class="row__input"> 
+                                                <h2 class="place__title">ТЕМА ЗАПРОСА</h2>
+                                                <p>
+                                                    <input class='__select__title' placeholder="Напишите, что именно Вы ищите" name="name" oninput="this.className = '__select__title'">
+                                                </p>
+                                            </div>
+                                            <div class="notice__message">
+                                                <p>Вы можете в свободной форме, общими словами описать задачу или проблему и что конкретно вас интересует. <br>
+                                                    Написанный текст будет опубликован и его смогут увидеть все потенциальные поставщики.</p>
+                                            </div>
+                                        </div>
+                                        <div class="task__row">
+                                            <div class="row__input">
+                                                <h2 class="place__title">ОСТАВИТЬ КОММЕНТАРИЙ</h2>
+                                                <p>
+                                                    <input class='__select__title' placeholder="Дать пояснение" name="name" oninput="this.className = '__select__title'">
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="task__block">
+                                        <div class="task__row">
+                                            <div class="task__option">
+                                                <p>У меня есть ТЗ</p>
+                                                <button type="button" id="loadBtn" onclick="" class="option__btn"> Загрузить </button>
+                                            </div>
+                                            <div class="task__option">
+                                                <p>У меня нет ТЗ</p>
+                                                <button type="button" id="loadBtn" onclick="" class="option__btn"> Создать </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="task__block">
+                                        <h2 class="place__title">Прикрепить имеющийся файл</h2>
+                                        <!-- <div class="addfile">Прикрепить файл</div> -->
+                                        <div class="profile__upload">
+                                            <input type="file" name="pdf" id="pdf" accept=".pdf" class="input-upload input-upload_doc">
+                                            <label for="pdf" class="upload-label">
+                                                <img src="images/upload.png" alt="">
+                                                <p>Прикрепить файл</p>
+                                            </label>
+                                        </div>
+                
+                                        <div class="upload-doc">
+                                            <div class="profile__upload-label">
+                                                Вы прикрепили:
+                                            </div>
+                                            <div class="upload-doc__file">
+                                                <img src="images/pdf-icon.png" alt="">
+                                                <p class="upload-doc__file-name">Техническое задание.pdf</p>
+                                            </div>
+                                            <div class="upload-doc__file">
+                                                <img src="images/pdf-icon.png" alt="">
+                                                <p class="upload-doc__file-name">Информация.pdf</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
 
                             <div class="place__clear">
