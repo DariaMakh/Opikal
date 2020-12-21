@@ -39,6 +39,25 @@ function nextPrev(n) {
   showTab(currentTab);
 }
 
+var tab4 = document.getElementById("tab4") ;
+var length = 0;
+function addContactInfo(n, button_id) {
+  if(n == 1){
+
+    current = length + 1;
+
+    var contactsDop = $( "#place__contacts_dop" ).clone();
+    contactsDop.prop("id", "place__contacts_dop" + current);
+    contactsDop.find('#prevBtn').prop("id", "prevBtn" + current);
+    contactsDop.find('.title_change').text('Контактное лицо ' + current);
+    contactsDop.appendTo( "#tab4" );
+
+    length++;
+  } else {
+    $( '#' + button_id ).parent().parent().parent().remove();
+    length--;
+  }
+}
 
 /**********************Category**************************/
 

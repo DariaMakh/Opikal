@@ -2,6 +2,14 @@
 .step {
     font-size: 18px;
 }
+.place__title {
+    font-size: 26px;
+    font-family: "FuturaBookDemiC";
+    color: rgb(20, 20, 25);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
+}
 .place-bg {
     border-top: 1px solid rgb(225, 225, 225);
     background: url(/images/application-bg.jpg) 100% 100% no-repeat;
@@ -22,6 +30,7 @@
 }
 .place__clear {
     clear: both;
+    padding: 50px 0;
 }
 .place-app {
     padding: 65px 0 0 0;
@@ -310,14 +319,16 @@ background-color: #d8093a;
     padding-top: 0px;
 }
 .place-form__button button,
-.place__contacts button{
+.place__contacts button,
+.option__btn {
     width: 200px;
     height: 45px;
     font-size: 18px;
     font-weight: 500;
     line-height: 28px;
 }
-#nextBtn {
+#nextBtn,
+.option__btn {
     border: 1px solid black;
     background-color: #ff0000;
     color: white;
@@ -511,7 +522,10 @@ p.duties {
 /* .tab4:has( > .place__contacts_dop ) + .tab +  .place__clear{
     display: none;
 } */
-.place__contacts_dop::parent +   .place__clear{
+/* .place__contacts_dop::parent +   .place__clear{
+    display: none;
+} */
+#place__contacts_dop {
     display: none;
 }
 .row__input p {
@@ -531,6 +545,48 @@ p.duties {
 .notice__req::before{
     content: "*  ";
     color: #ff0000;
+}
+.place__task {
+    display: flex;
+    flex-wrap: wrap;
+}
+.task__block {
+    width: 100%;
+}
+.task__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 55px;
+    justify-content: space-between;
+}
+.row__input .place__title {
+    padding-bottom: 10px;
+}
+.task__row .row__input {
+    width: 100%;
+    flex-wrap: wrap;
+}
+.task__option {
+    width: 575px;
+    height: 105px;
+    border: 1px #b6b6b6 solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.task__option p {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+    padding: 6px 0;
+}
+.option__btn {
+    width: 200px;
+    height: 40px;
+
 }
 
 @media all and (min-width: 980px) and (max-width: 1224px) {
