@@ -64,6 +64,7 @@ $font2: "FuturaBookDemiC";
         color: #000;
     }
     &__input{
+
         &::placeholder{
             font-size: 16px;
             font-family: $font;
@@ -82,6 +83,13 @@ $font2: "FuturaBookDemiC";
     &__date-inp{
         border: 1px solid #000;
         background-color: #fff;
+        background: #fff url(../../images/calendar.png) 9px 50% no-repeat;
+        &::-webkit-inner-spin-button {
+            display: none;
+        }
+        &::-webkit-calendar-picker-indicator {
+            opacity: 0;
+        }
         height: 45px;
         padding-left: 40px;
         &_img{

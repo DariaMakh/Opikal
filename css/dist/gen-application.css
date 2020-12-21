@@ -73,8 +73,15 @@
 .generated-application__date-inp {
   border: 1px solid #000;
   background-color: #fff;
+  background: #fff url(../../images/calendar.png) 9px 50% no-repeat;
   height: 45px;
   padding-left: 40px;
+}
+.generated-application__date-inp::-webkit-inner-spin-button {
+  display: none;
+}
+.generated-application__date-inp::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
 .generated-application__date-inp_img {
   width: 22px;
