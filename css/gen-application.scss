@@ -83,24 +83,15 @@ $font2: "FuturaBookDemiC";
     &__date-inp{
         border: 1px solid #000;
         background-color: #fff;
-        background: #fff url(../../images/calendar.png) 9px 50% no-repeat;
+        background: #fff url(../../images/calendar.png) 14px 50% no-repeat;
+        height: 45px;
+        padding-left: 50px;
+        width: 200px;
         &::-webkit-inner-spin-button {
             display: none;
         }
         &::-webkit-calendar-picker-indicator {
             opacity: 0;
-        }
-        height: 45px;
-        padding-left: 40px;
-        &_img{
-            width: 22px;
-            height: 24px;
-            object-fit: cover;
-            object-position: center;
-            position: absolute;
-            top: 50%;
-            left: 12px;
-            transform: translateY(-50%);
         }
     }
     &__theme{

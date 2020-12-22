@@ -1,9 +1,5 @@
 $(function() {
 
-
-    // код плагина   
-    // https://www.jqueryscript.net/other/Nested-Tabs-Plugin-jQuery-multiTabs.html
-    
     (function($) {
       $.fn.multitabs = function() {
         var _this = $(this);
@@ -51,13 +47,7 @@ $(function() {
     
       }
     })(jQuery);
-    // окончание плагина
-    
-    
-    
     
     $('.tabs').multitabs();
     
-    
-    
-    }); //end function
+    });
