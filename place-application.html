@@ -61,8 +61,6 @@
             <a href="#" class="btn-red">Разместить заявку</a>
         </nav>
 
-
-
     </header>
 
     <main>
@@ -78,21 +76,23 @@
                     </div>
                 </div>
                 <div class="place-app__title">Разместить заявку</div>
+
                 <div class="place-app__content">
                     <div class="place-app__form form">
                         <form id="place-form" action="">
 
-                            <div class="form__steps">
-                                <div class="step">Выбор типа оборудования<span></span></div>
-                                <div class="step">Статус организатора</div>
-                                <div class="step">Цель запроса</div>
-                                <div class="step">Контакты</div>
-                                <div class="step">Технические, коммерческие и иные требования</div>
+                            <div class="form__steps steps">
+                                <ul>
+                                    <li class="step"><a> Выбор типа оборудования </a></li>
+                                    <li class="step"><a> Статус организатора </a></li>
+                                    <li class="step"><a> Цель запроса</a></li>
+                                    <li class="step"><a> Контакты</a></li>
+                                    <li class="step"><a> Технические, коммерческие и иные требования</a></li>
+                                </ul>
                             </div>
                             
                             <!-- One "tab" for each step in the form: -->
                             <div class="tab tab1">
-                              <!-- <p><input placeholder="First name..." oninput="this.className = ''"></p> -->
                                 <div class="place_left">
                                     <div class="__select__category" data-state="">
                                         <!-- без переноса строки для проверки js -->
@@ -425,12 +425,9 @@
                                             </div>
                                         </div>
                                         <div class="place-form__button">
-                                            <button type="button" id="prevBtn" onclick="addContactInfo(-1, this.id)"> Убрать контакт </button>
+                                            <button type="button" id="delContact" onclick="addContactInfo(-1, this.id)"> Убрать контакт </button>
                                             <button type="button" id="addContact" onclick="addContactInfo(1, this.id)"> Добавить контакт </button>
                                         </div>
-
-
-
 
                                     </div>
                                 </div>
@@ -465,17 +462,16 @@
                                         <div class="task__row">
                                             <div class="task__option">
                                                 <p>У меня есть ТЗ</p>
-                                                <button type="button" id="loadBtn" onclick="" class="option__btn"> Загрузить </button>
+                                                <button type="button" id="TechAsBtnOn" class="option__btn"> Загрузить </button>
                                             </div>
                                             <div class="task__option">
                                                 <p>У меня нет ТЗ</p>
-                                                <button type="button" id="loadBtn" onclick="" class="option__btn"> Создать </button>
+                                                <button type="button" id="TechAsBtnOff" class="option__btn poll_btn"> Заполнить опросный лист </button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="task__block">
+                                    <div class="task__block" id="tech-as-on">
                                         <h2 class="place__title">Прикрепить имеющийся файл</h2>
-                                        <!-- <div class="addfile">Прикрепить файл</div> -->
                                         <div class="profile__upload">
                                             <input type="file" name="pdf" id="pdf" accept=".pdf" class="input-upload input-upload_doc">
                                             <label for="pdf" class="upload-label">
@@ -496,8 +492,73 @@
                                                 <img src="images/pdf-icon.png" alt="">
                                                 <p class="upload-doc__file-name">Информация.pdf</p>
                                             </div>
+                                            <div class="upload-doc__file">
+                                                <img src="images/pdf-icon.png" alt="">
+                                                <p class="upload-doc__file-name">пусто</p>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="task__block" id="tech-as-off">
+                                        <div class="task__poll">
+                                            <div class="poll__head">
+                                                <p class="poll__title">
+                                                    "Новичок"
+                                                </p>
+                                            </div>
+                                            <div class="poll__point">
+                                                <ul class="poll__check">
+                                                    <li>Рекомендуется к заполнению, если организатор не является специалистом в данном сфере</li>
+                                                    <li>Рекомендуется, если организатор располагает минимальным набором данных</li>
+                                                    <li>Рекомендуется при заполнении обратиться в службу поддержки площадки </li>
+                                                    <li>Рекомендуется, если организатору требуется фильтр для очистки только взвешанных частиц (не химическая очистка)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="poll__action">
+                                                <button type="button" id="" onclick="fillPoll(n)">Заполнить</button>
+                                            </div>
+                                        </div>
+                                        <div class="task__poll">
+                                            <div class="poll__head">
+                                                <p class="poll__title">
+                                                    "Эксперт"
+                                                </p>
+                                            </div>
+                                            <div class="poll__point">
+                                                <ul class="poll__check">
+                                                    <li>Рекомендовано если организатор является профильным специалистом в данном сфере (инженер-постановщик, ГИП, главный инженер и т.д.)</li>
+                                                    <li>Рекомендовано, если организатору требуется максимальный набор дополнительного оборудования в т.ч. тягодутьевое, компрессорное оборужование, оборудование пылетранспорта и т.д. </li>
+                                                    <li>Рекомендовано, если организатор располагает исчерпывающей информацией о характеристиках дополнительнго оборудования</li>
+                                                    <li>Помощь службы поддержки не требуется</li>
+                                                </ul>
+                                            </div>
+                                            <div class="poll__action">
+                                                <button type="button" id="" onclick="fillPoll(n)">Заполнить</button>
+                                            </div>
+                                        </div>
+                                        <div class="task__poll">
+                                            <div class="poll__head">
+                                                <p class="poll__title">
+                                                    "Тендерный"
+                                                </p>
+                                            </div>
+                                            <div class="poll__point">
+                                                <ul class="poll__check">
+                                                    <li>Рекомендовано если организатор является профильным специалистом в данном сфере </li>
+                                                    <li>Рекомендовано, если организатор располагает достаточным количеством исходных данных</li>
+                                                    <li>Рекомендовано, если организатор знает в какой комплектации требуется фильтр </li>
+                                                    <li>Рекомендуется в некоторых случаях обращаться в службу поддержки </li>
+                                                </ul>
+                                            </div>
+                                            <div class="poll__action">
+                                                <button type="button" id="" onclick="fillPoll(n)">Заполнить</button>
+                                            </div>
+                                        </div>
+                                        <div id="notice__poll" class="notice__message">
+                                            <p>Вы уверены, что хотите продолжить не заполнив опросные листы? <br>
+                                            Если да, то нажмите продолжить ещё раз.</p>
+                                        </div>
+                                    </div>
+
                                 </div>
 
                             </div>
@@ -514,6 +575,18 @@
                             </div>
 
                         </form>
+                    </div>
+                    <div class="popup">
+                        <div class="place__alert">
+                            <div class="__alert__title"> 
+                                <p>Обратите внимание:</p>
+                            </div>
+                            <div class="__alert__message">
+                                <p>
+                                    При завершении работы на площадке информация не теряется, а сохраняется в черновиках
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

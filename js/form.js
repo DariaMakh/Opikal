@@ -48,7 +48,7 @@ function addContactInfo(n, button_id) {
 
     var contactsDop = $( "#place__contacts_dop" ).clone();
     contactsDop.prop("id", "place__contacts_dop" + current);
-    contactsDop.find('#prevBtn').prop("id", "prevBtn" + current);
+    contactsDop.find('#delContact').prop("id", "delContact" + current);
     contactsDop.find('.title_change').text('Контактное лицо ' + current);
     contactsDop.appendTo( "#tab4" );
 
@@ -58,6 +58,29 @@ function addContactInfo(n, button_id) {
     length--;
   }
 }
+
+function fillPoll(n) {
+  ///
+}
+var TechAsOn = document.getElementById("tech-as-on");
+var TechAsOff = document.getElementById("tech-as-off");
+var TechAsBtnOn = document.getElementById("TechAsBtnOn");
+var TechAsBtnOff = document.getElementById("TechAsBtnOff");
+
+TechAsBtnOn.addEventListener("click", () => {
+  TechAsOn.style.display = "flex";
+  TechAsOff.style.display = "none";
+  TechAsBtnOn.parentElement.classList.add('act');
+  TechAsBtnOff.parentElement.classList.remove('act');
+
+})
+
+TechAsBtnOff.addEventListener("click", () => {
+  TechAsOn.style.display = "none";
+  TechAsOff.style.display = "flex";
+  TechAsBtnOn.parentElement.classList.remove('act');
+  TechAsBtnOff.parentElement.classList.add('act');
+})
 
 /**********************Category**************************/
 

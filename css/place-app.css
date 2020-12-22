@@ -1,3 +1,76 @@
+.steps {
+    padding: 0;
+    overflow: hidden;
+    height: 50px;
+}
+.steps a {
+    color: white;
+    text-decoration: none;
+}
+
+.steps li {
+    float: left;
+    margin-left: 0;
+    width: auto;
+    height: 50px;
+    list-style-type: none;
+    padding: 14px 20px 14px 30px; /* padding around text, last should include arrow width */
+    border-right: 3px solid white; /* width: gap between arrows, color: background of document */
+    position: relative;
+}
+/* remove extra padding on the first object since it doesn't have an arrow to the left */
+.steps li:first-child {
+    padding-left: 15px;
+}
+/* white arrow to the left to "erase" background (starting from the 2nd object) */
+.steps li:nth-child(n+2)::before {
+    position: absolute;
+    top:0;
+    left:0;
+    display: block;
+    border-left: 15px solid white; /* width: arrow width, color: background of document */
+    border-top: 25px solid transparent; /* width: half height */
+    border-bottom: 25px solid transparent; /* width: half height */
+    width: 0;
+    height: 0;
+    content: " ";
+}
+/* colored arrow to the right */
+.steps li::after {
+    z-index: 1; /* need to bring this above the next item */
+    position: absolute;
+    top: 0;
+    right: -15px; /* arrow width (negated) */
+    display: block;
+    border-left: 15px solid black; /* width: arrow width */
+    border-top: 25px solid transparent; /* width: half height */
+    border-bottom: 25px solid transparent; /* width: half height */
+    width:0;
+    height:0;
+    content: " ";
+}
+
+/* Setup colors (both the background and the arrow) */
+
+/* Completed */
+.steps li { background-color: black; }
+.steps li::after { border-left-color: black; }
+
+/* Current */
+.steps li.active { background-color: black; }
+.steps li.active::after { border-left-color: black; }
+
+/* Following */
+.steps li.active ~ li { background-color: #EBEBEB; }
+.steps li.active ~ li::after { border-left-color: #EBEBEB; }
+
+.steps li.active ~ li a { color: #000; }
+
+/* Hover for completed and active
+.steps li:hover {background-color: #696}
+.steps li:hover::after {border-left-color: #696} */
+/* css for steps ~ from css-tricks.com/triangle-breadcrumbs */
+
 .place-app__content p, 
 .step {
     font-size: 18px;
@@ -8,7 +81,8 @@
     color: rgb(20, 20, 25);
     text-transform: uppercase;
     line-height: 1.2;
-    text-align: left;
+    text-align: left;    
+    width: 100%;
 }
 .place-bg {
     border-top: 1px solid rgb(225, 225, 225);
@@ -55,65 +129,6 @@
     padding-bottom: 80px;
 }
 
-.step {
-    padding: 20px 15px 20px 26px;
-    background-color: #fff;
-    border: 1px solid #c2c2c2;
-    border-left: 0;
-    color: #000;
-    position: relative;
-}
-
-/* .step::after{
-content: "";
-position: absolute;
-border: solid #c2c2c2;
-left: 100%;
-top: 48%;
-border-left-color: white;
-border-color: transparent transparent transparent #fff;
-border-width: 30px 0 30px 15px;
-margin-top: -29px;
-z-index: 2;
-} */
-.step:first-child {
-    border-left: 1px solid #c2c2c2;
-    padding-left: 15px;
-}
-.step.active {
-    background-color: #000;
-    border: 1px solid #000;
-    color: #fff;
-}
-/* .step.active::after{
-content: "";
-position: absolute;
-border: solid transparent;
-left: 100%;
-top: 48%;
-border-left-color: black;
-border-color: transparent transparent transparent #000;
-border-width: 30px 0 30px 15px;
-margin-top: -29px;
-z-index: 2;
-} */
-
-.step.active .step::after {
-    border-color: transparent transparent transparent #000;
-}
-.step:after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 30px 0 30px 13px;
-    border-color: transparent transparent transparent #fff;
-    position: absolute;
-    right: -14px;
-    top: 0;
-    z-index: 2;
-}
-
 /* Style the form */
 /* Style the input fields */
 input {
@@ -135,28 +150,6 @@ input.invalid {
     justify-content: space-between;
     position: relative;
 }
-
-/* Mark the active step: */
-.step.active {
-    opacity: 1;
-}
-
-/* Mark the steps that are finished and valid: */
-.step.finish {
-    background-color: #4CAF50;
-}
-/* .place-select {
-height: 50px;
-width: 440px;
-} */
-
-/* option p {
-    display: block;
-width: 100%;
-height: 50px;
-padding: 15px 0;
-} */
-
 
 * {
     box-sizing: border-box;
@@ -326,6 +319,8 @@ background-color: #d8093a;
     font-size: 18px;
     font-weight: 500;
     line-height: 28px;
+    cursor: pointer;
+
 }
 #nextBtn,
 .option__btn {
@@ -333,17 +328,32 @@ background-color: #d8093a;
     background-color: #ff0000;
     color: white;
 }
+#nextBtn:hover,
+.option__btn:hover,
+.poll__action button:hover {
+    border: 2px solid  #ff0000;
+    background-color: white;
+    color:  #ff0000;
+}
 #prevBtn {
     border: 2px solid black;
     background-color: white;
     color: black;
     margin-right: 30px;
 }
+#prevBtn:hover {
+    background-color: black;
+    color: white;
+}
 #addContact {
     border: 2px solid black;
     background-color: black;
     color: white;
     margin-right: 30px;
+}
+#addContact:hover {
+    background-color: white;
+    color: black;
 }
 .tab1 .place__alert {
     max-width: 690px;
@@ -352,6 +362,18 @@ background-color: #d8093a;
 .tab3 .place__alert {
     max-width: 490px;
     display: block;
+}
+.popup {
+    width: 490px;
+    height: 150px;
+    background-color: white;
+    box-shadow: 0px 8px 20px 2px grey;
+    padding: 30px;
+    float: right;
+}
+.popup .place__alert {
+    width: 100%;
+    height: 100%;
 }
 .__alert__title {
     padding-bottom: 20px;
@@ -519,12 +541,6 @@ p.duties {
 .place__contacts_dop {
     border-top: 4px solid white;
 }
-/* .tab4:has( > .place__contacts_dop ) + .tab +  .place__clear{
-    display: none;
-} */
-/* .place__contacts_dop::parent +   .place__clear{
-    display: none;
-} */
 #place__contacts_dop {
     display: none;
 }
@@ -552,6 +568,9 @@ p.duties {
 }
 .task__block {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .task__row {
     display: flex;
@@ -574,6 +593,15 @@ p.duties {
     display: flex;
     justify-content: space-between;
     padding: 30px;
+    transition: transform .15s;
+}
+.task__option.act {
+    border: 2px black solid;
+}
+.task__option:hover {
+    border: 2px black solid;
+    transform: scale(1.01);
+    transition: transform .15s;
 }
 .task__option p {
     font-size: 25px;
@@ -586,7 +614,73 @@ p.duties {
 .option__btn {
     width: 200px;
     height: 40px;
+    cursor: pointer;
+}
+#tech-as-on, 
+#tech-as-off {
+    display: none;
+}
+.poll_btn {
+    width: 300px;
+}
+.task__block .profile__upload {
+    width: 100%;
+}
+.task__block .upload-doc {
+    width: 100%;
+    padding-bottom: 55px;
+}
+.task__poll {
+    width: 31%;
+    height: fit-content;
+    background-color: white;
+    border: 1px solid #b7b7b7;
+    position: relative;
+    transition: transform .15s;
+}
+.task__poll:hover{
+    cursor: pointer;
+    box-shadow: 0px 8px 20px 2px grey;
+    transform: scale(1.01);
+    transition: transform .15s;
 
+}
+.poll__head {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 55px;
+    text-align: center;
+}
+.poll__title {
+    font-size: 24px !important;
+    padding: 12px 0;
+}
+.poll__point {
+    padding: 40px 25px 10px;
+}
+.poll__check li {
+    padding-left: 25px;
+    list-style-image: none;
+    background: url(/images/check.png) no-repeat;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.poll__action {
+    height: 120px;
+    width: 100%;
+    padding: 45px 14% 30px;
+
+}
+.poll__action button {
+    border: 2px solid black;
+    width: 100%;
+    height: 40px;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 @media all and (min-width: 980px) and (max-width: 1224px) {
