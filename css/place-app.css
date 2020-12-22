@@ -1,3 +1,76 @@
+.steps {
+    padding: 0;
+    overflow: hidden;
+    height: 50px;
+}
+.steps a {
+    color: white;
+    text-decoration: none;
+}
+
+.steps li {
+    float: left;
+    margin-left: 0;
+    width: auto;
+    height: 50px;
+    list-style-type: none;
+    padding: 14px 20px 14px 30px; /* padding around text, last should include arrow width */
+    border-right: 3px solid white; /* width: gap between arrows, color: background of document */
+    position: relative;
+}
+/* remove extra padding on the first object since it doesn't have an arrow to the left */
+.steps li:first-child {
+    padding-left: 15px;
+}
+/* white arrow to the left to "erase" background (starting from the 2nd object) */
+.steps li:nth-child(n+2)::before {
+    position: absolute;
+    top:0;
+    left:0;
+    display: block;
+    border-left: 15px solid white; /* width: arrow width, color: background of document */
+    border-top: 25px solid transparent; /* width: half height */
+    border-bottom: 25px solid transparent; /* width: half height */
+    width: 0;
+    height: 0;
+    content: " ";
+}
+/* colored arrow to the right */
+.steps li::after {
+    z-index: 1; /* need to bring this above the next item */
+    position: absolute;
+    top: 0;
+    right: -15px; /* arrow width (negated) */
+    display: block;
+    border-left: 15px solid black; /* width: arrow width */
+    border-top: 25px solid transparent; /* width: half height */
+    border-bottom: 25px solid transparent; /* width: half height */
+    width:0;
+    height:0;
+    content: " ";
+}
+
+/* Setup colors (both the background and the arrow) */
+
+/* Completed */
+.steps li { background-color: black; }
+.steps li::after { border-left-color: black; }
+
+/* Current */
+.steps li.active { background-color: black; }
+.steps li.active::after { border-left-color: black; }
+
+/* Following */
+.steps li.active ~ li { background-color: #EBEBEB; }
+.steps li.active ~ li::after { border-left-color: #EBEBEB; }
+
+.steps li.active ~ li a { color: #000; }
+
+/* Hover for completed and active
+.steps li:hover {background-color: #696}
+.steps li:hover::after {border-left-color: #696} */
+/* css for steps ~ from css-tricks.com/triangle-breadcrumbs */
+
 .place-app__content p, 
 .step {
     font-size: 18px;
@@ -56,65 +129,6 @@
     padding-bottom: 80px;
 }
 
-.step {
-    padding: 20px 15px 20px 26px;
-    background-color: #fff;
-    border: 1px solid #c2c2c2;
-    border-left: 0;
-    color: #000;
-    position: relative;
-}
-
-/* .step::after{
-content: "";
-position: absolute;
-border: solid #c2c2c2;
-left: 100%;
-top: 48%;
-border-left-color: white;
-border-color: transparent transparent transparent #fff;
-border-width: 30px 0 30px 15px;
-margin-top: -29px;
-z-index: 2;
-} */
-.step:first-child {
-    border-left: 1px solid #c2c2c2;
-    padding-left: 15px;
-}
-.step.active {
-    background-color: #000;
-    border: 1px solid #000;
-    color: #fff;
-}
-/* .step.active::after{
-content: "";
-position: absolute;
-border: solid transparent;
-left: 100%;
-top: 48%;
-border-left-color: black;
-border-color: transparent transparent transparent #000;
-border-width: 30px 0 30px 15px;
-margin-top: -29px;
-z-index: 2;
-} */
-
-.step.active .step::after {
-    border-color: transparent transparent transparent #000;
-}
-.step:after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 30px 0 30px 13px;
-    border-color: transparent transparent transparent #fff;
-    position: absolute;
-    right: -14px;
-    top: 0;
-    z-index: 2;
-}
-
 /* Style the form */
 /* Style the input fields */
 input {
@@ -136,28 +150,6 @@ input.invalid {
     justify-content: space-between;
     position: relative;
 }
-
-/* Mark the active step: */
-.step.active {
-    opacity: 1;
-}
-
-/* Mark the steps that are finished and valid: */
-.step.finish {
-    background-color: #4CAF50;
-}
-/* .place-select {
-height: 50px;
-width: 440px;
-} */
-
-/* option p {
-    display: block;
-width: 100%;
-height: 50px;
-padding: 15px 0;
-} */
-
 
 * {
     box-sizing: border-box;
@@ -537,12 +529,6 @@ p.duties {
 .place__contacts_dop {
     border-top: 4px solid white;
 }
-/* .tab4:has( > .place__contacts_dop ) + .tab +  .place__clear{
-    display: none;
-} */
-/* .place__contacts_dop::parent +   .place__clear{
-    display: none;
-} */
 #place__contacts_dop {
     display: none;
 }
