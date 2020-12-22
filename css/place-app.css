@@ -8,7 +8,8 @@
     color: rgb(20, 20, 25);
     text-transform: uppercase;
     line-height: 1.2;
-    text-align: left;
+    text-align: left;    
+    width: 100%;
 }
 .place-bg {
     border-top: 1px solid rgb(225, 225, 225);
@@ -326,6 +327,8 @@ background-color: #d8093a;
     font-size: 18px;
     font-weight: 500;
     line-height: 28px;
+    cursor: pointer;
+
 }
 #nextBtn,
 .option__btn {
@@ -333,17 +336,32 @@ background-color: #d8093a;
     background-color: #ff0000;
     color: white;
 }
+#nextBtn:hover,
+.option__btn:hover,
+.poll__action button:hover {
+    border: 2px solid  #ff0000;
+    background-color: white;
+    color:  #ff0000;
+}
 #prevBtn {
     border: 2px solid black;
     background-color: white;
     color: black;
     margin-right: 30px;
 }
+#prevBtn:hover {
+    background-color: black;
+    color: white;
+}
 #addContact {
     border: 2px solid black;
     background-color: black;
     color: white;
     margin-right: 30px;
+}
+#addContact:hover {
+    background-color: white;
+    color: black;
 }
 .tab1 .place__alert {
     max-width: 690px;
@@ -552,6 +570,9 @@ p.duties {
 }
 .task__block {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .task__row {
     display: flex;
@@ -574,6 +595,15 @@ p.duties {
     display: flex;
     justify-content: space-between;
     padding: 30px;
+    transition: transform .15s;
+}
+.task__option.act {
+    border: 2px black solid;
+}
+.task__option:hover {
+    border: 2px black solid;
+    transform: scale(1.01);
+    transition: transform .15s;
 }
 .task__option p {
     font-size: 25px;
@@ -586,7 +616,73 @@ p.duties {
 .option__btn {
     width: 200px;
     height: 40px;
+    cursor: pointer;
+}
+#tech-as-on, 
+#tech-as-off {
+    display: none;
+}
+.poll_btn {
+    width: 300px;
+}
+.task__block .profile__upload {
+    width: 100%;
+}
+.task__block .upload-doc {
+    width: 100%;
+    padding-bottom: 55px;
+}
+.task__poll {
+    width: 31%;
+    height: fit-content;
+    background-color: white;
+    border: 1px solid #b7b7b7;
+    position: relative;
+    transition: transform .15s;
+}
+.task__poll:hover{
+    cursor: pointer;
+    box-shadow: 0px 8px 20px 2px grey;
+    transform: scale(1.01);
+    transition: transform .15s;
 
+}
+.poll__head {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 55px;
+    text-align: center;
+}
+.poll__title {
+    font-size: 24px !important;
+    padding: 12px 0;
+}
+.poll__point {
+    padding: 40px 25px 10px;
+}
+.poll__check li {
+    padding-left: 25px;
+    list-style-image: none;
+    background: url(/images/check.png) no-repeat;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.poll__action {
+    height: 120px;
+    width: 100%;
+    padding: 45px 14% 30px;
+
+}
+.poll__action button {
+    border: 2px solid black;
+    width: 100%;
+    height: 40px;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 @media all and (min-width: 980px) and (max-width: 1224px) {
