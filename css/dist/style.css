@@ -243,6 +243,10 @@ input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
 
+input:invalid {
+  border-color: #ff0000;
+}
+
 .banner {
   margin-top: 54px;
   width: 100%;

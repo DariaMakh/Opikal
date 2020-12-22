@@ -231,6 +231,19 @@
             margin-right: 30px;
         }
     }
+    .generated-application{
+        .justify{
+            &_2{
+                justify-content: flex-start;
+            }
+        }
+        &__row{
+            display: block;
+        }
+        &__block {
+            width: 30%;
+        }
+    } 
 }
 
 @media (max-width: 815px){
