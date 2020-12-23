@@ -167,11 +167,11 @@
                     <div class="modal__title">
                         Регистрация поставщика
                     </div>
-                    <form action="#" name="registration-form" method="post" class="registration-form">
+                    <form id="reg-p" action="#" name="registration-form" method="post" class="registration-form">
                         <div class="modal-content__row">
                             <div class="modal-content__box">
                                 <div class="modal-content__inputs">
-                                    <input class="input" type="text" name="name" id="name" required>
+                                    <input class="input" type="text" name="name" id="name">
                                     <p class="placeholder">Имя <span>*</span></p>
                                 </div>
         
@@ -181,34 +181,34 @@
                                 </div>
         
                                 <div class="modal-content__inputs">
-                                    <input class="input" type="text" name="name3" id="name3" required>
+                                    <input class="input" type="text" name="name3" id="name3">
                                     <p class="placeholder">Отчество</p>
                                 </div>
                                 
                                 <div class="modal-content__inputs">
-                                    <input class="input" type="email" name="email" id="email" required>
+                                    <input class="input" type="email" name="email" id="email">
                                     <p class="placeholder">Почта <span>*</span></p>
                                 </div>
         
                                 <div class="modal-content__inputs">
-                                    <input class="input" type="password" name="password" id="password" required>
+                                    <input class="input" type="password" name="password" id="password">
                                     <p class="placeholder">Пароль <span>*</span></p>
                                 </div>
                             </div>
         
                             <div class="modal-content__box">
                                 <div class="modal-content__inputs">
-                                    <input class="input" type="tel" name="tel" id="tel" required>
+                                    <input class="input" type="tel" name="tel" id="tel">
                                     <p class="placeholder">Телефон <span>*</span></p>
                                 </div>
         
                                 <div class="modal-content__inputs">
-                                    <input class="input" type="text" name="inn" id="inn" required>
+                                    <input class="input" type="text" name="inn" id="inn">
                                     <p class="placeholder">ИНН <span>*</span></p>
                                 </div>
         
                                 <div class="modal-content__inputs">
-                                    <textarea class="input textarea" name="org_name" id="org_name" required></textarea>
+                                    <textarea class="input textarea" name="org_name" id="org_name"></textarea>
                                     <p class="textarea-placeholder">Название организации, ИП <span>*</span></p>
                                 </div>
         
@@ -226,7 +226,7 @@
                             </label>
                         </div>
                         <div class="modal-content__btn">
-                            <button class="btn-red" type="submit">Зарегистрироваться</button>
+                            <button class="btn-red btn-reg-p" type="submit" >Зарегистрироваться</button>
                         </div>
                         <div class="modal-content__btn-login">
                             <a href="#" target="_blank" class="modal__link">Войти</a>
@@ -693,7 +693,9 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="js/slick.min.js"></script>
+    <script src="js/lib/slick.min.js"></script>
+    <script src="js/lib/jquery-ui.js"></script>
+    <script src="js/lib/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
       
 </body>

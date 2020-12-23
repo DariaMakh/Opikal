@@ -1,3 +1,4 @@
+// --------- SLIDER ON MAIN PAGE ---------
 
 $('.possibility__slider_1').slick({
     slidesToShow: 1,
@@ -15,6 +16,8 @@ $('.possibility__slider_2').slick({
     prevArrow: $('.possibility__prev_2'),
 });
 
+// --------- BURGER MENU ---------
+
 $('.nav__burger').click(function(event){
     $('.nav__burger, .menu').toggleClass('active');
 });
@@ -26,6 +29,8 @@ $('.account-menu__burger_btn').click(function(event){
 $('.search__icon-2').click(function(event){
     $('.advanced-search').toggleClass('active');
 });
+
+// ---------  ---------
 
 var select = function(){
     var selectHeader = document.querySelectorAll('.select__header');
@@ -48,7 +53,7 @@ var select = function(){
     };
 }
 
-// ОТКРЫТИЕ И ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА
+// --------- MODAL ---------
 
 $(".modal-trigger").click(function(e){
     e.preventDefault();
@@ -62,7 +67,7 @@ $(".modal-trigger").click(function(e){
     // $("body").css({"overflow-y": "auto"}); //Prevent double scrollbar.
   });
 
-// PLACEHOLDER
+// --------- PLACEHOLDER ---------
 
 $('body').on('focus', '.modal-content__inputs .input', function(){
 	var parent = $(this).parent();
@@ -100,7 +105,7 @@ if ($('.modal-content__inputs .input').length > 0) {
 	});
 }
 
-// ОТОБРАЖЕНИЕ НАЗВАНИЯ КАРТИНКИ
+// --------- NAME OF PICTURE AFTER UPLOADED ---------
 
 function uploadImg(){
     var inputImg = document.querySelectorAll('.profile_img');
@@ -121,7 +126,7 @@ function uploadImg(){
     });
 };
 
-// ОТОБРАЖЕНИЕ НАЗВАНИЯ ФАЙЛА ПОСЛЕ ЗАГРУЗКИ
+// --------- NAME OF PDF FILE AFTER UPLOADED IN PROFILE ---------
 
 $('.input-upload_doc').on('change', function() {
     var splittedFakePath = this.value.split('\\');
@@ -131,18 +136,97 @@ $('.input-upload_doc').on('change', function() {
 document.addEventListener("DOMContentLoaded", uploadImg);
 
 
-$('.js-tab-trigger').click(function() {
-    var id = $(this).attr('data-tab'),
-        content = $('.js-tab-content[data-tab="'+ id +'"]');
+// --------- TABS ---------
+
+$(function() {
+
+    (function($) {
+      $.fn.multitabs = function() {
+        var _this = $(this);
+        var tabs = _this.children('.tab__header[data-child="false"]').children('div');
+        var childrenTabs = _this.find('.tab__header[data-child="true"]').children('div');
     
-    $('.js-tab-trigger.active').removeClass('active');
-    $(this).addClass('active');
+        $(tabs).add(childrenTabs).on('click', function() {
+          var num;
+          var _this = $(this);
+          var classNameTab = _this.attr('class').split(' ');
+          var classNameContent = _this.parent().siblings().children();
     
-    $('.js-tab-content.active').removeClass('active');
-    content.addClass('active');
+          for (i = 0; i <= classNameTab.length; i++) {
+            if (/([\d.]+)/.test(classNameTab[i])) {
+              var isChild = $(_this).parent().data('child');
+              num = classNameTab[i].split('-')[1];
+              
+              if (!isChild) {
+                $(tabs).removeClass('tab__header--active');
+                $(_this).addClass('tab__header--active');
+              } else {
+                $(_this).siblings().removeClass('tab__header--active');
+                $(_this).addClass('tab__header--active');
+              }
+    
+            }
+          }
+    
+          $(classNameContent).each(function(i, n) {
+            var name = $(n).attr('class').split(' ');
+            for (n = 0; n <= name.length; n++) {
+              if (name[n] != undefined) {
+                if (/([\d.]+)/.test(name[n])) {
+                  if (num === name[n].split('-')[1]) {
+                    var el = $(classNameContent)[num - 1];
+                    $(classNameContent).removeClass('tab__content--active');
+                    $(el).addClass('tab__content--active');
+                  }
+                }
+              }
+            }
+          });
+    
+        });
+    
+      }
+    })(jQuery);
+    
+$('.tabs').multitabs();
+    
+});
+
+// --------- CALENDAR ---------
+
+$.datepicker.regional['ru'] = {
+	closeText: 'Закрыть',
+	prevText: 'Предыдущий',
+	nextText: 'Следующий',
+	currentText: 'Сегодня',
+	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+	monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+	dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+	dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+	dayNamesMin: ['ВС','ПН','ВТ','СР','ЧТ','ПТ','СБ'],
+	weekHeader: 'Не',
+	dateFormat: 'dd.mm.yy',
+	firstDay: 1,
+	isRTL: false,
+	showMonthAfterYear: false,
+	yearSuffix: ''
+};
+$.datepicker.setDefaults($.datepicker.regional['ru']);
+
+$(function() {
+    $("#datepicker").datepicker();
+    $("#datepicker-2").datepicker({
+		onSelect: function(date){
+			$('#datepicker_value').val(date)
+		}
+	});
+	$("#datepicker-2").datepicker("setDate", $('#datepicker_value').val());
 });
  
 /*
+
+// --------- GALLERY OF PICTURES ---------
+
 var showGallery = (function () {
     var fr = new FileReader,
         i = 0,
@@ -179,3 +263,5 @@ var showGallery = (function () {
  
 document.getElementById('gallery').addEventListener("DOMContentLoaded", showGallery, false);
 */
+
+
