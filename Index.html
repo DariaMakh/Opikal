@@ -257,12 +257,13 @@
                     <div class="modal__title">
                         Регистрация заказчика
                     </div>
-                    <form action="#" name="registration-form" method="get">
+                    <form id="reg-c" action="#" name="registration-form" method="get">
                         <div class="modal-content__row">
                             <div class="modal-content__box">
                                 <div class="modal-content__inputs">
-                                    <input class="input" type="text" name="name" id="name" required>
+                                    <input class="input" type="text" name="name" id="name">
                                     <p class="placeholder">Имя <span>*</span></p>
+                                    <div class="modal-content__inputs_error">введите имя</div>
                                 </div>
     
                                 <div class="modal-content__inputs">
@@ -276,13 +277,15 @@
                                 </div>
                                 
                                 <div class="modal-content__inputs">
-                                    <input class="input" type="email" name="email" id="email" required>
+                                    <input class="input email-c" type="email" name="email" id="email">
                                     <p class="placeholder">Почта <span>*</span></p>
+                                    <div class="modal-content__inputs_error">введите почту</div>
                                 </div>
     
                                 <div class="modal-content__inputs">
-                                    <input class="input" type="password" name="password" id="password" required>
+                                    <input class="input psw-c" type="password" name="password" id="password">
                                     <p class="placeholder">Пароль <span>*</span></p>
+                                    <div class="modal-content__inputs_error">введите почту</div>
                                 </div>
                             </div>
         
@@ -317,7 +320,7 @@
                         </div>
 
                         <div class="modal-content__btn">
-                            <button class="btn-red" type="submit">Зарегистрироваться</button>
+                            <button class="btn-red btn-reg" type="submit">Зарегистрироваться</button>
                         </div>
 
                         <div class="modal-content__btn-login">

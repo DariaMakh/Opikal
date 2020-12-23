@@ -265,3 +265,70 @@ document.getElementById('gallery').addEventListener("DOMContentLoaded", showGall
 */
 
 
+$(function(){
+  $('.modal-content__inputs_error').hide();
+  $(".btn-reg").click(function() {
+    // validate and process form here
+    $('.modal-content__inputs_error').hide();
+    var name = $("input#name").val();
+    if (name == "") {
+      $(".modal-content__inputs_error").show();
+      $("input#name").css("border-color", "#ff0000");
+      $("input#name").focus();
+      return false;
+    }
+    /*
+    var email = $("input#email").val();
+    if (email == "") {
+      $(".email-c").css("border-color", "#ff0000");
+      $(".modal-content__inputs_error").show();
+      $("input#email").focus();
+      return false;
+    }
+    var psw = $("input#password").val();
+    if (psw == "") {
+      $(".psw-c").css("border-color", "#ff0000");
+      $(".modal-content__inputs_error").show();
+      $("inputpassword").focus();
+      return false;
+    } 
+    */
+  });
+});
+
+/*
+$('form[id="reg-p"]').validate({
+    rules: {
+      name: 'required',
+      email: {
+        required: true,
+        email: true,
+      },
+      password: {
+        required: true,
+        minlength: 8,
+      },
+      tel: {
+        required: true,
+        minlength: 11,
+        maxlength: 11,
+      },
+      inn: 'required',
+      org_name: 'required',
+    },
+    messages: {
+      name: 'Введите имя',
+      email: 'Адрес эл. почты введен не корректно',
+      tel: 'Введите телефон корректно',
+      inn: 'Введите ИНН',
+      org_name: 'Введите название организации',
+      password: {
+        minlength: 'Пароль должен содержать не менее 8 символов'
+      }
+    },
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
+
+  */
