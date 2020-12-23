@@ -362,7 +362,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="button" id="addContact" onclick="addContactInfo(1, this.id)"> Добавить контакт </button>
+                                        <div id="form__button_contact-main" class="place-form__button show">
+                                            <button type="button" id="prevBtn" onclick="nextPrev(-1)"> Назад </button>
+                                            <button type="button" id="addContact" onclick="addContactInfo(1, this.id)"> Добавить контакт </button>
+                                            <button type="button" id="nextBtn" onclick="nextPrev(1)"> Продолжить </button>
+                                        </div>
+                                        <div id="form__button_contact-more" class="place-form__button hide">
+                                            <button type="button" id="addContact" onclick="addContactInfo(1, this.id)"> Добавить контакт </button>
+                                        </div>
                                         <div class="notice__message">
                                             <p>В случае, если вы не являетесь профильным техническим специалистом по данному вопросы, рекомендуем Вам добавить в качестве дополнительного контакта лицо, с которым поставщики смогут консультироваться и обсуждать технические вопросы.</p>
                                         </div>
@@ -370,7 +377,7 @@
                                 </div>
 
                                 <!-- доп блоки -->
-                                <div class="place__contacts place__contacts_dop" id="place__contacts_dop" >
+                                <div class=" place__contacts_dop" id="place__contacts_dop" >
                                     <div class="container">
                                         <div class="contacts__block">
                                             <div class="contacts__row">
@@ -424,12 +431,19 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="place-form__button">
-                                            <button type="button" id="delContact" onclick="addContactInfo(-1, this.id)"> Убрать контакт </button>
+                                        <div class="place-form__button long">
+                                            <a id="delContact" onclick="addContactInfo(-1, this.id)" href="#" class="close"></a>
+                                            <button type="button" id="prevBtn" onclick="nextPrev(-1)"> Назад </button>
+                                            <button type="button" id="addContact" onclick="addContactInfo(1, this.id)"> Добавить контакт </button>
+                                            <button type="button" id="nextBtn" onclick="nextPrev(1)"> Продолжить </button>
+                                        </div>
+                                        <div class="place-form__button short">
+                                            <a id="delContact" onclick="addContactInfo(-1, this.id)" href="#" class="close"></a>
                                             <button type="button" id="addContact" onclick="addContactInfo(1, this.id)"> Добавить контакт </button>
                                         </div>
 
                                     </div>
+                                    
                                 </div>
                             </div>
 
@@ -564,12 +578,12 @@
                             </div>
 
                             <div class="place__clear">
-                                <div class="place-form__button">
+                                <div id="place-form__butto_main" class="place-form__button">
                                     <button type="button" id="prevBtn" onclick="nextPrev(-1)"> Назад </button>
                                     <button type="button" id="nextBtn" onclick="nextPrev(1)"> Продолжить </button>
                                 </div>
                             </div>
-                            
+
                             <div class="place__notice">
                                 <p class="notice__req">Поле обязательное для заполнения</p>
                             </div>

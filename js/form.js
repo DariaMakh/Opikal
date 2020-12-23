@@ -23,6 +23,11 @@ function showTab(n) {
   } else {
     document.getElementById("prevBtn").style.display = "inline";
   }
+  if (n == 3) {
+    document.getElementById("place-form__butto_main").style.display = "none";
+  } else {
+    document.getElementById("place-form__butto_main").style.display = "inline";
+  }
   if (n == (x.length - 1)) {
     document.getElementById("nextBtn").innerHTML = "Отправить";
   } else {
@@ -51,7 +56,11 @@ function nextPrev(n) {
   showTab(currentTab);
 }
 
-var tab4 = document.getElementById("tab4") ;
+var tab4 = document.getElementById("tab4");
+
+var mainContactLong = document.getElementById("form__button_contact-main");
+var mainContactShort = document.getElementById("form__button_contact-more");
+
 var length = 0;
 function addContactInfo(n, button_id) {
   if(n == 1){
@@ -64,10 +73,23 @@ function addContactInfo(n, button_id) {
     contactsDop.find('.title_change').text('Контактное лицо ' + current);
     contactsDop.appendTo( "#tab4" );
 
+    if (length == 0) {
+      mainContactLong.classList.add('hide');
+      mainContactLong.classList.remove('show');
+      mainContactShort.classList.remove('hide');
+      mainContactShort.classList.add('show');
+    }
+    // alert(length)
     length++;
   } else {
     $( '#' + button_id ).parent().parent().parent().remove();
     length--;
+    if (length == 0) {
+      mainContactLong.classList.remove('hide');
+      mainContactLong.classList.add('show');
+      mainContactShort.classList.add('hide');
+      mainContactShort.classList.remove('show');
+    }
   }
 }
 

@@ -387,6 +387,10 @@ background-color: #d8093a;
     height: 25px;
     opacity: 0.3;
 }
+.place__contacts_dop .close {
+    right: 210px;
+    top: 65px;
+}
 .close:hover {
     opacity: 1;
 }
@@ -567,8 +571,27 @@ p.duties {
     position: inherit;
     left: -208px;
 }
+
+.long, .hide {
+    display: none;
+}
+.place__contacts_dop:last-child .long {
+    display: block;
+}
+.short, .show {
+    display: block;
+}
+.place__contacts_dop:last-child .short {
+    display: none;
+}
 .place__contacts_dop {
     border-top: 4px solid white;
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 50px 0 60px;
+    min-width: 1600px;
+    position: inherit;
+    left: -208px;
 }
 #place__contacts_dop {
     display: none;
