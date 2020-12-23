@@ -259,6 +259,9 @@ input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
   display: none;
 }
+input:invalid {
+  border-color: $red;
+}
 
 .banner{
   margin-top: 54px;
@@ -289,7 +292,5 @@ input[type='search']::-webkit-search-results-decoration {
 @import 'applications';
 
 @import 'mess';
-
-@import 'calendar';
 
 @import 'footer';

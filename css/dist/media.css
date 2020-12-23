@@ -208,6 +208,16 @@
   .footer__phone {
     margin-right: 30px;
   }
+
+  .generated-application .justify_2 {
+    justify-content: flex-start;
+  }
+  .generated-application__row {
+    display: block;
+  }
+  .generated-application__block {
+    width: 30%;
+  }
 }
 @media (max-width: 815px) {
   .header__title {
