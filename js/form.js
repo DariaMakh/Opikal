@@ -1,3 +1,15 @@
+// Всплывающее окно, напоминание о сохранении в черновиках
+function popup() {
+  document.getElementById("place__alert__popup").style.display = "block";
+}
+setInterval(popup, 1000*60*15);
+
+var PlacePopupOff = document.getElementById("place__alert__popup-close");
+
+PlacePopupOff.addEventListener("click", () => {
+  PlacePopupOff.parentElement.style.display = "none";
+})
+
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
