@@ -10,6 +10,8 @@ PlacePopupOff.addEventListener("click", () => {
   PlacePopupOff.parentElement.style.display = "none";
 })
 
+
+
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
@@ -79,7 +81,7 @@ function addContactInfo(n, button_id) {
       mainContactShort.classList.remove('hide');
       mainContactShort.classList.add('show');
     }
-    // alert(length)
+
     length++;
   } else {
     $( '#' + button_id ).parent().parent().parent().remove();
@@ -92,6 +94,16 @@ function addContactInfo(n, button_id) {
     }
   }
 }
+
+document.getElementById('openChat').onclick = function() {
+  document.getElementById('place__chat').style.display = "block";
+}
+
+var PlaceChatOff = document.getElementById("place__chat-close");
+
+PlaceChatOff.addEventListener("click", () => {
+  PlaceChatOff.parentElement.style.display = "none";
+})
 
 function fillPoll(n) {
   ///

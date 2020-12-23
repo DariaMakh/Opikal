@@ -253,7 +253,48 @@ input.__select__title {
 .__select__arrow.act {
     transform: rotate(-180deg);
 }
-
+.place__chat {
+    display: none;
+    position: fixed;
+    top: 230px;
+    left: 30%;
+    width: 750px;
+    height: 400px;
+    background-color: #e0e0e0;
+    z-index: 10;
+    border: 1px solid #6b6b6b;
+    box-shadow: 0 2px 19px 10000px rgb(0 0 0 / 55%);
+}
+.chat__area {
+    padding: 30px;
+}
+.place__chat-close {
+    position: absolute;
+    top: -36px;
+    right: 5px;
+    width: 100px;
+    height: 40px;
+    text-align: left;
+    padding: 10px;
+}
+.place__chat-close a {
+    right: 0;
+    top: 10px;
+    color: white;
+    opacity: 0.8;
+}
+.place__chat-close:hover {
+    cursor: pointer;
+}
+.place__chat-close:hover a {
+    opacity: 1;
+}
+.place__chat-close .close:before,
+.place__chat-close .close:after {
+    height: 20px;
+    width: 4px;
+    background-color: white;
+}
 /* 
 .necessarily, 
 .__select__title:hover {
@@ -424,6 +465,7 @@ background-color: #d8093a;
 .__alert__message > p > a {
     color: #ff0000;
     text-decoration: underline;
+    cursor: pointer;
 }
 .__select__checkbox {
     width: 100%;
