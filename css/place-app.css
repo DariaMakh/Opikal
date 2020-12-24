@@ -86,7 +86,7 @@
 }
 .place-bg {
     border-top: 1px solid rgb(225, 225, 225);
-    background: url(/images/application-bg.jpg) 100% 100% no-repeat;
+    background: url(../images/application-bg.jpg) 100% 100% no-repeat;
     background-position: top;
     max-width: 1600px;
     margin: 0 auto;
@@ -463,7 +463,7 @@ background-color: #d8093a;
 }
 .__alert__title p:before {
     content: '';
-    background: url(/images/attention.png) no-repeat;
+    background: url(../images/attention.png) no-repeat;
     background-size: contain;
     padding-right: 40px;
 }
@@ -511,7 +511,7 @@ background-color: #d8093a;
 } 
 .place__row input[type=checkbox]:checked + label:before{
     background-color: #fff;
-    background-image: url(../../images/check.png);
+    background-image: url(../images/check.png);
 } 
 
 .place__attention {
@@ -761,7 +761,7 @@ p.duties {
 .poll__check li {
     padding-left: 25px;
     list-style-image: none;
-    background: url(/images/check.png) no-repeat;
+    background: url(../images/check.png) no-repeat;
     padding-bottom: 10px;
     font-size: 18px;
 }
@@ -794,7 +794,7 @@ p.duties {
 }
 .editPollBtn::before {
     content: "";
-    background: url(/images/edit.png) no-repeat;
+    background: url(../images/edit.png) no-repeat;
     width: 15px;
     height: 15px;
     padding-left: 25px;

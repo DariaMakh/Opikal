@@ -1,0 +1,42 @@
+$red: #ff0000;
+$lgr: #f3f3f3;
+$grey: #f4f4f4;
+$lbl: #141419;
+
+$font: "FuturaBookC";
+$font2: "FuturaBookDemiC";
+
+.steps{
+    &__list{
+        width: 100%;
+        .step{
+            width: 50%;
+            text-align: center;
+            &:last-child{
+                width: calc(50% - 15px);
+            }
+        }
+    }
+}
+
+.list{
+    &__word{
+        margin-top: 20px;
+        padding: 25px;
+        border: 2px solid $red;
+        .row{
+            justify-content: space-between;
+        }
+        .list__text{
+            width: 790px;
+        }
+        .btn-red{
+            height: 45px;
+        }
+    }
+    &__text{
+        font-size: 20px;
+        color: rgb(20, 20, 25);
+        line-height: 1.4;
+    }
+}

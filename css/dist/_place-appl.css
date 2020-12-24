@@ -1,0 +1,30 @@
+.steps__list {
+  width: 100%;
+}
+.steps__list .step {
+  width: 50%;
+  text-align: center;
+}
+.steps__list .step:last-child {
+  width: calc(50% - 15px);
+}
+
+.list__word {
+  margin-top: 20px;
+  padding: 25px;
+  border: 2px solid #ff0000;
+}
+.list__word .row {
+  justify-content: space-between;
+}
+.list__word .list__text {
+  width: 790px;
+}
+.list__word .btn-red {
+  height: 45px;
+}
+.list__text {
+  font-size: 20px;
+  color: #141419;
+  line-height: 1.4;
+}
