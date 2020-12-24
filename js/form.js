@@ -10,6 +10,8 @@ PlacePopupOff.addEventListener("click", () => {
   PlacePopupOff.parentElement.style.display = "none";
 })
 
+
+
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
@@ -79,7 +81,7 @@ function addContactInfo(n, button_id) {
       mainContactShort.classList.remove('hide');
       mainContactShort.classList.add('show');
     }
-    // alert(length)
+
     length++;
   } else {
     $( '#' + button_id ).parent().parent().parent().remove();
@@ -93,8 +95,29 @@ function addContactInfo(n, button_id) {
   }
 }
 
-function fillPoll(n) {
-  ///
+document.getElementById('openChat').onclick = function() {
+  document.getElementById('place__chat').style.display = "block";
+}
+
+var PlaceChatOff = document.getElementById("place__chat-close");
+
+PlaceChatOff.addEventListener("click", () => {
+  PlaceChatOff.parentElement.style.display = "none";
+})
+
+function fillPoll(id) {
+  //ato de tsukuru
+ //var id = '"'+id+'"';
+
+  //var idPoll = $('#' + id);// document.getElementById(id);
+  var idPoll = document.getElementById(id);
+  alert(typeof(id));
+
+  //alert(idPoll);
+
+  idPoll.parentElement.parentElement.style.display = "none";
+  // $('#expert').parent().parent().hide();
+
 }
 var TechAsOn = document.getElementById("tech-as-on");
 var TechAsOff = document.getElementById("tech-as-off");
@@ -122,7 +145,7 @@ const selectCategory = document.querySelector('.__select__category');
 const selectCategory_title = selectCategory.querySelector('.__select__title');
 const selectCategory_labels = selectCategory.querySelectorAll('.__select__label');
 const selectCategory_arrow = selectCategory_title.querySelector('.__select__arrow');
-const textChosen = selectCategory.querySelector('.textChosen'); 
+const textChosen = selectCategory.querySelector('.textChosen');
 const placeAlert = document.querySelector('.tab1 .place_right');
 const placeNotice = document.querySelector('.place__notice');
 
@@ -158,7 +181,7 @@ for (let i = 0; i < selectCategory_labels.length; i++) {
     selectCategory.setAttribute('data-state', '');
     selectCategory_arrow.classList.add("act");
 
-    if (('' != selectCategory_title.getAttribute('data-description')) && 
+    if (('' != selectCategory_title.getAttribute('data-description')) &&
         ('0' != selectCategory_title.getAttribute('data-description'))
         ) {
       placeAlert.classList.add("act");
@@ -174,7 +197,7 @@ for (let i = 0; i < selectCategory_labels.length; i++) {
 const selectEquip_title = selectEquip.querySelector('.__select__title');
 const selectEquip_labels = selectEquip.querySelectorAll('.__select__label');
 const selectEquip_arrow = selectEquip_title.querySelector('.__select__arrow');
-const textChosenEquip = selectEquip.querySelector('.textChosen'); 
+const textChosenEquip = selectEquip.querySelector('.textChosen');
 // Toggle menu
 selectEquip_title.addEventListener('click', () => {
   if ('active' === selectEquip.getAttribute('data-state')) {
@@ -188,7 +211,6 @@ selectEquip_title.addEventListener('click', () => {
   if (textChosenEquip.textContent === selectEquip_title.getAttribute('data-default')) {
     textChosenEquip.classList.remove("act");
     }
-  
 
 });
 

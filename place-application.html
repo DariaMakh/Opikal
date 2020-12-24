@@ -40,24 +40,24 @@
                                 <img src="images/nav-icon-1.png" alt="">
                             </a>
                         </div>
-        
+
                         <div class="nav__icons_notification">
                             <a href="#">
                                 <img src="images/nav-icon-2.png" alt="">
                             </a>
                         </div>
-        
+
                         <div class="nav__icons_like">
                             <a href="#"><img src="images/nav-icon-3.png" alt=""><span>1</span></a>
                         </div>
-        
+
                         <div class="nav__icons_account">
                             <a href="customer.html"><img src="images/nav-icon-4.png" alt=""></a>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <a href="#" class="btn-red">Разместить заявку</a>
         </nav>
 
@@ -90,7 +90,7 @@
                                     <li class="step"><a> Технические, коммерческие и иные требования</a></li>
                                 </ul>
                             </div>
-                            
+
                             <!-- One "tab" for each step in the form: -->
                             <div class="tab tab1">
                                 <div class="place_left">
@@ -157,20 +157,26 @@
                                 </div>
                                 <div class="place_right">
                                     <div class="place__alert">
-                                        <div class="__alert__title"> 
+                                        <div class="__alert__title">
                                             <p>Обратите внимание:</p>
                                         </div>
                                         <div class="__alert__message">
                                             <p>
-                                                Если среди представленного перечня оборудования Вы не нашли оборудование, которое Вам требуется, <a href="#">оставьте заявку</a> службе поддержки площадки.
+                                                Если среди представленного перечня оборудования Вы не нашли оборудование, которое Вам требуется, <a id="openChat" href="#">оставьте заявку</a> службе поддержки площадки.
                                                 Наши специалисты проанализируют к какой категории или типу может относиться Ваше оборудованиеи в случае, если оно окажется уникальным, мы зарегистрируем данное оборужование на площадке и поможем найти потенциальных поставщиков.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="place__chat" id="place__chat">
+                                    <div class="chat__area">Тут будет чатик</div>
+                                    <div id="place__chat-close" class="place__chat-close">
+                                        <a>Закрыть</a><a class="close"></a>
+                                    </div>
 
+                                </div>
                             </div>
-                            
+
                             <div class="tab tab2">
 
                                 <div class="__select__status" data-state="">
@@ -205,7 +211,7 @@
                                 </div>
 
                             </div>
-                            
+
                             <div class="tab tab3">
 
                                 <div class="place_left">
@@ -242,12 +248,12 @@
                                 </div>
                                 <div class="place_right act">
                                     <div class="place__alert">
-                                        <div class="__alert__title"> 
+                                        <div class="__alert__title">
                                             <p>Обратите внимание:</p>
                                         </div>
                                         <div class="__alert__message">
                                             <p>
-                                                Укажите цель своего запроса. 
+                                                Укажите цель своего запроса.
                                                 Так поставщикам будет легче предложить вам именно то, что вы ищете. А если выбрали дргуое, то укажите цель запроса самостоятельно.
                                             </p>
                                         </div>
@@ -255,27 +261,27 @@
                                 </div>
 
                             </div>
-                            
+
                             <div class="tab tab4" id="tab4">
                                 <div class="place__addresss">
                                     <div class="address__row">
                                         <div class="row__title">
                                             <p> Страна нахождения объекта </p>
                                         </div>
-                                        <div class="row__input"> 
+                                        <div class="row__input">
                                             <div class="country__select">
                                                 <div class="__select__title" data-default="Другая" data-description="0"><p class="textChosen act">Другая</p><span class="__select__arrow act"></span></div>
                                                 <div class="__select__content">
-        
+
                                                     <input id="selectCountry0" class="__select__input"  type="radio" value="0" name="selectCountry" />
                                                     <label for="selectCountry0"class="__select__label"><p>Другая</p></label>
-        
+
                                                     <input id="selectCountry1" class="__select__input"  type="radio" value="1" name="selectCountry" />
                                                     <label for="selectCountry1" class="__select__label"><p>Россия</p></label>
-    
+
                                                     <input id="selectCountry2" class="__select__input"  type="radio" value="2" name="selectCountry" />
                                                     <label for="selectCountry2" class="__select__label"><p>Япония</p></label>
-    
+
                                                 </div>
                                             </div>
                                             <div class="country__input act">
@@ -289,7 +295,7 @@
                                         <div class="row__title">
                                             <p> Название объекта </p>
                                         </div>
-                                        <div class="row__input"> 
+                                        <div class="row__input">
                                             <p>
                                                 <input class='__select__title' placeholder="Указать" oninput="this.className = '__select__title'">
                                             </p>
@@ -299,7 +305,7 @@
                                         <div class="row__title">
                                             <p> Адрес нахождения объекта </p>
                                         </div>
-                                        <div class="row__input"> 
+                                        <div class="row__input">
                                             <p>
                                                 <input class='__select__title' placeholder="Укажите населенный пункт" oninput="this.className = '__select__title'">
                                             </p>
@@ -315,7 +321,7 @@
                                                 <div class="row__title">
                                                     <p class="title_change"> Контактное лицо (основное) </p>
                                                 </div>
-                                                <div class="row__input"> 
+                                                <div class="row__input">
                                                     <p>
                                                         <input class='__select__title' placeholder="Указать" name="name" oninput="this.className = '__select__title'">
                                                     </p>
@@ -325,7 +331,7 @@
                                                 <div class="row__title">
                                                     <p> Телефон </p>
                                                 </div>
-                                                <div class="row__input"> 
+                                                <div class="row__input">
                                                     <p>
                                                         <input class='mask-phone __select__title' placeholder="+7" name="phone" oninput="this.className = '__select__title'">
                                                     </p>
@@ -335,7 +341,7 @@
                                                 <div class="row__title">
                                                     <p> Должность </p>
                                                 </div>
-                                                <div class="row__input"> 
+                                                <div class="row__input">
                                                     <p>
                                                         <input class='__select__title' placeholder="Указать" name="position" oninput="this.className = '__select__title'">
                                                     </p>
@@ -345,7 +351,7 @@
                                                 <div class="row__title">
                                                     <p> Почта </p>
                                                 </div>
-                                                <div class="row__input"> 
+                                                <div class="row__input">
                                                     <p>
                                                         <input class=' __select__title' type="email" placeholder="Ваша почта @" name="email" oninput="this.className = '__select__title'">
                                                     </p>
@@ -355,7 +361,7 @@
                                                 <div class="row__title">
                                                     <p class="duties"> За что отвечает </p>
                                                 </div>
-                                                <div class="row__input"> 
+                                                <div class="row__input">
                                                     <p>
                                                         <input class='__select__title' placeholder="За что отвечает" name="duties" oninput="this.className = '__select__title'">
                                                     </p>
@@ -363,9 +369,9 @@
                                             </div>
                                         </div>
                                         <div id="form__button_contact-main" class="place-form__button show">
-                                            <button type="button" id="prevBtn" onclick="nextPrev(-1)"> Назад </button>
+                                            <button type="button" id="prevBtn2" onclick="nextPrev(-1)"> Назад </button>
                                             <button type="button" id="addContact" onclick="addContactInfo(1, this.id)"> Добавить контакт </button>
-                                            <button type="button" id="nextBtn" onclick="nextPrev(1)"> Продолжить </button>
+                                            <button type="button" id="nextBtn2" onclick="nextPrev(1)"> Продолжить </button>
                                         </div>
                                         <div id="form__button_contact-more" class="place-form__button hide">
                                             <button type="button" id="addContact" onclick="addContactInfo(1, this.id)"> Добавить контакт </button>
@@ -384,7 +390,7 @@
                                                 <div class="row__title">
                                                     <p class="title_change"> СКРЫТЫЙ КОНТАКТ-ШАБЛОН </p>
                                                 </div>
-                                                <div class="row__input"> 
+                                                <div class="row__input">
                                                     <p>
                                                         <input class='__select__title' placeholder="Указать" name="name" oninput="this.className = '__select__title'">
                                                     </p>
@@ -394,7 +400,7 @@
                                                 <div class="row__title">
                                                     <p> Телефон </p>
                                                 </div>
-                                                <div class="row__input"> 
+                                                <div class="row__input">
                                                     <p>
                                                         <input class='mask-phone __select__title' placeholder="+7" name="phone" oninput="this.className = '__select__title'">
                                                     </p>
@@ -404,7 +410,7 @@
                                                 <div class="row__title">
                                                     <p> Должность </p>
                                                 </div>
-                                                <div class="row__input"> 
+                                                <div class="row__input">
                                                     <p>
                                                         <input class='__select__title' placeholder="Указать" name="position" oninput="this.className = '__select__title'">
                                                     </p>
@@ -414,7 +420,7 @@
                                                 <div class="row__title">
                                                     <p> Почта </p>
                                                 </div>
-                                                <div class="row__input"> 
+                                                <div class="row__input">
                                                     <p>
                                                         <input class=' __select__title' type="email" placeholder="Ваша почта @" name="email" oninput="this.className = '__select__title'">
                                                     </p>
@@ -424,7 +430,7 @@
                                                 <div class="row__title">
                                                     <p class="duties"> За что отвечает </p>
                                                 </div>
-                                                <div class="row__input"> 
+                                                <div class="row__input">
                                                     <p>
                                                         <input class='__select__title' placeholder="За что отвечает" name="duties" oninput="this.className = '__select__title'">
                                                     </p>
@@ -433,9 +439,9 @@
                                         </div>
                                         <div class="place-form__button long">
                                             <a id="delContact" onclick="addContactInfo(-1, this.id)" href="#" class="close"></a>
-                                            <button type="button" id="prevBtn" onclick="nextPrev(-1)"> Назад </button>
+                                            <button type="button" id="prevBtn2" onclick="nextPrev(-1)"> Назад </button>
                                             <button type="button" id="addContact" onclick="addContactInfo(1, this.id)"> Добавить контакт </button>
-                                            <button type="button" id="nextBtn" onclick="nextPrev(1)"> Продолжить </button>
+                                            <button type="button" id="nextBtn2" onclick="nextPrev(1)"> Продолжить </button>
                                         </div>
                                         <div class="place-form__button short">
                                             <a id="delContact" onclick="addContactInfo(-1, this.id)" href="#" class="close"></a>
@@ -443,7 +449,7 @@
                                         </div>
 
                                     </div>
-                                    
+
                                 </div>
                             </div>
 
@@ -451,7 +457,7 @@
                                 <div class="place__task">
                                     <div class="task__block">
                                         <div class="task__row">
-                                            <div class="row__input"> 
+                                            <div class="row__input">
                                                 <h2 class="place__title">ТЕМА ЗАПРОСА</h2>
                                                 <p>
                                                     <input class='__select__title' placeholder="Напишите, что именно Вы ищите" name="name" oninput="this.className = '__select__title'">
@@ -493,7 +499,7 @@
                                                 <p>Прикрепить файл</p>
                                             </label>
                                         </div>
-                
+
                                         <div class="upload-doc">
                                             <div class="profile__upload-label">
                                                 Вы прикрепили:
@@ -528,7 +534,7 @@
                                                 </ul>
                                             </div>
                                             <div class="poll__action">
-                                                <button type="button" id="" onclick="fillPoll(n)">Заполнить</button>
+                                                <button type="button" id="newby" onclick="fillPoll(this.id)">Заполнить</button>
                                             </div>
                                         </div>
                                         <div class="task__poll">
@@ -546,7 +552,7 @@
                                                 </ul>
                                             </div>
                                             <div class="poll__action">
-                                                <button type="button" id="" onclick="fillPoll(n)">Заполнить</button>
+                                                <button type="button" id="expert" onclick="fillPoll(this.id)">Заполнить</button>
                                             </div>
                                         </div>
                                         <div class="task__poll">
@@ -564,7 +570,7 @@
                                                 </ul>
                                             </div>
                                             <div class="poll__action">
-                                                <button type="button" id="" onclick="fillPoll(n)">Заполнить</button>
+                                                <button type="button" id="tender" onclick="fillPoll(this.id)">Заполнить</button>
                                             </div>
                                         </div>
                                         <div id="notice__poll" class="notice__message">
@@ -592,7 +598,7 @@
                     </div>
                     <div id="place__alert__popup" class="popup">
                         <div class="place__alert">
-                            <div class="__alert__title"> 
+                            <div class="__alert__title">
                                 <p>Обратите внимание:</p>
                             </div>
                             <div class="__alert__message">
@@ -603,6 +609,20 @@
                         </div>
                         <a id="place__alert__popup-close" href="#" class="close"></a>
 
+                    </div>
+                    <div class="edit-poll__nav">
+                        <div class="edit-poll__item">
+                            <button type="button" class="editPollBtn" > Опросный лист №1 </button>
+                            <button type="button" class="closePollBtn close" >  </button>
+                        </div>
+                        <div class="edit-poll__item">
+                            <button type="button" class="editPollBtn" > Опросный лист №2 </button>
+                            <button type="button" class="closePollBtn close" >  </button>
+                        </div>
+                        <div class="edit-poll__item">
+                            <button type="button" class="editPollBtn" > Опросный лист №3 </button>
+                            <button type="button" class="closePollBtn close" >  </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -640,7 +660,7 @@
             <div class="footer__row">
                 <div class="footer__left">
                     <p>
-                        © 2006—2019, ООО «ОПИКАЛ». ВСЕ ПРАВА ЗАЩИЩЕНЫ. 
+                        © 2006—2020, ООО «ОПИКАЛ». ВСЕ ПРАВА ЗАЩИЩЕНЫ.
                     </p>
                 </div>
             </div>
@@ -648,7 +668,7 @@
             <div class="footer__row">
                 <div class="footer__left">
                     <p>
-                        ИНН: 7702775114, КПП: 770901001,ТЕЛ.: +7 (495) 120-30-13      ООО «МЕРКУРИЙ ФИТНЕС», ИНН: 7703453536, КПП: 770301001, ТЕЛ: +7(495) 540-30-30 . 
+                        ИНН: 7702775114, КПП: 770901001,ТЕЛ.: +7 (495) 120-30-13      ООО «МЕРКУРИЙ ФИТНЕС», ИНН: 7703453536, КПП: 770301001, ТЕЛ: +7(495) 540-30-30 .
                     </p>
                 </div>
 
@@ -666,9 +686,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="js/jquery.maskedinput.js"></script>
     <script src="js/masks.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/slick.min.js"></script> -->
+    <!-- <script src="js/script.js"></script> -->
     <script src="js/form.js"></script>
-      
+
 </body>
 </html>
