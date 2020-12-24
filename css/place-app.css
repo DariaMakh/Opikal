@@ -120,6 +120,7 @@
 }
 .place-app__content {
     padding-top: 15px;
+    position: relative;
 }
 
 .form__steps {
@@ -364,25 +365,29 @@ background-color: #d8093a;
 
 }
 #nextBtn,
+#nextBtn2,
 .option__btn {
     border: 1px solid black;
     background-color: #ff0000;
     color: white;
 }
 #nextBtn:hover,
+#nextBtn2:hover,
 .option__btn:hover,
 .poll__action button:hover {
     border: 2px solid  #ff0000;
     background-color: white;
     color:  #ff0000;
 }
-#prevBtn {
+#prevBtn,
+#prevBtn2  {
     border: 2px solid black;
     background-color: white;
     color: black;
     margin-right: 30px;
 }
-#prevBtn:hover {
+#prevBtn:hover,
+#prevBtn2:hover  {
     background-color: black;
     color: white;
 }
@@ -759,6 +764,53 @@ p.duties {
     background: url(/images/check.png) no-repeat;
     padding-bottom: 10px;
     font-size: 18px;
+}
+.edit-poll__nav {
+    display: block;
+    position: absolute;
+    right: -205px;
+    bottom: 100px;
+    width: 230px;
+    height: auto;
+}
+.edit-poll__item {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: gray;
+    margin-bottom: 5px;
+    position: relative;
+}
+.edit-poll__item button{
+    color: white;
+    background-color: grey;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.editPollBtn {
+    width: 80%;
+    height: 100%;
+}
+.editPollBtn::before {
+    content: "";
+    background: url(/images/edit.png) no-repeat;
+    width: 15px;
+    height: 15px;
+    padding-left: 25px;
+}
+.closePollBtn {
+    width: 20px;
+    height: 20px;
+    top: 5px;
+}
+.closePollBtn:before, .closePollBtn:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 20px;
+    width: 4px;
+    background-color: white;
 }
 
 .poll__action {
