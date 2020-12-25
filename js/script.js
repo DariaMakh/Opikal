@@ -264,71 +264,42 @@ var showGallery = (function () {
 document.getElementById('gallery').addEventListener("DOMContentLoaded", showGallery, false);
 */
 
+// --------- VALIDATION ---------
 
 $(function(){
-  $('.modal-content__inputs_error').hide();
-  $(".btn-reg").click(function() {
-    // validate and process form here
-    $('.modal-content__inputs_error').hide();
-    var name = $("input#name").val();
-    if (name == "") {
-      $(".modal-content__inputs_error").show();
-      $("input#name").css("border-color", "#ff0000");
-      $("input#name").focus();
-      return false;
-    }
-    /*
-    var email = $("input#email").val();
-    if (email == "") {
-      $(".email-c").css("border-color", "#ff0000");
-      $(".modal-content__inputs_error").show();
-      $("input#email").focus();
-      return false;
-    }
-    var psw = $("input#password").val();
-    if (psw == "") {
-      $(".psw-c").css("border-color", "#ff0000");
-      $(".modal-content__inputs_error").show();
-      $("inputpassword").focus();
-      return false;
-    } 
-    */
-  });
-});
-
-/*
-$('form[id="reg-p"]').validate({
-    rules: {
-      name: 'required',
-      email: {
+  $('#reg-c').validate({
+    rules:{
+      email:{
         required: true,
         email: true,
       },
-      password: {
+      name: {
         required: true,
-        minlength: 8,
+        minlength: 3,
       },
-      tel: {
+      password:{
         required: true,
-        minlength: 11,
-        maxlength: 11,
+        minlength: 6,
       },
-      inn: 'required',
-      org_name: 'required',
-    },
-    messages: {
-      name: 'Введите имя',
-      email: 'Адрес эл. почты введен не корректно',
-      tel: 'Введите телефон корректно',
-      inn: 'Введите ИНН',
-      org_name: 'Введите название организации',
-      password: {
-        minlength: 'Пароль должен содержать не менее 8 символов'
+      agree_с:{
+        required: true,
       }
     },
-    submitHandler: function(form) {
-      form.submit();
+    messages:{
+      email:{
+        required: '<div class="modal-content__inputs_error">введите почту</div>',
+      },
+      name:{
+        required: '<div class="modal-content__inputs_error">введите имя</div>',
+        minlength: "минимальная длина 6",
+      },
+      password:{
+        required: '<div class="modal-content__inputs_error">введите пароль</div>',
+        minlength: "минимальная длина 6",
+      },
+      agree_с:{
+        required: 'примите соглашение'
+      }
     }
   });
-
-  */
+});
