@@ -281,9 +281,9 @@ $(function(){
         required: true,
         minlength: 6,
       },
-      agree_с:{
-        required: true,
-      }
+//      agree_с:{
+//      required: true,
+//      }
     },
     messages:{
       email:{
@@ -297,9 +297,9 @@ $(function(){
         required: '<div class="modal-content__inputs_error">введите пароль</div>',
         minlength: "минимальная длина 6",
       },
-      agree_с:{
-        required: 'примите соглашение'
-      }
+//      agree_с:{
+//        required: 'примите соглашение'
+//    }
     }
   });
 });
