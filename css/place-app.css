@@ -88,7 +88,8 @@
     border-top: 1px solid rgb(225, 225, 225);
     background: url(../images/application-bg.jpg) 100% 100% no-repeat;
     background-position: top;
-    max-width: 1600px;
+    background-size: cover;
+    width: 100%;
     margin: 0 auto;
 }
 .place_left {

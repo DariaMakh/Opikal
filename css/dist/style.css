@@ -1088,7 +1088,7 @@ input[type=search]::-webkit-search-results-decoration {
   border-color: #ff0000;
 }
 .input.valid {
-  border-color: #2ecc71;
+  border-color: #169F13;
 }
 
 .placeholder {
@@ -1987,7 +1987,7 @@ input[type=search]::-webkit-search-results-decoration {
   width: 100%;
   border: 0;
   border-bottom: 2px solid #060606;
-  background-color: #fff;
+  background: transparent;
   cursor: pointer;
   font-size: 18px;
   font-family: "FuturaBookC";
@@ -1997,10 +1997,6 @@ input[type=search]::-webkit-search-results-decoration {
   background-repeat: no-repeat;
   background-position: right 0 top 50%, 0 0;
   background-size: 0.65em auto, 100%;
-}
-.select__header:hover {
-  background-color: #fff;
-  color: #ff0000;
 }
 .select__body {
   display: none;

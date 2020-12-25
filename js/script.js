@@ -105,6 +105,13 @@ if ($('.modal-content__inputs .input').length > 0) {
 	});
 }
 
+// --------- NAME OF PDF FILE AFTER UPLOADED IN PROFILE ---------
+
+$('.input-upload_doc').on('change', function() {
+  var splittedFakePath = this.value.split('\\');
+  $('.upload-doc__file-name').text(splittedFakePath[splittedFakePath.length - 1]);
+});
+
 // --------- NAME OF PICTURE AFTER UPLOADED ---------
 
 function uploadImg(){
@@ -126,15 +133,46 @@ function uploadImg(){
     });
 };
 
-// --------- NAME OF PDF FILE AFTER UPLOADED IN PROFILE ---------
-
-$('.input-upload_doc').on('change', function() {
-    var splittedFakePath = this.value.split('\\');
-    $('.upload-doc__file-name').text(splittedFakePath[splittedFakePath.length - 1]);
-});
-
 document.addEventListener("DOMContentLoaded", uploadImg);
 
+// --------- GALLERY OF PICTURES ---------
+/*
+var showGallery = (function () {
+  var fr = new FileReader,
+      i = 0,
+      files, file;
+  
+  fr.onload = function (e) {
+      var li, span;
+      if (file.type.match('image.*')) {
+          li = document.createElement('li');
+          li.classList.add('gallery-list__item');
+          li.innerHTML = "<img src='" + e.target.result + "'><span class=\"delete\"></span>";
+          document.getElementById('gallery-list').appendChild(li);
+      }
+          file = files[++i];
+          if (file) {
+              fr.readAsDataURL(file)
+          } else {
+              i = 0;
+          }
+  }
+  
+  return function (e) {
+      files = e.target.files;
+      file = files[i];
+      if (files) {
+          while (i < files.length && !file.type.match('image.*')) {
+              file = files[++i];
+          }
+          if (file) fr.readAsDataURL(files[i])
+      }
+  }
+
+});
+
+document.getElementById('gallery').addEventListener("DOMContentLoaded", showGallery, false);
+*/
 
 // --------- TABS ---------
 
@@ -222,47 +260,6 @@ $(function() {
 	});
 	$("#datepicker-2").datepicker("setDate", $('#datepicker_value').val());
 });
- 
-/*
-
-// --------- GALLERY OF PICTURES ---------
-
-var showGallery = (function () {
-    var fr = new FileReader,
-        i = 0,
-        files, file;
-    
-    fr.onload = function (e) {
-        var li, span;
-        if (file.type.match('image.*')) {
-            li = document.createElement('li');
-            li.classList.add('gallery-list__item');
-            li.innerHTML = "<img src='" + e.target.result + "'><span class=\"delete\"></span>";
-            document.getElementById('gallery-list').appendChild(li);
-        }
-            file = files[++i];
-            if (file) {
-                fr.readAsDataURL(file)
-            } else {
-                i = 0;
-            }
-    }
-    
-    return function (e) {
-        files = e.target.files;
-        file = files[i];
-        if (files) {
-            while (i < files.length && !file.type.match('image.*')) {
-                file = files[++i];
-            }
-            if (file) fr.readAsDataURL(files[i])
-        }
-    }
- 
-})()
- 
-document.getElementById('gallery').addEventListener("DOMContentLoaded", showGallery, false);
-*/
 
 // --------- VALIDATION ---------
 
@@ -303,3 +300,47 @@ $(function(){
     }
   });
 });
+
+/**********************Category**************************/
+
+const selectCategory = document.querySelector('.__select__category');
+const selectCategory_title = selectCategory.querySelector('.__select__title');
+const selectCategory_labels = selectCategory.querySelectorAll('.__select__label');
+const selectCategory_arrow = selectCategory_title.querySelector('.__select__arrow');
+const textChosen = selectCategory.querySelector('.textChosen');
+const placeAlert = document.querySelector('.tab1 .place_right');
+const placeNotice = document.querySelector('.place__notice');
+
+const selectEquip = document.querySelector('.__select__equipment');
+const selectCheckbox = document.querySelector('.__select__checkbox');
+
+// Toggle menu
+selectCategory_title.addEventListener('click', () => {
+  if ('active' === selectCategory.getAttribute('data-state')) {
+    selectCategory.setAttribute('data-state', '');
+    selectCategory_arrow.classList.add("act");
+
+  } else {
+    selectCategory.setAttribute('data-state', 'active');
+    selectCategory_arrow.classList.remove("act");
+  }
+  if (textChosen.textContent === selectCategory_title.getAttribute('data-default')) {
+      textChosen.classList.remove("act");
+    }
+
+});
+
+// Close when click to option
+for (let i = 0; i < selectCategory_labels.length; i++) {
+  selectCategory_labels[i].addEventListener('click', (evt) => {
+
+    textChosen.textContent = evt.target.textContent;
+    textChosen.classList.toggle("act");
+    textChosen.classList.remove("inact");
+    selectCategory_title.setAttribute('data-description', i);
+    selectCategory_title.classList.remove("invalid");
+    //placeNotice.classList.remove("act");
+    selectCategory.setAttribute('data-state', '');
+    selectCategory_arrow.classList.add("act");
+  });
+}
