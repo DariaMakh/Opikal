@@ -263,6 +263,8 @@ $(function() {
 
 // --------- VALIDATION ---------
 
+//    customer
+
 $(function(){
   $('#reg-c').validate({
     rules:{
@@ -278,9 +280,6 @@ $(function(){
         required: true,
         minlength: 6,
       },
-//      agree_с:{
-//      required: true,
-//      }
     },
     messages:{
       email:{
@@ -294,9 +293,61 @@ $(function(){
         required: '<div class="modal-content__inputs_error">введите пароль</div>',
         minlength: "минимальная длина 6",
       },
-//      agree_с:{
-//        required: 'примите соглашение'
-//    }
+    }
+  });
+});
+
+//    provisioner
+
+$(function(){
+  $('#reg-p').validate({
+    rules:{
+      email:{
+        required: true,
+        email: true,
+      },
+      name: {
+        required: true,
+        minlength: 3,
+      },
+      password:{
+        required: true,
+        minlength: 6,
+      },
+      tel:{
+        required: true,
+        minlength: 11,
+        maxlength: 11,
+      },
+      inn:{
+        required: true,
+        minlength: 6,
+      },
+      org_name:{
+        required: true,
+      },
+    },
+    messages:{
+      email:{
+        required: '<div class="modal-content__inputs_error">введите почту</div>',
+      },
+      name:{
+        required: '<div class="modal-content__inputs_error">введите имя</div>',
+        minlength: "минимальная длина 3",
+      },
+      password:{
+        required: '<div class="modal-content__inputs_error">введите пароль</div>',
+        minlength: "минимальная длина 6",
+      },
+      tel:{
+        required: '<div class="modal-content__inputs_error">введите телефон</div>',
+      },
+      inn:{
+        required: '<div class="modal-content__inputs_error">введите инн</div>',
+      },
+      org_name:{
+        required: '<div class="modal-content__inputs_error textarea_error">введите название организации</div>',
+      },
     }
   });
 });

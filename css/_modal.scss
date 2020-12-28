@@ -46,13 +46,14 @@ $font2: "FuturaBookDemiC";
             &_error{
                 position: absolute;
                 right: 0;
-                bottom: -2px;
+                bottom: 0;
                 transform: translateY(100%);
                 padding: 6px 36px;
                 background-color: $red;
                 color: #fff;
                 font-weight: 500;
                 font-size: 12px;
+                z-index: 2;
             }
         }
         &__btn{
@@ -305,10 +306,10 @@ $font2: "FuturaBookDemiC";
 }
 
 .textarea{
-    margin-top: 0;
+    margin-top: 4px;
     padding-top: 30px;
     padding-left: 18px;
-    height: 94px;
+    height: 90px;
     background: #f2f2f2;
     border: 0;
     font-family: inherit;
@@ -323,6 +324,7 @@ $font2: "FuturaBookDemiC";
     letter-spacing: normal;
     outline: 0;
     resize: none;
+    border: 1px solid transparent;
     &-placeholder{
         position: absolute;
         left: 18px;
@@ -336,6 +338,9 @@ $font2: "FuturaBookDemiC";
         span{
             color: $red;
         }
+    }
+    &_error{
+        bottom: 4px;
     }
 }
 
