@@ -15,6 +15,14 @@
             width: 315px;
         }
     }
+    .card{
+        &__gallery{
+            &_item{
+                width: 31%;
+                height: auto;
+            }
+        }
+    }
 }
 
 @media (max-width: 1235px){
@@ -43,6 +51,13 @@
         &__logo{
             width: 180px;
         }
+    }
+    .card{
+        &__right{
+            width: calc(100% - 250px);
+            padding-left: 50px;
+        }
+        
     }
 }
 
@@ -144,6 +159,14 @@
             margin-right: 10px;
         }
     }
+    .card{
+        &__block{
+            margin-bottom: 10px;
+        }
+        &__box{
+            margin-top: 30px;
+        }
+    }
 }
 
 @media (max-width: 960px){
@@ -200,6 +223,19 @@
     }
     .row{
         justify-content: space-between;
+    }
+    .card{
+        &__gallery{
+            &_item{
+                width: 48%;
+            }
+        }
+        &__list{
+            margin-bottom: 20px;
+        }
+        &__box{
+            margin-top: 20px;
+        }
     }
 }
 
@@ -271,6 +307,36 @@
     }
     .footer__row:first-child{
         padding-bottom: 45px;
+    }
+    .card{
+        &__content{
+            flex-direction: column;
+            justify-content: initial;
+        }
+        &__left{
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        &__img{
+            width: 250px;
+            margin: 0 70px 35px 0;
+        }
+        &__btns{
+            width: 250px;
+            a{
+                margin-bottom: 30px;
+            }
+        }
+        &__right{
+            padding-left: 0;
+            padding-top: 20px;
+            width: 100%;
+        }
+        &__gallery{
+            margin-top: 30px;
+            padding-bottom: 40px;
+        }
     }
 }
 
@@ -439,6 +505,20 @@
     }
     .mess__link, .btn, .btn-red, .btn-black, .btn-black_2, .btn-white, .btn-filter, .btn-search, .btn-add {
         font-size: 20px;
+    }
+    .card{
+        &__img{
+            width: 200px;
+            margin: 0 20px 20px 0;
+        }
+        &__btns{
+            width: calc(100% - 290px);
+        }
+        &__gallery{
+            &_item{
+                width: 100%;
+            }
+        }
     }
     .footer{
         padding: 40px 0;

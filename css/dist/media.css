@@ -10,6 +10,11 @@
   .nav__row {
     width: 315px;
   }
+
+  .card__gallery_item {
+    width: 31%;
+    height: auto;
+  }
 }
 @media (max-width: 1235px) {
   .nav__icons {
@@ -33,6 +38,11 @@
   }
   .nav__logo {
     width: 180px;
+  }
+
+  .card__right {
+    width: calc(100% - 250px);
+    padding-left: 50px;
   }
 }
 @media (max-width: 1135px) {
@@ -124,6 +134,13 @@
   .box__notification {
     margin-right: 10px;
   }
+
+  .card__block {
+    margin-bottom: 10px;
+  }
+  .card__box {
+    margin-top: 30px;
+  }
 }
 @media (max-width: 960px) {
   .nav {
@@ -181,6 +198,16 @@
 
   .row {
     justify-content: space-between;
+  }
+
+  .card__gallery_item {
+    width: 48%;
+  }
+  .card__list {
+    margin-bottom: 20px;
+  }
+  .card__box {
+    margin-top: 20px;
   }
 }
 @media (max-width: 940px) {
@@ -247,6 +274,35 @@
 
   .footer__row:first-child {
     padding-bottom: 45px;
+  }
+
+  .card__content {
+    flex-direction: column;
+    justify-content: initial;
+  }
+  .card__left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .card__img {
+    width: 250px;
+    margin: 0 70px 35px 0;
+  }
+  .card__btns {
+    width: 250px;
+  }
+  .card__btns a {
+    margin-bottom: 30px;
+  }
+  .card__right {
+    padding-left: 0;
+    padding-top: 20px;
+    width: 100%;
+  }
+  .card__gallery {
+    margin-top: 30px;
+    padding-bottom: 40px;
   }
 }
 @media (max-width: 685px) {
@@ -408,6 +464,17 @@
 
   .mess__link, .btn, .btn-red, .btn-black, .btn-black_2, .btn-white, .btn-filter, .btn-search, .btn-add {
     font-size: 20px;
+  }
+
+  .card__img {
+    width: 200px;
+    margin: 0 20px 20px 0;
+  }
+  .card__btns {
+    width: calc(100% - 290px);
+  }
+  .card__gallery_item {
+    width: 100%;
   }
 
   .footer {

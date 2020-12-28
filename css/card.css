@@ -1,6 +1,6 @@
 .card-bg {
   border-top: 1px solid #e1e1e1;
-  background: url(../../images/application-bg.jpg) 100% 100% no-repeat;
+  background: url(../images/application-bg.jpg) 100% 100% no-repeat;
   background-position: top;
   background-size: cover;
   width: 100%;
@@ -43,16 +43,13 @@
   position: absolute;
   width: 22px;
   height: 25px;
-  left: 32px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-image: url(../../images/pdf-icon.png);
+  background-image: url(../images/pdf-icon.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .card__btns .btn-pdf {
-  padding: 10px 35px 10px 65px;
+  padding: 10px 25px 10px 65px;
 }
 .card__name {
   font-family: FuturaDemiC;
@@ -130,8 +127,7 @@
   margin-bottom: 12px;
 }
 .card__gallery {
-  margin: 70px 0 0 0;
-  padding-bottom: 70px;
+  margin: 70px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
