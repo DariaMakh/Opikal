@@ -9,7 +9,7 @@
     position: relative;
     font-size: 18px;
     color: #141419;
-    width: 100%;
+    width: 100%; 
 }
 .select-styled {
     position: relative;
@@ -43,7 +43,7 @@
     top: 100%;
     right: 0;
     left: 0;
-    z-index: 999;
+    z-index: 3;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -53,8 +53,7 @@
     overflow-y: auto;
     li {
         margin: 0;
-        padding: 12px 0;
-        text-indent: 15px;
+        padding: 12px 15px;
         border-top: 1px solid #ccc;
         &:hover {
           color: #fff;
