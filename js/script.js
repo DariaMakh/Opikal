@@ -355,46 +355,50 @@ $(function(){
   });
 });
 
-/**********************Category**************************/
+// --------- SELECT ---------
 
-const selectCategory = document.querySelector('.__select__category');
-const selectCategory_title = selectCategory.querySelector('.__select__title');
-const selectCategory_labels = selectCategory.querySelectorAll('.__select__label');
-const selectCategory_arrow = selectCategory_title.querySelector('.__select__arrow');
-const textChosen = selectCategory.querySelector('.textChosen');
-const placeAlert = document.querySelector('.tab1 .place_right');
-const placeNotice = document.querySelector('.place__notice');
+$('select').each(function(){
+  var $this = $(this), numberOfOptions = $(this).children('option').length;
 
-const selectEquip = document.querySelector('.__select__equipment');
-const selectCheckbox = document.querySelector('.__select__checkbox');
+  $this.addClass('select-hidden'); 
+  $this.wrap('<div class="select-box"></div>');
+  $this.after('<div class="select-styled"></div>');
 
-// Toggle menu
-selectCategory_title.addEventListener('click', () => {
-  if ('active' === selectCategory.getAttribute('data-state')) {
-    selectCategory.setAttribute('data-state', '');
-    selectCategory_arrow.classList.add("act");
+  var $styledSelect = $this.next('div.select-styled');
+  $styledSelect.text($this.children('option').eq(0).text());
 
-  } else {
-    selectCategory.setAttribute('data-state', 'active');
-    selectCategory_arrow.classList.remove("act");
+  var $list = $('<ul />', {
+      'class': 'select-options'
+  }).insertAfter($styledSelect);
+
+  for (var i = 0; i < numberOfOptions; i++) {
+      $('<li />', {
+          text: $this.children('option').eq(i).text(),
+          rel: $this.children('option').eq(i).val()
+      }).appendTo($list);
   }
-  if (textChosen.textContent === selectCategory_title.getAttribute('data-default')) {
-      textChosen.classList.remove("act");
-    }
+
+  var $listItems = $list.children('li');
+
+  $styledSelect.click(function(e) {
+      e.stopPropagation();
+      $('div.select-styled.active').not(this).each(function(){
+          $(this).removeClass('active').next('ul.select-options').hide();
+      });
+      $(this).toggleClass('active').next('ul.select-options').toggle();
+  });
+
+  $listItems.click(function(e) {
+      e.stopPropagation();
+      $styledSelect.text($(this).text()).removeClass('active');
+      $this.val($(this).attr('rel'));
+      $list.hide();
+      //console.log($this.val());
+  });
+
+  $(document).click(function() {
+      $styledSelect.removeClass('active');
+      $list.hide();
+  });
 
 });
-
-// Close when click to option
-for (let i = 0; i < selectCategory_labels.length; i++) {
-  selectCategory_labels[i].addEventListener('click', (evt) => {
-
-    textChosen.textContent = evt.target.textContent;
-    textChosen.classList.toggle("act");
-    textChosen.classList.remove("inact");
-    selectCategory_title.setAttribute('data-description', i);
-    selectCategory_title.classList.remove("invalid");
-    //placeNotice.classList.remove("act");
-    selectCategory.setAttribute('data-state', '');
-    selectCategory_arrow.classList.add("act");
-  });
-}

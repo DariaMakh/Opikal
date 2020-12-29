@@ -131,56 +131,32 @@
                     <div class="advanced-search">
                         <div class="advanced-search__select select">
 
-                            <div class="__select__category" data-state="">
-                                <!-- без переноса строки для проверки js -->
-                                <div class="__select__title" data-default="Выберите категорию" data-description="">
-                                    <p class="textChosen">Выберите категорию</p><span class="__select__arrow act"></span></div>
-                                <div class="__select__content">
-
-                                    <input id="selectCategory0" class="__select__input"  type="radio" value="0" name="selectCategory" />
-                                    <label for="selectCategory0"class="__select__label"><p>Категория 1</p></label>
-
-                                    <input id="selectCategory1" class="__select__input"  type="radio" value="1" name="selectCategory" />
-                                    <label for="selectCategory1" class="__select__label"><p>Категория 2</p></label>
-
-                                    <input id="selectCategory2" class="__select__input"  type="radio" value="2" name="selectCategory" />
-                                    <label for="selectCategory2" class="__select__label"><p>Категория 3</p></label>
-
-                                    <input id="selectCategory3" class="__select__input"  type="radio" value="3" name="selectCategory" />
-                                    <label for="selectCategory3" class="__select__label"><p>Категория 4</p></label>
-
-                                    <input id="selectCategory4" class="__select__input"  type="radio" value="4" name="selectCategory" />
-                                    <label for="selectCategory4" class="__select__label"><p>Категория 5</p></label>
-
-                                </div>
-
-                            </div>
-
                             <div class="select__box">
-                                <select class="select__header" id="mounth">
-                                    <option class="select__current" value="hide">Выберите категорию</option>
-                                    <option class="select__item" value="item1">категория 1</option>
-                                    <option class="select__item" value="item2">категория 2</option>
-                                    <option class="select__item" value="item3">категория 3</option>
+
+                                <select id="cat1">
+                                    <option value="hide">Выберите категорию</option>
+                                    <option value="категория 1" rel="icon-temperature">категория 1</option>
+                                    <option value="категория 2">категория 2</option>
+                                    <option value="категория 3">категория 3</option>
                                 </select> 
                             </div>
 
                             <div class="select__box">
-                                <select class="select__header" id="mounth">
-                                    <option class="select__current" value="hide">Выберите оборудование</option>
-                                    <option class="select__item" value="item1">категория 1</option>
-                                    <option class="select__item" value="item2">категория 2</option>
-                                    <option class="select__item" value="item3">категория 3</option>
+                                <select id="cat2">
+                                    <option value="hide">Выберите оборудование</option>
+                                    <option value="оборудование 1" rel="icon-temperature">оборудование 1</option>
+                                    <option value="оборудование 2">оборудование 2</option>
+                                    <option value="оборудование 3">оборудование 3</option>
                                 </select>
                             </div>
 
                             <div class="select__box">
-                                <select class="select__header" id="mounth">
-                                    <option class="select__current" value="hide">По ответственному</option>
-                                    <option class="select__item" value="item1">категория 1</option>
-                                    <option class="select__item" value="item2">категория 2</option>
-                                    <option class="select__item" value="item3">категория 3</option>
-                                </select> 
+                                <select id="cat3">
+                                    <option value="hide">По отвественному</option>
+                                    <option value="ответственный 1" rel="icon-temperature">ответственный 1</option>
+                                    <option value="ответственный 2">ответственный 2</option>
+                                    <option value="ответственный 3">ответственный 3</option>
+                                </select>
                             </div>
 
                         </div>
@@ -337,6 +313,9 @@
 <script src="js/lib/slick.min.js"></script>
 <script src="js/lib/jquery-ui.js"></script>
 <script src="js/lib/jquery.validate.js"></script>
+<script src="js/lib/jquery.maskedinput.js"></script>
+<script src="js/masks.js"></script>
+<script src="js/form.js"></script>
 <script src="js/script.js"></script>
 
 </body>
