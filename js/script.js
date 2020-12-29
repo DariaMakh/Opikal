@@ -319,8 +319,8 @@ $(function(){
       },
       tel:{
         required: true,
-        minlength: 11,
-        maxlength: 11,
+        minlength: 10,
+        maxlength: 10,
       },
       inn:{
         required: true,
@@ -344,6 +344,7 @@ $(function(){
       },
       tel:{
         required: '<div class="modal-content__inputs_error">введите телефон</div>',
+        minlength: '',
       },
       inn:{
         required: '<div class="modal-content__inputs_error">введите инн</div>',
