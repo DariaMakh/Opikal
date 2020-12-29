@@ -56,16 +56,19 @@ var select = function(){
 // --------- MODAL ---------
 
 $(".modal-trigger").click(function(e){
-    e.preventDefault();
-    dataModal = $(this).attr("data-modal");
-    $("#" + dataModal).css({"display":"block"});
-    // $("body").css({"overflow-y": "hidden"}); //Prevent double scrollbar.
+  e.preventDefault();
+  dataModal = $(this).attr("data-modal");
+  $("#" + dataModal).fadeIn(300);
+  $(".modal-trigger2").click(function(e){
+      dataModal = $(this).attr("data-modal");
+      $(".modal").hide();
+      $("#" + dataModal).fadeIn(300);
   });
-  
-  $(".modal__close, .modal-sandbox").click(function(){
-    $(".modal").css({"display":"none"});
-    // $("body").css({"overflow-y": "auto"}); //Prevent double scrollbar.
-  });
+});
+
+$(".modal__close, .modal-sandbox").click(function(){
+  $(".modal").hide();
+});
 
 // --------- PLACEHOLDER ---------
 
