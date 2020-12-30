@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/slick/slick.css">
     <link rel="stylesheet" href="css/dist/style.css">
-    <link rel="stylesheet" href="css/dist/jquery-ui.css">
-    <link rel="stylesheet" href="css/dist/style.css">
+    <link rel="stylesheet" href="css/place-app.css">
+    <link rel="stylesheet" href="css/dist/_place-appl.css">
+    <link rel="stylesheet" href="css/dist/card.css">
     <link rel="stylesheet" href="css/dist/media.css">
 
 </head>
@@ -65,7 +66,7 @@
 
 <main>
 
-    <div class="bg place-bg">
+    <div class="bg card">
         <div class="container">
             <div class="row">
                 <div class="breadcrumbs">
@@ -75,276 +76,316 @@
                     <div class="breadcrumbs__item"><a href="#">Поиск заявки</a></div>
                     <div class="breadcrumbs__item"><a href="#">Заявка</a></div>
                 </div>
-            </div>
+            </div> 
             
-            <div class="generated-application__content">
-                <div class="row justify">
-                    <div class="generated-application__title">Заявка</div>
-                    <div class="mess__btns">
-                        <a href="#" class="mess__link" download="">Скачать
-                            <span class="mess__link_1"></span>
-                        </a>
-                        <a href="#" class="mess__link">Распечатать
-                            <span class="mess__link_2"></span>
-                        </a>
+            <div class="row justify">
+                <div class="generated-application__title">Заявка</div>
+                <div class="mess__btns">
+                    <a href="#" class="mess__link" download="">Скачать
+                        <span class="mess__link_1"></span>
+                    </a>
+                    <a href="#" class="mess__link">Распечатать
+                        <span class="mess__link_2"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card__content">
+                <div class="card__left_2">
+                    <div class="card__img_2">
+                        <img src="images/logo/5.jpg" alt="">
+                    </div>
+                    <div class="card__btns">
+                        <a href="#" class="btn-black btn-pdf" download=""><span class="pdf-img pdf-img_2"></span> Скачать реквизиты</a>
                     </div>
                 </div>
 
-                <div class="tabs">
+                <div class="card__right_2">
+                    <div class="card__row">
+                        <div class="box__section">
+                            <div class="label">Размещено:</div>
+                            <span class="box__section_text">16.07.2020</span>
+                        </div>
 
-                    <div class="tab__content tab__content_1">
+                        <div class="box__section">
+                            <div class="label">Номер запроса:</div>
+                            <span class="box__section_text">202</span>
+                        </div>
+                    </div>
 
-                        <div class="tab__content-1 tab__content--active">
-                            <div class="tab_2">
-                                <div data-child="true" class="tab__header tab__header_2">
-                                    <div class="tab__header-1 tab__btn tab__header--active">Техническое задание</div>
-                                    <div class="tab__header-2 tab__btn">Дополнительные требования</div>
-                                    <div class="tab__header-3 tab__btn">Реквизиты</div>
+                    <div class="box__title">
+                        Прошу дать коммерческое предложение на поставку фильтров рукавных для шахматных известе-обжиговых печей
+                    </div>
+                    
+                    <div class="box__equipment">
+                        <a href="#" target="_blank">Газоочистное оборудование</a>
+
+                        <a href="#" target="_blank">Конвейерное оборудование</a>
+                    </div>
+
+                    <div class="card__right_btns">
+                        <a href="#" class="btn-black">Написать заказчику</a>
+                        <a href="#" class="btn-black btn-black-active">Создать предложение</a>
+                        <a href="#" class="btn-red">Перейти в чат</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs">
+
+                <div class="tab__content tab__content_1">
+
+                    <div class="tab__content-1 tab__content--active">
+                        <div class="tab_2">
+                            <div data-child="true" class="tab__header tab__header_2">
+                                <div class="tab__header-1 tab__btn tab__header--active">Техническое задание</div>
+                                <div class="tab__header-2 tab__btn">Дополнительные требования</div>
+                                <div class="tab__header-3 tab__btn">Реквизиты</div>
+                            </div>
+                            <div class="tab__content">
+                                <div class="tab__content-1 stab tab__content--active">
+                                    <div class="generated-application__edit">
+                                        <svg 
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            width="16px" height="16px">
+                                            <image  x="0px" y="0px" width="16px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkDA4OBRwHxuwGAAAA1klEQVQoz22RMU7DQBBFvyOE4gKhUBAhQoIwmC6F74CoyREi5UapQEoTUSK5cxHAnUGy6KiofINUwe4eheV4F++fbt/Mzp8ZIWeckfLCKTqQW5UqzdTTwlU9YckNR8RA4sIp8EXAgIT8Px7zRq2ckBOGNr5gQ6tHPGTicwt/MkVmwmj/eY1v6/fW2ruFg6aw6f1q4IyrtrEQHj7PBr42jYtD5twjVgB8ENqDi2O+KYgQa7LGmpkQUQIFd/hcdhff04P6kn4VqlTRvZrHk7aK9aOdStdZ/wCIqxuyqeREbAAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                    </div>
+                                    
+                                    <div class="stab-box stab-1">
+                                        <div class="stab__right">
+                                            <div class="stab__text-right">
+                                                Категория: <span>Газоочистное и аспирационное оборудование</span>
+                                            </div>
+                                            <div class="stab__text-right">
+                                                Наименование оборудование: <span>Рукавный фильтр</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stab__block">
+                                            <div class="upload-doc">
+                                                <div class="profile__upload-label">
+                                                    Вы прикрепили:
+                                                </div>
+                                                <div class="upload-doc__file">
+                                                    <img src="images/pdf-icon.png" alt="">
+                                                    <p class="upload-doc__file-name">пусто</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="tab__content">
-                                    <div class="tab__content-1 stab tab__content--active">
-                                        <div class="generated-application__edit">
-                                            <svg 
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                width="16px" height="16px">
-                                                <image  x="0px" y="0px" width="16px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkDA4OBRwHxuwGAAAA1klEQVQoz22RMU7DQBBFvyOE4gKhUBAhQoIwmC6F74CoyREi5UapQEoTUSK5cxHAnUGy6KiofINUwe4eheV4F++fbt/Mzp8ZIWeckfLCKTqQW5UqzdTTwlU9YckNR8RA4sIp8EXAgIT8Px7zRq2ckBOGNr5gQ6tHPGTicwt/MkVmwmj/eY1v6/fW2ruFg6aw6f1q4IyrtrEQHj7PBr42jYtD5twjVgB8ENqDi2O+KYgQa7LGmpkQUQIFd/hcdhff04P6kn4VqlTRvZrHk7aK9aOdStdZ/wCIqxuyqeREbAAAAABJRU5ErkJggg==" />
-                                            </svg>
+
+                                <div class="tab__content-2 stab">
+                                    <div class="generated-application__edit">
+                                        <svg 
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            width="16px" height="16px">
+                                            <image  x="0px" y="0px" width="16px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkDA4OBRwHxuwGAAAA1klEQVQoz22RMU7DQBBFvyOE4gKhUBAhQoIwmC6F74CoyREi5UapQEoTUSK5cxHAnUGy6KiofINUwe4eheV4F++fbt/Mzp8ZIWeckfLCKTqQW5UqzdTTwlU9YckNR8RA4sIp8EXAgIT8Px7zRq2ckBOGNr5gQ6tHPGTicwt/MkVmwmj/eY1v6/fW2ruFg6aw6f1q4IyrtrEQHj7PBr42jYtD5twjVgB8ENqDi2O+KYgQa7LGmpkQUQIFd/hcdhff04P6kn4VqlTRvZrHk7aK9aOdStdZ/wCIqxuyqeREbAAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                    </div>
+                                    <div class="stab-box stab-2">
+                                        <div class="stab__right">
+                                            <div class="stab__text-right">
+                                                Категория: <span>Газоочистное и аспирационное оборудование</span>
+                                            </div>
+                                            <div class="stab__text-right">
+                                                Наименование оборудование: <span>Рукавный фильтр</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="scroll-box" id="scroll-style">
+                                            <div class="requisites">
+                                                
+                                                <div class="requisites__additional">
+                                                    
+                                                    <div class="requisites__additional_item">
+                                                        Желателен приезд до проверки обследования
+                                                    </div>
+
+                                                    <div class="requisites__additional_item">
+                                                        Доставка оборудования
+                                                    </div>
+
+                                                    <div class="requisites__additional_item">
+                                                        Пуско-наладка оборудования
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
                                         </div>
                                         
-                                        <div class="stab-box stab-1">
-                                            <div class="stab__right">
-                                                <div class="stab__text-right">
-                                                    Категория: <span>Газоочистное и аспирационное оборудование</span>
-                                                </div>
-                                                <div class="stab__text-right">
-                                                    Наименование оборудование: <span>Рукавный фильтр</span>
-                                                </div>
-                                            </div>
-    
-                                            <div class="stab__block">
-                                                <div class="upload-doc">
-                                                    <div class="profile__upload-label">
-                                                        Вы прикрепили:
-                                                    </div>
-                                                    <div class="upload-doc__file">
-                                                        <img src="images/pdf-icon.png" alt="">
-                                                        <p class="upload-doc__file-name">пусто</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
+                                </div>
 
-                                    <div class="tab__content-2 stab">
-                                        <div class="generated-application__edit">
-                                            <svg 
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                width="16px" height="16px">
-                                                <image  x="0px" y="0px" width="16px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkDA4OBRwHxuwGAAAA1klEQVQoz22RMU7DQBBFvyOE4gKhUBAhQoIwmC6F74CoyREi5UapQEoTUSK5cxHAnUGy6KiofINUwe4eheV4F++fbt/Mzp8ZIWeckfLCKTqQW5UqzdTTwlU9YckNR8RA4sIp8EXAgIT8Px7zRq2ckBOGNr5gQ6tHPGTicwt/MkVmwmj/eY1v6/fW2ruFg6aw6f1q4IyrtrEQHj7PBr42jYtD5twjVgB8ENqDi2O+KYgQa7LGmpkQUQIFd/hcdhff04P6kn4VqlTRvZrHk7aK9aOdStdZ/wCIqxuyqeREbAAAAABJRU5ErkJggg==" />
-                                            </svg>
-                                        </div>
-                                        <div class="stab-box stab-2">
-                                            <div class="stab__right">
-                                                <div class="stab__text-right">
-                                                    Категория: <span>Газоочистное и аспирационное оборудование</span>
-                                                </div>
-                                                <div class="stab__text-right">
-                                                    Наименование оборудование: <span>Рукавный фильтр</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="scroll-box" id="scroll-style">
-                                                <div class="requisites">
-                                                    
-                                                    <div class="requisites__additional">
-                                                        
-                                                        <div class="requisites__additional_item">
-                                                            Желателен приезд до проверки обследования
-                                                        </div>
-
-                                                        <div class="requisites__additional_item">
-                                                            Доставка оборудования
-                                                        </div>
-
-                                                        <div class="requisites__additional_item">
-                                                            Пуско-наладка оборудования
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
+                                <div class="tab__content-3 stab">
+                                    <div class="generated-application__edit">
+                                        <svg 
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            width="16px" height="16px">
+                                            <image  x="0px" y="0px" width="16px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkDA4OBRwHxuwGAAAA1klEQVQoz22RMU7DQBBFvyOE4gKhUBAhQoIwmC6F74CoyREi5UapQEoTUSK5cxHAnUGy6KiofINUwe4eheV4F++fbt/Mzp8ZIWeckfLCKTqQW5UqzdTTwlU9YckNR8RA4sIp8EXAgIT8Px7zRq2ckBOGNr5gQ6tHPGTicwt/MkVmwmj/eY1v6/fW2ruFg6aw6f1q4IyrtrEQHj7PBr42jYtD5twjVgB8ENqDi2O+KYgQa7LGmpkQUQIFd/hcdhff04P6kn4VqlTRvZrHk7aK9aOdStdZ/wCIqxuyqeREbAAAAABJRU5ErkJggg==" />
+                                        </svg>
                                     </div>
-
-                                    <div class="tab__content-3 stab">
-                                        <div class="generated-application__edit">
-                                            <svg 
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                width="16px" height="16px">
-                                                <image  x="0px" y="0px" width="16px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkDA4OBRwHxuwGAAAA1klEQVQoz22RMU7DQBBFvyOE4gKhUBAhQoIwmC6F74CoyREi5UapQEoTUSK5cxHAnUGy6KiofINUwe4eheV4F++fbt/Mzp8ZIWeckfLCKTqQW5UqzdTTwlU9YckNR8RA4sIp8EXAgIT8Px7zRq2ckBOGNr5gQ6tHPGTicwt/MkVmwmj/eY1v6/fW2ruFg6aw6f1q4IyrtrEQHj7PBr42jYtD5twjVgB8ENqDi2O+KYgQa7LGmpkQUQIFd/hcdhff04P6kn4VqlTRvZrHk7aK9aOdStdZ/wCIqxuyqeREbAAAAABJRU5ErkJggg==" />
-                                            </svg>
-                                        </div>
-                                        <div class="stab-box stab-2">
-                                            <div class="stab__right">
-                                                <div class="stab__text-right">
-                                                    Категория: <span>Газоочистное и аспирационное оборудование</span>
-                                                </div>
-                                                <div class="stab__text-right">
-                                                    Наименование оборудование: <span>Рукавный фильтр</span>
-                                                </div>
+                                    <div class="stab-box stab-2">
+                                        <div class="stab__right">
+                                            <div class="stab__text-right">
+                                                Категория: <span>Газоочистное и аспирационное оборудование</span>
                                             </div>
-
-                                            <div class="scroll-box" id="scroll-style">
-                                                <div class="requisites">
-                                                    <div class="requisites__list">
-                                                        <div class="requisites__list_title"></div>
-                                                        <p>
-                                                            <span class='requisites__name'>Категория</span>
-                                                            <span class='requisites__desc'>текст</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Статус организатора</span>
-                                                            <span class='requisites__desc'>текст</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Наименование организатора</span>
-                                                            <span class='requisites__desc'>текст</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Цель запроса</span>
-                                                            <span class='requisites__desc'>текст</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Страна нахождения объекта</span>
-                                                            <span class='requisites__desc'>Москва</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Адрес объекта</span>
-                                                            <span class='requisites__desc'>Санкт-Петербург</span>
-                                                        </p>
-                                                    </div>
-
-                                                    <div class="requisites__list">
-                                                        <div class="requisites__list_title">
-                                                            Контактное лицо (основное)
-                                                        </div>
-                                                        <p>
-                                                            <span class='requisites__name'>Категория</span>
-                                                            <span class='requisites__desc'>текст</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Статус организатора</span>
-                                                            <span class='requisites__desc'>текст</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Наименование организатора</span>
-                                                            <span class='requisites__desc'>текст</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Цель запроса</span>
-                                                            <span class='requisites__desc'>текст</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Страна нахождения объекта</span>
-                                                            <span class='requisites__desc'>Москва</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Адрес объекта</span>
-                                                            <span class='requisites__desc'>Санкт-Петербург</span>
-                                                        </p>
-                                                    </div>
-
-                                                    <div class="requisites__list">
-                                                        <div class="requisites__list_title">
-                                                            Контактное лицо (основное)
-                                                        </div>
-                                                        <p>
-                                                            <span class='requisites__name'>Категория</span>
-                                                            <span class='requisites__desc'>текст</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Статус организатора</span>
-                                                            <span class='requisites__desc'>текст</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Наименование организатора</span>
-                                                            <span class='requisites__desc'>текст</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Цель запроса</span>
-                                                            <span class='requisites__desc'>текст</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Страна нахождения объекта</span>
-                                                            <span class='requisites__desc'>Москва</span>
-                                                        </p>
-
-                                                        <p>
-                                                            <span class='requisites__name'>Адрес объекта</span>
-                                                            <span class='requisites__desc'>Санкт-Петербург</span>
-                                                        </p>
-                                                    </div>
-
-                                                </div>
+                                            <div class="stab__text-right">
+                                                Наименование оборудование: <span>Рукавный фильтр</span>
                                             </div>
-                                            
                                         </div>
+
+                                        <div class="scroll-box" id="scroll-style">
+                                            <div class="requisites">
+                                                <div class="requisites__list">
+                                                    <div class="requisites__list_title"></div>
+                                                    <p>
+                                                        <span class='requisites__name'>Категория</span>
+                                                        <span class='requisites__desc'>текст</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Статус организатора</span>
+                                                        <span class='requisites__desc'>текст</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Наименование организатора</span>
+                                                        <span class='requisites__desc'>текст</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Цель запроса</span>
+                                                        <span class='requisites__desc'>текст</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Страна нахождения объекта</span>
+                                                        <span class='requisites__desc'>Москва</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Адрес объекта</span>
+                                                        <span class='requisites__desc'>Санкт-Петербург</span>
+                                                    </p>
+                                                </div>
+
+                                                <div class="requisites__list">
+                                                    <div class="requisites__list_title">
+                                                        Контактное лицо (основное)
+                                                    </div>
+                                                    <p>
+                                                        <span class='requisites__name'>Категория</span>
+                                                        <span class='requisites__desc'>текст</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Статус организатора</span>
+                                                        <span class='requisites__desc'>текст</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Наименование организатора</span>
+                                                        <span class='requisites__desc'>текст</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Цель запроса</span>
+                                                        <span class='requisites__desc'>текст</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Страна нахождения объекта</span>
+                                                        <span class='requisites__desc'>Москва</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Адрес объекта</span>
+                                                        <span class='requisites__desc'>Санкт-Петербург</span>
+                                                    </p>
+                                                </div>
+
+                                                <div class="requisites__list">
+                                                    <div class="requisites__list_title">
+                                                        Контактное лицо (основное)
+                                                    </div>
+                                                    <p>
+                                                        <span class='requisites__name'>Категория</span>
+                                                        <span class='requisites__desc'>текст</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Статус организатора</span>
+                                                        <span class='requisites__desc'>текст</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Наименование организатора</span>
+                                                        <span class='requisites__desc'>текст</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Цель запроса</span>
+                                                        <span class='requisites__desc'>текст</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Страна нахождения объекта</span>
+                                                        <span class='requisites__desc'>Москва</span>
+                                                    </p>
+
+                                                    <p>
+                                                        <span class='requisites__name'>Адрес объекта</span>
+                                                        <span class='requisites__desc'>Санкт-Петербург</span>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    
+                </div>
+                
+                
+            </div>
+
+            <div class="generated-application__theme">
+                <div class="generated-application__theme_header">
+                    оставить комментарий
                 </div>
 
-                <div class="generated-application__theme">
-                    <div class="generated-application__theme_header">
-                        оставить комментарий
+                <div class="generated-application__theme_text">
+                    <div class="generated-application__edit">
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="16px" height="16px">
+                            <image  x="0px" y="0px" width="16px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkDA4OBRwHxuwGAAAA1klEQVQoz22RMU7DQBBFvyOE4gKhUBAhQoIwmC6F74CoyREi5UapQEoTUSK5cxHAnUGy6KiofINUwe4eheV4F++fbt/Mzp8ZIWeckfLCKTqQW5UqzdTTwlU9YckNR8RA4sIp8EXAgIT8Px7zRq2ckBOGNr5gQ6tHPGTicwt/MkVmwmj/eY1v6/fW2ruFg6aw6f1q4IyrtrEQHj7PBr42jYtD5twjVgB8ENqDi2O+KYgQa7LGmpkQUQIFd/hcdhff04P6kn4VqlTRvZrHk7aK9aOdStdZ/wCIqxuyqeREbAAAAABJRU5ErkJggg==" />
+                        </svg>
                     </div>
-
-                    <div class="generated-application__theme_text">
-                        <div class="generated-application__edit">
-                            <svg 
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                width="16px" height="16px">
-                                <image  x="0px" y="0px" width="16px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkDA4OBRwHxuwGAAAA1klEQVQoz22RMU7DQBBFvyOE4gKhUBAhQoIwmC6F74CoyREi5UapQEoTUSK5cxHAnUGy6KiofINUwe4eheV4F++fbt/Mzp8ZIWeckfLCKTqQW5UqzdTTwlU9YckNR8RA4sIp8EXAgIT8Px7zRq2ckBOGNr5gQ6tHPGTicwt/MkVmwmj/eY1v6/fW2ruFg6aw6f1q4IyrtrEQHj7PBr42jYtD5twjVgB8ENqDi2O+KYgQa7LGmpkQUQIFd/hcdhff04P6kn4VqlTRvZrHk7aK9aOdStdZ/wCIqxuyqeREbAAAAABJRU5ErkJggg==" />
-                            </svg>
-                        </div>
-                        Наша система автоматически оповещает поставщиков о вашей заявке.  Вам больше не нужно тратить время на поиск и обращение
-                        в разные компании. Тут вас найдут и предложат конкурентные цены! Наша система автоматически оповещает поставщиков
-                        о вашей заявке.  Вам больше не нужно тратить время на поиск и обращение в разные компании.
-                        Тут вас найдут и предложат конкурентные цены!
-                    </div>
-                </div>
-
-                <div class="generated-application__btns">
-                    <a href="#" class="btn-black">Назад</a>
-                    <a href="#" class="btn-black btn-black-active">Редактировать</a>
-                    <a href="#" class="btn-red">Опубликовать</a>
-                    <a href="#" class="btn-black">Сохранить как черновик</a>
+                    Наша система автоматически оповещает поставщиков о вашей заявке.  Вам больше не нужно тратить время на поиск и обращение
+                    в разные компании. Тут вас найдут и предложат конкурентные цены! Наша система автоматически оповещает поставщиков
+                    о вашей заявке.  Вам больше не нужно тратить время на поиск и обращение в разные компании.
+                    Тут вас найдут и предложат конкурентные цены!
                 </div>
             </div>
+
+            <div class="generated-application__btns">
+                <a href="#" class="btn-black">Назад</a>
+                <a href="#" class="btn-black btn-black-active">Редактировать</a>
+                <a href="#" class="btn-red">Опубликовать</a>
+                <a href="#" class="btn-black">Сохранить как черновик</a>
+            </div>
+            
         </div>
     </div>
 

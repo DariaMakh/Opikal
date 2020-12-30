@@ -2,7 +2,10 @@
   border-top: 1px solid #e1e1e1;
 }
 .card .breadcrumbs {
-  margin: 0 0 80px 0;
+  margin: 0 0 60px 0;
+}
+.card .justify {
+  margin-bottom: 50px;
 }
 .card__content {
   display: flex;
@@ -11,8 +14,22 @@
 .card__left {
   width: 250px;
 }
+.card__left_2 {
+  width: 350px;
+}
 .card__right {
   width: calc(100% - 250px - 150px);
+}
+.card__right_2 {
+  width: calc(100% - 350px - 60px);
+}
+.card__right_btns {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card__right_btns a {
+  margin-right: 40px;
+  margin-bottom: 10px;
 }
 .card__img {
   width: 100%;
@@ -26,6 +43,23 @@
   overflow: hidden;
   object-fit: cover;
   object-position: center;
+}
+.card__img_2 {
+  width: 100%;
+  height: 226px;
+  margin-bottom: 35px;
+  background-color: #fff;
+  border: 1px solid #959595;
+}
+.card__img_2 img {
+  width: fit-content;
+  height: auto;
+  object-fit: inherit;
+  object-position: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .card__btns {
   width: 100%;
@@ -47,8 +81,14 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.card__btns a .pdf-img_2 {
+  left: 75px;
+}
 .card__btns .btn-pdf {
   padding: 10px 35px 10px 65px;
+}
+.card__btns .btn-black {
+  border: 1px solid #000;
 }
 .card__name {
   font-family: FuturaDemiC;
@@ -142,4 +182,10 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+.card__row {
+  display: flex;
+}
+.card__row .box__section {
+  margin-right: 40px;
 }
