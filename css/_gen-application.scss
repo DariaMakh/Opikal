@@ -23,12 +23,6 @@ $font2: "FuturaBookDemiC";
 }
 
 .generated-application{
-    padding-top: 60px;
-    background-color: #fff;
-    background-image: url(../../images/application-bg.jpg);
-    background-position: top;
-    background-repeat: repeat-y;
-    background-size: cover;
     &__content{
         margin-top: 60px;
     }

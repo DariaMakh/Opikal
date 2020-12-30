@@ -250,6 +250,15 @@ input[type=search]::-webkit-search-results-decoration {
   object-position: center;
 }
 
+.bg {
+  background: url(../../images/application-bg.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: repeat-y;
+  width: 100%;
+  padding-top: 65px;
+}
+
 .breadcrumbs {
   display: flex;
 }
@@ -1306,9 +1315,6 @@ input[type=search]::-webkit-search-results-decoration {
   height: auto;
   padding-top: 50px;
   background-color: #fff;
-  background-image: url(../../images/eq-bg.jpg);
-  background-size: cover;
-  background-position: right;
 }
 .account__row {
   display: flex;
@@ -2226,14 +2232,6 @@ input[type=search]::-webkit-search-results-decoration {
   display: block;
 }
 
-.generated-application {
-  padding-top: 60px;
-  background-color: #fff;
-  background-image: url(../../images/application-bg.jpg);
-  background-position: top;
-  background-repeat: repeat-y;
-  background-size: cover;
-}
 .generated-application__content {
   margin-top: 60px;
 }

@@ -272,6 +272,15 @@ input[type='search']::-webkit-search-results-decoration {
   }
 }
 
+.bg{
+  background: url(../../images/application-bg.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: repeat-y;
+  width: 100%;
+  padding-top: 65px;
+}
+
 @import 'breadcrumbs';
 
 @import 'nav';
