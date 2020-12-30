@@ -152,15 +152,6 @@ input.invalid {
     position: relative;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
-}
-
 .__select__category,
 .__select__equipment,
 .__select__status,

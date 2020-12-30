@@ -21,6 +21,18 @@ $font2: "FuturaBookDemiC";
 
 .list{
     margin-top: 40px;
+    input{
+        width: 100%;
+        margin: 0;
+        height: 43px;
+        font-size: 18px;
+        color: #141419;
+        &::placeholder{
+            font-size: 18px;
+            letter-spacing: -0.45px;
+            color: rgba(20, 20, 25, 0.3);
+        }
+    }
     &__word{
         margin-top: 20px;
         padding: 25px;
@@ -36,9 +48,13 @@ $font2: "FuturaBookDemiC";
         }
     }
     &__text{
-        font-size: 20px;
-        color: rgb(20, 20, 25);
-        line-height: 1.4;
+        font-size: 22px;
+        font-weight: 500;
+        &_2{
+            font-size: 20px;
+            color: rgb(20, 20, 25);
+            line-height: 1.4;
+        }
     }
     &__box{
         position: relative;
@@ -53,26 +69,79 @@ $font2: "FuturaBookDemiC";
                     background-color: #eeeeee;
                     z-index: 0;
                 }
+                .valid{
+                    z-index: 1;
+                }
             }
         &_item{
             padding: 50px 0;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
             position: relative;
             z-index: 1;
-            
+            &_2{
+                padding: 50px 0;
+                display: flex;
+                align-items: baseline;
+                position: relative;
+                z-index: 1;
+                .list__select_2{
+                    margin-left: 27px;
+                }
+            }
         }
-        &_text{
-            font-size: 22px;
-            font-weight: 500;
+        .list__text {
+            width: 640px;
         }
     }
     &__select{
         width: 350px;
-        &_title{
-            font-size: 18px;
-            color: rgba(20, 20, 25, 0.302);
+        &_2{
+            width: 140px;
+        }
+        &_3{
+            width: 350px;
+            padding-left: 45px;
+            input{
+                height: 43px;
+                margin: 0 0 30px 0;
+            }
         }
     }
+    &__additional{
+        margin-top: 10px;
+        .profile__upload {
+            margin: 40px 0 35px 0;
+        }
+    }
+    &__new-eqpm{
+        width: 700px;
+        padding-bottom: 70px;
+        p{
+            font-size: 16.5px;
+            font-weight: 300;
+            line-height: 1.33;
+            letter-spacing: 0.08px;
+            text-align: left;
+            color: #000000;
+            a{
+                color: #ff0000;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.valid{
+    width: 21px;
+    height: 21px;
+    background-image: url(../../images/check-2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -17px;
+    top: 56px;
+    transform: translateX(-100%);
 }
