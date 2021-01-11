@@ -20,7 +20,6 @@ $font2: "FuturaBookDemiC";
 }
 
 .list{
-    margin-top: 40px;
     input{
         width: 100%;
         margin: 0;
@@ -32,6 +31,11 @@ $font2: "FuturaBookDemiC";
             letter-spacing: -0.45px;
             color: rgba(20, 20, 25, 0.3);
         }
+    }
+    &__container{
+        max-width: 1315px;
+        margin: 40px auto 0 auto;
+        padding: 0 15px;
     }
     &__word{
         margin-top: 20px;
@@ -59,36 +63,24 @@ $font2: "FuturaBookDemiC";
     &__box{
         position: relative;
         cursor: pointer;
-        &:hover{
-                .list__box_hover{
-                    position: absolute;
-                    top: 0;
-                    left: -50px;
-                    width: calc(100% + 100px);
-                    height: 100%;
-                    background-color: #eeeeee;
-                    z-index: 0;
-                }
-                .valid{
-                    z-index: 1;
-                }
-            }
+        .valid{
+            z-index: 1;
+        }
         &_item{
-            padding: 50px 0;
+            padding: 50px;
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             position: relative;
-            z-index: 1;
-            &_2{
-                padding: 50px 0;
-                display: flex;
-                align-items: baseline;
-                position: relative;
-                z-index: 1;
+            &-2{
+                padding: 50px;
+                justify-content: initial;
                 .list__select_2{
                     margin-left: 27px;
                 }
+            }
+            &:hover{
+                background-color: #eeeeee;
             }
         }
         .list__text {
@@ -141,7 +133,6 @@ $font2: "FuturaBookDemiC";
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    left: -17px;
-    top: 56px;
-    transform: translateX(-100%);
+    left: 17px;
+    top: 57px;
 }
