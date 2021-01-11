@@ -136,7 +136,7 @@
             }
         }
         &__row{
-            width: 149px;
+            width: fit-content;
         }
     }
     .header{
@@ -427,6 +427,11 @@
     .fav {
         flex-direction: column-reverse;
     }
+    .header{
+        &__box{
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 640px){
@@ -455,8 +460,8 @@
                 margin-top: 60px;
             }
             &_grey-right {
-                top: 47%;
-                height: 55%;
+                top: 50%;
+                height: 50%
             }
         }
         &__form{
@@ -476,6 +481,13 @@
             padding-left: 30px;
             &:before{
                 width: 18px;
+            }
+        }
+        &__btns{
+            width: 100%;
+            justify-content: initial;
+            & a:first-child{
+                margin-right: 30px;
             }
         }
     }
@@ -519,6 +531,9 @@
                 width: 100%;
             }
         }
+    }
+    .customer p, .provisioner p {
+        font-size: 22px;
     }
     .footer{
         padding: 40px 0;

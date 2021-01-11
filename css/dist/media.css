@@ -113,7 +113,7 @@
     font-size: 18px;
   }
   .nav__row {
-    width: 149px;
+    width: fit-content;
   }
 
   .header__content {
@@ -389,6 +389,10 @@
   .fav {
     flex-direction: column-reverse;
   }
+
+  .header__box {
+    width: 100%;
+  }
 }
 @media (max-width: 640px) {
   .rools {
@@ -419,8 +423,8 @@
     margin-top: 60px;
   }
   .possibility__content_grey-right {
-    top: 47%;
-    height: 55%;
+    top: 50%;
+    height: 50%;
   }
   .possibility__form {
     width: 100%;
@@ -440,6 +444,13 @@
   }
   .possibility__list-item:before {
     width: 18px;
+  }
+  .possibility__btns {
+    width: 100%;
+    justify-content: initial;
+  }
+  .possibility__btns a:first-child {
+    margin-right: 30px;
   }
 
   .box__notification {
@@ -475,6 +486,10 @@
   }
   .card__gallery_item {
     width: 100%;
+  }
+
+  .customer p, .provisioner p {
+    font-size: 22px;
   }
 
   .footer {
