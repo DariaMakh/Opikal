@@ -357,7 +357,7 @@ $(function(){
 });
 
 // --------- SELECT ---------
-/*
+
 
 $('select').each(function(){
   var $this = $(this), numberOfOptions = $(this).children('option').length;
@@ -404,7 +404,6 @@ $('select').each(function(){
   });
 
 });
-*/
 
 
 	/***************** CHOSEN *******************/
