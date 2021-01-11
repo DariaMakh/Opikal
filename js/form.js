@@ -26,9 +26,9 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == 3) {
-    document.getElementById("place-form__butto_main").style.display = "none";
+    document.getElementById("place-form__button_main").style.display = "none";
   } else {
-    document.getElementById("place-form__butto_main").style.display = "inline";
+    document.getElementById("place-form__button_main").style.display = "inline";
   }
   if (n == (x.length - 1)) {
     document.getElementById("nextBtn").innerHTML = "Отправить";
@@ -50,6 +50,7 @@ function nextPrev(n) {
   currentTab = currentTab + n;
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
+    var i = 0;
     //...the form gets submitted:
     document.getElementById("place-form").submit();
     return false;
@@ -105,20 +106,29 @@ PlaceChatOff.addEventListener("click", () => {
   PlaceChatOff.parentElement.style.display = "none";
 })
 
+var clicks = 0;
+
 function fillPoll(id) {
   //ato de tsukuru
- //var id = '"'+id+'"';
-
-  //var idPoll = $('#' + id);// document.getElementById(id);
   var idPoll = document.getElementById(id);
-  alert(typeof(id));
-
-  //alert(idPoll);
+  
+  clicks += 1;
 
   idPoll.parentElement.parentElement.style.display = "none";
-  // $('#expert').parent().parent().hide();
+  var edits = document.getElementById('edit-poll__nav');
+  edits.style.display = "block";
+
+  var editsItem = document.getElementById(clicks);
+  editsItem.style.display = "block";
 
 }
+
+function parentHide(elem) {
+  var edits = elem.parentNode.id;
+  var editsClose = document.getElementById(edits);
+  editsClose.style.display = "none";
+}
+
 var TechAsOn = document.getElementById("tech-as-on");
 var TechAsOff = document.getElementById("tech-as-off");
 var TechAsBtnOn = document.getElementById("TechAsBtnOn");
