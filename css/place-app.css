@@ -568,6 +568,7 @@ p > input.__select__title {
 .notice__message {
     width: 100%;
     margin-top: 40px;
+    display: none;
 }
 .notice__message > p {
     color: red;
@@ -752,7 +753,7 @@ p.duties {
     font-size: 18px;
 }
 .edit-poll__nav {
-    display: block;
+    display: none;
     position: absolute;
     right: -205px;
     bottom: 100px;
@@ -760,12 +761,26 @@ p.duties {
     height: auto;
 }
 .edit-poll__item {
+    display: none;
     width: 100%;
     height: 50px;
     border-radius: 5px;
     background-color: gray;
     margin-bottom: 5px;
     position: relative;
+}
+.edit-poll__item__name {
+    display: none;
+    position: absolute;
+    height: 50px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 15px 20px;
+    border: 1px solid gray;
+    top: -55px;
+}
+.edit-poll__item:hover .edit-poll__item__name {
+    display: block;
 }
 .edit-poll__item button{
     color: white;
