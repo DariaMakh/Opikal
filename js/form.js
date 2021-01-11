@@ -43,7 +43,7 @@ function nextPrev(n) {
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
   // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()) return false;
+  // if (n == 1 && !validateForm()) return false;
   // Hide the current tab:
   x[currentTab].style.display = "none";
   // Increase or decrease the current tab by 1:
@@ -154,8 +154,34 @@ TechAsBtnOff.addEventListener("click", () => {
 const selectCategory = document.querySelector('.__select__category');
 const selectCategory_title = selectCategory.querySelector('.__select__title');
 const selectCategory_labels = selectCategory.querySelectorAll('.__select__label');
-const selectCategory_arrow = selectCategory_title.querySelector('.__select__arrow');
+// const selectCategory_arrow = selectCategory_title.querySelector('.__select__arrow');
 const textChosen = selectCategory.querySelector('.textChosen');
+
+
+
+// chosenCat.addEventListener('change', () =>  {
+//   alert(123456);
+//   const chosenCategory = selectCategory.querySelector('.__select__category .active-result.result-selected');
+//   alert(chosenCategory.getAttribute('data-option-array-index'));
+// })
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+  const chosenContSingle = selectCategory.querySelector('.chosen-container-single');
+  alert(chosenContSingle);
+  const chosenSingle = chosenContSingle.querySelector('.chosen-single');
+  alert(chosenSingle);
+
+  chosenContSingle.addEventListener('change', () => {
+
+
+    const chosenSingle = chosenContSingle.querySelector('.chosen-single');
+    alert(chosenSingle);
+
+  });
+
+});
+
+
 const placeAlert = document.querySelector('.tab1 .place_right');
 const placeNotice = document.querySelector('.place__notice');
 
@@ -163,20 +189,20 @@ const selectEquip = document.querySelector('.__select__equipment');
 const selectCheckbox = document.querySelector('.__select__checkbox');
 
 // Toggle menu
-selectCategory_title.addEventListener('click', () => {
-  if ('active' === selectCategory.getAttribute('data-state')) {
-    selectCategory.setAttribute('data-state', '');
-    selectCategory_arrow.classList.add("act");
+// selectCategory_title.addEventListener('click', () => {
+//   if ('active' === selectCategory.getAttribute('data-state')) {
+//     selectCategory.setAttribute('data-state', '');
+//     selectCategory_arrow.classList.add("act");
 
-  } else {
-    selectCategory.setAttribute('data-state', 'active');
-    selectCategory_arrow.classList.remove("act");
-  }
-  if (textChosen.textContent === selectCategory_title.getAttribute('data-default')) {
-      textChosen.classList.remove("act");
-    }
+//   } else {
+//     selectCategory.setAttribute('data-state', 'active');
+//     selectCategory_arrow.classList.remove("act");
+//   }
+//   if (textChosen.textContent === selectCategory_title.getAttribute('data-default')) {
+//       textChosen.classList.remove("act");
+//     }
 
-});
+// });
 
 // Close when click to option
 for (let i = 0; i < selectCategory_labels.length; i++) {

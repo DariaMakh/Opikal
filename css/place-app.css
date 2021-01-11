@@ -228,13 +228,13 @@ input.__select__title {
 }
 .__select__arrow {
     position: absolute;
-    top: 20px;
-    right: 10px;
-    width: 0;
-    height: 0;
+    top: 20px !important;
+    right: 10px !important;
+    width: 0 !important;
+    height: 0 !important;
     border-top: 8px solid #000;
     border-right: 10px solid transparent;
-    border-left: 10px solid transparent;
+    border-left: 10px solid transparent !important;
     transition: all 0.3s ease-out;
 }
 .__select__arrow.act {
@@ -828,6 +828,20 @@ p.duties {
     color: white;
     font-size: 18px;
     cursor: pointer;
+}
+
+/* Для chosen select */
+    /* placeholder */
+.chosen-container-single .chosen-default span {
+    color: #999;
+}
+
+.chosen-container-single .chosen-default span::after {
+    content: "*";
+    color: #ff0000;
+}
+.chosen-container-single .chosen-single div b {
+
 }
 
 @media all and (min-width: 980px) and (max-width: 1224px) {

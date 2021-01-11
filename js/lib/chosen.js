@@ -186,7 +186,7 @@
             var e;
             return t.outerHTML ? t.outerHTML : ((e = document.createElement("div")).appendChild(t), e.innerHTML)
         }, t.prototype.get_single_html = function() {
-            return '<a class="chosen-single chosen-default">\n  <input class="chosen-focus-input" type="text" autocomplete="off" />\n  <span>' + this.default_text + '</span>\n  <div><b></b></div>\n</a>\n<div class="chosen-drop">\n  <div class="chosen-search">\n    <input class="chosen-search-input" type="text" autocomplete="off" />\n  </div>\n  <ul class="chosen-results"></ul>\n</div>'
+            return '<a class="chosen-single chosen-default">\n  <input class="chosen-focus-input" type="text" autocomplete="off" />\n  <span>' + this.default_text + '</span>\n  <div class="__select__arrow"><b></b></div>\n</a>\n<div class="chosen-drop">\n  <div class="chosen-search">\n    <input class="chosen-search-input" type="text" autocomplete="off" />\n  </div>\n  <ul class="chosen-results"></ul>\n</div>'
         }, t.prototype.get_multi_html = function() {
             return '<ul class="chosen-choices">\n  <li class="search-field">\n    <input class="chosen-search-input" type="text" autocomplete="off" value="' + this.default_text + '" />\n  </li>\n</ul>\n<div class="chosen-drop">\n  <ul class="chosen-results"></ul>\n</div>'
         }, t.prototype.get_no_results_html = function(t) {
