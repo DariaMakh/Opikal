@@ -357,6 +357,7 @@ $(function(){
 });
 
 // --------- SELECT ---------
+/*
 
 $('select').each(function(){
   var $this = $(this), numberOfOptions = $(this).children('option').length;
@@ -403,3 +404,23 @@ $('select').each(function(){
   });
 
 });
+*/
+
+
+	/***************** CHOSEN *******************/
+
+	function chosen_init(){
+
+		$('.chosen').chosen({
+
+			no_results_text: "Не найдено",
+
+			width:'100%',
+
+			search_contains: true
+
+		});
+
+	}
+
+	chosen_init();
