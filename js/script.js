@@ -30,29 +30,6 @@ $('.search__icon-2').click(function(event){
     $('.advanced-search').toggleClass('active');
 });
 
-// ---------  ---------
-
-var select = function(){
-    var selectHeader = document.querySelectorAll('.select__header');
-    var selectItem = document.querySelectorAll('.select__item');
-
-    selectHeader.forEach(item=>{
-        item.addEventListener('click', function(){
-            this.parentElement.classList.toggle('active');
-        });
-    });
-
-    selectHeader.forEach(item=>{
-        item.addEventListener('click', selectChoose);
-    });
-
-    function selectChoose(){
-        var selectItem = this.innerText;
-        currentItem = this.closest('.select__box').querySelector('selector__current')
-        console.log(selectItem);
-    };
-}
-
 // --------- MODAL ---------
 
 $(".modal-trigger").click(function(e){

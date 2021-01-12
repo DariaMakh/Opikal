@@ -414,8 +414,14 @@ $font2: "FuturaBookDemiC";
         background-position: center center;
         background-size: 100%;
     }
-    &:checked+label::before {
-        background-color: #fff;
+    &:checked+label::after {
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        left: 3px;
+        top: -2px;
         background-image: url(../../images/check.png);
     }
 }
