@@ -152,80 +152,31 @@ TechAsBtnOff.addEventListener("click", () => {
 /**********************Category**************************/
 
 const selectCategory = document.querySelector('.__select__category');
-const selectCategory_title = selectCategory.querySelector('.__select__title');
-const selectCategory_labels = selectCategory.querySelectorAll('.__select__label');
-// const selectCategory_arrow = selectCategory_title.querySelector('.__select__arrow');
-const textChosen = selectCategory.querySelector('.textChosen');
-
-
-
-// chosenCat.addEventListener('change', () =>  {
-//   alert(123456);
-//   const chosenCategory = selectCategory.querySelector('.__select__category .active-result.result-selected');
-//   alert(chosenCategory.getAttribute('data-option-array-index'));
-// })
-
-document.addEventListener("DOMContentLoaded", function(event) { 
-  const chosenContSingle = selectCategory.querySelector('.chosen-container-single');
-  alert(chosenContSingle);
-  const chosenSingle = chosenContSingle.querySelector('.chosen-single');
-  alert(chosenSingle);
-
-  chosenContSingle.addEventListener('change', () => {
-
-
-    const chosenSingle = chosenContSingle.querySelector('.chosen-single');
-    alert(chosenSingle);
-
-  });
-
-});
-
-
-const placeAlert = document.querySelector('.tab1 .place_right');
 const placeNotice = document.querySelector('.place__notice');
 
-const selectEquip = document.querySelector('.__select__equipment');
-const selectCheckbox = document.querySelector('.__select__checkbox');
 
-// Toggle menu
-// selectCategory_title.addEventListener('click', () => {
-//   if ('active' === selectCategory.getAttribute('data-state')) {
-//     selectCategory.setAttribute('data-state', '');
-//     selectCategory_arrow.classList.add("act");
+$("#__select__category").change(function() {
+  // find the selected country
+  var selectedCategory = $(this).val();
+  // if US or Canada
+  if(selectedCategory != "1") {
+      // show the cities list
+    $(".__select__equipment").addClass("act");
+    $(".__select__checkbox").addClass("act");
+    $(".tab1 .place_right").addClass("act");
+    $(".place__notice").removeClass("act");
+    // $(".__select__category .__select__arrow").addClass("act");
 
-//   } else {
-//     selectCategory.setAttribute('data-state', 'active');
-//     selectCategory_arrow.classList.remove("act");
-//   }
-//   if (textChosen.textContent === selectCategory_title.getAttribute('data-default')) {
-//       textChosen.classList.remove("act");
-//     }
+  }
+  // otherwise hide it
+  else {
+    $(".__select__equipment").removeClass("act");
+    $(".__select__checkbox").removeClass("act");
+    $(".tab1 .place_right").removeClass("act");
+    // $(".__select__category .__select__arrow").removeClass("act");
+  }
+});
 
-// });
-
-// Close when click to option
-for (let i = 0; i < selectCategory_labels.length; i++) {
-  selectCategory_labels[i].addEventListener('click', (evt) => {
-
-    textChosen.textContent = evt.target.textContent;
-    textChosen.classList.add("act");
-    textChosen.classList.remove("inact");
-    selectCategory_title.setAttribute('data-description', i);
-    selectCategory_title.classList.remove("invalid");
-    placeNotice.classList.remove("act");
-    selectCategory.setAttribute('data-state', '');
-    selectCategory_arrow.classList.add("act");
-
-    if (('' != selectCategory_title.getAttribute('data-description')) &&
-        ('0' != selectCategory_title.getAttribute('data-description'))
-        ) {
-      placeAlert.classList.add("act");
-      selectEquip.classList.add("act");
-      selectCheckbox.classList.add("act");
-    }
-  });
-}
 
 
 /**********************Equipment**************************/
