@@ -151,24 +151,19 @@ TechAsBtnOff.addEventListener("click", () => {
 
 /**********************Category**************************/
 
-const selectCategory = document.querySelector('.__select__category');
+// const selectCategory = document.querySelector('.__select__category');
 const placeNotice = document.querySelector('.place__notice');
 
 
 $("#__select__category").change(function() {
-  // find the selected country
   var selectedCategory = $(this).val();
-  // if US or Canada
   if(selectedCategory != "1") {
-      // show the cities list
     $(".__select__equipment").addClass("act");
     $(".__select__checkbox").addClass("act");
     $(".tab1 .place_right").addClass("act");
     $(".place__notice").removeClass("act");
     // $(".__select__category .__select__arrow").addClass("act");
-
   }
-  // otherwise hide it
   else {
     $(".__select__equipment").removeClass("act");
     $(".__select__checkbox").removeClass("act");
@@ -178,197 +173,57 @@ $("#__select__category").change(function() {
 });
 
 
-
 /**********************Equipment**************************/
-
-const selectEquip_title = selectEquip.querySelector('.__select__title');
-const selectEquip_labels = selectEquip.querySelectorAll('.__select__label');
-const selectEquip_arrow = selectEquip_title.querySelector('.__select__arrow');
-const textChosenEquip = selectEquip.querySelector('.textChosen');
-// Toggle menu
-selectEquip_title.addEventListener('click', () => {
-  if ('active' === selectEquip.getAttribute('data-state')) {
-    selectEquip.setAttribute('data-state', '');
-    selectEquip_arrow.classList.add("act");
-
-  } else {
-    selectEquip.setAttribute('data-state', 'active');
-    selectEquip_arrow.classList.remove("act");
-  }
-  if (textChosenEquip.textContent === selectEquip_title.getAttribute('data-default')) {
-    textChosenEquip.classList.remove("act");
-    }
-
-});
-
-// Close when click to option
-for (let i = 0; i < selectEquip_labels.length; i++) {
-  selectEquip_labels[i].addEventListener('click', (evt) => {
-
-    textChosenEquip.textContent = evt.target.textContent;
-    textChosenEquip.classList.add("act");
-    textChosenEquip.classList.remove("inact");
-    selectEquip_title.setAttribute('data-description', i);
-    selectEquip.setAttribute('data-state', '');
-    selectEquip_arrow.classList.add("act");
-
-  });
-}
 
 /**********************Status**************************/
 
-const selectStatus = document.querySelector('.__select__status');
-const selectStatus_title = selectStatus.querySelector('.__select__title');
-const selectStatus_labels = selectStatus.querySelectorAll('.__select__label');
-const selectStatus_arrow = selectStatus_title.querySelector('.__select__arrow');
-const textChosenStatus = selectStatus.querySelector('.textChosen'); 
-const placeAttentionStatus = document.querySelector('.tab2 .place__attention');
+$("#__select__status").change(function() {
+  var selectedStatus = $(this).val();
+  if(selectedStatus === "1") {
 
+    $(".tab2 .place__attention").addClass("act");
+    $(".tab2 .place__attention").removeClass("hide");
+    $(".place__notice").removeClass("act");
+    // $(".__select__category .__select__arrow").addClass("act");
 
-// Toggle menu
-selectStatus_title.addEventListener('click', () => {
-  if ('active' === selectStatus.getAttribute('data-state')) {
-    selectStatus.setAttribute('data-state', '');
-    selectStatus_arrow.classList.add("act");
-
-  } else {
-    selectStatus.setAttribute('data-state', 'active');
-    selectStatus_arrow.classList.remove("act");
   }
-  if (textChosenStatus.textContent === selectStatus_title.getAttribute('data-default')) {
-      textChosenStatus.classList.remove("act");
-    }
-
+  else {
+    $(".tab2 .place__attention").removeClass("act");
+    $(".tab2 .place__attention").addClass("hide");
+    // $(".__select__category .__select__arrow").removeClass("act");
+  }
 });
 
-// Close when click to option
-for (let i = 0; i < selectStatus_labels.length; i++) {
-  selectStatus_labels[i].addEventListener('click', (evt) => {
-
-    textChosenStatus.textContent = evt.target.textContent;
-    textChosenStatus.classList.add("act");
-    textChosenStatus.classList.remove("inact");
-    selectStatus_title.setAttribute('data-description', i);
-    selectStatus_title.classList.remove("invalid");
-    placeNotice.classList.remove("act");
-    selectStatus.setAttribute('data-state', '');
-    selectStatus_arrow.classList.add("act");
-
-    if (('' === selectStatus_title.getAttribute('data-description')) || 
-        ('0' === selectStatus_title.getAttribute('data-description'))
-        ) {
-            placeAttentionStatus.classList.remove("hide");
-            placeAttentionStatus.classList.add("act");
-          } else {
-            placeAttentionStatus.classList.remove("act");
-            placeAttentionStatus.classList.add("hide");
-          }
-  });
-}
 
 /**********************Aim**************************/
 
-const selectAim = document.querySelector('.__select__aim');
-const selectAim_title = selectAim.querySelector('.__select__title');
-const selectAim_labels = selectAim.querySelectorAll('.__select__label');
-const selectAim_arrow = selectAim_title.querySelector('.__select__arrow');
-const textChosenAim = selectAim.querySelector('.textChosen'); 
-const placeAlertAim = document.querySelector('.tab3 .place_right');
-const placeAttentionAim = document.querySelector('.tab3 .place__attention');
-
-
-// Toggle menu
-selectAim_title.addEventListener('click', () => {
-  if ('active' === selectAim.getAttribute('data-state')) {
-    selectAim.setAttribute('data-state', '');
-    selectAim_arrow.classList.add("act");
-
-  } else {
-    selectAim.setAttribute('data-state', 'active');
-    selectAim_arrow.classList.remove("act");
+$("#__select__aim").change(function() {
+  var selectedAim = $(this).val();
+  if(selectedAim === "1"){
+    $(".tab3 .place__attention").addClass("act");
+    $(".tab3 .place__attention").removeClass("hide");
+    $(".tab3 .place_right").removeClass("act");
   }
-  if (textChosenAim.textContent === selectAim_title.getAttribute('data-default')) {
-      textChosenAim.classList.remove("act");
-    }
-
+  else {
+    $(".tab3 .place_right").removeClass("act");
+    $(".tab3 .place__attention").removeClass("act");
+    $(".tab3 .place__attention").addClass("hide");
+  }
 });
 
-// Close when click to option
-for (let i = 0; i < selectAim_labels.length; i++) {
-  selectAim_labels[i].addEventListener('click', (evt) => {
-
-    textChosenAim.textContent = evt.target.textContent;
-    textChosenAim.classList.add("act");
-    textChosenAim.classList.remove("inact");
-    selectAim_title.setAttribute('data-description', i);
-    selectAim_title.classList.remove("invalid");
-    selectAim.setAttribute('data-state', '');
-    selectAim_arrow.classList.add("act");
-
-    if ('' === selectAim_title.getAttribute('data-description')) {
-      placeAlertAim.classList.add("act");
-    } else {
-      placeAlertAim.classList.remove("act");
-    }
-  
-    if (('' === selectAim_title.getAttribute('data-description')) || 
-    ('0' === selectAim_title.getAttribute('data-description'))
-    ) {
-        placeAttentionAim.classList.remove("hide");
-        placeAttentionAim.classList.add("act");
-      } else {
-        placeAttentionAim.classList.remove("act");
-        placeAttentionAim.classList.add("hide");
-      }
-  });
-}
 /**********************Country**************************/
 
-const selectCountry = document.querySelector('.country__select');
-const selectCountry_title = selectCountry.querySelector('.__select__title');
-const selectCountry_labels = selectCountry.querySelectorAll('.__select__label');
-const selectCountry_arrow = selectCountry_title.querySelector('.__select__arrow');
-const textChosenCountry = selectCountry.querySelector('.textChosen'); 
-const inputCountry = document.querySelector('.country__input');
-
-
-// Toggle menu
-selectCountry_title.addEventListener('click', () => {
-  if ('active' === selectCountry.getAttribute('data-state')) {
-    selectCountry.setAttribute('data-state', '');
-    selectCountry_arrow.classList.add("act");
-
-  } else {
-    selectCountry.setAttribute('data-state', 'active');
-    selectCountry_arrow.classList.remove("act");
+$("#country__select").change(function() {
+  var selectCountry = $(this).val();
+  if(selectCountry === "1"){
+    $(".tab4 .country__input").addClass("act");
+    $(".tab4 .country__input").removeClass("hide");
   }
-  if (textChosenCountry.textContent === selectCountry_title.getAttribute('data-default')) {
-      textChosenCountry.classList.remove("act");
-    }
-
+  else {
+    $(".tab4 .country__input").removeClass("act");
+    $(".tab4 .country__input").addClass("hide");
+  }
 });
-
-// Close when click to option
-for (let i = 0; i < selectCountry_labels.length; i++) {
-  selectCountry_labels[i].addEventListener('click', (evt) => {
-
-    textChosenCountry.textContent = evt.target.textContent;
-    textChosenCountry.classList.add("act");
-    selectCountry_title.setAttribute('data-description', i);
-    selectCountry_title.classList.remove("invalid");
-    selectCountry.setAttribute('data-state', '');
-    selectCountry_arrow.classList.add("act");
-
-    if ('0' === selectCountry_title.getAttribute('data-description')) {
-        inputCountry.classList.remove("hide");
-        inputCountry.classList.add("act");
-      } else {
-        inputCountry.classList.remove("act");
-        inputCountry.classList.add("hide");
-      }
-  
-  });
-}
 
 /**********************Validate**************************/
 

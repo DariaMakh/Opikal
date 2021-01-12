@@ -161,29 +161,18 @@
                             <div class="tab tab2">
 
                                 <div class="__select__status" data-state="">
-                                    <!-- без переноса строки для проверки js -->
-                                    <div class="__select__title" data-default="Укажите свой статус" data-description=""><p class="textChosen inact">Укажите свой статус</p><span class="__select__arrow act"></span></div>
-                                    <div class="__select__content">
 
-                                        <input id="selectStatus0" class="__select__input"  type="radio" value="0" name="selectStatus" />
-                                        <label for="selectStatus0"class="__select__label"><p>Другое</p></label>
-
-                                        <input id="selectStatus1" class="__select__input"  type="radio" value="1" name="selectStatus" />
-                                        <label for="selectStatus1" class="__select__label"><p>Конечный заказчик</p></label>
-
-                                        <input id="selectStatus2" class="__select__input"  type="radio" value="2" name="selectStatus" />
-                                        <label for="selectStatus2" class="__select__label"><p>Проектный институт или проектный отдел</p></label>
-
-                                        <input id="selectStatus3" class="__select__input"  type="radio" value="3" name="selectStatus" />
-                                        <label for="selectStatus3" class="__select__label"><p>Инжиниринговая компания</p></label>
-
-                                        <input id="selectStatus4" class="__select__input"  type="radio" value="4" name="selectStatus" />
-                                        <label for="selectStatus4" class="__select__label"><p>Генеральный подрядчик</p></label>
-
-
-                                    </div>
+                                    <select id="__select__status" data-placeholder="Укажите свой статус" class="select chosen" name="status"><span class="__select__arrow act"></span>
+                                        <option value=""></option>
+                                        <option value="1" id="selectStatus1">Другое</option>
+                                        <option value="2" id="selectStatus2">Конечный заказчик</option>
+                                        <option value="3" id="selectStatus3">Проектный институт или проектный отдел</option>
+                                        <option value="4" id="selectStatus4">Инжиниринговая компания</option>
+                                        <option value="5" id="selectStatus5">Генеральный подрядчик</option>
+                                    </select>
 
                                 </div>
+
                                 <div class="place__attention hide">
                                     <p class="attention_red">
                                         Площадка рекомендует всем своим пользователям указывать свой статус для более удоной коммуникации между организаторами и поставщиками
@@ -197,27 +186,16 @@
 
                                 <div class="place_left">
                                     <div class="__select__aim" data-state="">
-                                        <!-- без переноса строки для проверки js -->
-                                        <div class="__select__title" data-default="Пожалуйста укажите цель своего запроса" data-description=""><p class="textChosen inact">Пожалуйста укажите цель своего запроса</p><span class="__select__arrow act"></span></div>
-                                        <div class="__select__content">
 
-                                            <input id="selectAim0" class="__select__input"  type="radio" value="0" name="selectAim" />
-                                            <label for="selectAim0"class="__select__label"><p>Другое</p></label>
-
-                                            <input id="selectAim1" class="__select__input"  type="radio" value="1" name="selectAim" />
-                                            <label for="selectAim1" class="__select__label"><p>Проводится маркетинговое исследование, бюджетирование, предТЭО</p></label>
-
-                                            <input id="selectAim2" class="__select__input"  type="radio" value="2" name="selectAim" />
-                                            <label for="selectAim2" class="__select__label"><p>Есть текущая проблема, которая требует скорейшего решения</p></label>
-
-                                            <input id="selectAim3" class="__select__input"  type="radio" value="3" name="selectAim" />
-                                            <label for="selectAim3" class="__select__label"><p>Для проекта требуется поставщик</p></label>
-
-                                            <input id="selectAim4" class="__select__input"  type="radio" value="4" name="selectAim" />
-                                            <label for="selectAim4" class="__select__label"><p>Идет поиск более дешевое альтернативы</p></label>
-
-
-                                        </div>
+                                        <select id="__select__aim" data-placeholder="Пожалуйста, укажите цель своего запроса" class="select chosen" name="aim"><span class="__select__arrow act"></span>
+                                            <option value=""></option>
+                                            <option value="1" id="selectAim1">Другое</option>
+                                            <option value="2" id="selectAim2">Проводится маркетинговое исследование, бюджетирование, предТЭО</option>
+                                            <option value="3" id="selectAim3">Есть текущая проблема, которая требует скорейшего решения</option>
+                                            <option value="4" id="selectAim4">Для проекта требуется поставщик</option>
+                                            <option value="5" id="selectAim5">Идет поиск более дешевое альтернативы</option>
+                                        </select>
+    
                                     </div>
 
                                     <div class="place__attention hide">
@@ -251,19 +229,16 @@
                                         </div>
                                         <div class="row__input">
                                             <div class="country__select">
-                                                <div class="__select__title" data-default="Другая" data-description="0"><p class="textChosen act">Другая</p><span class="__select__arrow act"></span></div>
-                                                <div class="__select__content">
 
-                                                    <input id="selectCountry0" class="__select__input"  type="radio" value="0" name="selectCountry" />
-                                                    <label for="selectCountry0"class="__select__label"><p>Другая</p></label>
+                                                <select id="country__select" data-placeholder="Выберите страну" class="select chosen" name="country"><span class="__select__arrow act"></span>
+                                                    <option value=""></option>
+                                                    <option value="1" id="selectCountry1">Другая</option>
+                                                    <option value="2" id="selectCountry2">Япония</option>
+                                                    <option value="3" id="selectCountry3">Россия</option>
+                                                    <option value="4" id="selectCountry4">Германия</option>
+                                                    <option value="5" id="selectCountry5">Страна Оз</option>
+                                                </select>
 
-                                                    <input id="selectCountry1" class="__select__input"  type="radio" value="1" name="selectCountry" />
-                                                    <label for="selectCountry1" class="__select__label"><p>Россия</p></label>
-
-                                                    <input id="selectCountry2" class="__select__input"  type="radio" value="2" name="selectCountry" />
-                                                    <label for="selectCountry2" class="__select__label"><p>Япония</p></label>
-
-                                                </div>
                                             </div>
                                             <div class="country__input act">
                                                 <p>
