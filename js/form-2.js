@@ -32,6 +32,7 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     var i = 0;
+    document.getElementByClassName("list__new-eqpm").style.display = "none";
     //...the form gets submitted:
     document.getElementById("q-form").submit();
     return false;

@@ -90,6 +90,9 @@
   height: 43px;
   margin: 0 0 30px 0;
 }
+.list__select .radio {
+  padding-top: 27px;
+}
 .list__additional {
   margin-top: 10px;
 }
