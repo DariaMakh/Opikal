@@ -1310,6 +1310,161 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 1.444;
 }
 
+.tab__header_2 .tab__btn, .tab__btn, .mess__link, .btn, .btn-red, .btn-black, .btn-black_2, .btn-white, .btn-filter, .btn-search, .btn-add {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-family: "FuturaBookDemiC";
+  font-size: 17px;
+  font-weight: 500;
+}
+@media (max-width: 640px) {
+  .tab__header_2 .tab__btn, .tab__btn, .mess__link, .btn, .btn-red, .btn-black, .btn-black_2, .btn-white, .btn-filter, .btn-search, .btn-add {
+    font-size: 20px;
+  }
+}
+
+.search-input, .profile__textarea, .profile__input_2, .profile__input {
+  background: none;
+  border: none;
+  appearance: none;
+  border-radius: 0;
+  box-shadow: none;
+  line-height: normal;
+  letter-spacing: normal;
+  outline: 0;
+  font-weight: normal;
+  font-family: "FuturaBookC";
+}
+.search-input:focus, .profile__textarea:focus, .profile__input_2:focus, .profile__input:focus, .search-input:active, .profile__textarea:active, .profile__input_2:active, .profile__input:active {
+  outline: 0;
+}
+
+.input-upload_img, .input-upload_doc {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.input-upload + label {
+  position: relative;
+  display: inline-block;
+  height: 35px;
+  padding: 8px 30px 8px 30px;
+  background-color: #000;
+  font-size: 16px;
+  font-family: "FuturaBookC";
+  color: white;
+}
+.input-upload + label p {
+  font-size: 16px;
+  font-family: "FuturaBookC";
+  color: white;
+  padding-left: 23px;
+}
+.input-upload + label img {
+  width: 17px;
+  height: 15px;
+  object-position: center;
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  left: 24px;
+}
+
+.input-upload:focus + label,
+.input-upload + label:hover {
+  background-color: #ff0000;
+  cursor: pointer;
+}
+
+checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  cursor: pointer;
+}
+checkbox + label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  user-select: none;
+  font-size: 17px;
+  color: #141419;
+  cursor: pointer;
+}
+checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #000;
+  margin-right: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+checkbox:checked + label::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 3px;
+  top: -2px;
+  background-image: url(../../images/check.png);
+}
+
+.radio input[type=radio]:checked,
+.radio input[type=radio]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+.radio input[type=radio]:checked + label,
+.radio input[type=radio]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 30px;
+}
+.radio input[type=radio]:checked + label:before,
+.radio input[type=radio]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border: 1px solid #000;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+}
+.radio input[type=radio]:checked + label:after,
+.radio input[type=radio]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  left: 4px;
+  top: 4px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #ff0000;
+}
+.radio input[type=radio]:not(:checked) + label:after {
+  opacity: 0;
+}
+.radio input[type=radio]:checked + label:after {
+  opacity: 1;
+}
+
 .account {
   position: relative;
   width: 100%;
@@ -1592,47 +1747,6 @@ input[type=search]::-webkit-search-results-decoration {
   cursor: pointer;
 }
 
-.input-upload_img, .input-upload_doc {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-}
-
-.input-upload + label {
-  position: relative;
-  display: inline-block;
-  height: 35px;
-  padding: 8px 30px 8px 30px;
-  background-color: #000;
-  font-size: 16px;
-  font-family: "FuturaBookC";
-  color: white;
-}
-.input-upload + label p {
-  font-size: 16px;
-  font-family: "FuturaBookC";
-  color: white;
-  padding-left: 23px;
-}
-.input-upload + label img {
-  width: 17px;
-  height: 15px;
-  object-position: center;
-  object-fit: cover;
-  position: absolute;
-  top: 10px;
-  left: 24px;
-}
-
-.input-upload:focus + label,
-.input-upload + label:hover {
-  background-color: #ff0000;
-  cursor: pointer;
-}
-
 .upload-doc__file {
   display: flex;
   align-items: center;
@@ -1720,10 +1834,6 @@ input[type=search]::-webkit-search-results-decoration {
   left: 3px;
   top: -2px;
   background-image: url(../../images/check.png);
-}
-
-.checkbox:not(:disabled):not(:checked) + label:hover::before {
-  border-color: #ff0000;
 }
 
 @media all and (min-width: 0px) and (max-width: 979px) {

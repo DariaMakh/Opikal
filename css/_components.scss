@@ -1,0 +1,172 @@
+$red: #ff0000;
+$lgr: #f3f3f3;
+$grey: #f4f4f4;
+$lbl: #141419;
+
+$font: "FuturaBookC";
+$font2: "FuturaBookDemiC";
+
+%btn{
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-family: $font2;
+  font-size: 17px;
+  font-weight: 500;
+  @media (max-width: 640px) {
+    font-size: 20px;   
+  }
+}
+
+%input-reset{
+  background: none;
+  border: none;
+  appearance: none;
+  border-radius: 0;
+  box-shadow: none;
+  line-height: normal;
+  letter-spacing: normal;
+  outline: 0;
+  font-weight: normal;
+  font-family: $font;
+  &:focus, &:active{
+    outline: 0;
+  }
+}
+
+%select-text{
+  font-size: 18px;
+  font-family: $font;
+  color: rgb(20, 20, 25);
+}
+
+.input-upload_img, .input-upload_doc{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.input-upload + label {
+    position: relative;
+    display: inline-block;
+    height: 35px;
+    padding: 8px 30px 8px 30px;
+    background-color: #000;
+    font-size: 16px;
+    font-family: $font;
+    color: rgb(255, 255, 255);
+    p{
+        font-size: 16px;
+        font-family: $font;
+        color: rgb(255, 255, 255);
+        padding-left: 23px;
+    }
+    img{
+        width: 17px;
+        height: 15px;
+        object-position: center;
+        object-fit: cover;
+        position: absolute;
+        top: 10px;
+        left: 24px;
+    }
+}
+.input-upload:focus + label,
+.input-upload + label:hover {
+    background-color: $red;
+    cursor: pointer;
+}
+
+checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    cursor: pointer;
+    & + label{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        user-select: none;
+        font-size: 17px;
+        color: rgb(20, 20, 25);
+        cursor: pointer;
+    }
+    & + label::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #000;
+        margin-right: 15px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+    }
+    &:checked+label::after {
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        left: 3px;
+        top: -2px;
+        background-image: url(../../images/check.png);
+    }
+}
+
+.radio{
+  input[type="radio"]:checked, 
+  input[type="radio"]:not(:checked){
+    position: absolute;
+    left: -9999px;
+  }
+
+  input[type="radio"]:checked + label,
+  input[type="radio"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+  }
+
+  input[type="radio"]:checked + label:before, 
+  input[type="radio"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 1px solid #000;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+  }
+
+  input[type="radio"]:checked + label:after, 
+  input[type="radio"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    left: 4px;
+    top: 4px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #ff0000;
+  }
+
+  input[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+  }
+
+  input[type="radio"]:checked + label:after {
+    opacity: 1;
+  }
+}

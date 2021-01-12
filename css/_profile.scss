@@ -294,47 +294,6 @@ $font2: "FuturaBookDemiC";
     cursor: pointer;
 }
 
-.input-upload_img, .input-upload_doc{
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-
-.input-upload + label {
-    position: relative;
-    display: inline-block;
-    height: 35px;
-    padding: 8px 30px 8px 30px;
-    background-color: #000;
-    font-size: 16px;
-    font-family: $font;
-    color: rgb(255, 255, 255);
-    p{
-        font-size: 16px;
-        font-family: $font;
-        color: rgb(255, 255, 255);
-        padding-left: 23px;
-    }
-    img{
-        width: 17px;
-        height: 15px;
-        object-position: center;
-        object-fit: cover;
-        position: absolute;
-        top: 10px;
-        left: 24px;
-    }
-}
-.input-upload:focus + label,
-.input-upload + label:hover {
-    background-color: $red;
-    cursor: pointer;
-}
-
-
 .upload-doc{
     &__file{
         display: flex;
@@ -424,10 +383,6 @@ $font2: "FuturaBookDemiC";
         top: -2px;
         background-image: url(../../images/check.png);
     }
-}
-
-.checkbox:not(:disabled):not(:checked)+label:hover::before {
-    border-color: $red;
 }
 
 @media all and (min-width: 0px) and (max-width: 979px) {
