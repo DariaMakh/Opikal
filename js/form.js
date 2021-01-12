@@ -1,8 +1,8 @@
 // Всплывающее окно, напоминание о сохранении в черновиках
-function popup() {
+function popup_alert() {
   document.getElementById("place__alert__popup").style.display = "block";
 }
-setInterval(popup, 1000*60*15);
+setInterval(popup_alert, 1000*60*15);
 
 var PlacePopupOff = document.getElementById("place__alert__popup-close");
 
@@ -10,7 +10,28 @@ PlacePopupOff.addEventListener("click", () => {
   PlacePopupOff.parentElement.style.display = "none";
 })
 
+// function popup_message() {
+//   document.getElementById("place__alert__popup").style.display = "block";
+// }
 
+// $(document).ready(function(){
+//   popup_message_hide();
+// });
+function popup_message_show(){
+  $("#place__message__popup").show();
+}
+function popup_message_hide(){
+  $("#place__message__popup").hide();
+  window.location.href = "customer-drafts.html";
+
+}
+function popup_save_template() {
+  //save
+  $("#btn-save").hide();
+  $("#saved").show();
+
+  
+}
 
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
@@ -52,8 +73,16 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     var i = 0;
     //...the form gets submitted:
+
+    // setTimeout('document.location.href="customer-drafts.html";', 2000);
     document.getElementById("place-form").submit();
-    return false;
+    // alert(123141241);
+    popup_message_show();
+
+    //redirect customer-drafts.html + window
+    // return false;
+    
+    
   }
   // Otherwise, display the correct tab:
   showTab(currentTab);
@@ -133,12 +162,15 @@ var TechAsOn = document.getElementById("tech-as-on");
 var TechAsOff = document.getElementById("tech-as-off");
 var TechAsBtnOn = document.getElementById("TechAsBtnOn");
 var TechAsBtnOff = document.getElementById("TechAsBtnOff");
+var NoticePoll = document.getElementById("notice__poll");
+
 
 TechAsBtnOn.addEventListener("click", () => {
   TechAsOn.style.display = "flex";
   TechAsOff.style.display = "none";
   TechAsBtnOn.parentElement.classList.add('act');
   TechAsBtnOff.parentElement.classList.remove('act');
+  NoticePoll.style.display = "block";
 
 })
 

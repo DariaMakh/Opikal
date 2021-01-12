@@ -706,6 +706,9 @@ p.duties {
 #tech-as-off {
     display: none;
 }
+#tech-as-off {
+    justify-content: left;
+}
 .poll_btn {
     width: 300px;
 }
@@ -719,10 +722,14 @@ p.duties {
 .task__poll {
     width: 31%;
     height: fit-content;
+    margin-right: 3.5%;
     background-color: white;
     border: 1px solid #b7b7b7;
     position: relative;
     transition: transform .15s;
+}
+.task__poll:nth-child(3n+3) {
+    margin-right: 0;
 }
 .task__poll:hover{
     cursor: pointer;
@@ -829,7 +836,68 @@ p.duties {
     font-size: 18px;
     cursor: pointer;
 }
-
+.place-form__message_bg {
+    /* display: none; */
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 100;
+}
+.place-form__message {
+    margin: 25% auto;
+    width: 40%;
+    height: fit-content;
+    padding: 10px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px #000;
+}
+.place-form__message .modal__close p {
+    font-size: 12px;
+}
+.message__content {
+    padding: 30px;
+}
+.message__content h3 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.message__btns {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.message__btns a{
+    margin: 0 auto;
+}
+.message__btns p {
+    display: none;
+    text-align: center;
+    text-decoration: none;
+    font-family: "FuturaBookDemiC";
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 auto;
+    position: relative;
+}
+.message__btns p::before {
+    content: '';
+    width: 28px;
+    height: 28px;
+    background-image: url(/images/saved.png);
+    position: absolute;
+    left: -40px;
+    top: -5px;
+}
 /* Для chosen select */
     /* placeholder */
 .chosen-container-single .chosen-default span {

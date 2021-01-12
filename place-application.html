@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=640, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=640">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Opikal</title>
 
@@ -80,7 +80,7 @@
 
                 <div class="place-app__content">
                     <div class="place-app__form form">
-                        <form id="place-form" action="">
+                        <form id="place-form" action="" method="POST">
 
                             <div class="form__steps steps">
                                 <ul>
@@ -529,10 +529,10 @@
                                                 <button type="button" id="tender" onclick="fillPoll(this.id)">Заполнить</button>
                                             </div>
                                         </div>
-                                        <div id="notice__poll" class="notice__message">
-                                            <p>Вы уверены, что хотите продолжить не заполнив опросные листы? <br>
-                                            Если да, то нажмите продолжить ещё раз.</p>
-                                        </div>
+                                    </div>
+                                    <div id="notice__poll" class="notice__message">
+                                        <p>Вы уверены, что хотите продолжить не заполнив опросные листы? <br>
+                                        Если да, то нажмите продолжить ещё раз.</p>
                                     </div>
 
                                 </div>
@@ -552,6 +552,29 @@
 
                         </form>
                     </div>
+                    <div id="place__message__popup" class="place-form__message_bg">
+                        <div class="place-form__message">
+                            <div class="modal__close">
+                                <p onclick="popup_message_hide()">Закрыть</p>
+                                <span class="modal__close_1"></span>
+                                <span class="modal__close_2"></span>
+                            </div>
+                            <div class="message__content">
+                                <h3>Ваша заявка успешно сохранена <br>
+                                    и опубликована на сайте</h3>
+                                <div class="message__btns">
+                                    <a id="btn-save" onclick="popup_save_template()" href="#" class="btn-black">Сохранить шаблон</a>
+                                </div>
+                                <div class="message__btns">
+                                    <p id="saved">Шаблон сохранён</p>
+                                </div>
+
+                            </div>
+                            
+
+                        </div>
+                    </div>
+
                     <div id="place__alert__popup" class="popup">
                         <div class="place__alert">
                             <div class="__alert__title">
