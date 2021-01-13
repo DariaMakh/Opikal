@@ -36,6 +36,7 @@ $font2: "FuturaBookDemiC";
         max-width: 1315px;
         margin: 40px auto 0 auto;
         padding: 0 15px;
+        position: relative;
     }
     &__word{
         margin-top: 20px;
@@ -124,6 +125,18 @@ $font2: "FuturaBookDemiC";
                 color: #ff0000;
                 text-decoration: underline;
             }
+        }
+    }
+    &__help{
+        padding: 20px 15px;
+        background-color: #ff0000;
+        position: absolute;
+        top: -353px;
+        right: 65px;
+        cursor: pointer;
+        p{
+            color: #fff;
+            font-size: 16px;
         }
     }
 }
