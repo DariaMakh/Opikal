@@ -30,6 +30,22 @@ function popup_save_template() {
   
 }
 
+
+function chooseDir() {
+
+  if (document.getElementById('__select__checkbox0').checked) {
+    selectDir = document.getElementById('__select__checkbox0').value;
+  } else {
+    selectDir = document.getElementById('__select__checkbox1').value;
+  }
+
+  if (selectDir === '1') {
+    
+  }
+  alert(selectDir);
+}
+
+
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
@@ -73,7 +89,6 @@ function nextPrev(n) {
 
     // setTimeout('document.location.href="customer-drafts.html";', 2000);
     document.getElementById("place-form").submit();
-    // alert(123141241);
     popup_message_show();
 
     //redirect customer-drafts.html + window
