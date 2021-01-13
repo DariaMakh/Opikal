@@ -510,9 +510,15 @@ background-color: #d8093a;
     left: -30px;
     position: absolute;
 } 
-.place__row input[type=checkbox]:checked + label:before{
-    background-color: #fff;
+.place__row input[type=checkbox]:checked + label:after{
     background-image: url(../images/check.png);
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: -27px;
+    top: -3px;
 } 
 
 .place__attention {
