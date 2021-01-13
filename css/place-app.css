@@ -491,12 +491,13 @@ background-color: #d8093a;
     color: #b7b7b7;
     position: absolute;
     left: 30px;
+    cursor: pointer;
 }
 
-.place__row input[type=checkbox]{
+.place__row input[type=radio]{
     display:none;
 }
-.place__row input[type=checkbox] + label:before{
+.place__row input[type=radio] + label:before{
     content: "";
     display: inline-block;
     width: 18px;
@@ -510,7 +511,7 @@ background-color: #d8093a;
     left: -30px;
     position: absolute;
 } 
-.place__row input[type=checkbox]:checked + label:after{
+.place__row input[type=radio]:checked + label:after{
     background-image: url(../images/check.png);
     content: "";
     display: inline-block;
