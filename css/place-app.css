@@ -848,8 +848,8 @@ p.duties {
     z-index: 100;
 }
 .place-form__message {
-    margin: 25% auto;
-    width: 40%;
+    margin: 10% auto;
+    width: fit-content;
     height: fit-content;
     padding: 10px;
     background-color: white;
@@ -898,6 +898,85 @@ p.duties {
     left: -40px;
     top: -5px;
 }
+.message__adv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+}
+.advertisement__block {
+    width: 427px;
+    height: 235px;
+    padding: 23px 16px 27px 43px;
+    background-image: url(/images/adv1.png);
+}
+.adv2 {
+    background-image: url(/images/adv2.png);
+}
+.adv__close {
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+.adv__close span {
+    background-color: white;
+}
+.adv__content {
+    padding: 30px 0;
+}
+.adv__title  {
+    padding-bottom: 14px;
+    width: 280px;
+}
+.adv__title h4{
+    font-size: 26px;
+    line-height: 0.92;
+    text-align: left;
+    color: #ffffff;
+}
+.adv__text {
+    width: 280px;
+
+}
+.adv__text p{
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: -0.35px;
+    text-align: left;
+    color: #fefefe;
+}
+.adv__btn {
+    width: 199px;
+    height: 42px;
+    margin: 21px 153px 4px 1px;
+}
+.btn_red {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: "FuturaBookDemiC";
+    font-size: 17px;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: solid 2px #ffffff;
+    background-color: #ff0000;
+    color: white;
+    padding: 8px;
+}
+.btn_red:hover {
+    border: solid 2px #ff0000;
+    background-color: white;
+    color: #ff0000;
+}
+
 /* Для chosen select */
     /* placeholder */
 .chosen-container-single .chosen-default span {

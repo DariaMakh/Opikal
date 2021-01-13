@@ -10,13 +10,10 @@ PlacePopupOff.addEventListener("click", () => {
   PlacePopupOff.parentElement.style.display = "none";
 })
 
-// function popup_message() {
-//   document.getElementById("place__alert__popup").style.display = "block";
-// }
+$(".adv__close").click(function(){
+  $(this).parent().hide();
+});
 
-// $(document).ready(function(){
-//   popup_message_hide();
-// });
 function popup_message_show(){
   $("#place__message__popup").show();
 }
