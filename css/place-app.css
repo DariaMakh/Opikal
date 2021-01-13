@@ -208,7 +208,22 @@ input.__select__title {
     content: "выберите категорию";
     display: block;
     top: 100%;
-    left: 66%;
+    right: 0;
+    width: 150px;
+    position: absolute;
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+select.chosen.required.invalid + .chosen-container {
+    border-bottom: solid 2px #ff0000;
+}
+select.chosen.required.invalid + .chosen-container:after {
+    content: "выберите категорию";
+    display: block;
+    top: 100%;
+    right: 0;
     width: 150px;
     position: absolute;
     background-color: red;
@@ -837,7 +852,7 @@ p.duties {
     cursor: pointer;
 }
 .place-form__message_bg {
-    /* display: none; */
+    display: none;
     width: 100%;
     min-height: 100%;
     background-color: rgba(0,0,0,0.5);
@@ -983,12 +998,17 @@ p.duties {
     color: #999;
 }
 
-.chosen-container-single .chosen-default span::after {
+select.select.chosen.required + .chosen-container-single > .chosen-default > span::after {
     content: "*";
     color: #ff0000;
 }
 .chosen-container-single .chosen-single div b {
 
+}
+
+input.required::placeholder::after {
+    content: "*";
+    color: #ff0000;
 }
 
 @media all and (min-width: 980px) and (max-width: 1224px) {

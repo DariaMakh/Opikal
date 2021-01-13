@@ -399,4 +399,6 @@ $(function(){
 
 	}
 
-	chosen_init();
+chosen_init();
+
+$('.chosen').trigger('chosen:updated');

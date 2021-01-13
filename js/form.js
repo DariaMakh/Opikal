@@ -61,7 +61,7 @@ function nextPrev(n) {
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
   // Exit the function if any field in the current tab is invalid:
-  // if (n == 1 && !validateForm()) return false;
+  if (n == 1 && !validateForm()) return false;
   // Hide the current tab:
   x[currentTab].style.display = "none";
   // Increase or decrease the current tab by 1:
@@ -184,8 +184,12 @@ TechAsBtnOff.addEventListener("click", () => {
 const placeNotice = document.querySelector('.place__notice');
 
 
-$("#__select__category").change(function() {
+$("#__select__category").change(function () {
+
+  $(this).removeClass("invalid");
+
   var selectedCategory = $(this).val();
+
   if(selectedCategory != "1") {
     $(".__select__equipment").addClass("act");
     $(".__select__checkbox").addClass("act");
@@ -207,7 +211,11 @@ $("#__select__category").change(function() {
 /**********************Status**************************/
 
 $("#__select__status").change(function() {
+
+  $(this).removeClass("invalid");
+
   var selectedStatus = $(this).val();
+
   if(selectedStatus === "1") {
 
     $(".tab2 .place__attention").addClass("act");
@@ -226,7 +234,9 @@ $("#__select__status").change(function() {
 
 /**********************Aim**************************/
 
-$("#__select__aim").change(function() {
+$("#__select__aim").change(function () {
+  $(this).removeClass("invalid");
+
   var selectedAim = $(this).val();
   if(selectedAim === "1"){
     $(".tab3 .place__attention").addClass("act");
@@ -242,7 +252,9 @@ $("#__select__aim").change(function() {
 
 /**********************Country**************************/
 
-$("#country__select").change(function() {
+$("#country__select").change(function () {
+  $(this).removeClass("invalid");
+
   var selectCountry = $(this).val();
   if(selectCountry === "1"){
     $(".tab4 .country__input").addClass("act");
@@ -270,18 +282,6 @@ function validateForm() {
       // and set the current valid status to false:
       valid = false;
     }
-  }
-  if (textChosen.textContent === selectCategory_title.getAttribute('data-default')) {
-    selectCategory_title.className += " invalid";
-    placeNotice.className += " act";
-
-    valid = false;
-  }
-  else if (textChosenStatus.textContent === selectStatus_title.getAttribute('data-default')) {
-    // selectStatus_title.className += " invalid";
-    // placeNotice.className += " act";
-    // valid = false;
-    // обязательно ли поле??
   }
 
   // If the valid status is true, mark the step as finished and valid:
