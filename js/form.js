@@ -30,8 +30,34 @@ function popup_save_template() {
   
 }
 
+var ChooseTaskOption = document.getElementById("chooseTaskOption");
+var TechAsOn = document.getElementById("tech-as-on");
+var TechAsOff = document.getElementById("tech-as-off");
+var TechAsBtnOn = document.getElementById("TechAsBtnOn");
+var TechAsBtnOff = document.getElementById("TechAsBtnOff");
+var NoticePoll = document.getElementById("notice__poll");
+
+
+TechAsBtnOn.addEventListener("click", () => {
+  TechAsOn.style.display = "flex";
+  TechAsOff.style.display = "none";
+  TechAsBtnOn.parentElement.classList.add('act');
+  TechAsBtnOff.parentElement.classList.remove('act');
+  NoticePoll.style.display = "block";
+
+})
+
+TechAsBtnOff.addEventListener("click", () => {
+  TechAsOn.style.display = "none";
+  TechAsOff.style.display = "flex";
+  TechAsBtnOn.parentElement.classList.remove('act');
+  TechAsBtnOff.parentElement.classList.add('act');
+})
 
 function chooseDir() {
+
+  step3 = document.getElementById('step3');
+  tab3 = document.getElementById('tab3');
 
   if (document.getElementById('__select__checkbox0').checked) {
     selectDir = document.getElementById('__select__checkbox0').value;
@@ -39,10 +65,19 @@ function chooseDir() {
     selectDir = document.getElementById('__select__checkbox1').value;
   }
 
-  if (selectDir === '1') {
-    
+  if (selectDir == '1') {
+    step3.style.display = "none";
+    tab3.classList.add('hide');
+      // change tab5
+    TechAsOn.classList.add('show');
+    ChooseTaskOption.classList.add('hide');
+  } else {
+    step3.style.display = "block";
+    tab3.classList.remove('hide');
+       // change tab5
+    TechAsOn.classList.remove('show');
+    ChooseTaskOption.classList.remove('hide');
   }
-  alert(selectDir);
 }
 
 
@@ -52,7 +87,8 @@ showTab(currentTab); // Display the current tab
 function showTab(n) {
   // This function will display the specified tab of the form ...
   var x = document.getElementsByClassName("tab");
-  x[n].style.display = "flex";
+
+  x[n].classList.add('show');
   // ... and fix the Previous/Next buttons:
   if (n == 0) {
     document.getElementById("prevBtn").style.display = "none";
@@ -79,9 +115,22 @@ function nextPrev(n) {
   // Exit the function if any field in the current tab is invalid:
   if (n == 1 && !validateForm()) return false;
   // Hide the current tab:
-  x[currentTab].style.display = "none";
+
+  nextTab = currentTab + n;
+
+  if (nextTab === 2 && x[nextTab].classList.contains('hide')) {
+      // hide tab3
+    x[currentTab].classList.remove('show');
+    x[currentTab].classList.add('hide');
+    currentTab = currentTab + n;
+  }
+
+  x[currentTab].classList.add('hide');
+  x[currentTab].classList.remove('show');
   // Increase or decrease the current tab by 1:
   currentTab = currentTab + n;
+
+
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     var i = 0;
@@ -169,29 +218,6 @@ function parentHide(elem) {
   var editsClose = document.getElementById(edits);
   editsClose.style.display = "none";
 }
-
-var TechAsOn = document.getElementById("tech-as-on");
-var TechAsOff = document.getElementById("tech-as-off");
-var TechAsBtnOn = document.getElementById("TechAsBtnOn");
-var TechAsBtnOff = document.getElementById("TechAsBtnOff");
-var NoticePoll = document.getElementById("notice__poll");
-
-
-TechAsBtnOn.addEventListener("click", () => {
-  TechAsOn.style.display = "flex";
-  TechAsOff.style.display = "none";
-  TechAsBtnOn.parentElement.classList.add('act');
-  TechAsBtnOff.parentElement.classList.remove('act');
-  NoticePoll.style.display = "block";
-
-})
-
-TechAsBtnOff.addEventListener("click", () => {
-  TechAsOn.style.display = "none";
-  TechAsOff.style.display = "flex";
-  TechAsBtnOn.parentElement.classList.remove('act');
-  TechAsBtnOff.parentElement.classList.add('act');
-})
 
 /**********************Category**************************/
 

@@ -999,6 +999,13 @@ p.duties {
     color: #ff0000;
 }
 
+.tab.hide, .task__block.hide {
+    display: none;
+}
+.tab.show, #tech-as-on.task__block.show {
+    display: flex;
+}
+
 /* Для chosen select */
     /* placeholder */
 .chosen-container-single .chosen-default span {

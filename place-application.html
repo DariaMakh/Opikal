@@ -86,7 +86,7 @@
                                 <ul>
                                     <li class="step"><a> Выбор типа оборудования </a></li>
                                     <li class="step"><a> Статус организатора </a></li>
-                                    <li class="step"><a> Цель запроса</a></li>
+                                    <li class="step" id="step3"><a> Цель запроса</a></li>
                                     <li class="step"><a> Контакты</a></li>
                                     <li class="step"><a> Технические, коммерческие и иные требования</a></li>
                                 </ul>
@@ -182,7 +182,7 @@
 
                             </div>
 
-                            <div class="tab tab3">
+                            <div class="tab tab3" id="tab3">
 
                                 <div class="place_left">
                                     <div class="__select__aim" data-state="">
@@ -263,7 +263,10 @@
                                         </div>
                                         <div class="row__input">
                                             <p>
-                                                <input class='__select__title required' placeholder="Укажите населенный пункт" oninput="this.className = '__select__title required'">
+                                                <!--для проверки
+                                                    <input class='__select__title required' placeholder="Укажите населенный пункт" oninput="this.className = '__select__title required'"> 
+                                                -->
+                                                <input class='__select__title' placeholder="Укажите населенный пункт" oninput="this.className = '__select__title'">
                                             </p>
                                         </div>
                                     </div>
@@ -434,7 +437,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="task__block">
+                                    <div class="task__block" id="chooseTaskOption">
                                         <div class="task__row">
                                             <div class="task__option">
                                                 <p>У меня есть ТЗ</p>
