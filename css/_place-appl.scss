@@ -108,11 +108,20 @@ $font2: "FuturaBookDemiC";
             padding-left: 45px;
             input{
                 height: 43px;
-                margin: 0 0 30px 0;
-                &:last-child{
-                    margin-bottom: 0;
-                }
+                margin-bottom: 20px;
             }
+            & .select-box, & .chosen-container{
+                margin-bottom: 20px;
+            }
+            & .radio{
+                margin-top: 10px;
+            }
+        }
+        input{
+            margin-bottom: 20px;
+        }
+        & .select-box, & .chosen-container{
+            margin-bottom: 20px;
         }
     }
     &__additional{
@@ -138,15 +147,36 @@ $font2: "FuturaBookDemiC";
         }
     }
     &__help{
-        padding: 20px 15px;
+        padding: 23px 18px 23px 44px;
         background-color: #ff0000;
         position: absolute;
-        top: -353px;
+        top: -421px;
         right: 65px;
         cursor: pointer;
         p{
             color: #fff;
-            font-size: 16px;
+            font-size: 17px;
+            font-weight: 500;
+        }
+        &_icon{
+            width: 20px;
+            height: 20px;
+            background: url(../../images/help.png) center no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+        }
+        span{
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 33px 33px 0;
+            border-color: transparent #cf0000 transparent transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
     }
 }

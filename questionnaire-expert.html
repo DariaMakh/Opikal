@@ -127,8 +127,8 @@
                             <div class="list__container">
                                 <div class="list__box">
                                     <span class="valid"></span>
-                                    <div class="list__box_item">
-                                        <div class="  list__text">
+                                    <div class="list__item">
+                                        <div class="list__text">
                                             Пожалуйста укажите задачу, которую должен выполнять фильтр
                                         </div>
                                         
@@ -141,31 +141,14 @@
                                             </select> 
                                         </div>
                                     </div>
-                                </div>
-        
-                                <div class="list__box">
-                                    <div class="list__box_item">
-                                        <div class="  list__text">
-                                            Пожалуйста уточните, какую задачу должен решить будущий поставщик 
-                                        </div>
-                                        
-                                        <div class="list__select">
-                                            <select id="cat1" class="select-2 _select">
-                                                <option value="hide">Указать</option>
-                                                <option value="категория 1" rel="icon-temperature">1</option>
-                                                <option value="категория 2">категория 2</option>
-                                                <option value="категория 3">категория 3</option>
-                                            </select> 
-                                        </div>
-                                    </div>
-                                    <div class="list__box_warning">
+                                    <div class="list__warning">
                                         Напоминаем Вам, что данное требование может существенно удорожить конечную стоимость фильтра и целесообразно в случаях, если режим работы фильтра предполагает безостановочную эксплуатацию с перерывами на плановые работы
                                     </div>
                                 </div>
         
                                 <div class="list__box">
-                                    <div class="list__box_item">
-                                        <div class="  list__text">
+                                    <div class="list__item">
+                                        <div class="list__text">
                                             Пожалуйста сообщите, известно ли наименование пылящего <br>материала в очищаемом газе
                                         </div>
         
@@ -185,25 +168,28 @@
                                 </div>
         
                                 <div class="list__box">
-                                    <div class="list__box_item">
-                                        <div class="  list__text">
+                                    <div class="list__item">
+                                        <div class="list__text">
                                             Пожалуйста сообщите, известен ли расход очищаемого газа 
                                         </div>
         
-                                        <div class="list__select_2">
-                                            <select id="cat1" class="select-2 _select">
-                                                <option value="hide">Выбрать</option>
-                                                <option value="категория 1" rel="icon-temperature">Да</option>
-                                                <option value="категория 2">Нет</option>
-                                                <option value="категория 3">Нет данных</option>
-                                            </select> 
-                                        </div>
-                                        
-                                        <div class="list__select">
-                                            <input type="text" name="text" id="text" class="input" placeholder="Указать (м3/ч)">
+                                        <div class="list__select-box">
+                                            <div class="list__select_2">
+                                                <select id="cat1" class="select-2 _select">
+                                                    <option value="hide">Выбрать</option>
+                                                    <option value="категория 1" rel="icon-temperature">Да</option>
+                                                    <option value="категория 2">Нет</option>
+                                                    <option value="категория 3">Нет данных</option>
+                                                </select> 
+                                            </div>
+                                            
+                                            <div class="list__select">
+                                                <input type="text" name="text" id="text" class="input" placeholder="Указать (м3/ч)">
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="list__box_item-2">
+
+                                    <div class="list__item-2">
                                         <div class="check-list">
                                             <div class="check-list__item">
                                                 <input type="checkbox" class="checkbox" id="check1" name="check1" value="">
@@ -218,6 +204,11 @@
                                             <div class="check-list__item">
                                                 <input type="checkbox" class="checkbox" id="check3" name="check1" value="">
                                                 <label for="check3">Запомнить меня</label>
+                                            </div>
+
+                                            <div class="check-list__item">
+                                                <input type="checkbox" class="checkbox" id="check4" name="check1" value="">
+                                                <label for="check4">Запомнить меня</label>
                                             </div>
 
                                             <div class="check-list__item">
@@ -263,11 +254,11 @@
                         <div class="list">
                             <div class="list__container">
                                 <div class="list__box">
-                                    <div class="list__box_item">
-                                        <div class="  list__text">
-                                            Пожалуйста уточните, требуется ли вам разработка проектной документации
+                                    <div class="list__item list__item-2">
+                                        <div class="list__text">
+                                            Пожалуйста сообщите, является ли очищаемый газ взрывоопасной средой 
                                         </div>
-        
+
                                         <div class="list__select_2">
                                             <select id="cat1" class="select-2 _select">
                                                 <option value="hide">Выбрать</option>
@@ -276,12 +267,31 @@
                                                 <option value="категория 3">Нет данных</option>
                                             </select> 
                                         </div>
-                                        
-                                        <div class="list__select">
-                                            <input type="text" name="text" id="text" class="input" placeholder="Указать">
+                                    </div>
+                                </div>
 
-                                            <div class="radio">
-                                                <input type="radio" name="rd" id="rd"> <label for="rd">Оставить выбор за поставщиком</label>
+                                <div class="list__box">
+                                    <div class="list__item">
+                                        <div class=" list__text">
+                                            Пожалуйста сообщите, имеются ли на Вашем предприятии <br>резервы сжатого воздуха для работы фильтра  
+                                        </div>
+
+                                        <div class="list__select-box">
+                                            <div class="list__select_2">
+                                                <select id="cat1" class="select-2 _select">
+                                                    <option value="hide">Выбрать</option>
+                                                    <option value="категория 1" rel="icon-temperature">Да</option>
+                                                    <option value="категория 2">Нет</option>
+                                                    <option value="категория 3">Нет данных</option>
+                                                </select> 
+                                            </div>
+                                            
+                                            <div class="list__select_3">
+                                                <input type="text" name="text" id="text" class="input" placeholder="Укажите объем (л/мин)">
+                        
+                                                <input type="text" name="text" id="text" class="input" placeholder="Укажите давление (бар)">
+                        
+                                                <input type="text" name="text" id="text" class="input" placeholder="Укажите давление (бар)">
                                             </div>
                                         </div>
                                     </div>
@@ -289,7 +299,9 @@
                             </div>
 
                             <a href="#" class="list__help">
+                                <div class="list__help_icon"></div>
                                 <p>Попросить помочь заполнить опросный лист</p>
+                                <span></span>
                             </a>
                         </div>
                     </div>

@@ -29,13 +29,14 @@
     overflow:hidden;
     background-color:transparent;
     color:#000;
+    height: 43px;
 }.chosen-container-single .chosen-single input[type="text"]{cursor:pointer;opacity:0;position:absolute;width:0}.chosen-container-single .chosen-default{color:#999}
 .chosen-container-single .chosen-single span{
     display:block;
     overflow:hidden;
     font-size: 18px;
     color:#141419;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 .chosen-container-single .chosen-single-with-deselect span{margin-right:38px}.chosen-container-single .chosen-single abbr{position:absolute;top:6px;right:26px;display:block;width:12px;height:12px;/*background:url(/public/images/chosen-sprite.png) -42px 1px no-repeat;*/font-size:1px}.chosen-container-single .chosen-single abbr:hover{background-position:-42px -10px}.chosen-container-single.chosen-disabled .chosen-single abbr:hover{background-position:-42px -10px}.chosen-container-single .chosen-single div{position:absolute;top:0;right:0;display:block;width:40px;height:100%}.chosen-container-single .chosen-single div b{display:block;width:100%;height:100%;background-size:15px;background-repeat:no-repeat;background-position:center}
 .chosen-container-single .chosen-search{

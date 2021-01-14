@@ -99,10 +99,19 @@
 }
 .list__select_3 input {
   height: 43px;
-  margin: 0 0 30px 0;
+  margin-bottom: 20px;
 }
-.list__select_3 input:last-child {
-  margin-bottom: 0;
+.list__select_3 .select-box, .list__select_3 .chosen-container {
+  margin-bottom: 20px;
+}
+.list__select_3 .radio {
+  margin-top: 10px;
+}
+.list__select input {
+  margin-bottom: 20px;
+}
+.list__select .select-box, .list__select .chosen-container {
+  margin-bottom: 20px;
 }
 .list__additional {
   margin-top: 10px;
@@ -127,16 +136,37 @@
   text-decoration: underline;
 }
 .list__help {
-  padding: 20px 15px;
+  padding: 23px 18px 23px 44px;
   background-color: #ff0000;
   position: absolute;
-  top: -353px;
+  top: -421px;
   right: 65px;
   cursor: pointer;
 }
 .list__help p {
   color: #fff;
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.list__help_icon {
+  width: 20px;
+  height: 20px;
+  background: url(../../images/help.png) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+.list__help span {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 33px 33px 0;
+  border-color: transparent #cf0000 transparent transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .valid {

@@ -1437,7 +1437,8 @@ input[type=search]::-webkit-search-results-decoration {
   content: "";
   position: absolute;
   left: 0px;
-  top: 0px;
+  top: 50%;
+  transform: translateY(-50%);
   border: 1px solid #000;
   background-color: #ffffff;
   border-radius: 50%;
@@ -1453,7 +1454,8 @@ input[type=search]::-webkit-search-results-decoration {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   left: 4px;
-  top: 4px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -2739,14 +2741,14 @@ VERTICAL TAB STYLING*
   transition: all 0.3s ease-out;
 }
 .select-styled:active:after, .select-styled.active:after {
-  transform: rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .select-options {
   display: none;
   width: 100%;
   position: absolute;
-  top: 100%;
+  top: 43px;
   right: 0;
   left: 0;
   z-index: 3;
