@@ -21,6 +21,9 @@
   letter-spacing: -0.45px;
   color: rgba(20, 20, 25, 0.3);
 }
+.list input[type=checkbox] {
+  height: 22px;
+}
 .list__container {
   max-width: 1345px;
   margin: 40px auto 0 auto;
@@ -62,14 +65,14 @@
   width: 59%;
   padding: 10px 30px 0 0;
 }
-.list__box_warning {
+.list__box:hover {
+  background-color: #eeeeee;
+}
+.list__warning {
   font-size: 18px;
   color: #ff0000;
   line-height: 1.37;
   margin-top: 35px;
-}
-.list__box:hover {
-  background-color: #eeeeee;
 }
 .list__item {
   display: flex;
@@ -100,9 +103,6 @@
 }
 .list__select_3 input:last-child {
   margin-bottom: 0;
-}
-.list__select .radio {
-  padding-top: 27px;
 }
 .list__additional {
   margin-top: 10px;
@@ -154,12 +154,16 @@
 .check-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 60px;
 }
 .check-list__item {
   position: relative;
-  width: 33%;
-  margin-bottom: 34px;
+  width: calc(100% / 3);
+  margin-top: 34px;
 }
 .check-list__item label {
   font-size: 19px;
+}
+.check-list__item:nth-child(1), .check-list__item:nth-child(2), .check-list__item:nth-child(3) {
+  margin-top: 0;
 }
