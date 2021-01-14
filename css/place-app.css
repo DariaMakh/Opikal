@@ -11,6 +11,7 @@
 .steps li {
     float: left;
     margin-left: 0;
+    margin-bottom: 5px;
     width: auto;
     height: 50px;
     list-style-type: none;
@@ -123,6 +124,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 80px;
+    height: fit-content;
 }
 
 /* Style the form */
@@ -364,6 +366,10 @@ background-color: #d8093a;
     line-height: 28px;
     cursor: pointer;
 
+}
+.place__contacts .container,
+.place__contacts_dop .container{
+    padding: 0 30px;
 }
 #nextBtn,
 #nextBtn2,
