@@ -267,10 +267,71 @@ select.chosen.required.invalid + .chosen-container:after {
     background-color: #e0e0e0;
     z-index: 10;
     border: 1px solid #6b6b6b;
+    border-radius: 5px;
     box-shadow: 0 2px 19px 10000px rgb(0 0 0 / 55%);
 }
 .chat__area {
+    width: 100%;
+    height: 80%;
     padding: 30px;
+    background-image: url(/images/bg-contacts-copy.png);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+.chat__area__history {
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.chat__area__message {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #e0e0e0;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.chat__message__btns {
+    width: 12%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.chat__print, .chat__add  {
+    width: 48%;
+    /* display: none; */
+    padding: 15px 0;
+    margin-left: 7px;
+}
+
+.chat__message__input {
+    width: 85%;
+    height: 100%;
+    position: relative;
+    padding: 15px 20px;
+}
+.chat__message__input__text {
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.chat__message__enter {
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    right: 25px;
+    top: 17px;
+    background-image: url(/images/enter.jpg);
+    z-index: 50;
 }
 .place__chat-close {
     position: absolute;
