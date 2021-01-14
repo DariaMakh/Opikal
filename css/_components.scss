@@ -94,6 +94,7 @@ $font2: "FuturaBookDemiC";
         font-size: 17px;
         color: rgb(20, 20, 25);
         cursor: pointer;
+        position: relative;
     }
     & + label::before {
         content: '';

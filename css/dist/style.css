@@ -1396,6 +1396,7 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 17px;
   color: #141419;
   cursor: pointer;
+  position: relative;
 }
 .checkbox + label::before {
   content: "";

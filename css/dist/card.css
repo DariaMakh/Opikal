@@ -20,13 +20,23 @@
 .card__right_2 {
   width: calc(100% - 350px - 60px);
 }
+.card__right_2 .box__title {
+  margin-top: 35px;
+}
 .card__right_btns {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 .card__right_btns a {
   margin-right: 40px;
   margin-bottom: 10px;
+}
+.card__right_group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 375px;
 }
 .card__img {
   width: 100%;
@@ -189,4 +199,36 @@
 .card__row_2 {
   justify-content: space-between;
   align-items: center;
+  margin-top: 30px;
+}
+
+.fvrt, .share {
+  position: relative;
+  padding-left: 33px;
+}
+.fvrt a, .share a {
+  font-size: 17px;
+  color: #ff0000;
+  position: relative;
+}
+.fvrt span, .share span {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fvrt span {
+  width: 23px;
+  height: 20px;
+  background: url(../../images/fav.png) center no-repeat;
+  background-size: cover;
+}
+
+.share span {
+  width: 23px;
+  height: 23px;
+  background: url(../../images/share.png) center no-repeat;
+  background-size: cover;
 }
