@@ -278,7 +278,6 @@ input[type='search']::-webkit-search-results-decoration {
   background-position: top;
   background-repeat: repeat-y;
   width: 100%;
-  padding-top: 65px;
 }
 
 @import 'breadcrumbs';
@@ -304,5 +303,7 @@ input[type='search']::-webkit-search-results-decoration {
 @import 'gen-application';
 
 @import 'select';
+
+@import '_place-app';
 
 @import 'footer';

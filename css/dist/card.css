@@ -1,9 +1,6 @@
 .card-bg {
   border-top: 1px solid #e1e1e1;
 }
-.card .breadcrumbs {
-  margin: 0 0 60px 0;
-}
 .card .justify {
   margin-bottom: 50px;
 }
@@ -188,4 +185,8 @@
 }
 .card__row .box__section {
   margin-right: 40px;
+}
+.card__row_2 {
+  justify-content: space-between;
+  align-items: center;
 }

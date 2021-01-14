@@ -2,9 +2,6 @@
     &-bg{
         border-top: 1px solid rgb(225, 225, 225);
     }
-    .breadcrumbs{
-        margin: 0 0 60px 0;
-    }
     .justify{
         margin-bottom: 50px;
     }
@@ -188,6 +185,10 @@
         display: flex;
         .box__section{
             margin-right: 40px;
+        }
+        &_2{
+            justify-content: space-between;
+            align-items: center;
         }
     }
 }
