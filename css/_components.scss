@@ -81,7 +81,7 @@ $font2: "FuturaBookDemiC";
     cursor: pointer;
 }
 
-checkbox{
+.checkbox{
     position: absolute;
     z-index: -1;
     opacity: 0;
@@ -131,6 +131,7 @@ checkbox{
     position: relative;
     cursor: pointer;
     padding-left: 30px;
+    font-size: 19px;
   }
 
   input[type="radio"]:checked + label:before, 

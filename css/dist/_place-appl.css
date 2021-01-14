@@ -22,7 +22,7 @@
   color: rgba(20, 20, 25, 0.3);
 }
 .list__container {
-  max-width: 1315px;
+  max-width: 1345px;
   margin: 40px auto 0 auto;
   padding: 0 15px;
   position: relative;
@@ -58,34 +58,37 @@
 .list__box .valid {
   z-index: 1;
 }
-.list__box_item {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  position: relative;
-}
-.list__box_item-2 {
-  justify-content: initial;
-}
-.list__box_item-2 .list__select_2 {
-  margin-left: 27px;
-}
 .list__box .list__text {
-  width: 640px;
+  width: 59%;
+  padding: 10px 30px 0 0;
 }
 .list__box_warning {
   font-size: 18px;
   color: #ff0000;
   line-height: 1.37;
+  margin-top: 35px;
 }
 .list__box:hover {
-  background-color: #792d2d;
+  background-color: #eeeeee;
+}
+.list__item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.list__item-2 {
+  justify-content: initial;
 }
 .list__select {
   width: 350px;
 }
+.list__select-box {
+  width: calc(100% - 59%);
+  display: flex;
+  justify-content: space-between;
+}
 .list__select_2 {
-  width: 140px;
+  width: 120px;
 }
 .list__select_3 {
   width: 350px;
@@ -94,6 +97,9 @@
 .list__select_3 input {
   height: 43px;
   margin: 0 0 30px 0;
+}
+.list__select_3 input:last-child {
+  margin-bottom: 0;
 }
 .list__select .radio {
   padding-top: 27px;
@@ -142,7 +148,7 @@
   background-repeat: no-repeat;
   position: absolute;
   left: 17px;
-  top: 57px;
+  top: 61px;
 }
 
 .check-list {

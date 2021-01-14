@@ -33,7 +33,7 @@ $font2: "FuturaBookDemiC";
         }
     }
     &__container{
-        max-width: 1315px;
+        max-width: 1345px;
         margin: 40px auto 0 auto;
         padding: 0 15px;
         position: relative;
@@ -68,22 +68,9 @@ $font2: "FuturaBookDemiC";
         .valid{
             z-index: 1;
         }
-        &_item{
-            //padding: 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            position: relative;
-            &-2{
-                //padding: 50px;
-                justify-content: initial;
-                .list__select_2{
-                    margin-left: 27px;
-                }
-            }
-        }
         .list__text {
-            width: 640px;
+            width: 59%;
+            padding: 10px 30px 0 0;
         }
         &_warning{
             font-size: 18px;
@@ -92,13 +79,26 @@ $font2: "FuturaBookDemiC";
             margin-top: 35px;
         }
         &:hover{
-            background-color: #792d2d;
+            background-color: #eeeeee;
+        }
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &-2{
+            justify-content: initial;
         }
     }
     &__select{
         width: 350px;
+        &-box{
+            width: calc(100% - 59%);
+            display: flex;
+            justify-content: space-between;
+        }
         &_2{
-            width: 140px;
+            width: 120px;
         }
         &_3{
             width: 350px;
@@ -106,6 +106,9 @@ $font2: "FuturaBookDemiC";
             input{
                 height: 43px;
                 margin: 0 0 30px 0;
+                &:last-child{
+                    margin-bottom: 0;
+                }
             }
         }
         & .radio{
@@ -157,7 +160,7 @@ $font2: "FuturaBookDemiC";
     background-repeat: no-repeat;
     position: absolute;
     left: 17px;
-    top: 57px;
+    top: 61px;
 }
 
 .check-list{
