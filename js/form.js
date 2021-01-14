@@ -19,6 +19,7 @@ function popup_message_show(){
 }
 function popup_message_hide(){
   $("#place__message__popup").hide();
+  $('#place-form').submit(); //fixit
   window.location.href = "customer-drafts.html";
 
 }
@@ -102,7 +103,11 @@ function showTab(n) {
   }
   if (n == (x.length - 1)) {
     document.getElementById("nextBtn").innerHTML = "Отправить";
-  } else {
+    // document.getElementById("nextBtn").type = "submit";
+    document.getElementById("nextBtn").setAttribute('onclick', 'popup_message_show()');
+}
+
+  else {
     document.getElementById("nextBtn").innerHTML = "Продолжить";
   }
   // ... and run a function that displays the correct step indicator:
@@ -131,19 +136,29 @@ function nextPrev(n) {
   currentTab = currentTab + n;
 
 
+
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
-    var i = 0;
     //...the form gets submitted:
 
-    // setTimeout('document.location.href="customer-drafts.html";', 2000);
-    document.getElementById("place-form").submit();
-    popup_message_show();
+    // document.querySelector('#place-form').submit(function(e){
+      // e.preventDefault();
+      // $.ajax({
+      //     url: 'http://opikal/place-application.html',
+      //     type: 'get',
+      //     data:$('#place-form').serialize(),
+      //     success: function () {
+      //       popup_message_show();
+      //     },
+      // });
+      // popup_message_show();
+    //   return false;
+    // });
 
-    //redirect customer-drafts.html + window
-    // return false;
-    
-    
+    // form.submit();
+    // setTimeout('document.location.href="customer-drafts.html";', 2000);
+    // redirect customer-drafts.html + window
+    return false;
   }
   // Otherwise, display the correct tab:
   showTab(currentTab);

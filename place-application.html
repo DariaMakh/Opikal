@@ -80,7 +80,7 @@
 
                 <div class="place-app__content">
                     <div class="place-app__form form">
-                        <form id="place-form" action="" method="POST">
+                        <form id="place-form" action="" method="GET">
 
                             <div class="form__steps steps">
                                 <ul>
@@ -162,7 +162,7 @@
 
                                 <div class="__select__status" data-state="">
 
-                                    <select id="__select__status" data-placeholder="Укажите свой статус" class="select chosen required" name="status"><span class="__select__arrow act"></span>
+                                    <select id="__select__status" data-placeholder="Укажите свой статус" class="select chosen " name="status"><span class="__select__arrow act"></span>
                                         <option value=""></option>
                                         <option value="1" id="selectStatus1">Другое</option>
                                         <option value="2" id="selectStatus2">Конечный заказчик</option>
@@ -187,7 +187,7 @@
                                 <div class="place_left">
                                     <div class="__select__aim" data-state="">
 
-                                        <select id="__select__aim" data-placeholder="Пожалуйста, укажите цель своего запроса" class="select chosen required" name="aim"><span class="__select__arrow act"></span>
+                                        <select id="__select__aim" data-placeholder="Пожалуйста, укажите цель своего запроса" class="select chosen " name="aim"><span class="__select__arrow act"></span>
                                             <option value=""></option>
                                             <option value="1" id="selectAim1">Другое</option>
                                             <option value="2" id="selectAim2">Проводится маркетинговое исследование, бюджетирование, предТЭО</option>
@@ -230,7 +230,7 @@
                                         <div class="row__input">
                                             <div class="country__select">
 
-                                                <select id="country__select" data-placeholder="Выберите страну" class="select chosen required" name="country"><span class="__select__arrow act"></span>
+                                                <select id="country__select" data-placeholder="Выберите страну" class="select chosen " name="country"><span class="__select__arrow act"></span>
                                                     <option value=""></option>
                                                     <option value="1" id="selectCountry1">Другая</option>
                                                     <option value="2" id="selectCountry2">Япония</option>
@@ -541,11 +541,11 @@
                                 </div>
 
                             </div>
-
+                            
                             <div class="place__clear">
                                 <div id="place-form__button_main" class="place-form__button">
                                     <button type="button" id="prevBtn" onclick="nextPrev(-1)"> Назад </button>
-                                    <button type="button" id="nextBtn" onclick="nextPrev(1)"> Продолжить </button>
+                                    <button type="button" id="nextBtn" onclick="nextPrev(1)" > Продолжить </button>
                                 </div>
                             </div>
 
