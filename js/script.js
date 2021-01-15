@@ -94,26 +94,12 @@ $('.input-upload_doc').on('change', function() {
 
 // --------- NAME OF PICTURE AFTER UPLOADED ---------
 
-function uploadImg(){
-    var inputImg = document.querySelectorAll('.profile_img');
-    Array.prototype.forEach.call(inputImg, function ( input ){
-        var label = input.nextElementSibling,
-        labelVal = label.innerHTML;
-
-        input.addEventListener( 'change', function (e){
-            var imgName = '';
-            imgName = this.files[0].name;
-            if ( imgName ){
-                label.innerHTML = imgName;
-            }
-            else{
-                label.innerHTML = labelVal;
-            }
-        });
-    });
-};
-
-document.addEventListener("DOMContentLoaded", uploadImg);
+$(".profile_img").change(function(){
+  imgFileName = this.files[0].name;
+  if (imgFileName){
+    $(".profile_img").next().text(imgFileName);
+  }
+});
 
 // --------- GALLERY OF PICTURES ---------
 /*
