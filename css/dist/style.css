@@ -260,7 +260,7 @@ input[type=search]::-webkit-search-results-decoration {
 
 .breadcrumbs {
   display: flex;
-  margin: 60px 0;
+  padding: 60px 0;
 }
 .breadcrumbs__item {
   margin-right: 50px;
