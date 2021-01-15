@@ -102,43 +102,51 @@ $(".profile_img").change(function(){
 });
 
 // --------- GALLERY OF PICTURES ---------
-/*
-var showGallery = (function () {
-  var fr = new FileReader,
-      i = 0,
-      files, file;
-  
-  fr.onload = function (e) {
-      var li, span;
-      if (file.type.match('image.*')) {
-          li = document.createElement('li');
-          li.classList.add('gallery-list__item');
-          li.innerHTML = "<img src='" + e.target.result + "'><span class=\"delete\"></span>";
-          document.getElementById('gallery-list').appendChild(li);
-      }
-          file = files[++i];
-          if (file) {
-              fr.readAsDataURL(file)
-          } else {
-              i = 0;
-          }
-  }
-  
-  return function (e) {
-      files = e.target.files;
-      file = files[i];
-      if (files) {
-          while (i < files.length && !file.type.match('image.*')) {
-              file = files[++i];
-          }
-          if (file) fr.readAsDataURL(files[i])
-      }
-  }
 
+$(function(){
+  $('#gallery').change(function(e) {
+    var files = e.target.files;
+		for (var i = 0; i <= files.length; i++) {
+      
+      // when i == files.length reorder and break
+      if(i==files.length){
+        // need timeout to reorder beacuse prepend is not done
+        setTimeout(function(){ reorderImages(); }, 100);
+        break;
+      }
+      
+      var file = files[i];
+      var reader = new FileReader();
+      
+      reader.onload = (function(file) {
+        return function(event){
+          $('#gallery-list').prepend('<li class="gallery-list__item" data-order=0 data-id="'+file.lastModified+'"><img src="' + event.target.result + '" /> <span class="delete"></span></li>');
+        };
+      })(file);
+      
+      reader.readAsDataURL(file);
+    }// end for;
+  });
+  
+  
+  function reorderImages(){
+    // get the items
+    var images = $('#gellery-list li');
+    
+    var i=0;
+    for(i;i<images.length;i++){
+      
+      var image = $(images[i]);
+      
+      if( image.hasClass('gallery-list__item')){
+        image.attr('data-order');
+      }// end if;
+      
+    }// end for;
+  }
 });
 
-document.getElementById('gallery').addEventListener("DOMContentLoaded", showGallery, false);
-*/
+ 
 
 // --------- TABS ---------
 
