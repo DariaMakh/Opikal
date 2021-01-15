@@ -356,3 +356,18 @@ function fixStepIndicator(n) {
   //... and adds the "active" class to the current step:
   x[n].className += " active";
 }
+
+
+
+//for chats
+
+function print_chat(printId) {
+  var prtContent = document.getElementById(printId);
+//
+}
+// function {
+
+// }
+function send_message() {
+  
+}
