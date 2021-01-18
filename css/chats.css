@@ -149,7 +149,8 @@
 .to_me.from_customer .chat__user__content:before {
     background: white;
 }
-.to_me.from_supplier .chat__user__content:before {
+.to_me.from_supplier .chat__user__content:before,
+.to_me.admin .chat__user__content:before {
     background: #ffe8e8;
 }
 .from_me .chat__user__content:before {
@@ -170,6 +171,13 @@
     padding: 10px 0;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+.admin .chat__msg-author,
+.admin .chat__msg-content {
+    padding: 10px 20px;
+}
+.admin .chat__user__content {
+    padding: 0;
 }
 .general__chat .chat__msg-author {
     border-bottom: 1px solid #36363636;
