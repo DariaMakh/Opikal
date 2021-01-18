@@ -280,30 +280,36 @@ input[type='search']::-webkit-search-results-decoration {
   width: 100%;
 }
 
-@import 'breadcrumbs';
+@import 'scss/breadcrumbs';
 
-@import 'nav';
+@import 'scss/nav';
 
-@import 'main';
+@import 'scss/main';
 
-@import 'burger';
+@import 'scss/burger';
 
-@import 'modal';
+@import 'scss/modal';
 
-@import 'components';
+@import 'scss/components';
 
-@import 'profile';
+@import 'scss/profile';
 
-@import 'offers';
+@import 'scss/offers';
 
-@import 'applications';
+@import 'scss/applications';
 
-@import 'mess';
+@import 'scss/mess';
 
-@import 'gen-application';
+@import 'scss/gen-application';
 
-@import 'select';
+@import 'scss/select';
 
-@import '_place-app';
+@import 'scss/place-app-2';
 
-@import 'footer';
+@import 'scss/place-app';
+
+@import 'scss/card';
+
+@import 'scss/select';
+
+@import 'scss/footer';

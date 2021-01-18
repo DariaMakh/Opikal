@@ -69,7 +69,7 @@
 .ui-icon {
   display: inline-block;
   vertical-align: middle;
-  margin-top: -0.25em;
+  margin-top: -.25em;
   position: relative;
   text-indent: -99999px;
   overflow: hidden;
@@ -110,7 +110,8 @@
   top: 50%;
   width: 10px;
   height: 20px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 /*
@@ -190,8 +191,8 @@
 
 .ui-datepicker .ui-datepicker-buttonpane {
   background-image: none;
-  margin: 0.7em 0 0 0;
-  padding: 0 0.2em;
+  margin: .7em 0 0 0;
+  padding: 0 .2em;
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
@@ -199,9 +200,9 @@
 
 .ui-datepicker .ui-datepicker-buttonpane button {
   float: right;
-  margin: 0.5em 0.2em 0.4em;
+  margin: .5em .2em .4em;
   cursor: pointer;
-  padding: 0.2em 0.6em 0.3em 0.6em;
+  padding: .2em .6em .3em .6em;
   width: auto;
   overflow: visible;
 }
@@ -221,7 +222,7 @@
 
 .ui-datepicker-multi .ui-datepicker-group table {
   width: 95%;
-  margin: 0 auto 0.4em;
+  margin: 0 auto .4em;
 }
 
 .ui-datepicker-multi-2 .ui-datepicker-group {
@@ -301,8 +302,8 @@
   text-indent: -99999px;
   overflow: hidden;
   background-repeat: no-repeat;
-  left: 0.5em;
-  top: 0.3em;
+  left: .5em;
+  top: .3em;
 }
 
 /* Component containers
@@ -400,7 +401,8 @@ a.ui-button:focus {
 }
 
 .ui-visual-focus {
-  box-shadow: 0 0 3px 1px #5e9ed6;
+  -webkit-box-shadow: 0 0 3px 1px #5e9ed6;
+          box-shadow: 0 0 3px 1px #5e9ed6;
 }
 
 .ui-state-active,
@@ -476,7 +478,7 @@ a.ui-button:active,
 .ui-priority-secondary,
 .ui-widget-content .ui-priority-secondary,
 .ui-widget-header .ui-priority-secondary {
-  opacity: 0.7;
+  opacity: .7;
   filter: Alpha(Opacity=70);
   /* support: IE8 */
   font-weight: normal;
@@ -485,7 +487,7 @@ a.ui-button:active,
 .ui-state-disabled,
 .ui-widget-content .ui-state-disabled,
 .ui-widget-header .ui-state-disabled {
-  opacity: 0.35;
+  opacity: .35;
   filter: Alpha(Opacity=35);
   /* support: IE8 */
   background-image: none;
@@ -1274,7 +1276,7 @@ a.ui-button:active,
 /* Overlays */
 .ui-widget-overlay {
   background: #aaaaaa;
-  opacity: 0.3;
+  opacity: .3;
   filter: Alpha(Opacity=30);
   /* support: IE8 */
 }
@@ -1283,3 +1285,4 @@ a.ui-button:active,
   -webkit-box-shadow: 0px 0px 5px #666666;
   box-shadow: 0px 0px 5px #666666;
 }
+/*# sourceMappingURL=jquery-ui.css.map */
