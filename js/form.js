@@ -205,12 +205,6 @@ document.getElementById('openChat').onclick = function() {
   document.getElementById('place__chat').style.display = "block";
 }
 
-var PlaceChatOff = document.getElementById("place__chat-close");
-
-PlaceChatOff.addEventListener("click", () => {
-  PlaceChatOff.parentElement.style.display = "none";
-})
-
 var clicks = 0;
 
 function fillPoll(id) {
