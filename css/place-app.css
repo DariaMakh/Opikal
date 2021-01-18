@@ -1,0 +1,1014 @@
+.steps {
+    padding: 0;
+    overflow: hidden;
+    height: 50px;
+}
+.steps a {
+    color: white;
+    text-decoration: none;
+}
+
+.steps li {
+    float: left;
+    margin-left: 0;
+    margin-bottom: 5px;
+    width: auto;
+    height: 50px;
+    list-style-type: none;
+    padding: 14px 20px 14px 30px; /* padding around text, last should include arrow width */
+    border-right: 3px solid white; /* width: gap between arrows, color: background of document */
+    position: relative;
+}
+/* remove extra padding on the first object since it doesn't have an arrow to the left */
+.steps li:first-child {
+    padding-left: 15px;
+}
+/* white arrow to the left to "erase" background (starting from the 2nd object) */
+.steps li:nth-child(n+2)::before {
+    position: absolute;
+    top:0;
+    left:0;
+    display: block;
+    border-left: 15px solid white; /* width: arrow width, color: background of document */
+    border-top: 25px solid transparent; /* width: half height */
+    border-bottom: 25px solid transparent; /* width: half height */
+    width: 0;
+    height: 0;
+    content: " ";
+}
+/* colored arrow to the right */
+.steps li::after {
+    z-index: 1; /* need to bring this above the next item */
+    position: absolute;
+    top: 0;
+    right: -15px; /* arrow width (negated) */
+    display: block;
+    border-left: 15px solid black; /* width: arrow width */
+    border-top: 25px solid transparent; /* width: half height */
+    border-bottom: 25px solid transparent; /* width: half height */
+    width:0;
+    height:0;
+    content: " ";
+}
+
+/* Setup colors (both the background and the arrow) */
+
+/* Completed */
+.steps li { background-color: black; }
+.steps li::after { border-left-color: black; }
+
+/* Current */
+.steps li.active { background-color: black; }
+.steps li.active::after { border-left-color: black; }
+
+/* Following */
+.steps li.active ~ li { background-color: #EBEBEB; }
+.steps li.active ~ li::after { border-left-color: #EBEBEB; }
+
+.steps li.active ~ li a { color: #000; }
+
+/* Hover for completed and active
+.steps li:hover {background-color: #696}
+.steps li:hover::after {border-left-color: #696} */
+/* css for steps ~ from css-tricks.com/triangle-breadcrumbs */
+
+.place-app__content p, 
+.step {
+    font-size: 18px;
+}
+.place__title {
+    font-size: 26px;
+    font-family: "FuturaBookDemiC";
+    color: rgb(20, 20, 25);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;    
+    width: 100%;
+}
+.place-bg {
+    border-top: 1px solid rgb(225, 225, 225);
+}
+.place_left {
+    display: block;
+    order: 1;
+}
+.place_right {
+    display: none;
+    order: 2;
+}
+.place_right.act{
+    display: block;
+}
+.place__clear {
+    clear: both;
+    padding: 50px 0;
+}
+.place-app {
+    min-height: 880px;
+    height: auto;
+}
+.place-app__title {
+    font-family: "FuturaBookDemiC";
+    font-weight: 600;
+    font-size: 66px;
+    color: #000;
+    padding: 55px 0;
+}
+.place-app__content {
+    padding-top: 15px;
+    position: relative;
+}
+
+.form__steps {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+    height: fit-content;
+}
+
+/* Style the form */
+/* Style the input fields */
+.row__input input{
+    padding: 10px 0;
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+}
+
+/* Mark input boxes that gets an error on validation: */
+.row__input input.invalid {
+    background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+    display: none;
+    justify-content: space-between;
+    position: relative;
+}
+
+.__select__category,
+.__select__equipment,
+.__select__status,
+.__select__aim,
+.country__select {
+    position: relative;
+    height: 50px;
+    width: 440px;
+    margin-bottom: 60px;
+}
+.__select__equipment {
+    display: none;
+}
+.__select__equipment.act {
+    display: block;
+    margin-bottom: 35px;
+}
+/* .__select[data-state="active"] .__select__title::before {
+transform: translate(-3px, -50%) rotate(-45deg);
+}
+.__select[data-state="active"] .__select__title::after {
+transform: translate(3px, -50%) rotate(45deg);
+} */
+.__select__category[data-state="active"] .__select__content,
+.__select__equipment[data-state="active"] .__select__content,
+.__select__status[data-state="active"] .__select__content,
+.__select__aim[data-state="active"] .__select__content,
+.country__select[data-state="active"] .__select__content {
+    opacity: 1;
+    display: flex;
+    border: 2px solid black;
+}
+.__select__category[data-state="active"] .__select__label + .__select__input + .__select__label,
+.__select__equipment[data-state="active"] .__select__label + .__select__input + .__select__label,
+.__select__status[data-state="active"] .__select__label + .__select__input + .__select__label,
+.__select__aim[data-state="active"] .__select__label + .__select__input + .__select__label,
+.country__select[data-state="active"] .__select__label + .__select__input + .__select__label  {
+    max-height: 50px;
+    border-top-width: 1px;
+}
+.__select__aim {
+    width: 630px;
+}
+.__select__title,
+input.__select__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 50px;
+    border: none;
+    border-bottom: solid 2px black;
+    cursor: pointer;
+}
+.__select__title.invalid {
+    border-bottom: solid 2px #ff0000;
+}
+.__select__title.invalid:after {
+    content: "выберите категорию";
+    display: block;
+    top: 100%;
+    right: 0;
+    width: 150px;
+    position: absolute;
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+select.chosen.required.invalid + .chosen-container {
+    border-bottom: solid 2px #ff0000;
+}
+select.chosen.required.invalid + .chosen-container:after {
+    content: "выберите категорию";
+    display: block;
+    top: 100%;
+    right: 0;
+    width: 150px;
+    position: absolute;
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+.textChosen.inact {
+    color: #b7b7b7;
+}
+.textChosen.act {
+    color: black;
+}
+.__select__category .textChosen.inact:after {
+    content: "*";
+    color: #ff0000;
+}
+.__select__arrow {
+    position: absolute;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    right: 10px !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-top: 8px solid #000;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent !important;
+    transition: all 0.3s ease-out;
+}
+.__select__arrow.act {
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+/* 
+.necessarily, 
+.__select__title:hover {
+border-color: #d8093a;
+}
+.__select__title:hover::before, .__select__title:hover::after {
+background-color: #d8093a;
+} */
+
+
+.__select__content {
+    position: absolute;
+    top: 40px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #c7ccd1;
+    border-top: none;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    z-index: 8;
+}
+
+.__select__input {
+    display: none;
+}
+.__select__input:checked + label {
+    background-color: #dedede;
+}
+.__select__input:disabled + label {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.__select__label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    /* max-height: 0; */
+    padding: 0 25px;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    overflow: hidden;
+    color: black;
+}
+.__select__label + input + .__select__label {
+    border-top: 0 solid #c7ccd160;
+}
+.__select__label:hover {
+    background-color: #ff0000 !important;
+    color: #ffffff;
+}
+.place-form__button {
+    padding-top: 0px;
+}
+.place-form__button button,
+.place__contacts button,
+.option__btn {
+    width: 200px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    cursor: pointer;
+
+}
+.place__contacts .container,
+.place__contacts_dop .container{
+    padding: 0 30px;
+}
+#nextBtn,
+#nextBtn2,
+.option__btn {
+    border: 1px solid black;
+    background-color: #ff0000;
+    color: white;
+}
+#nextBtn:hover,
+#nextBtn2:hover,
+.option__btn:hover,
+.poll__action button:hover {
+    border: 2px solid  #ff0000;
+    background-color: white;
+    color:  #ff0000;
+}
+#prevBtn,
+#prevBtn2  {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    margin-right: 30px;
+}
+#prevBtn:hover,
+#prevBtn2:hover  {
+    background-color: black;
+    color: white;
+}
+#addContact {
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    margin-right: 30px;
+}
+#addContact:hover {
+    background-color: white;
+    color: black;
+}
+.tab1 .place__alert {
+    max-width: 690px;
+    display: block;
+}
+.tab3 .place__alert {
+    max-width: 490px;
+    display: block;
+}
+.popup {
+    width: 490px;
+    height: 150px;
+    background-color: white;
+    box-shadow: 0px 8px 20px 2px grey;
+    padding: 30px;
+    float: right;
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 385px;
+}
+.popup .place__alert {
+    width: 100%;
+    height: 100%;
+}
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    opacity: 0.3;
+}
+.place__contacts_dop .close {
+    right: 210px;
+    top: 65px;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 25px;
+    width: 2px;
+    background-color: #333;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+.__alert__title {
+    padding-bottom: 20px;
+}
+.__alert__title p {
+    font-size: 18px;
+    font-weight: bold;
+}
+.__alert__title p:before {
+    content: '';
+    background: url(../images/attention.png) no-repeat;
+    background-size: contain;
+    padding-right: 40px;
+}
+.__alert__message > p > a {
+    color: #ff0000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.__select__checkbox {
+    width: 100%;
+    height: 30px;
+    display: none;
+}
+.__select__checkbox.act {
+    display: flex;
+    margin-bottom: 30px;
+}
+.place__row {
+    width: 50%;
+    display: flex;
+    position: relative;
+}
+.__checkbox__label {
+    color: #b7b7b7;
+    position: absolute;
+    left: 30px;
+    cursor: pointer;
+}
+
+.place__row input[type=radio]{
+    display:none;
+}
+.place__row input[type=radio] + label:before{
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #000;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    top: 0px;
+    left: -30px;
+    position: absolute;
+} 
+.place__row input[type=radio]:checked + label:after{
+    background-image: url(../images/check.png);
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: -27px;
+    top: -3px;
+} 
+
+.place__attention {
+    width: 100%;
+}
+.place__attention p.attention_red,
+.__select__status {
+    width: 490px;
+}
+.attention_red {
+    color: red;
+}
+.tab2 {
+    flex-direction: column;
+}
+p > input.__select__title {
+    margin: 30px 0 60px;
+}
+.tab3 p > input.__select__title {
+    width: 190%;
+}
+
+.place__attention.hide {
+    display: none;
+}
+.place__attention.act {
+    display: block;
+}
+.tab4 {
+    flex-wrap: wrap;
+}
+.place__addresss {
+    width: 100%;
+    padding-bottom: 60px;
+}
+.contacts__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.contacts__row {
+    width: 48%;
+}
+.contacts__row .row__title,
+.contacts__row .row__input {
+    width: 100%;
+}
+
+.address__row {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.country__select {
+    width: 35%;
+}
+.country__input {
+    width: 60%;
+}
+.country__input.hide {
+    display: none;
+}
+.country__input.act {
+    display: block;
+}
+.notice__message {
+    width: 100%;
+    margin-top: 40px;
+    display: none;
+}
+.notice__message > p {
+    color: red;
+    font-size: 20px;
+}
+.row__title {
+    padding: 15px 0;
+    text-align: left;
+    width: 25%;
+}
+.row__title p{
+    color: #111111;
+    font-size: 22px;
+    font-weight: 500;
+}
+p.duties {
+    color: transparent;
+}
+.row__input {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.country__input > p > input.__select__title,
+.row__input > p > input.__select__title {
+    margin: 0;
+    background-color: transparent;
+}
+.place__contacts {
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 50px 0 60px;
+    min-width: 1600px;
+    position: inherit;
+    left: -208px;
+}
+
+.long, .hide {
+    display: none;
+}
+.place__contacts_dop:last-child .long {
+    display: block;
+}
+.short, .show {
+    display: block;
+}
+.place__contacts_dop:last-child .short {
+    display: none;
+}
+.place__contacts_dop {
+    border-top: 4px solid white;
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 50px 0 60px;
+    min-width: 1600px;
+    position: inherit;
+    left: -208px;
+}
+#place__contacts_dop {
+    display: none;
+}
+.row__input p {
+    width: 100%;
+}
+.place__notice {
+    padding: 50px 0;
+    display: none;
+}
+.place__notice.act {
+    display: block;
+}
+.notice__req {
+    color: #b7b7b7;
+    font-size: 14px;
+}
+.notice__req::before{
+    content: "*  ";
+    color: #ff0000;
+}
+.place__task {
+    display: flex;
+    flex-wrap: wrap;
+}
+.task__block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.task__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 55px;
+    justify-content: space-between;
+}
+.row__input .place__title {
+    padding-bottom: 10px;
+}
+.task__row .row__input {
+    width: 100%;
+    flex-wrap: wrap;
+}
+.task__option {
+    width: 575px;
+    height: 105px;
+    border: 1px #b6b6b6 solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    transition: transform .15s;
+}
+.task__option.act {
+    border: 2px black solid;
+}
+.task__option:hover {
+    border: 2px black solid;
+    transform: scale(1.01);
+    transition: transform .15s;
+}
+.task__option p {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+    padding: 6px 0;
+}
+.option__btn {
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+}
+#tech-as-on, 
+#tech-as-off {
+    display: none;
+}
+#tech-as-off {
+    justify-content: left;
+}
+.poll_btn {
+    width: 300px;
+}
+.task__block .profile__upload {
+    width: 100%;
+}
+.task__block .upload-doc {
+    width: 100%;
+    padding-bottom: 55px;
+}
+.task__poll {
+    width: 31%;
+    height: fit-content;
+    margin-right: 3.5%;
+    background-color: white;
+    border: 1px solid #b7b7b7;
+    position: relative;
+    transition: transform .15s;
+}
+.task__poll:nth-child(3n+3) {
+    margin-right: 0;
+}
+.task__poll:hover{
+    cursor: pointer;
+    box-shadow: 0px 8px 20px 2px grey;
+    transform: scale(1.01);
+    transition: transform .15s;
+
+}
+.poll__head {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 55px;
+    text-align: center;
+}
+.poll__title {
+    font-size: 24px !important;
+    padding: 12px 0;
+}
+.poll__point {
+    padding: 40px 25px 10px;
+}
+.poll__check li {
+    padding-left: 25px;
+    list-style-image: none;
+    background: url(../images/check.png) no-repeat;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+.edit-poll__nav {
+    display: none;
+    position: absolute;
+    right: -205px;
+    bottom: 100px;
+    width: 230px;
+    height: auto;
+}
+.edit-poll__item {
+    display: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: gray;
+    margin-bottom: 5px;
+    position: relative;
+}
+.edit-poll__item__name {
+    display: none;
+    position: absolute;
+    height: 50px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 15px 20px;
+    border: 1px solid gray;
+    top: -55px;
+}
+.edit-poll__item:hover .edit-poll__item__name {
+    display: block;
+}
+.edit-poll__item button{
+    color: white;
+    background-color: grey;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.editPollBtn {
+    width: 80%;
+    height: 100%;
+}
+.editPollBtn::before {
+    content: "";
+    background: url(../images/edit.png) no-repeat;
+    width: 15px;
+    height: 15px;
+    padding-left: 25px;
+}
+.closePollBtn {
+    width: 20px;
+    height: 20px;
+    top: 5px;
+}
+.closePollBtn:before, .closePollBtn:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 20px;
+    width: 4px;
+    background-color: white;
+}
+
+.poll__action {
+    height: 120px;
+    width: 100%;
+    padding: 45px 14% 30px;
+
+}
+.poll__action button {
+    border: 2px solid black;
+    width: 100%;
+    height: 40px;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+.place-form__message_bg {
+    display: none;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 100;
+}
+.place-form__message {
+    margin: 10% auto;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px #000;
+}
+.place-form__message .modal__close p {
+    font-size: 12px;
+}
+.message__content {
+    padding: 30px;
+}
+.message__content h3 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.message__btns {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 290px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.message__btns a{
+    margin: 0 auto;
+}
+.message__btns p {
+    display: none;
+    text-align: center;
+    text-decoration: none;
+    font-family: "FuturaBookDemiC";
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 auto;
+    position: relative;
+}
+.message__btns p::before {
+    content: '';
+    width: 28px;
+    height: 28px;
+    background-image: url(/images/saved.png);
+    position: absolute;
+    left: -40px;
+    top: -5px;
+}
+.message__adv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+}
+.advertisement__block {
+    width: 427px;
+    height: 235px;
+    padding: 23px 16px 27px 43px;
+    background-image: url(/images/adv1.png);
+}
+.adv2 {
+    background-image: url(/images/adv2.png);
+}
+.adv__close {
+    height: 16px;
+    width: 16px;
+    float: right;
+}
+.adv__close span {
+    background-color: white;
+}
+.adv__content {
+    padding: 30px 0;
+}
+.adv__title  {
+    padding-bottom: 14px;
+    width: 280px;
+}
+.adv__title h4{
+    font-size: 26px;
+    line-height: 0.92;
+    text-align: left;
+    color: #ffffff;
+}
+.adv__text {
+    width: 280px;
+
+}
+.adv__text p{
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: -0.35px;
+    text-align: left;
+    color: #fefefe;
+}
+.adv__btn {
+    width: 199px;
+    height: 42px;
+    margin: 21px 153px 4px 1px;
+}
+.btn_red {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: "FuturaBookDemiC";
+    font-size: 17px;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: solid 2px #ffffff;
+    background-color: #ff0000;
+    color: white;
+    padding: 8px;
+}
+.btn_red:hover {
+    border: solid 2px #ff0000;
+    background-color: white;
+    color: #ff0000;
+}
+
+.tab.hide, .task__block.hide {
+    display: none;
+}
+.tab.show, #tech-as-on.task__block.show {
+    display: flex;
+}
+
+/* Для chosen select */
+    /* placeholder */
+.chosen-container-single .chosen-default span {
+    color: #999;
+}
+
+select.select.chosen.required + .chosen-container-single > .chosen-default > span::after {
+    content: "*";
+    color: #ff0000;
+}
+.chosen-container-single .chosen-single div b {
+
+}
+
+input.required::placeholder::after {
+    content: "*";
+    color: #ff0000;
+}
+
+@media all and (min-width: 980px) and (max-width: 1224px) {
+    .place__alert {
+        padding-left: 50px;
+    }
+}
+
+@media all and (min-width: 0px) and (max-width: 980px) {
+    .tab {
+        flex-wrap: wrap;
+    }
+    .place_left {
+        order: 2;
+    }
+    .place_right {
+        order: 1;
+    }
+    .place__alert {
+        padding-left: 0;
+        padding-bottom: 50px;
+    }
+}
