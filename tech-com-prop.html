@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Opikal</title>
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/slick/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.css">
+    <link rel="stylesheet" href="css/place-app.css">
+    <link rel="stylesheet" href="css/tech-com-prop.css">
+    <link rel="stylesheet" href="css/chats.css">
+    <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__burger">
+                <span class="menu-line menu-line_1"></span>
+                <span class="menu-line menu-line_2"></span>
+                <span class="menu-line menu-line_3"></span>
+            </div>
+            <div class="nav__logo">
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="menu">
+                <div class="menu__link"><a href="#">О проекте</a></div>
+                <div class="menu__link"><a href="#">Справка</a></div>
+                <div class="menu__link"><a href="#">Тарифы</a></div>
+                <div class="menu__link"><a href="#">Контакты</a></div>
+                <div class="nav__row">
+                    <div class="nav__phone">
+                        <a href="tel:+74955403030">+7(495) 540-30-30</a>
+                    </div>
+                    <div class="nav__icons">
+                        <div class="nav__icons_mess">
+                            <a href="#">
+                                <img src="images/nav-icon-1.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="nav__icons_notification">
+                            <a href="#">
+                                <img src="images/nav-icon-2.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="nav__icons_like">
+                            <a href="#"><img src="images/nav-icon-3.png" alt=""><span>1</span></a>
+                        </div>
+
+                        <div class="nav__icons_account">
+                            <a href="customer.html"><img src="images/nav-icon-4.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn-red">Разместить заявку</a>
+        </nav>
+
+    </header>
+
+    <main>
+    <div class="bg place-bg">
+        <div class="container">
+            <div class="place-app">
+                <div class="row">
+                    <div class="breadcrumbs">
+                        <div class="breadcrumbs__item">
+                            <a href="#"><img src="images/main.png" alt="">Главная</a>
+                        </div>
+                        <div class="breadcrumbs__item"><a href="#">Создание технико-коммерческого предложения</a></div>
+                    </div>
+                </div>
+                <h1 class="tech-com__title">Создание технико-коммерческого предложения</h1>
+
+                <div class="tech-com__content">
+                    <div class="tech-com__form form">
+                        <form id="place-form" action="#" method="GET">
+
+                            <div class="apply__steps steps">
+                                <ul>
+                                    <li class="step"><a> Выбор оборудования </a></li>
+                                    <li class="step" id="step2"><a> Техника</a></li>
+                                    <li class="step" id="step3"><a> Работы и услуги</a></li>
+                                    <li class="step"><a> Коммерция</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- One "tab" for each step in the form: -->
+                            <div class="tab tab1">
+                                <div class="tab_row">
+                                    <h2>Выберите оборудование, на которое будете готовить технико-коммерческое предложение</h2>
+                                    <div class="poisk">
+                                        <div class="search-form__input">
+                                            <span class="search__icon-1"></span>
+                                            <input name="search" placeholder="Поиск" type="search" class="search-input">
+                                        </div>
+                                        <button type="submit" class="btn-search">Найти</button>
+                                    </div>
+                                </div>
+                                <div class="tab_row">
+                                    <div class="tab_row__item">
+                                        <div class="row">
+                                            <h3 class="tab_row__item_title">Конвейерное оборудование</h3>
+                                            <button class="tab_row__item_button"></button>
+                                        </div>
+
+                                        <div class="tab_row__options">
+                                            <div class="place__row">
+                                                <input id="__select__checkbox0" class="__checkbox__input" type="checkbox" value="0" name="select__checkbox" checked="">
+                                                <label for="__select__checkbox0" class="__checkbox__label">Фильтр ФРИ</label>
+                                            </div>
+                                            <div class="place__row">
+                                                <input id="__select__checkbox1" class="__checkbox__input" type="checkbox" value="1" name="select__checkbox" checked="">
+                                                <label for="__select__checkbox1" class="__checkbox__label">Фильтр КФЕ</label>
+                                            </div>
+                                            <div class="place__row">
+                                                <input id="__select__checkbox2" class="__checkbox__input" type="checkbox" value="2" name="select__checkbox" checked="">
+                                                <label for="__select__checkbox2" class="__checkbox__label">Наклонный фильтр</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_row">
+                                    <div class="tab_row__item">
+                                        <div class="row">
+                                            <h3 class="tab_row__item_title">Газоочистное оборудование</h3>
+                                            <button class="tab_row__item_button"></button>
+                                        </div>
+                                        <div class="tab_row__options">
+                                            <div class="place__row">
+                                                <input id="__select__checkbox0" class="__checkbox__input" type="checkbox" value="0" name="select__checkbox" checked="">
+                                                <label for="__select__checkbox0" class="__checkbox__label">Техническое разгрузочное устройство</label>
+                                            </div>
+                                            <div class="place__row">
+                                                <input id="__select__checkbox1" class="__checkbox__input" type="checkbox" value="1" name="select__checkbox" checked="">
+                                                <label for="__select__checkbox1" class="__checkbox__label">Механическое устройство</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_row">
+                                    <div class="tab_row__item">
+                                        <div class="row">
+                                            <h3 class="tab_row__item_title">Вакуумная пылеуборка</h3>
+                                            <button class="tab_row__item_button"></button>
+                                        </div>
+                                        <div class="tab_row__options">
+                                            <div class="place__row">
+                                                <input id="__select__checkbox0" class="__checkbox__input" type="checkbox" value="0" name="select__checkbox" checked="">
+                                                <label for="__select__checkbox0" class="__checkbox__label">Фильтр ФРИ</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_row">
+                                    <div class="tab_row__item">
+                                        <div class="row">
+                                            <h3 class="tab_row__item_title">Телескопические загрузочные устройства</h3>
+                                            <button class="tab_row__item_button"></button>
+                                        </div>
+                                        <div class="tab_row__options">
+                                            <div class="place__row">
+                                                <input id="__select__checkbox0" class="__checkbox__input" type="checkbox" value="0" name="select__checkbox" checked="">
+                                                <label for="__select__checkbox0" class="__checkbox__label">Фильтр ФРИ</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_row">
+                                    <div class="tab_row__item">
+                                        <div class="row">
+                                            <h3 class="tab_row__item_title">Водоочистка</h3>
+                                            <button class="tab_row__item_button"></button>
+                                        </div>
+                                        <div class="tab_row__options">
+                                            <div class="place__row">
+                                                <input id="__select__checkbox0" class="__checkbox__input" type="checkbox" value="0" name="select__checkbox" checked="">
+                                                <label for="__select__checkbox0" class="__checkbox__label">Фильтр ФРИ</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_row">
+                                    <div class="tab_row__item">
+                                        <div class="row">
+                                            <h3 class="tab_row__item_title">Компрессорное оборудование</h3>
+                                            <button class="tab_row__item_button"></button>
+                                        </div>
+                                        <div class="tab_row__options">
+                                            <div class="place__row">
+                                                <input id="__select__checkbox0" class="__checkbox__input" type="checkbox" value="0" name="select__checkbox" checked="">
+                                                <label for="__select__checkbox0" class="__checkbox__label">Фильтр ФРИ</label>
+                                            </div>
+                                            <div class="place__row">
+                                                <input id="__select__checkbox1" class="__checkbox__input" type="checkbox" value="1" name="select__checkbox" checked="">
+                                                <label for="__select__checkbox1" class="__checkbox__label">Фильтр КФЕ</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab tab2">
+
+
+                            </div>
+
+                            <div class="tab tab3" id="tab3">
+
+
+                            </div>
+
+                            <div class="tab tab4" id="tab4">
+
+                            </div>
+
+                            
+                            <div class="place__clear">
+                                <div id="place-form__button_main" class="place-form__button">
+                                    <button type="button" id="prevBtn" onclick="nextPrev(-1)"> Назад </button>
+                                    <button type="button" id="nextBtn" onclick="nextPrev(1)" > Продолжить </button>
+                                </div>
+                            </div>
+
+                            <div class="place__notice">
+                                <p class="notice__req">Поле обязательное для заполнения</p>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div id="place__message__popup" class="place-form__message_bg">
+                        <div class="place-form__message">
+                            <div class="modal__close">
+                                <p onclick="popup_message_hide()">Закрыть</p>
+                                <span class="modal__close_1"></span>
+                                <span class="modal__close_2"></span>
+                            </div>
+                            <div class="message__content">
+                                <h3>Ваша заявка успешно сохранена <br>
+                                    и опубликована на сайте</h3>
+                                <div class="message__btns">
+                                    <a id="btn-return" onclick="popup_message_hide()" href="#" class="btn-black">Вернуться на свою страницу</a>
+                                </div>
+                                <div class="message__adv">
+                                    <div class="advertisement__block">
+                                        <div class="modal__close adv__close">
+                                            <span class="modal__close_1"></span>
+                                            <span class="modal__close_2"></span>
+                                        </div>
+                                        <div class="adv__content">
+                                            <div class="adv__title">
+                                                <h4>Предложение на поставку фильтров</h4>
+                                            </div>
+                                            <div class="adv__text">
+                                                <p>
+                                                    При завершении работы на площадке информация не теряется, а сохраняется в черновиках
+                                                </p>
+                                            </div>
+                                            <div class="adv__btn">
+                                                <a href="#" class="btn_red">Оформить заявку</a>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="advertisement__block adv2">
+                                        <div class="modal__close adv__close">
+                                            <span class="modal__close_1"></span>
+                                            <span class="modal__close_2"></span>
+                                        </div>
+                                        <div class="adv__content">
+                                            <div class="adv__title">
+                                                <h4>Предложение на поставку фильтров</h4>
+                                            </div>
+                                            <div class="adv__text">
+                                                <p>
+                                                    При завершении работы на площадке информация не теряется, а сохраняется в черновиках
+                                                </p>
+                                            </div>
+                                            <div class="adv__btn">
+                                                <a href="#" class="btn_red">Оформить заявку</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+
+                        </div>
+                    </div>
+
+                    <div id="place__alert__popup" class="popup">
+                        <div class="place__alert">
+                            <div class="__alert__title">
+                                <p>Обратите внимание:</p>
+                            </div>
+                            <div class="__alert__message">
+                                <p>
+                                    При завершении работы на площадке информация не теряется, а сохраняется в черновиках
+                                </p>
+                            </div>
+                        </div>
+                        <a id="place__alert__popup-close" href="#" class="close"></a>
+
+                    </div>
+                    <div class="edit-poll__nav" id="edit-poll__nav">
+                        <div class="edit-poll__item" id="1">
+                            <div class="edit-poll__item__name">Вентилятор</div>
+                            <button type="button" class="editPollBtn" > Опросный лист №1 </button>
+                            <button type="button" class="closePollBtn close" onclick="parentHide(this)">  </button>
+                        </div>
+                        <div class="edit-poll__item" id="2">
+                            <div class="edit-poll__item__name">Комплектующие</div>
+                            <button type="button" class="editPollBtn"> Опросный лист №2 </button>
+                            <button type="button" class="closePollBtn close"  onclick="parentHide(this)">  </button>
+                        </div>
+                        <div class="edit-poll__item" id="3">
+                            <div class="edit-poll__item__name">Конвейеры</div>
+                            <button type="button" class="editPollBtn" > Опросный лист №3 </button>
+                            <button type="button" class="closePollBtn close"  onclick="parentHide(this)">  </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="account__rools">
+                <a href="#" class="btn-add">Правила сервиса</a>
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__left">
+                    <div class="footer__logo">
+                        <a href="#"><img src="images/logo-2.png" alt=""></a>
+                    </div>
+                    <div class="footer__menu">
+                        <div class="footer__menu-link"><a href="#">о проекте</a></div>
+                        <div class="footer__menu-link"><a href="">справка</a></div>
+                        <div class="footer__menu-link"><a href="">полезная информация</a></div>
+                        <div class="footer__menu-link"><a href="">контакты</a></div>
+                        <div class="footer__menu-link"><a href="">политика конфиденциальности</a></div>
+                        <div class="footer__menu-link"><a href="">частые вопросы</a></div>
+                    </div>
+                </div>
+
+                <div class="footer__right">
+                    <div class="footer__phone">
+                        <a href="tel:+74955403030">+7(495)540-30-30</a>
+                    </div>
+                    <div class="footer__mail">
+                        <a href="mailto:info@visualteam.ru" target="_blank">info@visualteam.ru</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__row">
+                <div class="footer__left">
+                    <p>
+                        © 2006—2021, ООО «ОПИКАЛ». ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer__row">
+                <div class="footer__left">
+                    <p>
+                        ИНН: 7702775114, КПП: 770901001,ТЕЛ.: +7 (495) 120-30-13      ООО «МЕРКУРИЙ ФИТНЕС», ИНН: 7703453536, КПП: 770301001, ТЕЛ: +7(495) 540-30-30 .
+                    </p>
+                </div>
+
+                <div class="footer__right">
+                    <p>
+                        ДИЗАЙН И РАЗРАБОТКА САЙТА
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/lib/slick.min.js"></script>
+    <script src="js/lib/jquery-ui.js"></script>
+    <script src="js/lib/jquery.validate.js"></script>
+    <script src="js/lib/jquery.maskedinput.js"></script>
+    <script src="js/lib/chosen.js"></script>
+    <script src="js/masks.js"></script>
+    <script src="js/form-tech-com.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
