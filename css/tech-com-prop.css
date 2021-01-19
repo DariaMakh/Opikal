@@ -1,5 +1,5 @@
 .tech-com__title {
-    font-size: 36px;
+    font-size: 42px;
     padding-bottom: 30px;
 }
 .tech-com__content {
@@ -112,4 +112,156 @@
     position: absolute;
     left: -27px;
     top: -3px;
-} 
+}
+.account__rools {
+    top: 500px;
+    right: -112px;
+    width: 265px;
+}
+.sidebar__info {
+    position: fixed;
+    top: 200px;
+    right: -3px;
+    width: 150px;
+    height: 43px;
+    background-color: transparent;
+}
+.sidebar__info a {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: "FuturaBookDemiC";
+    font-size: 17px;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+}
+.sidebar__info a:hover {
+    background-color: gray;
+}
+.sidebar__info > a {
+    width: 150px;
+}
+.sidebar__info_hide {
+    display: none;
+    position: absolute;
+    right: 151px;
+    top: 43px;
+}
+.sidebar__info_hide a {
+    width: 300px;
+    font-size: 15px;
+    padding: 8px 0;
+}
+.sidebar__info > a:nth-child(2):hover ~ .sidebar__info_hide, 
+.sidebar__info_hide:hover {
+    display: block;
+}
+.check {
+    /* display: none; */
+    justify-content: space-between;
+    position: relative;
+}
+.check__steps {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    height: fit-content;
+}
+.check__steps a {
+    color: white;
+    text-decoration: none;
+}
+.check_item {
+    float: left;
+    margin-left: 0;
+    margin-bottom: 5px;
+    width: auto;
+    height: 50px;
+    list-style-type: none;
+    padding: 12px 31px 8px;
+    border-right: 3px solid white;
+    position: relative;
+}
+.check_item a {
+    font-size: 24.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: 0.12px;
+}
+.check_item.active {
+    background-color:#686868;
+    border: 1px solid black;
+}
+
+.check_item.active ~ li {
+    background-color: transparent;
+}
+.check_item.active ~ li a {
+    color: #000;
+}
+.apply__steps {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    height: fit-content;
+}
+.apply__steps.active a {
+    color: white;
+    text-decoration: none;
+}
+.apply__steps a {
+    color: black;
+    text-decoration: none;
+}
+.step {
+    float: left;
+    margin-left: 0;
+    margin-bottom: 5px;
+    width: auto;
+    height: 50px;
+    list-style-type: none;
+    padding: 12px 34px 10px 31px;
+    border-right: 3px solid white;
+    position: relative;
+}
+.step a {
+    font-size: 22px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.11px;
+}
+.step.active {
+    background-color: black;
+    border: 1px solid black;
+}
+.step.active a {
+    color: white;
+}
+
+.step.active ~ li {
+    background-color: transparent;
+}
+.step.active ~ li a {
+    color: #000;
+}
+.check__textarea {
+    height: 280px;
+    width: 100%;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    background-color: white;
+}
+.check p {
+    font-size: 20.5px;
+    padding: 20px 0;
+}
