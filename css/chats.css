@@ -45,9 +45,7 @@
     padding: 35px 30px;
     position: absolute;
     top: 0;
-    /* overflow-y: auto; */
     overflow-y: auto;
-    overflow: visible;
 }
 
 .chat__history__date {
@@ -129,15 +127,19 @@
     border-radius: 5px;
     position: absolute;
     top: 46px;
-    left: -74px;
+    left: -18px;
     width: 187px;
     height: 127px;
     z-index: 100;
     box-shadow: 0px 8px 20px 2px grey;
     padding: 22px;
 }
-.to_me .chat__user__ico:hover .chat__user__ico_nav {
+/* .to_me .chat__user__ico:hover .chat__user__ico_nav {
     display: block;
+} */
+.chat__user__ico_nav.active {
+    display: block;
+
 }
 .chat__user__ico_nav a{
     font-size: 16.5px;
@@ -401,15 +403,13 @@
 }
 .chat__message__input__text::-webkit-scrollbar,
 .chat__area__history::-webkit-scrollbar{
-    width: 5px;
+    width: 10px;
     height: 2px;
-    background-color: #aaa;
-    border-radius: 10px;
+    background-color: #ffffff85;
 }
 .chat__message__input__text::-webkit-scrollbar-thumb,
 .chat__area__history::-webkit-scrollbar-thumb{
-    background: #6b6b6b;
-    border-radius: 10px;
+    background-color: #b07b4b78;
 }
 .chat__message__enter {
     width: 36px;

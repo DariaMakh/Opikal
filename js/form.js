@@ -365,3 +365,9 @@ function print_chat(printId) {
 function send_message() {
   
 }
+
+$('.chat__user__ico').hover(
+  function () {
+    $(':nth-child(2)', this).toggleClass('active');
+  }
+  );
