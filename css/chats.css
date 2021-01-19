@@ -67,15 +67,6 @@
     margin: 10px 0;
     max-width: 90%;
 }
-.highlighted  .chat__user__ico img {
-    opacity: 0.5;
-}
-.highlighted  .chat__user__content,
-.highlighted.to_me.from_supplier .chat__user__content:before,
-.highlighted.to_me.admin .chat__user__content:before, 
-.highlighted.with_theme .chat__user__content:before  {
-    background-color: #ffe8e880;
-}
 .general__chat .to_me .chat__user__ico img,
 .dialog__chat .to_me .chat__user__ico img {
     cursor: pointer;
@@ -295,6 +286,16 @@
 .with_theme .chat__msg-author,
 .with_theme .chat__msg-theme {
     background-color: #ffe8e8;
+}
+.highlighted  .chat__user__ico img {
+    opacity: 0.5;
+}
+.highlighted  .chat__user__content,
+.highlighted.to_me.from_supplier .chat__user__content:before,
+.highlighted.to_me.admin .chat__user__content:before, 
+.highlighted.with_theme .chat__user__content:before,
+.highlighted.to_me.from_customer .chat__user__content:before  {
+    background-color: #ffe8e880;
 }
 .chat__msg-content {
     padding: 10px 0;

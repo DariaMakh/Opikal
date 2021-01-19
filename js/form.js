@@ -370,4 +370,10 @@ $('.chat__user__ico').hover(
   function () {
     $(':nth-child(2)', this).toggleClass('active');
   }
-  );
+);
+  
+$('.to_highlight').click(
+  function () {
+    $(this).parent().parent().parent().addClass('highlighted');
+  }
+)
