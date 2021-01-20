@@ -158,9 +158,12 @@
     display: block;
 }
 .check {
-    /* display: none; */
+    display: none;
     justify-content: space-between;
     position: relative;
+}
+.check.show {
+    display: block;
 }
 .check__steps {
     display: flex;
@@ -170,7 +173,7 @@
     height: fit-content;
 }
 .check__steps a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 .check_item {
@@ -200,8 +203,8 @@
 .check_item.active ~ li {
     background-color: transparent;
 }
-.check_item.active ~ li a {
-    color: #000;
+.check_item.active a {
+    color: white;
 }
 .apply__steps {
     display: flex;
