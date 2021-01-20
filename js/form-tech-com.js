@@ -48,8 +48,8 @@ function nextPrev(n) {
     var x = document.getElementsByClassName("tab");
     //
     var sub = x[currentTab].getElementsByClassName("check");
-    alert(sub.length);
-    if (sub.length > 0) {
+
+    // if (sub.length > 0) {
         // alert(sub.length); 
         if ((currentCheck == 0) && (n == -1) ) {
             // Hide the current tab:
@@ -58,17 +58,21 @@ function nextPrev(n) {
             currentTab = currentTab + n;
             // currentCheck = 0;
             showTab(currentTab);
-            currentCheck = sub.length + n;
-            showCheck(currentCheck);
-
+            if (sub.length > 0) {
+                currentCheck = sub.length + n;
+                showCheck(currentCheck);
+            }
+            alert(2222);
             return false;
         }
         if ((currentCheck < (sub.length - 1)) || 
             (currentCheck == (sub.length - 1)) && (n == -1)) {
             
+            // alert(currentCheck);
             sub[currentCheck].style.display = "none";
             currentCheck = currentCheck + n;
             showCheck(currentCheck);
+            alert(3333);
 
             return false;
         }
@@ -81,13 +85,14 @@ function nextPrev(n) {
             showTab(currentTab);
             currentCheck = 0;
             showCheck(currentCheck);
+            alert(4444);
 
             return false;
         }
 
         
         
-    }
+    // }
     // else {
     //     // Hide the current tab:
     //     x[currentTab].style.display = "none";
@@ -102,18 +107,25 @@ function nextPrev(n) {
 
     // alert(currentCheck >= (sub.length));
     if (currentCheck >= (sub.length - 1)) {
-        
+        alert(666);
+
         // Hide the current tab:
         x[currentTab].style.display = "none";
         // Increase or decrease the current tab by 1:
         currentTab = currentTab + n;
-        // alert(999);
+        
+        alert(999);
         // alert(currentCheck);
+        if (sub.length > 0) {
+            currentCheck = sub.length - 1
+        }
+        else {
+            currentCheck = sub.length;
+        }
         showTab(currentTab);
         
-            showCheck(currentCheck);
+        showCheck(currentCheck);
         
-        alert(sub.length);
         return false;
 
     }
