@@ -48,34 +48,57 @@ function nextPrev(n) {
     var x = document.getElementsByClassName("tab");
     //
     var sub = x[currentTab].getElementsByClassName("check");
-
-    // alert(currentCheck);
-    // alert((currentCheck == (sub.length - 1)) && (n == -1));
-    // alert(sub.length);
+    alert(sub.length);
     if (sub.length > 0) {
-        if ((currentCheck == 0) && (n == -1) || (currentCheck == (sub.length - 1)) && (n == 1) ) {
+        // alert(sub.length); 
+        if ((currentCheck == 0) && (n == -1) ) {
             // Hide the current tab:
             x[currentTab].style.display = "none";
             // Increase or decrease the current tab by 1:
             currentTab = currentTab + n;
             // currentCheck = 0;
             showTab(currentTab);
+            currentCheck = sub.length + n;
             showCheck(currentCheck);
+
+            return false;
         }
-        if (currentCheck < (sub.length - 1) || 
+        if ((currentCheck < (sub.length - 1)) || 
             (currentCheck == (sub.length - 1)) && (n == -1)) {
             
             sub[currentCheck].style.display = "none";
             currentCheck = currentCheck + n;
             showCheck(currentCheck);
-            
-            // sub[currentCheck].style.display = "block";
+
+            return false;
+        }
+        if ((currentCheck == (sub.length - 1)) && (n == 1) ) {
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // currentCheck = 0;
+            showTab(currentTab);
+            currentCheck = 0;
+            showCheck(currentCheck);
+
+            return false;
         }
 
-
         
-        return false;
+        
     }
+    // else {
+    //     // Hide the current tab:
+    //     x[currentTab].style.display = "none";
+    //     // Increase or decrease the current tab by 1:
+    //     currentTab = currentTab + n;
+    //     alert(sub.length);
+    //     // alert(currentCheck);
+    //     showTab(currentTab);
+    //     showCheck(currentCheck);
+    //     return false;
+    // }
 
     // alert(currentCheck >= (sub.length));
     if (currentCheck >= (sub.length - 1)) {
@@ -84,19 +107,18 @@ function nextPrev(n) {
         x[currentTab].style.display = "none";
         // Increase or decrease the current tab by 1:
         currentTab = currentTab + n;
-        alert(999);
+        // alert(999);
+        // alert(currentCheck);
+        showTab(currentTab);
+        
+            showCheck(currentCheck);
+        
+        alert(sub.length);
+        return false;
+
     }
-    // if (currentCheck == 0 && n == -1) {
-    //     alert(1000);
-    //             // Hide the current tab:
-    //             x[currentTab].style.display = "none";
-    //             // Increase or decrease the current tab by 1:
-    //             currentTab = currentTab + n;
-    //             // alert(currentTab);
-    // }
-    // if (currentCheck == 0 && n == -1) {
-    //     alert(1000);
-    // }
+
+
   // Exit the function if any field in the current tab is invalid:
   // if (n == 1 && !validateForm()) return false;
     // alert(currentTab);
@@ -111,31 +133,10 @@ function nextPrev(n) {
     return false;
   }
   // Otherwise, display the correct tab:
-    showTab(currentTab);
-    showCheck(currentCheck);
+    // showTab(currentTab);
+    // showCheck(currentCheck);
 }
 
-// function nextPrevSub(n) {
-//     // This function will figure out which tab to display
-//     var x = document.getElementsByClassName("check");
-//     // Exit the function if any field in the current tab is invalid:
-//     // if (n == 1 && !validateForm()) return false;
-//       alert(currentTab);
-//     // Hide the current tab:
-//     x[currentTab].style.display = "none";
-//     // Increase or decrease the current tab by 1:
-//     currentTab = currentTab + n;
-//     // if you have reached the end of the form... :
-//     if (currentTab >= x.length) {
-//       var i = 0;
-//       // document.getElementByClassName("list__new-eqpm").style.display = "none";
-//       //...the form gets submitted:
-//       document.getElementById("tech-com-form").submit();
-//       return false;
-//     }
-//     // Otherwise, display the correct tab:
-//     showTab(currentTab);
-//   }
 function fixStepIndicator(n) {
     // This function removes the "active" class of all steps...
     var i, x = document.getElementsByClassName("step");
