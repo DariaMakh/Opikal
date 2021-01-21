@@ -14,15 +14,16 @@ var currentCheck = 0; // Current tab is set to be the first tab (0)
 function showTab(n) {
   // This function will display the specified tab of the form ...
   var x = document.getElementsByClassName("tab");
-    x[n].style.display = "block";
-    // showCheck(currentCheck);
+  var current_subtabs = x[currentTab].getElementsByClassName("check");
+  x[n].style.display = "block";
   // ... and fix the Previous/Next buttons:
   if (n == 0) {
     document.getElementById("prevBtn").style.display = "none";
   } else {
     document.getElementById("prevBtn").style.display = "inline";
   }
-  if (n == (x.length - 1)) {
+  //Если показанная вкладка последняя и на ней нет подвкладок
+  if ((n == (x.length - 1)) && (current_subtabs.length == 0)) {
     document.getElementById("nextBtn").innerHTML = "Отправить";
   } else {
     document.getElementById("nextBtn").innerHTML = "Продолжить";
@@ -35,6 +36,13 @@ function showCheck(n) {
     // This function will display the specified tab of the form ...
     var x = document.getElementsByClassName("tab");
     var sub = x[currentTab].getElementsByClassName("check");
+	//Если подвкладка последняя на последней вкладке
+	if ((currentTab == (x.length - 1)) && (n == (sub.length - 1))) {
+		document.getElementById("nextBtn").innerHTML = "Отправить";
+	} else {
+		document.getElementById("nextBtn").innerHTML = "Продолжить";
+	}
+
     if (sub.length != 0) {
         sub[n].style.display = "block";
         // ... and run a function that displays the correct step indicator:
@@ -44,109 +52,89 @@ function showCheck(n) {
 }
 
 function nextPrev(n) {
-  // This function will figure out which tab to display
+	// This function will figure out which tab to display
+	// currentTab - счетчик для больших вкладок
+	// currentCheck - счетчик для подвкладок
+
     var x = document.getElementsByClassName("tab");
-    //
-    var sub = x[currentTab].getElementsByClassName("check");
 
-    // if (sub.length > 0) {
-        // alert(sub.length); 
-        if ((currentCheck == 0) && (n == -1) ) {
-            // Hide the current tab:
-            x[currentTab].style.display = "none";
-            // Increase or decrease the current tab by 1:
-            currentTab = currentTab + n;
-            // currentCheck = 0;
-            showTab(currentTab);
-            if (sub.length > 0) {
-                currentCheck = sub.length + n;
-                showCheck(currentCheck);
-            }
-            alert(2222);
-            return false;
-        }
-        if ((currentCheck < (sub.length - 1)) || 
-            (currentCheck == (sub.length - 1)) && (n == -1)) {
-            
-            // alert(currentCheck);
-            sub[currentCheck].style.display = "none";
-            currentCheck = currentCheck + n;
-            showCheck(currentCheck);
-            alert(3333);
+	//подвкладки на текущей вкладке
+	var current_subtabs = x[currentTab].getElementsByClassName("check");
+	//количество подвкладок на текущей вкладке
+	var number_of_subtabs = current_subtabs.length;
 
-            return false;
-        }
-        if ((currentCheck == (sub.length - 1)) && (n == 1) ) {
-            // Hide the current tab:
-            x[currentTab].style.display = "none";
-            // Increase or decrease the current tab by 1:
-            currentTab = currentTab + n;
-            // currentCheck = 0;
-            showTab(currentTab);
-            currentCheck = 0;
-            showCheck(currentCheck);
-            alert(4444);
+	//Перед проверкой следующей вкладки проверяем, не является ли текущая последней
+	if(currentTab + n < x.length){
+		//подвкладки на следующей/предыдущей вкладке
+		var nextprev_subtabs = x[currentTab + n].getElementsByClassName("check");
+		//количество подвкладок на следующей/предыдущей вкладке
+		var nextprev_number_of_subtabs = nextprev_subtabs.length;
+	}
+	else
+	{
+		var nextprev_number_of_subtabs = 0;
+	}
 
-            return false;
-        }
+	//Тут уже должна была быть надпись Отправить (последняя вкладка и последняя подвкладка)
+	if((currentTab == x.length - 1) && currentCheck == number_of_subtabs - 1){
+		document.getElementById("tech-com-form").submit();
+	}
+	// если на текущей вкладке нет подвкладок
+	if(number_of_subtabs == 0){
+		//скрываем текущую вкладку
+		x[currentTab].style.display = "none";
+		//Измеяем счетчик вкладок
+		currentTab = currentTab + n;
+		//показываем следующую/предыдущую вкладку
+		showTab(currentTab);
+		//проверяем есть ли на следующей/предыдущей подвкладки
+		if (nextprev_number_of_subtabs != 0){
+			// если возвращаемся на вкладку с подвкладками - то показываем последнюю подвкладку
+			if (n == -1){
+				currentCheck = nextprev_number_of_subtabs - 1;
+			} 
+			// иначе если переходим на вкладку с подвкладками - то показываем первую подвкладку
+			else {
+				currentCheck = 0;
+			}
+			//показываем нужную подвкладку
+			showCheck(currentCheck);
+		}
+	// если на текущей вкладке есть подвкладки
+	} else {
+		//скрываем текущую подвкладку
+		current_subtabs[currentCheck].style.display = "none";
+		//Измеяем счетчик подвкладок
+		currentCheck = currentCheck + n;
+		//провряем нужно ли перейти на следующую/предыдущую вкладку
+		if((currentCheck < 0) || (currentCheck >= number_of_subtabs)){
+			//скрываем текущую вкладку
+			x[currentTab].style.display = "none";
+			//Измеяем счетчик вкладок
+			currentTab = currentTab + n;
+			//показываем следующую/предыдущую вкладку
+			showTab(currentTab);
+			//проверяем есть ли на следующей/предыдущей подвкладки
+			if (nextprev_number_of_subtabs != 0){
+				// если возвращаемся на вкладку с подвкладками - то показываем последнюю подвкладку
+				if (n == -1){
+					currentCheck = nextprev_number_of_subtabs - 1;
+				} 
+				// иначе если переходим на вкладку с подвкладками - то показываем первую подвкладку
+				else {
+					currentCheck = 0;
+				}
+				//показываем нужную подвкладку
+				showCheck(currentCheck);
+			}
+		}
+		// или нужно показывать подвклавдку 
+		else {
+			showCheck(currentCheck);
+		}
+		
+	}
 
-        
-        
-    // }
-    // else {
-    //     // Hide the current tab:
-    //     x[currentTab].style.display = "none";
-    //     // Increase or decrease the current tab by 1:
-    //     currentTab = currentTab + n;
-    //     alert(sub.length);
-    //     // alert(currentCheck);
-    //     showTab(currentTab);
-    //     showCheck(currentCheck);
-    //     return false;
-    // }
-
-    // alert(currentCheck >= (sub.length));
-    if (currentCheck >= (sub.length - 1)) {
-        alert(666);
-
-        // Hide the current tab:
-        x[currentTab].style.display = "none";
-        // Increase or decrease the current tab by 1:
-        currentTab = currentTab + n;
-        
-        alert(999);
-        // alert(currentCheck);
-        if (sub.length > 0) {
-            currentCheck = sub.length - 1
-        }
-        else {
-            currentCheck = sub.length;
-        }
-        showTab(currentTab);
-        
-        showCheck(currentCheck);
-        
-        return false;
-
-    }
-
-
-  // Exit the function if any field in the current tab is invalid:
-  // if (n == 1 && !validateForm()) return false;
-    // alert(currentTab);
-
-  // if you have reached the end of the form... :
-  if (currentTab >= x.length) {
-      var i = 0;
-      alert(777);
-    // document.getElementByClassName("list__new-eqpm").style.display = "none";
-    //...the form gets submitted:
-    document.getElementById("tech-com-form").submit();
-    return false;
-  }
-  // Otherwise, display the correct tab:
-    // showTab(currentTab);
-    // showCheck(currentCheck);
 }
 
 function fixStepIndicator(n) {
