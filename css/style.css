@@ -110,7 +110,7 @@ button:focus {
   border: 2px solid #000;
   color: #000;
   background-color: #fff;
-  padding: 10px 28px;
+  padding: 11px 28px;
 }
 
 .btn-black:hover {
@@ -135,7 +135,7 @@ button:focus {
   border: 2px solid #fff;
   color: #fff;
   background-color: transparent;
-  padding: 8px 28px;
+  padding: 11px 28px;
 }
 
 .btn-white:hover {
@@ -282,7 +282,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .bg {
-  background: url(../../images/application-bg.jpg);
+  background: url(../images/application-bg.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: repeat-y;
@@ -500,7 +500,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .header__bg {
-  background-image: url(../../images/header-bg.jpg);
+  background-image: url(../images/header-bg.jpg);
   width: 100%;
   max-height: 859px;
   background-repeat: no-repeat;
@@ -603,7 +603,7 @@ input[type='search']::-webkit-search-results-decoration {
   padding-top: 95px;
   padding-bottom: 110px;
   background-color: #fcfcfc;
-  background-image: url(../../images/eq-bg.jpg);
+  background-image: url(../images/eq-bg.jpg);
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -783,7 +783,7 @@ input[type='search']::-webkit-search-results-decoration {
   height: 100%;
 }
 
-.possibility__prev_1, .possibility__next_1, .possibility__prev_2, .possibility__next_2 {
+.possibility__prev_1, .possibility__next_1, .possibility__prev_2, .possibility__next_2, .modal-slider__next, .modal-slider__prev {
   width: 43px;
   height: 42px;
   border-radius: 50%;
@@ -791,12 +791,12 @@ input[type='search']::-webkit-search-results-decoration {
   cursor: pointer;
 }
 
-.possibility__prev_1, .possibility__prev_2 {
-  background-image: url(../../images/prev.png);
+.possibility__prev_1, .possibility__prev_2, .modal-slider__prev {
+  background-image: url(../images/prev.png);
 }
 
-.possibility__next_1, .possibility__next_2 {
-  background-image: url(../../images/next.png);
+.possibility__next_1, .possibility__next_2, .modal-slider__next {
+  background-image: url(../images/next.png);
 }
 
 .possibility__list-item {
@@ -1212,14 +1212,17 @@ input[type='search']::-webkit-search-results-decoration {
 .modal-box {
   position: relative;
   width: 80%;
+  background-color: #fff;
   max-width: 1120px;
-  margin: 5% auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   -webkit-animation-name: modalbox;
-          animation-name: modalbox;
+  animation-name: modalbox;
   -webkit-animation-duration: .4s;
-          animation-duration: .4s;
+  animation-duration: .4s;
   -webkit-animation-timing-function: cubic-bezier(0, 0, 0.3, 1.6);
-          animation-timing-function: cubic-bezier(0, 0, 0.3, 1.6);
+  animation-timing-function: cubic-bezier(0, 0, 0.3, 1.6);
 }
 
 .modal-header {
@@ -1752,7 +1755,7 @@ input[type='search']::-webkit-search-results-decoration {
   position: absolute;
   left: 3px;
   top: -2px;
-  background-image: url(../../images/check.png);
+  background-image: url(../images/check.png);
 }
 
 .radio input[type="radio"]:checked,
@@ -2210,7 +2213,7 @@ input[type='search']::-webkit-search-results-decoration {
 
 .delete {
   content: '';
-  background-image: url(../../images/del.png);
+  background-image: url(../images/del.png);
   width: 18px;
   height: 18px;
   background-position: center;
@@ -2404,7 +2407,7 @@ input[type='search']::-webkit-search-results-decoration {
   left: 10px;
   width: 18px;
   height: 18px;
-  background-image: url(../../images/search.png);
+  background-image: url(../images/search.png);
 }
 
 .search__icon-2 {
@@ -2426,7 +2429,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .search__icon-2:hover .search__img {
-  background-image: url(../../images/search-2-hover.png);
+  background-image: url(../images/search-2-hover.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2438,7 +2441,7 @@ input[type='search']::-webkit-search-results-decoration {
   position: absolute;
   top: -2px;
   left: -24px;
-  background-image: url(../../images/search-2.png);
+  background-image: url(../images/search-2.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2802,7 +2805,7 @@ input[type='search']::-webkit-search-results-decoration {
 .new {
   width: 100%;
   height: 100%;
-  background-image: url(../../images/hover-bg.png);
+  background-image: url(../images/hover-bg.png);
   background-size: cover;
   background-position: center;
   padding: 25px;
@@ -2883,7 +2886,7 @@ input[type='search']::-webkit-search-results-decoration {
   top: -3px;
   width: 20px;
   height: 20px;
-  background-image: url(../../images/download-icon.png);
+  background-image: url(../images/download-icon.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2895,7 +2898,7 @@ input[type='search']::-webkit-search-results-decoration {
   top: -6px;
   width: 31px;
   height: 31px;
-  background-image: url(../../images/print-icon.png);
+  background-image: url(../images/print-icon.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3020,7 +3023,7 @@ input[type='search']::-webkit-search-results-decoration {
 .generated-application__date-inp {
   border: 1px solid #000;
   background-color: #fff;
-  background: #fff url(../../images/calendar.png) 14px 50% no-repeat;
+  background: #fff url(../images/calendar.png) 14px 50% no-repeat;
   height: 45px;
   padding-left: 50px;
   width: 200px;
@@ -5007,7 +5010,7 @@ input.required::placeholder::after {
 .list__help_icon {
   width: 20px;
   height: 20px;
-  background: url(../../images/help.png) center no-repeat;
+  background: url(../images/help.png) center no-repeat;
   background-size: cover;
   position: absolute;
   top: 50%;
@@ -5030,7 +5033,7 @@ input.required::placeholder::after {
 .valid {
   width: 21px;
   height: 21px;
-  background-image: url(../../images/check-2.png);
+  background-image: url(../images/check-2.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5185,7 +5188,7 @@ input.required::placeholder::after {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-image: url(../../images/pdf-icon.png);
+  background-image: url(../images/pdf-icon.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5366,14 +5369,14 @@ input.required::placeholder::after {
 .fvrt span {
   width: 23px;
   height: 20px;
-  background: url(../../images/fav.png) center no-repeat;
+  background: url(../images/fav.png) center no-repeat;
   background-size: cover;
 }
 
 .share span {
   width: 23px;
   height: 23px;
-  background: url(../../images/share.png) center no-repeat;
+  background: url(../images/share.png) center no-repeat;
   background-size: cover;
 }
 
@@ -5569,5 +5572,48 @@ input.required::placeholder::after {
   font-size: 18px;
   font-family: "FuturaBookC";
   color: red;
+}
+
+.modal-box-slider{
+  width: 520px;
+}
+
+.modal-box-slider .modal-body{
+  padding: 25px 80px 50px 80px;
+}
+
+.modal-box-slider .slider-btns{
+  margin: 30px 0 0 0;
+}
+
+.modal-slider{
+  margin-top: 35px;
+}
+
+.modal-slider__item{
+  font-size: 20px;
+  color: rgb(17, 17, 17);
+  line-height: 1.4;
+  padding-top: 14px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #000;
+}
+
+.modal-slider__prev, .modal-slider__next{
+  transform: rotate(-90deg);
+}
+
+.modal-block .customer p, .modal-block .provisioner p{
+  color: #000;
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.customer, .provisioner{
+  width: 252px;
+}
+
+.customer a, .provisioner a{
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

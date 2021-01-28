@@ -16,6 +16,18 @@ $('.possibility__slider_2').slick({
     prevArrow: $('.possibility__prev_2'),
 });
 
+$('.modal-slider').slick({
+  vertical: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  verticalSwiping: true,
+  infinite: true,
+  initialSlide: 0,
+  pauseOnHover: true,
+  nextArrow: $('.modal-slider__next'),
+  prevArrow: $('.modal-slider__prev'),
+});
+
 // --------- BURGER MENU ---------
 
 $('.nav__burger').click(function(event){
